@@ -1,0 +1,39 @@
+# sim_params.yaml — Isaac Lab simulation parameters
+# Tuned to approximate the MuJoCo FARMS centipede behavior.
+# These WILL need re-tuning after migration (PhysX ≠ MuJoCo contact solver).
+
+physics:
+  dt: 0.0005              # 0.5 ms timestep (match MuJoCo)
+  substeps: 1             # PhysX substeps per sim step
+  gravity: [0.0, 0.0, -9.81]
+  solver_type: "TGS"      # TGS recommended for articulations (vs PGS)
+  solver_iterations: 8    # increase if joints are sloppy
+  solver_velocity_iterations: 2
+
+# Ground plane contact material
+ground:
+  static_friction: 1.6    # match MuJoCo friction[0]
+  dynamic_friction: 1.6
+  restitution: 0.0
+
+# Robot contact material
+robot:
+  static_friction: 1.6
+  dynamic_friction: 1.6
+  restitution: 0.0
+
+# Articulation drive defaults
+# In Isaac Lab, joint drives can be effort (torque), position, or velocity.
+# We use EFFORT mode for all joints (matches MuJoCo general actuators).
+articulation:
+  drive_mode: "effort"
+  # Per-joint armature (rotor inertia) — MuJoCo uses 0.0001
+  armature: 0.0001
+  # Joint damping — MuJoCo default 4.0754e-06
+  damping: 4.0754e-06
+
+# Rendering
+render:
+  width: 1280
+  height: 720
+  headless: false

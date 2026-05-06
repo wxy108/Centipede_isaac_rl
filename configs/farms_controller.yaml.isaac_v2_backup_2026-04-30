@@ -1,0 +1,129 @@
+# farms_controller.yaml — Isaac Lab (PhysX) tuned parameters
+# ============================================================
+# TUNING LOG:
+#   v1: 10-20x MuJoCo gains → robot exploded (launched 10m into air)
+#   v2: Start conservative, close to MuJoCo gains. PhysX contacts are
+#       stiffer than MuJoCo, so less gain is needed, not more.
+#       Increase carefully if the body is too floppy.
+
+# Body travelling wave
+body_wave:
+  # MuJoCo's most-recent value is 0.4 — pairs with the v2 conservative
+  # gains below: amplitude 0.6 + v2 stiff legs was making the centipede
+  # whip its body around, walk backwards, and leave the chase camera
+  # frame. 0.4 is enough wave to drive locomotion without overdriving
+  # the stiffer-than-MuJoCo PhysX leg solver.
+  amplitude:    0.4
+  frequency:    1.0
+  wave_number:  3.0
+  speed:        1.0
+  head_hold_joints: 1
+  head_ramp_joints: 2
+  head_ramp_min:    0.0
+
+# Leg wave
+leg_wave:
+  # v4 (2026-04-29): restored MuJoCo amplitudes [0.6, 0.2, 0, 0]. Hip
+  # yaw and hip pitch are the active DOFs (active_dofs: [0, 1]); tibia
+  # and tarsus are passive. The previous values [0.10, 0.05, 0, 0] left
+  # legs barely able to lift, which is why the locomotion looked dead.
+  amplitudes:     [0.6, 0.2, 0.0, 0.0]
+  phase_offsets:  [-1.5707963, 3.1415926, 0.0, 3.1415926]
+  dc_offsets:     [0.0, 0.0, 0.0, 0.5235987755982988]
+  active_dofs:    [0, 1]
+
+# CPG oscillator network (Kuramoto chain).
+cpg:
+  enabled:            true
+  coupling_omega:     -2.5
+  leg_coupling_omega: -2.5
+
+# Simulation
+# dt=0.004 with default PhysX 4 position iterations is fine for 57/58
+# multi-DOF joints in this articulation. The frozen compound joint at
+# leg_9_R_0 is addressed separately by raising PhysX solver iterations
+# (see SimulationCfg in test_walk.py / optimize_impedance_bayesian.py).
+simulation:
+  duration:     10.0
+  timestep:     0.004
+
+# Impedance control — Isaac-v2 CONSERVATIVE gains (restored 2026-04-29).
+# ============================================================================
+# These values are the previous Isaac-Lab-tuned baseline (NOT a copy of
+# MuJoCo's Bayesian winners). They were derived empirically from runs in
+# PhysX: the MuJoCo winners pushed too far into PhysX-unstable territory
+# (very soft proximal legs slid during stance, near-zero pitch damping
+# rang under contact impulses, the high-gain heading servo made
+# joint_body_1 oscillate wildly even with bumped solver iterations).
+# These conservative gains land inside PhysX's stable region.
+#
+# Side-by-side reference (Isaac-v2 / MuJoCo-Bayesian-v3 / why MuJoCo's
+# value is unstable here):
+#   body_kp        0.05    / 0.0479    / OK either way
+#   body_kv        0.02    / 0.0123    / less damping → ringing in PhysX
+#   body_kp_head   0.05    / 2.0       / 40× stiffer pulled body around
+#   body_kv_head   0.01    / 0.20      / same
+#   head_yaw_gain  0.0     / 1.0       / servo off — joint_body_1 rang
+#   pitch_kp       0.02    / 0.0145    / OK either way
+#   pitch_kv       0.005   / 4.1e-5    / 100× less damping → contact ringing
+#   leg.kp[0]      0.5     / 0.033     / soft hip_yaw → leg slid in stance
+#   leg.kp[1]      0.06    / 0.0089    / soft hip_pitch → couldn't hold swing
+impedance:
+  # Body yaw — close to MuJoCo, slightly more damping for PhysX.
+  body_kp:        0.05
+  body_kv:        0.02
+
+  # Heading servo DISABLED. Repeated tuning attempts (kp 2.0→0.3→0.05,
+  # gain 1.0→0.5, clip 0.5→0.2, with dt as fine as 0.0005 and PhysX
+  # solver iterations bumped to 32+8) still left joint_body_1 with
+  # RMSE 11° vs the family's 1.6° — i.e. it kept oscillating. Setting
+  # head_yaw_gain=0 turns the heading servo off entirely; joint_body_1
+  # then just follows the same body-yaw wave as joints 2..18 and tracks
+  # cleanly. Trade-off: no closed-loop heading control (the robot won't
+  # auto-correct yaw drift), but for now we want forward locomotion,
+  # not steered locomotion.
+  body_kp_head:   0.05
+  body_kv_head:   0.01
+  head_yaw_gain:  0.0
+  head_yaw_target_clip: 0.2
+  head_yaw_rate:  0.0
+
+  # Pitch — gentle compliance joints with finite damping. The MuJoCo
+  # optimizer's near-zero kv (4e-5) lets PhysX contacts excite high-
+  # frequency oscillations; 0.005 keeps them quiet without killing
+  # compliance.
+  pitch_kp:       0.02
+  pitch_kv:       0.005
+  head_pitch_offset: -0.25
+  head_pitch_joints: 1
+  # Halved from MuJoCo's (was 0.20 / 0.05). MuJoCo's value was too
+  # stiff under PhysX — head fought every contact perturbation and
+  # pulled the body around with reaction torque. Tiny head mass
+  # (~0.12 mg) means even a small kp holds the −0.25 rad offset.
+  head_pitch_kp:     0.05
+  head_pitch_kv:     0.0125
+
+  # Roll — gentle. Note: with simplify_mjcf.py the body roll DOF is
+  # gone, so these gains apply only if the controller is also asked
+  # to act on legs/feet via roll terms.
+  roll_kp:        0.005
+  roll_kv:        0.002
+
+  settle_time:    1.0
+  ramp_time:      1.0
+
+  leg:
+    # Stiffer than MuJoCo's Bayesian winners. MuJoCo's [0.033, 0.009,
+    # 0.057, 0.106] would slide the foot during stance and not hold
+    # the swing leg. PhysX wants stiffer proximal joints to track
+    # commanded positions on dt=0.004.
+    #   hip_yaw   (DOF 0): kp 0.5   | kv 0.001
+    #   hip_pitch (DOF 1): kp 0.06  | kv 0.003
+    #   tibia     (DOF 2): kp 0.13  | kv 0.0005
+    #   tarsus    (DOF 3): kp 0.13  | kv 0.001
+    kp: [0.5, 0.06, 0.13, 0.13]
+    kv: [0.001, 0.003, 0.0005, 0.001]
+
+# Recording
+recording:
+  dt_record:    0.01
