@@ -1,0 +1,15 @@
+# Renders / large binaries — this is a NOTES repo, not a data repo
+*.mp4
+*.npz
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.usd
+*.usda
+# Python / OS cruft
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
