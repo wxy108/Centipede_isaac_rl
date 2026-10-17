@@ -1,0 +1,2625 @@
+{
+  "format": "centipede-high-fidelity-skin-map/1",
+  "license": "CC0",
+  "species": "Scolopendra subspinipes mutilans",
+  "source_blend_sha256": "1904b0fffab66f7f902924c6975c73770635923236c47a10153f50e6593e858a",
+  "source_rig_xml_sha256": "e71d65d8d33042da62cc5e91c56c059ebec48e3df0f99358edb82a640272d8de",
+  "source_color_contract": {
+    "packed_images": [
+      "QS1167-W01-body",
+      "ashi",
+      "tail"
+    ],
+    "colorspace": "sRGB",
+    "uv_policy": "preserve",
+    "material_policy": "preserve_source_nodes",
+    "mujoco_reference_median_hue_opencv": 19.0,
+    "hue_tolerance_opencv": 6.0
+  },
+  "physics_policy": "visual-only; never loaded by Isaac or collision",
+  "bindings": [
+    {
+      "object": "body_1_head.001",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_2.001",
+      "source_anchor": "b1",
+      "source_pose": {
+        "position": [
+          0.07595225321155509,
+          -0.000699792808847098,
+          0.008948016889193494
+        ],
+        "quaternion": [
+          0.014593044977156291,
+          0.023480043628246003,
+          -0.0003427748340815553,
+          0.999617733483617
+        ]
+      },
+      "target": "link_body_1",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_3.001",
+      "source_anchor": "b2",
+      "source_pose": {
+        "position": [
+          0.07164864349108949,
+          -0.0006246439840995779,
+          0.009095129709685387
+        ],
+        "quaternion": [
+          -0.006677800621350011,
+          -0.013995112229754698,
+          -9.346309516090214e-05,
+          0.9998797603098025
+        ]
+      },
+      "target": "link_body_2",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_4.001",
+      "source_anchor": "b3",
+      "source_pose": {
+        "position": [
+          0.06401112130181967,
+          -0.000564160004143704,
+          0.009167720033970834
+        ],
+        "quaternion": [
+          -0.016485012020986414,
+          0.010080122358364092,
+          0.00016620698083706935,
+          0.9998132865126109
+        ]
+      },
+      "target": "link_body_3",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_5.001",
+      "source_anchor": "b4",
+      "source_pose": {
+        "position": [
+          0.057784227035018614,
+          -0.0007099126167446664,
+          0.009146960845640768
+        ],
+        "quaternion": [
+          0.017714470072532598,
+          -0.0038390660511966514,
+          6.801935113003211e-05,
+          0.9998357137526506
+        ]
+      },
+      "target": "link_body_4",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_6.001",
+      "source_anchor": "b5",
+      "source_pose": {
+        "position": [
+          0.04887705714937192,
+          -0.0007033140787352154,
+          0.009204373017040307
+        ],
+        "quaternion": [
+          -0.00483848711398047,
+          -0.008828499442908026,
+          -4.271365313897782e-05,
+          0.9999493211236151
+        ]
+      },
+      "target": "link_body_5",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_7.001",
+      "source_anchor": "b6",
+      "source_pose": {
+        "position": [
+          0.04189350364582508,
+          -0.0006133513764546839,
+          0.009115875131206066
+        ],
+        "quaternion": [
+          0.008708319367817042,
+          0.02065423792100609,
+          -0.00017990816639253967,
+          0.9997487360645887
+        ]
+      },
+      "target": "link_body_6",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_8.001",
+      "source_anchor": "b7",
+      "source_pose": {
+        "position": [
+          0.034202576290016835,
+          -0.0005836532667159669,
+          0.00920677061656349
+        ],
+        "quaternion": [
+          0.0015817198618689856,
+          -0.011429857141951237,
+          1.8082419266241632e-05,
+          0.9999334258844534
+        ]
+      },
+      "target": "link_body_7",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_9.001",
+      "source_anchor": "b8",
+      "source_pose": {
+        "position": [
+          0.025560371780713527,
+          -0.0004947019758919893,
+          0.00928659035997537
+        ],
+        "quaternion": [
+          0.005449522609419202,
+          -0.0024475435933058592,
+          1.3337047786060202e-05,
+          0.9999821558686994
+        ]
+      },
+      "target": "link_body_8",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_10.001",
+      "source_anchor": "b9",
+      "source_pose": {
+        "position": [
+          0.017188064523156,
+          -0.0004355793903458085,
+          0.009170974594925907
+        ],
+        "quaternion": [
+          0.004974633515863968,
+          -0.021123297658188992,
+          0.00010510203812943896,
+          0.9997644964045226
+        ]
+      },
+      "target": "link_body_9",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_11.001",
+      "source_anchor": "b10",
+      "source_pose": {
+        "position": [
+          0.006770386277704311,
+          -0.0003269338992136676,
+          0.008926553910655178
+        ],
+        "quaternion": [
+          0.00010586114421607361,
+          -0.01536191580899576,
+          1.6237828375230987e-06,
+          0.9998819932039277
+        ]
+      },
+      "target": "link_body_10",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_12.001",
+      "source_anchor": "b11",
+      "source_pose": {
+        "position": [
+          -0.001748831974328664,
+          -0.00028364997605409385,
+          0.00861556471289394
+        ],
+        "quaternion": [
+          0.011624179051964887,
+          -0.020198510849569983,
+          0.0002348496327024067,
+          0.9997283848458431
+        ]
+      },
+      "target": "link_body_11",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_13.001",
+      "source_anchor": "b12",
+      "source_pose": {
+        "position": [
+          -0.012211467675062631,
+          -0.00016092449744485298,
+          0.008243268238659625
+        ],
+        "quaternion": [
+          0.010537775631042228,
+          -1.6644413932363766e-06,
+          8.5675546315241e-09,
+          0.9999444760995383
+        ]
+      },
+      "target": "link_body_12",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_14.001",
+      "source_anchor": "b13",
+      "source_pose": {
+        "position": [
+          -0.02075404300528914,
+          2.8467055309201104e-05,
+          0.008070309794659407
+        ],
+        "quaternion": [
+          0.0051061128854618595,
+          -0.0018937078486781183,
+          9.656073188263601e-06,
+          0.9999851705843172
+        ]
+      },
+      "target": "link_body_13",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_15.001",
+      "source_anchor": "b14",
+      "source_pose": {
+        "position": [
+          -0.030426114199813257,
+          0.00017953719703815824,
+          0.008051883166237032
+        ],
+        "quaternion": [
+          0.008896361920084602,
+          -0.017312185170063544,
+          0.0001540273890342161,
+          0.9998105416851679
+        ]
+      },
+      "target": "link_body_14",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_16.001",
+      "source_anchor": "b15",
+      "source_pose": {
+        "position": [
+          -0.03947637502806134,
+          0.00030623381323044495,
+          0.007878185579828997
+        ],
+        "quaternion": [
+          0.005198702265886776,
+          -0.015014560676706791,
+          7.804680047497174e-05,
+          0.9998737572169472
+        ]
+      },
+      "target": "link_body_15",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_17.001",
+      "source_anchor": "b16",
+      "source_pose": {
+        "position": [
+          -0.05051508965881746,
+          0.00046189760631368726,
+          0.007521123893346093
+        ],
+        "quaternion": [
+          0.002170208728535845,
+          0.015643691069212547,
+          -3.3968845132793965e-05,
+          0.9998752742067006
+        ]
+      },
+      "target": "link_body_16",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_18.001",
+      "source_anchor": "b17",
+      "source_pose": {
+        "position": [
+          -0.05867416892075972,
+          0.0005221562384399066,
+          0.007524947137803744
+        ],
+        "quaternion": [
+          -0.013944188351014273,
+          -0.012992928379227785,
+          -0.00018122648601148682,
+          0.9998183387897656
+        ]
+      },
+      "target": "link_body_17",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_19.001",
+      "source_anchor": "b18",
+      "source_pose": {
+        "position": [
+          -0.06861860303016594,
+          0.0004053002114944148,
+          0.007551774071003453
+        ],
+        "quaternion": [
+          -0.017635438093277108,
+          -0.02155065796579133,
+          -0.00038021571417788994,
+          0.9996121327297465
+        ]
+      },
+      "target": "link_body_18",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_20.001",
+      "source_anchor": "b19",
+      "source_pose": {
+        "position": [
+          -0.07677045946678664,
+          0.00014766470131754054,
+          0.007269700172668669
+        ],
+        "quaternion": [
+          -0.049389871574246055,
+          5.913564060764161e-05,
+          2.9165569201659564e-06,
+          0.9987795738201444
+        ]
+      },
+      "target": "link_body_19",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_21.001",
+      "source_anchor": "b20",
+      "source_pose": {
+        "position": [
+          -0.08507851591928742,
+          -0.000409278586608288,
+          0.007089855681247769
+        ],
+        "quaternion": [
+          -0.049389871574246055,
+          5.913564060764161e-05,
+          2.9165569201659564e-06,
+          0.9987795738201444
+        ]
+      },
+      "target": "link_body_20",
+      "scale_mode": "body"
+    },
+    {
+      "object": "body_1_left_forcipules.001",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "body_1_right_forcipules.001",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "body_1_left_mandibles.001",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "body_1_right_mandibles.001",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "left_antenna",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "right_antenna",
+      "source_anchor": "b0",
+      "source_pose": {
+        "position": [
+          0.08390662,
+          -0.00074569,
+          0.00877781
+        ],
+        "quaternion": [
+          0.0028848300135102607,
+          0.010696900050095815,
+          -3.086000014452382e-05,
+          0.9999386246829212
+        ]
+      },
+      "target": "link_body_0",
+      "scale_mode": "head_fixed"
+    },
+    {
+      "object": "left_leg_1.001",
+      "source_anchor": "l1L",
+      "source_pose": {
+        "position": [
+          0.07359123623879668,
+          0.0029431701492603378,
+          0.007815318206708229
+        ],
+        "quaternion": [
+          0.9231108425514577,
+          0.024150344970483392,
+          -0.05878359117697919,
+          0.37924612405413277
+        ]
+      },
+      "source_bone_length": 0.006187983052085719,
+      "target": "link_leg_0_L_2",
+      "target_endpoint": "link_leg_0_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_1",
+      "source_anchor": "l1Ll",
+      "source_pose": {
+        "position": [
+          0.07773624488632302,
+          0.007382436244985578,
+          0.008999781838980786
+        ],
+        "quaternion": [
+          0.9208125427303222,
+          -0.07906596135298824,
+          0.26214241520919984,
+          0.27773042515024193
+        ]
+      },
+      "source_bone_length": 0.007427930000000006,
+      "target": "link_leg_0_L_3",
+      "target_endpoint": "foot_0_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_1.001",
+      "source_anchor": "l1R",
+      "source_pose": {
+        "position": [
+          0.07379801085404442,
+          -0.004262996717847219,
+          0.006843945929982968
+        ],
+        "quaternion": [
+          -0.9140942644756921,
+          0.01909833516991558,
+          0.04334882051357984,
+          0.40272547598390507
+        ]
+      },
+      "source_bone_length": 0.005680901772826211,
+      "target": "link_leg_0_R_2",
+      "target_endpoint": "link_leg_0_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_1",
+      "source_anchor": "l1Rl",
+      "source_pose": {
+        "position": [
+          0.07745691442211754,
+          -0.008550635807476871,
+          0.00755191532841879
+        ],
+        "quaternion": [
+          -0.9280847949981474,
+          -0.06435976224871295,
+          -0.31332863390352067,
+          0.19063473312250803
+        ]
+      },
+      "source_bone_length": 0.006158990000000004,
+      "target": "link_leg_0_R_3",
+      "target_endpoint": "foot_0_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_2.001",
+      "source_anchor": "l2L",
+      "source_pose": {
+        "position": [
+          0.06762179713788806,
+          0.0034747966673686244,
+          0.007923439393006802
+        ],
+        "quaternion": [
+          0.8702234923885526,
+          0.059461401019395614,
+          -0.10851000049363098,
+          0.47686580384501653
+        ]
+      },
+      "source_bone_length": 0.0065809117198910964,
+      "target": "link_leg_1_L_2",
+      "target_endpoint": "link_leg_1_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_2",
+      "source_anchor": "l2Ll",
+      "source_pose": {
+        "position": [
+          0.0707644278311345,
+          0.008930129395765186,
+          0.009839585580892974
+        ],
+        "quaternion": [
+          0.8917460323539078,
+          -0.08823355174585167,
+          0.1980949558516508,
+          0.3971929538568225
+        ]
+      },
+      "source_bone_length": 0.008178329999999996,
+      "target": "link_leg_1_L_3",
+      "target_endpoint": "foot_1_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_2.001",
+      "source_anchor": "l2R",
+      "source_pose": {
+        "position": [
+          0.06718548119486162,
+          -0.0025309567768186303,
+          0.0071410072601071515
+        ],
+        "quaternion": [
+          -0.8455351038106842,
+          0.07162684372769783,
+          0.11739152554019476,
+          0.515906205828937
+        ]
+      },
+      "source_bone_length": 0.007175909408667311,
+      "target": "link_leg_1_R_2",
+      "target_endpoint": "link_leg_1_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_2",
+      "source_anchor": "l2Rl",
+      "source_pose": {
+        "position": [
+          0.06999871717306314,
+          -0.008721058804072169,
+          0.009434915729193097
+        ],
+        "quaternion": [
+          -0.7720301046640843,
+          -0.17958235089593821,
+          -0.2491540535222968,
+          0.5564548089040654
+        ]
+      },
+      "source_bone_length": 0.007846960000000002,
+      "target": "link_leg_1_R_3",
+      "target_endpoint": "foot_1_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_3.001",
+      "source_anchor": "l3L",
+      "source_pose": {
+        "position": [
+          0.06066666122966258,
+          0.003992729414499386,
+          0.00851276217990263
+        ],
+        "quaternion": [
+          0.7476410155137617,
+          0.09345742301232117,
+          -0.10772686163158048,
+          0.6486089309348566
+        ]
+      },
+      "source_bone_length": 0.0059040917367957635,
+      "target": "link_leg_2_L_2",
+      "target_endpoint": "link_leg_2_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_3",
+      "source_anchor": "l3Ll",
+      "source_pose": {
+        "position": [
+          0.06132796642190074,
+          0.009691753194012108,
+          0.009906355606898965
+        ],
+        "quaternion": [
+          0.6266114966936678,
+          -0.20606852700845288,
+          0.1767590965896101,
+          0.7305135290743857
+        ]
+      },
+      "source_bone_length": 0.007849690000000001,
+      "target": "link_leg_2_L_3",
+      "target_endpoint": "foot_2_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_3.001",
+      "source_anchor": "l3R",
+      "source_pose": {
+        "position": [
+          0.06066582062945919,
+          -0.0043122325919749535,
+          0.008996057616265382
+        ],
+        "quaternion": [
+          -0.5902578699489868,
+          0.04849937388969357,
+          0.035562943275192445,
+          0.804971263313914
+        ]
+      },
+      "source_bone_length": 0.005018388489335996,
+      "target": "link_leg_2_R_2",
+      "target_endpoint": "link_leg_2_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_3",
+      "source_anchor": "l3Rl",
+      "source_pose": {
+        "position": [
+          0.05926831320190296,
+          -0.008939410495196302,
+          0.010345287274909633
+        ],
+        "quaternion": [
+          -0.48556186145259006,
+          -0.25715262208656525,
+          -0.1519784724183999,
+          0.8215867279709856
+        ]
+      },
+      "source_bone_length": 0.007934770000000008,
+      "target": "link_leg_2_R_3",
+      "target_endpoint": "foot_2_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_4.001",
+      "source_anchor": "l4L",
+      "source_pose": {
+        "position": [
+          0.052842447723490706,
+          0.004374604316536922,
+          0.008159753101785613
+        ],
+        "quaternion": [
+          0.6426396479545793,
+          0.20253318293297876,
+          -0.18172626179764148,
+          0.7162193508003724
+        ]
+      },
+      "source_bone_length": 0.005559443161279739,
+      "target": "link_leg_3_L_2",
+      "target_endpoint": "link_leg_3_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_4",
+      "source_anchor": "l4Ll",
+      "source_pose": {
+        "position": [
+          0.05232685101749525,
+          0.009210994975389727,
+          0.010852501455276527
+        ],
+        "quaternion": [
+          0.49729698579022474,
+          -0.2940071707773868,
+          0.18384793894004436,
+          0.7952706626067206
+        ]
+      },
+      "source_bone_length": 0.008243240000000011,
+      "target": "link_leg_3_L_3",
+      "target_endpoint": "foot_3_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_4.001",
+      "source_anchor": "l4R",
+      "source_pose": {
+        "position": [
+          0.05312270770507491,
+          -0.004085773364952536,
+          0.008383162013374936
+        ],
+        "quaternion": [
+          -0.7109450581650536,
+          0.14090466533051124,
+          0.14891521483312298,
+          0.6727014630205518
+        ]
+      },
+      "source_bone_length": 0.0061046615309695955,
+      "target": "link_leg_3_R_2",
+      "target_endpoint": "link_leg_3_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_4",
+      "source_anchor": "l4Rl",
+      "source_pose": {
+        "position": [
+          0.05316428053019423,
+          -0.009421112905973583,
+          0.011349526132954486
+        ],
+        "quaternion": [
+          -0.6395784831899874,
+          -0.30386450052327085,
+          -0.30521456338629943,
+          0.6367494008313237
+        ]
+      },
+      "source_bone_length": 0.007792820000000008,
+      "target": "link_leg_3_R_3",
+      "target_endpoint": "foot_3_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_5.001",
+      "source_anchor": "l5L",
+      "source_pose": {
+        "position": [
+          0.04462258379097274,
+          0.004095649069517335,
+          0.007767933359245506
+        ],
+        "quaternion": [
+          0.5498290374350757,
+          0.0880903429143785,
+          -0.0584564249381428,
+          0.8285595738761922
+        ]
+      },
+      "source_bone_length": 0.006230768956308686,
+      "target": "link_leg_4_L_2",
+      "target_endpoint": "link_leg_4_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_5",
+      "source_anchor": "l5Ll",
+      "source_pose": {
+        "position": [
+          0.042305765700756594,
+          0.0096197613878365,
+          0.009482290036935919
+        ],
+        "quaternion": [
+          0.4942007470173193,
+          -0.2431164314346112,
+          0.1462092458169106,
+          0.8217559728116823
+        ]
+      },
+      "source_bone_length": 0.009218650000000009,
+      "target": "link_leg_4_L_3",
+      "target_endpoint": "foot_4_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_5.001",
+      "source_anchor": "l5R",
+      "source_pose": {
+        "position": [
+          0.045179003679187826,
+          -0.00430866986199983,
+          0.007548797246427605
+        ],
+        "quaternion": [
+          -0.7392930637278115,
+          0.1401012791462358,
+          0.16225573338233162,
+          0.6383498057414109
+        ]
+      },
+      "source_bone_length": 0.006832823441806474,
+      "target": "link_leg_4_R_2",
+      "target_endpoint": "link_leg_4_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_5",
+      "source_anchor": "l5Rl",
+      "source_pose": {
+        "position": [
+          0.04567354767837254,
+          -0.010368001249644612,
+          0.01066767614027283
+        ],
+        "quaternion": [
+          -0.7453502421091689,
+          -0.2535416309434558,
+          -0.4588837977458022,
+          0.41181952131088484
+        ]
+      },
+      "source_bone_length": 0.008147330000000006,
+      "target": "link_leg_4_R_3",
+      "target_endpoint": "foot_4_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_6.001",
+      "source_anchor": "l6L",
+      "source_pose": {
+        "position": [
+          0.037869872378794654,
+          0.0041417005529357795,
+          0.007678655552166318
+        ],
+        "quaternion": [
+          0.6141992706317881,
+          0.04655720115456347,
+          -0.036337563924458915,
+          0.7869379037916964
+        ]
+      },
+      "source_bone_length": 0.007003241290359774,
+      "target": "link_leg_5_L_2",
+      "target_endpoint": "link_leg_5_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_6",
+      "source_anchor": "l6Ll",
+      "source_pose": {
+        "position": [
+          0.036138009107503026,
+          0.010815743114726842,
+          0.008904703701283018
+        ],
+        "quaternion": [
+          0.513537918649362,
+          -0.45017799336704023,
+          0.36553034497315207,
+          0.6324603918832508
+        ]
+      },
+      "source_bone_length": 0.007987300000000003,
+      "target": "link_leg_5_L_3",
+      "target_endpoint": "foot_5_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_6.001",
+      "source_anchor": "l6R",
+      "source_pose": {
+        "position": [
+          0.038035898900684366,
+          -0.004766413246028352,
+          0.007321375668413966
+        ],
+        "quaternion": [
+          -0.748978715886976,
+          0.042938265547321566,
+          0.04877137837415594,
+          0.6594001373608968
+        ]
+      },
+      "source_bone_length": 0.006638538166268236,
+      "target": "link_leg_5_R_2",
+      "target_endpoint": "link_leg_5_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_6",
+      "source_anchor": "l6Rl",
+      "source_pose": {
+        "position": [
+          0.038511407033487426,
+          -0.01125153826454544,
+          0.008658250567139324
+        ],
+        "quaternion": [
+          -0.6970492298270751,
+          -0.2972183035561269,
+          -0.4048340015232487,
+          0.5117549046559046
+        ]
+      },
+      "source_bone_length": 0.007934800000000002,
+      "target": "link_leg_5_R_3",
+      "target_endpoint": "foot_5_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_7.001",
+      "source_anchor": "l7L",
+      "source_pose": {
+        "position": [
+          0.02981585600305677,
+          0.003661815982657738,
+          0.0068994984852371235
+        ],
+        "quaternion": [
+          0.7109006318369581,
+          0.11562079750817053,
+          -0.12030662777436547,
+          0.6832118545158223
+        ]
+      },
+      "source_bone_length": 0.0069157654193010365,
+      "target": "link_leg_6_L_2",
+      "target_endpoint": "link_leg_6_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_7",
+      "source_anchor": "l7Ll",
+      "source_pose": {
+        "position": [
+          0.029758435834167738,
+          0.009967670253756875,
+          0.009738638525930005
+        ],
+        "quaternion": [
+          0.6326061567405639,
+          -0.32095517475143215,
+          0.3244988223374184,
+          0.6256978029015603
+        ]
+      },
+      "source_bone_length": 0.008585500000000005,
+      "target": "link_leg_6_L_3",
+      "target_endpoint": "foot_6_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_7.001",
+      "source_anchor": "l7R",
+      "source_pose": {
+        "position": [
+          0.029627100683974616,
+          -0.00435505698048071,
+          0.0072328207633974816
+        ],
+        "quaternion": [
+          -0.7201188990981588,
+          0.017949376464805628,
+          0.018641894099204664,
+          0.6933679188068732
+        ]
+      },
+      "source_bone_length": 0.006986912659408306,
+      "target": "link_leg_6_R_2",
+      "target_endpoint": "link_leg_6_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_7",
+      "source_anchor": "l7Rl",
+      "source_pose": {
+        "position": [
+          0.02962001927070203,
+          -0.011283201858452082,
+          0.00813709224565552
+        ],
+        "quaternion": [
+          -0.48632913516680526,
+          -0.47088131856050375,
+          -0.3552439557485265,
+          0.6446367101110269
+        ]
+      },
+      "source_bone_length": 0.007862880000000004,
+      "target": "link_leg_6_R_3",
+      "target_endpoint": "foot_6_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_8.001",
+      "source_anchor": "l8L",
+      "source_pose": {
+        "position": [
+          0.020294151888635134,
+          0.0038341512285935057,
+          0.007471170286688325
+        ],
+        "quaternion": [
+          0.5131061707322452,
+          0.2288209184179649,
+          -0.14412960187212315,
+          0.81461015382515
+        ]
+      },
+      "source_bone_length": 0.0068927940069974545,
+      "target": "link_leg_7_L_2",
+      "target_endpoint": "link_leg_7_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_8",
+      "source_anchor": "l8Ll",
+      "source_pose": {
+        "position": [
+          0.017989777704109877,
+          0.009338137132017088,
+          0.010921765599892712
+        ],
+        "quaternion": [
+          0.5275743913547937,
+          -0.17758403087952362,
+          0.11385174396456614,
+          0.8229015457267209
+        ]
+      },
+      "source_bone_length": 0.008535430000000002,
+      "target": "link_leg_7_L_3",
+      "target_endpoint": "foot_7_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_8.001",
+      "source_anchor": "l8R",
+      "source_pose": {
+        "position": [
+          0.020415736858228645,
+          -0.004195060810195057,
+          0.0073721025949728776
+        ],
+        "quaternion": [
+          -0.7527615977079734,
+          0.07206341293953038,
+          0.08358795273512881,
+          0.6489760362981027
+        ]
+      },
+      "source_bone_length": 0.007222983500112682,
+      "target": "link_leg_7_R_2",
+      "target_endpoint": "link_leg_7_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_8",
+      "source_anchor": "l8Rl",
+      "source_pose": {
+        "position": [
+          0.021029686067868085,
+          -0.011231435277167141,
+          0.008883390579252009
+        ],
+        "quaternion": [
+          -0.6347521367400424,
+          -0.3372540890696837,
+          -0.359883654242314,
+          0.5948387678345519
+        ]
+      },
+      "source_bone_length": 0.007316580000000006,
+      "target": "link_leg_7_R_3",
+      "target_endpoint": "foot_7_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_9.001",
+      "source_anchor": "l9L",
+      "source_pose": {
+        "position": [
+          0.010939572456729687,
+          0.00415780908866936,
+          0.007300285686112304
+        ],
+        "quaternion": [
+          0.49226912173987875,
+          0.16392130182090933,
+          -0.09498079170328291,
+          0.849576110656488
+        ]
+      },
+      "source_bone_length": 0.007307658172390118,
+      "target": "link_leg_8_L_2",
+      "target_endpoint": "link_leg_8_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_9",
+      "source_anchor": "l9Ll",
+      "source_pose": {
+        "position": [
+          0.007659394515377268,
+          0.009904090783940542,
+          0.010402308786631774
+        ],
+        "quaternion": [
+          0.44691516125429914,
+          -0.22880346822772282,
+          0.11938207139976476,
+          0.8565417284617906
+        ]
+      },
+      "source_bone_length": 0.009641550000000011,
+      "target": "link_leg_8_L_3",
+      "target_endpoint": "foot_8_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_9.001",
+      "source_anchor": "l9R",
+      "source_pose": {
+        "position": [
+          0.010762863692300957,
+          -0.004114962049970874,
+          0.006849276978152758
+        ],
+        "quaternion": [
+          -0.704194767173416,
+          0.1193934121236009,
+          0.12199416236402223,
+          0.6891823905006305
+        ]
+      },
+      "source_bone_length": 0.007177626238764461,
+      "target": "link_leg_8_R_2",
+      "target_endpoint": "link_leg_8_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_9",
+      "source_anchor": "l9Rl",
+      "source_pose": {
+        "position": [
+          0.010668508926053494,
+          -0.010725898898811068,
+          0.009643007384282405
+        ],
+        "quaternion": [
+          -0.6075462385062969,
+          -0.32983491415858623,
+          -0.3061796112228739,
+          0.6544849449378178
+        ]
+      },
+      "source_bone_length": 0.008902110000000006,
+      "target": "link_leg_8_R_3",
+      "target_endpoint": "foot_8_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_10.001",
+      "source_anchor": "l10L",
+      "source_pose": {
+        "position": [
+          0.0012504911140678032,
+          0.0044051550388518644,
+          0.007093275574095191
+        ],
+        "quaternion": [
+          0.384434796490734,
+          0.07433525663628628,
+          -0.031074538003864713,
+          0.9196295612668137
+        ]
+      },
+      "source_bone_length": 0.006368034201941762,
+      "target": "link_leg_9_L_2",
+      "target_endpoint": "link_leg_9_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_10",
+      "source_anchor": "l10Ll",
+      "source_pose": {
+        "position": [
+          -0.002988956391249703,
+          0.008856251105158874,
+          0.008756612056970349
+        ],
+        "quaternion": [
+          0.3189458889106306,
+          -0.3604419571298627,
+          0.13267964236687269,
+          0.8664590169123992
+        ]
+      },
+      "source_bone_length": 0.009390020000000008,
+      "target": "link_leg_9_L_3",
+      "target_endpoint": "foot_9_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_10.001",
+      "source_anchor": "l10R",
+      "source_pose": {
+        "position": [
+          0.0018597771813076572,
+          -0.0032563041424730106,
+          0.006136901377579926
+        ],
+        "quaternion": [
+          -0.5330294414216885,
+          0.13952066836522933,
+          0.0896346480580365,
+          0.8296862223419857
+        ]
+      },
+      "source_bone_length": 0.008065846755660569,
+      "target": "link_leg_9_R_2",
+      "target_endpoint": "link_leg_9_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_10",
+      "source_anchor": "l10Rl",
+      "source_pose": {
+        "position": [
+          -0.0011882842913039336,
+          -0.010024273685107159,
+          0.009293132265040078
+        ],
+        "quaternion": [
+          -0.48796794208871813,
+          -0.3142434964321927,
+          -0.19387712128962728,
+          0.7909171728343112
+        ]
+      },
+      "source_bone_length": 0.008449050000000005,
+      "target": "link_leg_9_R_3",
+      "target_endpoint": "foot_9_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_11.001",
+      "source_anchor": "l11L",
+      "source_pose": {
+        "position": [
+          -0.007833370851964082,
+          0.004241318232128832,
+          0.006235025118395035
+        ],
+        "quaternion": [
+          0.5206290829812982,
+          0.03135927636824189,
+          -0.01914033194131881,
+          0.8529921461730403
+        ]
+      },
+      "source_bone_length": 0.007623772788869041,
+      "target": "link_leg_10_L_2",
+      "target_endpoint": "link_leg_10_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_11",
+      "source_anchor": "l11Ll",
+      "source_pose": {
+        "position": [
+          -0.011352188498837073,
+          0.010833864537213963,
+          0.007744384956095658
+        ],
+        "quaternion": [
+          0.49736640785030833,
+          -0.37296075711951515,
+          0.2498787253859294,
+          0.7423527144090082
+        ]
+      },
+      "source_bone_length": 0.009016720000000006,
+      "target": "link_leg_10_L_3",
+      "target_endpoint": "foot_10_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_11.001",
+      "source_anchor": "l11R",
+      "source_pose": {
+        "position": [
+          -0.007944710889641141,
+          -0.003584638711799383,
+          0.005881290247634634
+        ],
+        "quaternion": [
+          -0.627978045532949,
+          0.095103513316911,
+          0.07771580646735297,
+          0.7684784639197946
+        ]
+      },
+      "source_bone_length": 0.007808375860696004,
+      "target": "link_leg_10_R_2",
+      "target_endpoint": "link_leg_10_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_11",
+      "source_anchor": "l11Rl",
+      "source_pose": {
+        "position": [
+          -0.009622641431393594,
+          -0.010875273485055842,
+          0.008117789136956538
+        ],
+        "quaternion": [
+          -0.6319579027196266,
+          -0.18631522706465617,
+          -0.1601906514204399,
+          0.7350202722044832
+        ]
+      },
+      "source_bone_length": 0.008857270000000007,
+      "target": "link_leg_10_R_3",
+      "target_endpoint": "foot_10_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_12.001",
+      "source_anchor": "l12L",
+      "source_pose": {
+        "position": [
+          -0.01746400528213232,
+          0.004623652122928023,
+          0.006159950505667373
+        ],
+        "quaternion": [
+          0.46877754938903193,
+          0.06191689651036026,
+          -0.032963509496123825,
+          0.8805267254076043
+        ]
+      },
+      "source_bone_length": 0.007281067032770682,
+      "target": "link_leg_11_L_2",
+      "target_endpoint": "link_leg_11_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_12",
+      "source_anchor": "l12Ll",
+      "source_pose": {
+        "position": [
+          -0.02130694845799417,
+          0.01057861881898727,
+          0.007828511721692155
+        ],
+        "quaternion": [
+          0.39501890965028646,
+          -0.3773217667659186,
+          0.18231743417819582,
+          0.8175259619963298
+        ]
+      },
+      "source_bone_length": 0.009547140000000008,
+      "target": "link_leg_11_L_3",
+      "target_endpoint": "foot_11_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_12.001",
+      "source_anchor": "l12R",
+      "source_pose": {
+        "position": [
+          -0.018453211178826732,
+          -0.005193741318220649,
+          0.006374457725676844
+        ],
+        "quaternion": [
+          -0.4492075012668801,
+          0.10746554375888283,
+          0.05453106543022074,
+          0.8852627523019475
+        ]
+      },
+      "source_bone_length": 0.005721387074512617,
+      "target": "link_leg_11_R_2",
+      "target_endpoint": "link_leg_11_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_12",
+      "source_anchor": "l12Rl",
+      "source_pose": {
+        "position": [
+          -0.02170119606214622,
+          -0.009701984768891276,
+          0.0077384977704018955
+        ],
+        "quaternion": [
+          -0.38721244243046526,
+          -0.36335813022066404,
+          -0.16946259132795635,
+          0.830252867366317
+        ]
+      },
+      "source_bone_length": 0.009263780000000006,
+      "target": "link_leg_11_R_3",
+      "target_endpoint": "foot_11_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_13.001",
+      "source_anchor": "l13L",
+      "source_pose": {
+        "position": [
+          -0.027041572903264734,
+          0.00515520339128789,
+          0.006230385929001107
+        ],
+        "quaternion": [
+          0.42609449436242786,
+          0.06035368943352088,
+          -0.028503672006268813,
+          0.9022130872072013
+        ]
+      },
+      "source_bone_length": 0.006420535448153843,
+      "target": "link_leg_12_L_2",
+      "target_endpoint": "link_leg_12_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_13",
+      "source_anchor": "l13Ll",
+      "source_pose": {
+        "position": [
+          -0.030930321437575056,
+          0.010116112844672051,
+          0.00745115932043092
+        ],
+        "quaternion": [
+          0.28515416274956007,
+          -0.38057579847243556,
+          0.12462208641116476,
+          0.8708148486688743
+        ]
+      },
+      "source_bone_length": 0.010041080000000008,
+      "target": "link_leg_12_L_3",
+      "target_endpoint": "foot_12_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_13.001",
+      "source_anchor": "l13R",
+      "source_pose": {
+        "position": [
+          -0.02720053740885603,
+          -0.00382504151157015,
+          0.005915788726447643
+        ],
+        "quaternion": [
+          -0.5181388128101352,
+          0.05670094528806097,
+          0.03445325707047568,
+          0.8527192659605979
+        ]
+      },
+      "source_bone_length": 0.007536487093885327,
+      "target": "link_leg_12_R_2",
+      "target_endpoint": "link_leg_12_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_13",
+      "source_anchor": "l13Rl",
+      "source_pose": {
+        "position": [
+          -0.030547903445886464,
+          -0.010385981718022852,
+          0.007511984810200405
+        ],
+        "quaternion": [
+          -0.45194288245667347,
+          -0.2506118417614848,
+          -0.13394677623909046,
+          0.8455764879068164
+        ]
+      },
+      "source_bone_length": 0.008951450000000012,
+      "target": "link_leg_12_R_3",
+      "target_endpoint": "foot_12_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_14.001",
+      "source_anchor": "l14L",
+      "source_pose": {
+        "position": [
+          -0.03709440404774165,
+          0.005683018787847213,
+          0.006400009301487916
+        ],
+        "quaternion": [
+          0.32475558349429395,
+          0.1248542434197161,
+          -0.04329550008294993,
+          0.9365205435877739
+        ]
+      },
+      "source_bone_length": 0.006599837864803961,
+      "target": "link_leg_13_L_2",
+      "target_endpoint": "link_leg_13_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_14",
+      "source_anchor": "l14Ll",
+      "source_pose": {
+        "position": [
+          -0.041893071300408764,
+          0.009483330441963974,
+          0.00886745408738783
+        ],
+        "quaternion": [
+          0.39294879507105795,
+          -0.2240126434374738,
+          0.09931679439539605,
+          0.8863101908380513
+        ]
+      },
+      "source_bone_length": 0.009439290000000015,
+      "target": "link_leg_13_L_3",
+      "target_endpoint": "foot_13_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_14.001",
+      "source_anchor": "l14R",
+      "source_pose": {
+        "position": [
+          -0.03804339373452856,
+          -0.00429964487451686,
+          0.006435500827071023
+        ],
+        "quaternion": [
+          -0.41484327458664133,
+          0.10195680001483458,
+          0.04684219231523067,
+          0.9029483249223468
+        ]
+      },
+      "source_bone_length": 0.0066040945931671894,
+      "target": "link_leg_13_R_2",
+      "target_endpoint": "link_leg_13_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_14",
+      "source_anchor": "l14Rl",
+      "source_pose": {
+        "position": [
+          -0.04219063803873264,
+          -0.009157987527937839,
+          0.008112085670941838
+        ],
+        "quaternion": [
+          -0.30189253786242737,
+          -0.2893735765620611,
+          -0.0967225719065796,
+          0.9031990770890114
+        ]
+      },
+      "source_bone_length": 0.008497750000000012,
+      "target": "link_leg_13_R_3",
+      "target_endpoint": "foot_13_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_15.001",
+      "source_anchor": "l15L",
+      "source_pose": {
+        "position": [
+          -0.047331838070273975,
+          0.005872259331311631,
+          0.006239562611388506
+        ],
+        "quaternion": [
+          0.3320436279603174,
+          0.15463723180974623,
+          -0.05527893619569945,
+          0.9288587593828476
+        ]
+      },
+      "source_bone_length": 0.0061732985335313335,
+      "target": "link_leg_14_L_2",
+      "target_endpoint": "link_leg_14_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_15",
+      "source_anchor": "l15Ll",
+      "source_pose": {
+        "position": [
+          -0.05162422665406623,
+          0.009498892987987681,
+          0.008795446675679091
+        ],
+        "quaternion": [
+          0.391272703256002,
+          -0.07736400896192949,
+          0.03303107810245509,
+          0.9164220805302928
+        ]
+      },
+      "source_bone_length": 0.009691630000000017,
+      "target": "link_leg_14_L_3",
+      "target_endpoint": "foot_14_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_15.001",
+      "source_anchor": "l15R",
+      "source_pose": {
+        "position": [
+          -0.047180771835629395,
+          -0.003893099488897063,
+          0.006283236606200606
+        ],
+        "quaternion": [
+          -0.3681580488490682,
+          0.09390167063823557,
+          0.037403891295640083,
+          0.9242527123221986
+        ]
+      },
+      "source_bone_length": 0.007643795563468462,
+      "target": "link_leg_14_R_2",
+      "target_endpoint": "link_leg_14_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_15",
+      "source_anchor": "l15Rl",
+      "source_pose": {
+        "position": [
+          -0.05249220882958118,
+          -0.009155289011037796,
+          0.00787245311393417
+        ],
+        "quaternion": [
+          -0.298398589958973,
+          -0.14766828386058178,
+          -0.046787652199983286,
+          0.9417872769653359
+        ]
+      },
+      "source_bone_length": 0.008988310000000011,
+      "target": "link_leg_14_R_3",
+      "target_endpoint": "foot_14_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_16.001",
+      "source_anchor": "l16L",
+      "source_pose": {
+        "position": [
+          -0.056713406530342764,
+          0.00546626131191261,
+          0.006140922096488402
+        ],
+        "quaternion": [
+          0.3611358970972754,
+          0.11849709661475853,
+          -0.04632376314398484,
+          0.9237929480623894
+        ]
+      },
+      "source_bone_length": 0.008490089909647612,
+      "target": "link_leg_15_L_2",
+      "target_endpoint": "link_leg_15_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_16",
+      "source_anchor": "l16Ll",
+      "source_pose": {
+        "position": [
+          -0.06276626745897268,
+          0.011162710070091033,
+          0.007871521067369028
+        ],
+        "quaternion": [
+          0.2807311189423246,
+          -0.20163890278469385,
+          0.06044986527483656,
+          0.9364174312396321
+        ]
+      },
+      "source_bone_length": 0.007318890000000016,
+      "target": "link_leg_15_L_3",
+      "target_endpoint": "foot_15_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_16.001",
+      "source_anchor": "l16R",
+      "source_pose": {
+        "position": [
+          -0.05863149328634599,
+          -0.004245733885596624,
+          0.005771676339569087
+        ],
+        "quaternion": [
+          -0.36881010625927585,
+          0.073030317258017,
+          0.029081233728643036,
+          0.9261749079558551
+        ]
+      },
+      "source_bone_length": 0.006276457884675095,
+      "target": "link_leg_15_R_2",
+      "target_endpoint": "link_leg_15_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_16",
+      "source_anchor": "l16Rl",
+      "source_pose": {
+        "position": [
+          -0.06322456508185832,
+          -0.008364987563337166,
+          0.0069246569108669265
+        ],
+        "quaternion": [
+          -0.35486184888193295,
+          -0.1650818928204171,
+          -0.06381308318433995,
+          0.918013576852453
+        ]
+      },
+      "source_bone_length": 0.008994890000000016,
+      "target": "link_leg_15_R_3",
+      "target_endpoint": "foot_15_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_17.001",
+      "source_anchor": "l17L",
+      "source_pose": {
+        "position": [
+          -0.06561690744302229,
+          0.005398233572530318,
+          0.006668196551949688
+        ],
+        "quaternion": [
+          0.398158091179053,
+          0.12041085730688125,
+          -0.05280919692117117,
+          0.9078450025151968
+        ]
+      },
+      "source_bone_length": 0.008161636313448439,
+      "target": "link_leg_16_L_2",
+      "target_endpoint": "link_leg_16_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_17",
+      "source_anchor": "l17Ll",
+      "source_pose": {
+        "position": [
+          -0.07116948115701537,
+          0.011021863358336515,
+          0.008706828567755062
+        ],
+        "quaternion": [
+          0.3341984632718956,
+          -0.14466367274043643,
+          0.05199193723841783,
+          0.9298820610153461
+        ]
+      },
+      "source_bone_length": 0.009301539999999999,
+      "target": "link_leg_16_L_3",
+      "target_endpoint": "foot_16_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_17.001",
+      "source_anchor": "l17R",
+      "source_pose": {
+        "position": [
+          -0.06622237157967542,
+          -0.004268701532380768,
+          0.00635398685482857
+        ],
+        "quaternion": [
+          -0.32485708225081766,
+          0.0925017694174663,
+          0.03194459274730677,
+          0.9406863673724277
+        ]
+      },
+      "source_bone_length": 0.006569719495990693,
+      "target": "link_leg_16_R_2",
+      "target_endpoint": "link_leg_16_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_17",
+      "source_anchor": "l17Rl",
+      "source_pose": {
+        "position": [
+          -0.0707022954183457,
+          -0.008537001677549057,
+          0.00856149914844559
+        ],
+        "quaternion": [
+          -0.08785273627081147,
+          -0.22306126553699757,
+          -0.02018957911384884,
+          0.9706276059550191
+        ]
+      },
+      "source_bone_length": 0.00932709000000001,
+      "target": "link_leg_16_R_3",
+      "target_endpoint": "foot_16_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_18.001",
+      "source_anchor": "l18L",
+      "source_pose": {
+        "position": [
+          -0.07507869813888958,
+          0.005111518252243999,
+          0.006183853711198701
+        ],
+        "quaternion": [
+          0.262030918987999,
+          -0.00979505171961132,
+          0.0026596623543824944,
+          0.9650061039456048
+        ]
+      },
+      "source_bone_length": 0.008565674679871982,
+      "target": "link_leg_17_L_2",
+      "target_endpoint": "link_leg_17_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_18",
+      "source_anchor": "l18Ll",
+      "source_pose": {
+        "position": [
+          -0.08258702888675677,
+          0.009234084898202783,
+          0.0061978662648644245
+        ],
+        "quaternion": [
+          0.3921687477757383,
+          -0.18132560093495687,
+          0.07915517543576654,
+          0.8983647131957706
+        ]
+      },
+      "source_bone_length": 0.008791879999999998,
+      "target": "link_leg_17_L_3",
+      "target_endpoint": "foot_17_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_18.001",
+      "source_anchor": "l18R",
+      "source_pose": {
+        "position": [
+          -0.07487473898543713,
+          -0.0036196308090949373,
+          0.005447390685172635
+        ],
+        "quaternion": [
+          -0.33699543403622595,
+          -0.08168434788651398,
+          -0.029362525560507252,
+          0.9374964463088911
+        ]
+      },
+      "source_bone_length": 0.0069288343463673645,
+      "target": "link_leg_17_R_2",
+      "target_endpoint": "link_leg_17_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_18",
+      "source_anchor": "l18Rl",
+      "source_pose": {
+        "position": [
+          -0.07989032551380985,
+          -0.008266271206821153,
+          0.004324283303830641
+        ],
+        "quaternion": [
+          -0.20101349644609923,
+          -0.23106477363021233,
+          -0.04885613452891209,
+          0.9506922334555101
+        ]
+      },
+      "source_bone_length": 0.00969522,
+      "target": "link_leg_17_R_3",
+      "target_endpoint": "foot_17_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_19.001",
+      "source_anchor": "l19L",
+      "source_pose": {
+        "position": [
+          -0.08243038843485342,
+          0.003645013291968589,
+          0.006086156318893258
+        ],
+        "quaternion": [
+          0.1398955089648091,
+          0.07557315044872791,
+          -0.01070921955142667,
+          0.9872199644047575
+        ]
+      },
+      "source_bone_length": 0.012077349161720052,
+      "target": "link_leg_18_L_2",
+      "target_endpoint": "link_leg_18_L_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_19",
+      "source_anchor": "l19Ll",
+      "source_pose": {
+        "position": [
+          -0.09389056362787543,
+          0.006886623916441769,
+          0.008090827832794153
+        ],
+        "quaternion": [
+          0.2546217238585571,
+          -0.20913476842616588,
+          0.056501104848782534,
+          0.9424638197434944
+        ]
+      },
+      "source_bone_length": 0.009822250000000001,
+      "target": "link_leg_18_L_3",
+      "target_endpoint": "foot_18_0",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_19.001",
+      "source_anchor": "l19R",
+      "source_pose": {
+        "position": [
+          -0.08285326369961403,
+          -0.00352783151679829,
+          0.005079299831403757
+        ],
+        "quaternion": [
+          -0.3447738878461687,
+          -0.034445189480042986,
+          -0.012661208348926381,
+          0.9379681172536019
+        ]
+      },
+      "source_bone_length": 0.007460971278808144,
+      "target": "link_leg_18_R_2",
+      "target_endpoint": "link_leg_18_R_3",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "right_leg_19",
+      "source_anchor": "l19Rl",
+      "source_pose": {
+        "position": [
+          -0.08883911732916888,
+          -0.007533198378793951,
+          0.0031318181114453696
+        ],
+        "quaternion": [
+          -0.023946492562362698,
+          0.13286343586390958,
+          0.0032110209829275295,
+          0.9908398267372204
+        ]
+      },
+      "source_bone_length": 0.007430879999999998,
+      "target": "link_leg_18_R_3",
+      "target_endpoint": "foot_18_1",
+      "target_alignment_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "scale_mode": "leg"
+    },
+    {
+      "object": "left_leg_ultimate",
+      "source_anchor": "b20",
+      "source_pose": {
+        "position": [
+          -0.08507851591928742,
+          -0.000409278586608288,
+          0.007089855681247769
+        ],
+        "quaternion": [
+          -0.049389871574246055,
+          5.913564060764161e-05,
+          2.9165569201659564e-06,
+          0.9987795738201444
+        ]
+      },
+      "target": "link_body_20",
+      "scale_mode": "ultimate_fixed"
+    },
+    {
+      "object": "right_leg_ultimate",
+      "source_anchor": "b20",
+      "source_pose": {
+        "position": [
+          -0.08507851591928742,
+          -0.000409278586608288,
+          0.007089855681247769
+        ],
+        "quaternion": [
+          -0.049389871574246055,
+          5.913564060764161e-05,
+          2.9165569201659564e-06,
+          0.9987795738201444
+        ]
+      },
+      "target": "link_body_20",
+      "scale_mode": "ultimate_fixed"
+    }
+  ]
+}

@@ -1,36 +1,45 @@
-# Centipede Isaac Lab RL
+# Centipede Isaac Lab Clean
 
-Centipede locomotion and reinforcement learning in Isaac Lab. This repository contains the GPU controller, simulation environment, USD/model assets, experiment scripts and tests.
+The adopted research runtime: 34 legal observations -> PPO -> one wave action -> wave-conditioned CPG -> PhysX implicit PD.
+The PI code course and retained demonstration evidence are separate directories in the same project.
 
-## Start here
+## Start
 
-- [Setup guide](SETUP_GUIDE.md): the repository's existing installation and experiment instructions.
-- [Biological references](BIO_REFERENCES.md): model and locomotion references.
-- [Rendering notes](NOTES_RENDERING.md): the original in-repository notes.
-- [Rendering reference collection](docs/rendering/README.md): the complete notes and script snapshots formerly stored in [`Omniverse_rendering_problem`](https://github.com/wxy108/Omniverse_rendering_problem).
+```powershell
+conda activate isaaclab_50
+cd C:\Users\wxy22\Documents\Centipede_IsaacLab_RL_Clean
+python scripts\check_project.py
+python -m pytest -q -p no:cacheprovider
+```
 
-The rendering collection records a particular project's environment and observations from May–June 2026. Its performance measurements and failure descriptions are historical evidence, not guarantees for every system. Files under `docs/rendering/scripts/` are reference snapshots that may depend on a later parent-project workspace; they are not installed runtime entry points for this checkout. See [provenance](docs/rendering/PROVENANCE.md) before reuse.
+Read [PI_HANDOFF.md](PI_HANDOFF.md), [the reading index](docs/README.md), and
+[organization/integrity notes](docs/07_ORGANIZATION_AND_INTEGRITY.md).
 
-## Contents
+## Runtime contract
 
-| Path | Purpose |
-| --- | --- |
-| `controllers/` | Scalar and Torch controller implementations |
-| `envs/` | Isaac Lab environment and configuration |
-| `assets/`, `models/` | USD and source robot assets |
-| `configs/` | Controller and simulation settings |
-| `scripts/` | Conversion, simulation and experiment tools |
-| `tests/` | Existing tests |
-| `docs/rendering/` | Consolidated rendering documentation and historical reference scripts |
+- Isaac Sim 5.0.0, pinned Isaac Lab v2.2.1; physics 1 ms, policy 12 ms, episode 9.6 s, default batch 32.
+- Scalar action [-1,1] -> wave [1,4], zero/reset 2.5, first-order time constant 0.25 s and rate limit 3.5 wave/s.
+- A 13-knot wave map controls body/leg yaw amplitude and yaw impedance; leg pitch scale is fixed.
+- Reward is world -x displacement of the unweighted 61-link spine centroid / 0.1025 m; terminal/reset transitions are zero.
+- No terrain ID, absolute position or oracle roughness in policy observations/reward.
+- The approved segment-center leg phase correction is adopted. September rigid-tip/envelope/skin experiments are not adopted.
+- Three retained epoch-24 policies and August evidence predate the phase correction; distinguish their original contract from current evaluation.
 
-## Repository consolidation
+## Tools
 
-On 2026-10-17 all 18 source files from `Omniverse_rendering_problem` were imported byte-for-byte into `docs/rendering/`, including its full original Git history. The original source head `9875196b6b6b6eae2ac6c8937aa9bbfeb244460a` is preserved on [`legacy/rendering-notes/main`](https://github.com/wxy108/Centipede_isaac_rl/tree/legacy/rendering-notes/main) and in the merged history. The source repository remains available as an archive.
+```powershell
+python scripts\evaluate.py --terrain flat --policy-seed 161803 --headless
+python scripts\evaluate.py --terrain l60a12 --fixed-wave 3 --video --headless
+python scripts\render_structure_reveal_demo.py
+```
 
-This organization change leaves existing runtime scripts, physics, controllers, parameters and tests unchanged. It does not adopt the archived reference scripts as the current runtime or claim new training/rendering validation.
+Training and sweeps use `scripts/train.py` and `scripts/open_loop_sweep.py` for an explicitly chosen experiment.
+The course is under `course/`; preserve its private `workspace/` drafts/progress/wrong notebook.
+Generated data go in `outputs/`. The retained source fixture is under `demo/structure_reveal/`.
 
-## Related projects
+## Independence and evidence
 
-- [Centipede_MuJoCo](https://github.com/wxy108/Centipede_MuJoCo): MuJoCo biological locomotion research and backbone wave notes.
-- [Centipede_Robot_Sim](https://github.com/wxy108/Centipede_Robot_Sim): CAD-derived robot simulation and benchmarks.
-- [Terrain_model](https://github.com/wxy108/Terrain_model): standalone terrain-to-STL utility.
+Runtime assets/configs are project-relative. The current shared environment still resolves Isaac Lab inside
+the original project's `IsaacLab/` checkout; install the pinned framework elsewhere before removing that dependency.
+P13 open-loop evidence is conditional/calibration-dependent. No final closed-loop trend claim is certified here.
+High-fidelity meshes and interpolated frames are presentation-only and do not change collision or simulation.

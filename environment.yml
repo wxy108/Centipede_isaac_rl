@@ -1,0 +1,16 @@
+name: centipede_isaaclab_clean
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - numpy=1.26
+  - scipy=1.15
+  - pyyaml=6.0
+  - pytest=9.0
+  - imageio
+  - imageio-ffmpeg
+  - pillow
+  - pyvista
+  - trimesh
+
+# Install Isaac Sim 5.0.0, Isaac Lab v2.2.1, PyTorch 2.7.0+cu128,
+# isaaclab_rl, and rl_games 1.6.1 using the official Isaac Lab installer.

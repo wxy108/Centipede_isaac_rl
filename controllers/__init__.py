@@ -1,1 +1,0 @@
-# Centipede Isaac Lab controllers

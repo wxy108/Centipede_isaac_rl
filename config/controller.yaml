@@ -1,0 +1,25 @@
+body_wave:
+  amplitude: 0.4
+  frequency: 1.0
+  wave_number: 3.0
+  speed: 1.0
+  head_hold_joints: 0
+  head_ramp_joints: 0
+  head_ramp_min: 0.0
+leg_wave:
+  amplitudes: [0.6, 0.4, 0.0, 0.0]
+  phase_offsets: [-1.5707963, 3.1415926, 0.0, 3.1415926]
+  dc_offsets: [0.0, 0.0, 0.0, 0.5235987755982988]
+  active_dofs: [0, 1]
+cpg:
+  enabled: true
+  coupling_omega: -2.5
+  leg_coupling_omega: -2.5
+reference_targets:
+  head_yaw_gain: 0.0
+  head_yaw_target_clip: 0.2
+  head_yaw_rate: 0.0
+  head_pitch_offset: -0.57
+  head_pitch_joints: 1
+  settle_time: 1.0
+  ramp_time: 0.25

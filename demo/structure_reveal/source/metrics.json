@@ -1,0 +1,29 @@
+{
+  "contract": {
+    "observation_dim": 34,
+    "action_dim": 1,
+    "period_ms": 12,
+    "reward": "pure_forward_spine_centroid"
+  },
+  "terrain": "l60a12",
+  "terrain_seed": 244949,
+  "mode": "open_loop",
+  "fixed_wave": 3.0,
+  "policy_seed": null,
+  "num_envs": 1,
+  "parallel_conditions_not_independent_replicates": true,
+  "steps": 1667,
+  "duration_s": 20.004,
+  "survivors": 1,
+  "survival_rate": 1.0,
+  "survivor_speed_bl_cycle": [
+    0.2815006971359253
+  ],
+  "survivor_speed_median_bl_cycle": 0.2815006971359253,
+  "first_done_step": [
+    -1
+  ],
+  "episode_return": [
+    5.631143093109131
+  ]
+}

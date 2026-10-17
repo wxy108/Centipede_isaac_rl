@@ -1,0 +1,556 @@
+{
+  "captured_date": "2026-10-17",
+  "source_roots": {
+    "isaac": "X:\\Projects\\Centipede_IsaacLab_RL",
+    "robot": "X:\\Projects\\Centipede_robot_MUJOCO",
+    "mujoco": "X:\\Projects\\Centipede_MUJOCO-main",
+    "clean": "X:\\Projects\\Centipede_IsaacLab_RL_Clean",
+    "sim2sim": "C:\\Users\\wxy22\\Documents\\Centipede_Sim2Sim_2026-09-11",
+    "tracking": "X:\\Projects\\Centipede_Tracking",
+    "benchmark": "C:\\Users\\wxy22\\Documents\\Centipede_Tracking_Methods_20261017"
+  },
+  "files": [
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\06_PI_CODE_COURSE.md",
+      "path": "docs/06_PI_CODE_COURSE.md",
+      "bytes": 17619,
+      "sha256": "b68cda71ec7dba320f530cff0a2ef89699421302021ca6b0713005d18bb75dac"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\07_PI_REPRODUCTION_WORKBOOK.md",
+      "path": "docs/07_PI_REPRODUCTION_WORKBOOK.md",
+      "bytes": 9279,
+      "sha256": "a607bf96d8d54d0773a758caf35a2c4b7efc26da2a237c042e7d73d3af92e471"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\provenance\\SOURCE_LOCK.json",
+      "path": "provenance/SOURCE_LOCK.json",
+      "bytes": 13604,
+      "sha256": "f58f024249c6fb642db6d594ad3c0225757bda14a359f9cb0468cb073ab151e4"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\.gitignore",
+      "path": ".gitignore",
+      "bytes": 104,
+      "sha256": "4aefb1546aadb3c5c939a3efb9ca5a586f7f09f187cf53f80f33232c2a4c4bb1"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\PI_HANDOFF.md",
+      "path": "PI_HANDOFF.md",
+      "bytes": 5340,
+      "sha256": "84e47bf92c4d1d7f64cae22125fef88ecdfaeb69912a71887c5d09ca8df8054c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\README.md",
+      "path": "README.md",
+      "bytes": 2423,
+      "sha256": "e5215b199e29f6f5daeb790cad2e8cded4eaab0a1eaf3c133cf3bb47fbe243bf"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\centipede_rebuild_v1_renamed.usd",
+      "path": "assets/centipede_rebuild_v1_renamed.usd",
+      "bytes": 1325,
+      "sha256": "6dfe73a944edd3179dd792931ee13c134b68fda9818849f7780e56e235335db9"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\configuration\\centipede_rebuild_v1_renamed_base.usd",
+      "path": "assets/configuration/centipede_rebuild_v1_renamed_base.usd",
+      "bytes": 595800,
+      "sha256": "db128256fd4fa83f644ad4c06df7dd05aca46939b1f2e29def4eea274d222709"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\configuration\\centipede_rebuild_v1_renamed_physics.usd",
+      "path": "assets/configuration/centipede_rebuild_v1_renamed_physics.usd",
+      "bytes": 47273,
+      "sha256": "4589990e10fb324d53956a902d0e6ff146197d39dd238670caeccdd7c4b81ef4"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\configuration\\centipede_rebuild_v1_renamed_robot.usd",
+      "path": "assets/configuration/centipede_rebuild_v1_renamed_robot.usd",
+      "bytes": 6251,
+      "sha256": "e4a4f72dc927b5178970399c15d94c4b7e3ae74b3ba798fc898f11fd343f0b41"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\configuration\\centipede_rebuild_v1_renamed_sensor.usd",
+      "path": "assets/configuration/centipede_rebuild_v1_renamed_sensor.usd",
+      "bytes": 668,
+      "sha256": "a16a7b67c985fc7d6621da1221de7591587f262d82a8a331d188a407bef911c6"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\high_fidelity\\README.md",
+      "path": "assets/high_fidelity/README.md",
+      "bytes": 3970,
+      "sha256": "cf824f80767b2ca106938dfeff88fd24ec0429f37a296c4ed7c7d1f02cfbf866"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\high_fidelity\\skin_map.json",
+      "path": "assets/high_fidelity/skin_map.json",
+      "bytes": 67693,
+      "sha256": "27d5bf5eefc47e24ca91a29dd4724e3e1142d33a386915b409105cce4847cd4d"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\high_fidelity\\source_Centipede_v1_CC0.blend",
+      "path": "assets/high_fidelity/source_Centipede_v1_CC0.blend",
+      "bytes": 30475818,
+      "sha256": "1904b0fffab66f7f902924c6975c73770635923236c47a10153f50e6593e858a"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\centipede_rebuild_v1_renamed.xml",
+      "path": "assets/offline_geometry/centipede_rebuild_v1_renamed.xml",
+      "bytes": 248348,
+      "sha256": "0951286b5e8fb885ae94e84558a8c4d5133f45532c0924b581b7080dbeab1032"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_0.obj",
+      "path": "assets/offline_geometry/meshes/link_0.obj",
+      "bytes": 20782,
+      "sha256": "766fd83affd2f46e3f1c1cf7dff2da913de56924c42223c642c3b2ef9b543d0f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_1.obj",
+      "path": "assets/offline_geometry/meshes/link_1.obj",
+      "bytes": 35854,
+      "sha256": "453bba73ca723ae530f2235a2672e4b3aa2bf4b2fece4e9371b681a54a76b247"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_10.obj",
+      "path": "assets/offline_geometry/meshes/link_10.obj",
+      "bytes": 36222,
+      "sha256": "3aa62d83dbf4a8882d213b79c121fd59ea37c24c18cff883e1744101e1ae5e78"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_11.obj",
+      "path": "assets/offline_geometry/meshes/link_11.obj",
+      "bytes": 36939,
+      "sha256": "c255037ab21046714afeb078434da965f6ef505e9879680e35f787407e73db60"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_12.obj",
+      "path": "assets/offline_geometry/meshes/link_12.obj",
+      "bytes": 34260,
+      "sha256": "d27653e9bc8642d9800d7dbacf83fdf73517633630402e3777df4f74b1d80354"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_13.obj",
+      "path": "assets/offline_geometry/meshes/link_13.obj",
+      "bytes": 35074,
+      "sha256": "50044b6d906e22f7a696c5dc9ead863c3cf13ee60203a31fecaa7b8b2499a7cb"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_14.obj",
+      "path": "assets/offline_geometry/meshes/link_14.obj",
+      "bytes": 34199,
+      "sha256": "6a39ffdd572b3bbabd0e09a175bb08a31bb932992d9bbb2149c331b928942015"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_15.obj",
+      "path": "assets/offline_geometry/meshes/link_15.obj",
+      "bytes": 34479,
+      "sha256": "3da29de9a7d883c9ca6108a8fc1082be1bdf94982afda9a3ad7aa88e4fcdd527"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_16.obj",
+      "path": "assets/offline_geometry/meshes/link_16.obj",
+      "bytes": 35154,
+      "sha256": "7d4772140f44460a4e06e4fd2487d29e021e0385fdedcc3e12eb3205d2bbe85a"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_17.obj",
+      "path": "assets/offline_geometry/meshes/link_17.obj",
+      "bytes": 35373,
+      "sha256": "46e7401401a4e3a53245c0dffc6995fd5e7b12deb2501b61e7a12d9a5ca247dd"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_18.obj",
+      "path": "assets/offline_geometry/meshes/link_18.obj",
+      "bytes": 36823,
+      "sha256": "d9a2b297308b1171e398b6764c88246b059ee4328d282b678614656a35da8656"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_19.obj",
+      "path": "assets/offline_geometry/meshes/link_19.obj",
+      "bytes": 34405,
+      "sha256": "f869a8a356c056a012c90af40aa3d71879f8e0e9ff1c35c8d74383aef97ae21f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_2.obj",
+      "path": "assets/offline_geometry/meshes/link_2.obj",
+      "bytes": 34165,
+      "sha256": "99d1ce8d61a17f26d5a14a315dca225fd2292f605e462c3b48d3bb11b3edd60f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_20.obj",
+      "path": "assets/offline_geometry/meshes/link_20.obj",
+      "bytes": 19571,
+      "sha256": "5a2b15ee49e9b0d8f07dc985a88126990a1fad65dd541bbd6ca4f1b774114395"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_3.obj",
+      "path": "assets/offline_geometry/meshes/link_3.obj",
+      "bytes": 34484,
+      "sha256": "8acc797ee9b004647ff3bf95b715473943c0ec69a7c52429fa17e8ce5c79e589"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_4.obj",
+      "path": "assets/offline_geometry/meshes/link_4.obj",
+      "bytes": 34900,
+      "sha256": "0e7502391162ea8254cd64b4d5ebb6f19c5c32b07f9e41dceb9e5e7800bb6996"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_5.obj",
+      "path": "assets/offline_geometry/meshes/link_5.obj",
+      "bytes": 34214,
+      "sha256": "9d757461c873763cb240fce2eb5ebdec34812af239e43178843709fc234baf14"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_6.obj",
+      "path": "assets/offline_geometry/meshes/link_6.obj",
+      "bytes": 34638,
+      "sha256": "0f1199d118fa4da51c44b5bb655413af493cf1a853eed0895bb1ae6a018c6fec"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_7.obj",
+      "path": "assets/offline_geometry/meshes/link_7.obj",
+      "bytes": 34516,
+      "sha256": "14d3be80efae641970e5dd636f71af90df3735edc27dea03f7bd631ae0eb7bf7"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_8.obj",
+      "path": "assets/offline_geometry/meshes/link_8.obj",
+      "bytes": 35765,
+      "sha256": "1d1f48d9348afa7027dd35bcfb35a9e2b1662d26d5fa90cad722cb120c5ad24b"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\assets\\offline_geometry\\meshes\\link_9.obj",
+      "path": "assets/offline_geometry/meshes/link_9.obj",
+      "bytes": 34939,
+      "sha256": "fba7a91a09dd95d5c8d209214e3bf4849f2002d3668032322df9f4a92c71845f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\__init__.py",
+      "path": "centipede/__init__.py",
+      "bytes": 43,
+      "sha256": "011eed53af2b618adf1e082d403ee5d62d76742baa25b8a71b5acfd8e322b94c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\controller.py",
+      "path": "centipede/controller.py",
+      "bytes": 14546,
+      "sha256": "7d8242117150f2a0862b8013fe78be37e8e23e3b0ba45a80a545bccc22320367"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\env.py",
+      "path": "centipede/env.py",
+      "bytes": 18563,
+      "sha256": "dfd47cff4d1a907a7f5578e3da1258214e6b5362e0efe561891c25393957de7b"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\env_cfg.py",
+      "path": "centipede/env_cfg.py",
+      "bytes": 3037,
+      "sha256": "dca820523390c623606701d2bb9a82277352b8b7dabc875a1b228ba9f99e7979"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\gait.py",
+      "path": "centipede/gait.py",
+      "bytes": 3080,
+      "sha256": "c5ff7cd990d98e08ffda29f2a5afb68406618d1022dda8920544c8f5baf16dbc"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\model.py",
+      "path": "centipede/model.py",
+      "bytes": 2657,
+      "sha256": "090af5339ad16f763f3030ef300a08054fa73448d8de5d8bd348167057516728"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\centipede\\terrain.py",
+      "path": "centipede/terrain.py",
+      "bytes": 5962,
+      "sha256": "cb43b4e542cb3d7934a506f545b296686fcb87e3b420fb6ae1f3201ee00eb82c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\checkpoints\\policy_seed_141421.pth",
+      "path": "checkpoints/policy_seed_141421.pth",
+      "bytes": 521701,
+      "sha256": "1cfd2508c60a5c215206f183a1070b8073ef9a218fdb5fbe8b3f298f3970183d"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\checkpoints\\policy_seed_161803.pth",
+      "path": "checkpoints/policy_seed_161803.pth",
+      "bytes": 521701,
+      "sha256": "427e58e1fae4353ac244104f3d6165c9671f147e046e7ad2d293309c96974297"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\checkpoints\\policy_seed_173205.pth",
+      "path": "checkpoints/policy_seed_173205.pth",
+      "bytes": 521701,
+      "sha256": "b0358fb6336540d8c2b0dc168b9a2aee67cc368cb34e3f5cdd2185521037e8de"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\config\\controller.yaml",
+      "path": "config/controller.yaml",
+      "bytes": 563,
+      "sha256": "2c3d1f1ab5e95041c0f32fee589df550d98d55d1f7ae0f884139844324396e8e"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\config\\gait_map.json",
+      "path": "config/gait_map.json",
+      "bytes": 3240,
+      "sha256": "80b68ce12b7566e06ce3ea36e4dd73a31bae0f5c7351cbd163391738379a555b"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\config\\rl_games.json",
+      "path": "config/rl_games.json",
+      "bytes": 1620,
+      "sha256": "a655cfb7801e23bca09965b77f24154b1216625fb141307d2a70fcc38c5139b6"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\demo\\structure_reveal\\README.md",
+      "path": "demo/structure_reveal/README.md",
+      "bytes": 1356,
+      "sha256": "67e4d04dd8b2bf709960bf166bbafe96dd976abb5f5bb56b49392f75a0c68ac1"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\demo\\structure_reveal\\SOURCE.json",
+      "path": "demo/structure_reveal/SOURCE.json",
+      "bytes": 1286,
+      "sha256": "f5cfef3de2e706a151d9074c555a1f20e9373020f227a55b2f6107171cacd0e5"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\demo\\structure_reveal\\source\\all_link_world_poses.npz",
+      "path": "demo/structure_reveal/source/all_link_world_poses.npz",
+      "bytes": 1864244,
+      "sha256": "c1bd51f2b77f6532e31728527dc93a03e693b2a19bb26b47aa43e7bfe0aa13f6"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\demo\\structure_reveal\\source\\metrics.json",
+      "path": "demo/structure_reveal/source/metrics.json",
+      "bytes": 637,
+      "sha256": "f5a560d8cb9006ce35d02e3ed358ba7cf815a3045468697f4349d19bbf668725"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\demo\\structure_reveal\\source\\traces.npz",
+      "path": "demo/structure_reveal/source/traces.npz",
+      "bytes": 6394,
+      "sha256": "d775cb52e921c47593d250271a59bc555ea3566dddf2d9275d2a1be55af42880"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\00_PI_MASTER_RUNBOOK.md",
+      "path": "docs/00_PI_MASTER_RUNBOOK.md",
+      "bytes": 13596,
+      "sha256": "43b8d1116aea293313b21871c3f378418e6bbc2c6db4687f090a6428e8fc017b"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\01_RUNTIME_LINE_BY_LINE.md",
+      "path": "docs/01_RUNTIME_LINE_BY_LINE.md",
+      "bytes": 22039,
+      "sha256": "7c4c69fa1c81479dc8d2cd3be12c30e72dbdd282eef07781e4b3cb955c507853"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\02_RL_CONFIG_AND_TOOLS_LINE_BY_LINE.md",
+      "path": "docs/02_RL_CONFIG_AND_TOOLS_LINE_BY_LINE.md",
+      "bytes": 17018,
+      "sha256": "f2629ca11b05cdd93fdb50b3fb0538bd0fc57a1ebfc192421bef129b1951ddc7"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\03_OBSERVATION_REWARD_ACTION_REFERENCE.md",
+      "path": "docs/03_OBSERVATION_REWARD_ACTION_REFERENCE.md",
+      "bytes": 11403,
+      "sha256": "c1ce64c6dcd213bc6de2d44795e70577496cc5206ba6e3beac53de28ff70ca29"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\04_RESULTS_AND_DEMO_GUIDE.md",
+      "path": "docs/04_RESULTS_AND_DEMO_GUIDE.md",
+      "bytes": 9323,
+      "sha256": "f82410001cbf5bc04278e948b8e97fd2e6e5980a81352c2edd6acb3a855269ef"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\05_VIDEO_RENDERING_PLAYBOOK.md",
+      "path": "docs/05_VIDEO_RENDERING_PLAYBOOK.md",
+      "bytes": 15232,
+      "sha256": "971ad5a7dbb764f9e924999c8ec1adbc8b805cb5cd1fdfb354b797b891ddeaae"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\README.md",
+      "path": "docs/README.md",
+      "bytes": 1320,
+      "sha256": "7d567947571e35c444625e420c8610fc0d7b8fcaa6ddf9da603a9ecc75a3172e"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\environment.yml",
+      "path": "environment.yml",
+      "bytes": 352,
+      "sha256": "426d346c0f65c54f740ac6ee637a055a74f997e6e59fee78e4553def3a7c4a6c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\P13_OPEN_LOOP_FINAL_REPORT.md",
+      "path": "evidence/P13_OPEN_LOOP_FINAL_REPORT.md",
+      "bytes": 3272,
+      "sha256": "fd2fcfa7d3f635ca4051d7d8af9d28b7ede769a50e193616ed94243bbc5af5b8"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\data\\observation_classifier_audit.json",
+      "path": "evidence/data/observation_classifier_audit.json",
+      "bytes": 845793,
+      "sha256": "b632ca36b43a37eefff1cc9a1c87e82fe4712d360dab055d785194c6d87f111d"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\data\\p13_cell_results.json",
+      "path": "evidence/data/p13_cell_results.json",
+      "bytes": 796824,
+      "sha256": "91602b7b5f775933826b32bf769c483634ce8ad7f746f44292dad59dafe38492"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\data\\p13_open_loop_long_form_quiescent.csv",
+      "path": "evidence/data/p13_open_loop_long_form_quiescent.csv",
+      "bytes": 1026707,
+      "sha256": "09853783171863c21f6de3610fb3616e7e885f357a9eb3d42d070fca790c3cf6"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\data\\p13_trend_tests.json",
+      "path": "evidence/data/p13_trend_tests.json",
+      "bytes": 58614,
+      "sha256": "333047b1cc5ec42d54fc1886451256944cc1abc2ae98ae4966e1602fb8a6224c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\observation_classifier_evidence.png",
+      "path": "evidence/figures/observation_classifier_evidence.png",
+      "bytes": 106939,
+      "sha256": "ee62cd19a7055468b64bdc683bca36d37189dcf8bb81279ccdef9cab4a1cbe67"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_near_optimal_interval_span.png",
+      "path": "evidence/figures/p13_near_optimal_interval_span.png",
+      "bytes": 102059,
+      "sha256": "f6587a2b046f96f8570d44f98b84d971eb00dada1a53c7fee1028fbf5bc16eeb"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_open_loop_premeasurement_validity_curves.png",
+      "path": "evidence/figures/p13_open_loop_premeasurement_validity_curves.png",
+      "bytes": 147025,
+      "sha256": "57cfa3f495be154ab5f55448650c3eeec739396c96b4a668fca7afb5ff78cc80"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_open_loop_speed_curves.png",
+      "path": "evidence/figures/p13_open_loop_speed_curves.png",
+      "bytes": 560461,
+      "sha256": "bd7490efb18271ad9f45dcf35721306682a858eed850155f134d4b98f1f6d748"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_open_loop_survival_curves.png",
+      "path": "evidence/figures/p13_open_loop_survival_curves.png",
+      "bytes": 257528,
+      "sha256": "33936938d7ebb9a2b2b1c3ed9b90f8c6e2642bef7d15b01d82988ebd690e600f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_preregistered_geometry_path.png",
+      "path": "evidence/figures/p13_preregistered_geometry_path.png",
+      "bytes": 90702,
+      "sha256": "d3eaf63cf444ef4b59ce333273c6f7753b0d2888048ab64e89704586923ce65a"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\evidence\\figures\\p13_robust_wave_preference_heatmap.png",
+      "path": "evidence/figures/p13_robust_wave_preference_heatmap.png",
+      "bytes": 76639,
+      "sha256": "d0cc5f3bb37e8abc415b92a418531159ffdec6d0d153ec93a2797b32742bbb67"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\provenance\\MIGRATION_REPORT.md",
+      "path": "provenance/MIGRATION_REPORT.md",
+      "bytes": 3525,
+      "sha256": "0ebde6acbe088a42c9eae4512047613f67f78a9967e029c1a9f0830789abe856"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\provenance\\SOURCE_ORIGINS.md",
+      "path": "provenance/SOURCE_ORIGINS.md",
+      "bytes": 3843,
+      "sha256": "2ea6397845d6cfed44908b69bbdf736ac7c19220ea94801e5f00e21cbc173a8d"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\provenance\\VERIFICATION.md",
+      "path": "provenance/VERIFICATION.md",
+      "bytes": 12860,
+      "sha256": "d2f2b7448d79dba18970db46c8c8ba302b5a2d078405783922892f5ee3f289e3"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\pyproject.toml",
+      "path": "pyproject.toml",
+      "bytes": 45,
+      "sha256": "16713d02c4751fb02221a274d20fe9f3be7ffaffd1a3031af82cd37f3a6456f3"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\blender_high_fidelity_scene.py",
+      "path": "scripts/blender_high_fidelity_scene.py",
+      "bytes": 45242,
+      "sha256": "8d27ae82fa2e1a20f053fb9e6c3dc61673a704a8187dfd5b2834c7b2a19dd176"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\check_project.py",
+      "path": "scripts/check_project.py",
+      "bytes": 6299,
+      "sha256": "2c12ac53bccf3549ad25543941305a31255eaa21f41b326e54e1989806b5ac5f"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\evaluate.py",
+      "path": "scripts/evaluate.py",
+      "bytes": 10714,
+      "sha256": "7d975b6e0dc18075679f2bf78433575d29e5f7876fedda44e5984a50aa58666c"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\open_loop_sweep.py",
+      "path": "scripts/open_loop_sweep.py",
+      "bytes": 1471,
+      "sha256": "d87e4544501799a2d8b5668e342a0fad6d87dc27e877cc425e112b988658decc"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\render_high_fidelity.py",
+      "path": "scripts/render_high_fidelity.py",
+      "bytes": 14237,
+      "sha256": "01ada927ac75e1fa2231507a968cef643afd7240b5e6f529ac44d907f1e02b2e"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\render_offline.py",
+      "path": "scripts/render_offline.py",
+      "bytes": 15074,
+      "sha256": "4be70b7a3b01f3f65a4cee7bbdbac71af59dc3c69c9a69a7c6ade8275f53c520"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\render_structure_reveal.py",
+      "path": "scripts/render_structure_reveal.py",
+      "bytes": 27162,
+      "sha256": "120aae7a30ecbb253b3fc6f5ce702327bd36e853aceffd752e75d53c37b4dbb9"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\render_structure_reveal_demo.py",
+      "path": "scripts/render_structure_reveal_demo.py",
+      "bytes": 5719,
+      "sha256": "8ccf3643a9f8f3e981f59b854b359a1b9ece7b1165165f16a33b1533fcada791"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\scripts\\train.py",
+      "path": "scripts/train.py",
+      "bytes": 2276,
+      "sha256": "5687ad48b1f7017fff2e0e22c801dc93941ef3c0f4a726a8292617d9bcd71376"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\tests\\test_core.py",
+      "path": "tests/test_core.py",
+      "bytes": 4655,
+      "sha256": "ee1c1e600b676f2e1d8f33275b44bb4258085a600fcaf3c5c1d4b67af103a716"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL_Clean\\docs\\07_ORGANIZATION_AND_INTEGRITY.md",
+      "path": "docs/07_ORGANIZATION_AND_INTEGRITY.md",
+      "bytes": 4106,
+      "sha256": "7644434ecb29bb7c999858fd6e1c1a581b5fa75b8c01d22a9bce6f6202cbd57c"
+    }
+  ],
+  "omitted_large": [],
+  "verification": {
+    "files": 89,
+    "bytes": 40014676,
+    "python": 17,
+    "syntax_errors": [],
+    "omitted_large": 0
+  }
+}

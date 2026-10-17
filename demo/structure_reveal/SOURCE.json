@@ -1,0 +1,32 @@
+{
+  "format": "centipede-structure-reveal-demo-source/1",
+  "role": "Frozen camera-free pose fixture for the canonical rendering demo",
+  "condition": {
+    "terrain": "l60a12",
+    "terrain_seed": 244949,
+    "mode": "open_loop",
+    "fixed_wave": 3.0,
+    "control_period_ms": 12,
+    "steps": 1667,
+    "duration_s": 20.004,
+    "survivors": 1,
+    "speed_body_length_per_cycle": 0.2815006971359253
+  },
+  "files": {
+    "source/all_link_world_poses.npz": "c1bd51f2b77f6532e31728527dc93a03e693b2a19bb26b47aa43e7bfe0aa13f6",
+    "source/metrics.json": "f5a560d8cb9006ce35d02e3ed358ba7cf815a3045468697f4349d19bbf668725",
+    "source/traces.npz": "d775cb52e921c47593d250271a59bc555ea3566dddf2d9275d2a1be55af42880"
+  },
+  "presentation_contract": {
+    "output_resolution": [1280, 720],
+    "output_fps": 120,
+    "pose_presentation_fps": 40,
+    "pose_interpolation": "linear position plus shortest-arc quaternion SLERP",
+    "video_interpolation": "bidirectional AOBMC/VSBMC motion compensation",
+    "terrain_surface": "exact collision heightfield with smooth normals and visual-only micro-detail",
+    "labels": false,
+    "borders": false,
+    "physics_samples_are_120_hz": false
+  },
+  "canonical_video_sha256": "f753e930086a119d626e461a9995173adf51c278f248441064ae88b3c24bea51"
+}
