@@ -1,0 +1,8 @@
+{
+  "contact_reports": true,
+  "detailed_force_recording": false,
+  "pose_sample_dt_s": 0.01,
+  "world_feedback_sample_dt_s": 0.01,
+  "collisions_enabled": true,
+  "numerical_contact_offset_m": 2e-05
+}

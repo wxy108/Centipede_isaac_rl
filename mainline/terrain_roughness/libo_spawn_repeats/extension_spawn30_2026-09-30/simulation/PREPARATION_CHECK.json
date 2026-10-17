@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "new_conditions": 600,
+  "original_spawns_preserved": true,
+  "original_worker_source_bitexact": true,
+  "full173_PD_fixed": true,
+  "amplitudes_fixed": true,
+  "physics_profile_fixed": true,
+  "terrain_surfaces_unchanged": true,
+  "batch_layout_preserved": [
+    3,
+    2,
+    3,
+    2
+  ],
+  "authorization": "2026-09-30 user: 好的，去做吧; scope is the immediately proposed600 extra cases at the six existing4mm Libo heights only.",
+  "no_capacity_or_convergence_search": true
+}

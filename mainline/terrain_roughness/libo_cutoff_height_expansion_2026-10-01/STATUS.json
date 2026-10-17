@@ -1,0 +1,120 @@
+{
+  "started_unix": 1790831365.4196131,
+  "finished_stages": [
+    "initial_4mm_h1p75_2p00",
+    "matched_2_8mm_h0p25_2p00",
+    "higher_h2p25_c2_4_8"
+  ],
+  "execution_finished": true,
+  "pid": 12536,
+  "status": "awaiting_discussion",
+  "updated_unix": 1790964705.983388,
+  "controller_source_sha256": "32e9a73e85feb71bad4488279bb9b5ca3662e7a68f1e6aebc0a8394df4470b99",
+  "active_action": "combined_v03",
+  "active_command": [
+    "C:\\Users\\wxy22\\anaconda3\\envs\\isaaclab_50\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\analyze_libo_cutoff_height_expansion.py",
+    "combine",
+    "--stages",
+    "initial_4mm_h1p75_2p00",
+    "matched_2_8mm_h0p25_2p00",
+    "higher_h2p25_c2_4_8",
+    "--out",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v03"
+  ],
+  "active_returncode": 0,
+  "error": "Traceback (most recent call last):\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 150, in main\n    perform_stage(stage, active, [height], state, allow_resume)\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 77, in perform_stage\n    execute('run_libo_cutoff_height_expansion.py', ['run', '--stage', name], state, f'{name}_run')\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 55, in execute\n    raise RuntimeError(f'{label} returned {returncode}; retained log {log_path}')\nRuntimeError: higher_h2p25_c2_4_8_run returned 1; retained log X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\logs\\higher_h2p25_c2_4_8_run.log\n",
+  "controller_resumes": [
+    {
+      "unix": 1790865040.8029442,
+      "previous_pid": 32892
+    },
+    {
+      "unix": 1790865479.5819783,
+      "previous_pid": 22692
+    },
+    {
+      "unix": 1790900441.623176,
+      "previous_pid": 21944
+    },
+    {
+      "unix": 1790905433.9857936,
+      "previous_pid": 16224
+    },
+    {
+      "unix": 1790961630.4141514,
+      "previous_pid": 12584
+    }
+  ],
+  "latest_combined_results": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v03\\RESULTS.json",
+  "cutoff_decisions": {
+    "2": {
+      "status": "insufficient_complete",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 2.0,
+        "height_scale": 2.25,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 19,
+        "n_stalled_raw": 1,
+        "stalled_fraction": 0.05263157894736842,
+        "eligible": false,
+        "stop": false,
+        "status": "insufficient_complete"
+      }
+    },
+    "4": {
+      "status": "insufficient_complete",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 4.0,
+        "height_scale": 2.25,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 18,
+        "n_stalled_raw": 0,
+        "stalled_fraction": 0.0,
+        "eligible": false,
+        "stop": false,
+        "status": "insufficient_complete"
+      }
+    },
+    "8": {
+      "status": "insufficient_complete",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 8.0,
+        "height_scale": 2.25,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 21,
+        "n_stalled_raw": 1,
+        "stalled_fraction": 0.047619047619047616,
+        "eligible": false,
+        "stop": false,
+        "status": "insufficient_complete"
+      }
+    }
+  },
+  "physics_queue_empty": true,
+  "elapsed_wall_s": 133340.56377482414,
+  "meaning": "All authorized dispatched conditions and final figures/videos delivered. Height2.25 has insufficient complete wave3.5 observations for every cutoff; no physical stall was established and no further physics is queued.",
+  "delivery_complete": true,
+  "final_delivery_utc": "2026-10-02T18:48:29.846709+00:00",
+  "final_delivery_manifest": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\FINAL_DELIVERY.json",
+  "final_report": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\FINAL_REPORT.md",
+  "manual_figure_video_qa_complete": true,
+  "next_physics_requires_user_discussion": true,
+  "physical_stalling_threshold_established": false,
+  "historical_error_retained": true,
+  "current_execution_error": null,
+  "automatic_followup_closure_pending": false,
+  "automatic_followup_closed": true,
+  "automatic_followup_status": "DELETED",
+  "automatic_followup_closed_utc": "2026-10-02T18:50:50.122878+00:00",
+  "automatic_followup_closure_receipt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\FINAL_DELIVERY.json"
+}

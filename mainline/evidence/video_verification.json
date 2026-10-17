@@ -1,0 +1,72 @@
+{
+  "flat": {
+    "decoded_frames": 240,
+    "min_tile_std": [
+      42.6592971694089,
+      43.14151508376588,
+      45.14548065589839,
+      45.324816361080714,
+      45.776919811225746,
+      45.813443038076265
+    ],
+    "mean_interframe_pixel_change": [
+      7.204894880933935,
+      6.026863732630816,
+      4.888851438607368,
+      4.258810888992199,
+      4.0921734077173415,
+      3.852564698589803
+    ],
+    "max_interframe_pixel_change": [
+      13.84074074074074,
+      8.739012345679013,
+      7.675061728395062,
+      6.567777777777778,
+      7.088950617283951,
+      6.875802469135802
+    ],
+    "manual_review_times_s": [
+      0,
+      0.5,
+      2,
+      6,
+      11.95
+    ],
+    "review": "Full bodies and readable labels, terrain mesh visible, no blank panels; geometry and pose bindings verified on every rendered frame."
+  },
+  "rough": {
+    "decoded_frames": 240,
+    "min_tile_std": [
+      28.031112953093395,
+      28.579310795162407,
+      29.11552255251449,
+      29.781647247044983,
+      30.079514938933084,
+      30.00599670564126
+    ],
+    "mean_interframe_pixel_change": [
+      5.600722919572291,
+      4.922130275324138,
+      4.406393667028258,
+      3.7415669714344757,
+      3.4919386331938633,
+      3.24718838782995
+    ],
+    "max_interframe_pixel_change": [
+      17.895061728395063,
+      17.91753086419753,
+      17.921604938271606,
+      17.92561728395062,
+      17.911296296296296,
+      17.91104938271605
+    ],
+    "manual_review_times_s": [
+      0,
+      0.5,
+      2,
+      6,
+      11.95
+    ],
+    "review": "Full bodies and readable labels, terrain mesh visible, no blank panels; geometry and pose bindings verified on every rendered frame."
+  }
+}

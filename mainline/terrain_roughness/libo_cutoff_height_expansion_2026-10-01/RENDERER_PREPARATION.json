@@ -1,0 +1,17 @@
+{
+  "renderer": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\render_libo_cutoff_height_expansion.py",
+  "sha256": "1b639be8f4763c72bea517067aee7bc5e66204f1fa0337e18704ca9617f29067",
+  "selected_spawn": 12,
+  "prepared_only": true,
+  "rendering_started": false,
+  "no_native_physics": true,
+  "static_time_s": 6.0,
+  "video_source_window_s": [
+    0.0,
+    5.95
+  ],
+  "fps": 20,
+  "missing_observations_explicit": true,
+  "review_required": true,
+  "timing_policy": "After native simulation completion; no rendering process launched during physics."
+}

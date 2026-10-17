@@ -1,0 +1,21 @@
+{
+  "pid": 32196,
+  "status": "started",
+  "stage": "initial_4mm_h1p75_2p00",
+  "runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py",
+  "runner_sha256": "859ca686f7f487583153df25dbf75eaf5f23bf91a1c587dfcb60339339fa5ed2",
+  "command": [
+    "C:\\Users\\wxy22\\anaconda3\\envs\\isaaclab_50\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py",
+    "run",
+    "--stage",
+    "initial_4mm_h1p75_2p00"
+  ],
+  "started_unix": 1790831365.435806,
+  "condition_count": 300,
+  "scope": "Only the finite supplied terrain manifest; no implicit height continuation or other study",
+  "controller_pid": 32892
+}

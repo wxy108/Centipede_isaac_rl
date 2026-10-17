@@ -1,0 +1,99 @@
+body_wave:
+  amplitude: 0.4
+  # 2026-05-05: reverted 1.5 → 1.0 Hz. At 1.5 Hz the soft-body gain sets
+  # discovered by the constraint-cost optimizer (rank 1 trial #196 has
+  # body_kp ≈ 0.01) flipped on fine-mesh single-wavelength rough terrain
+  # because the PD-tracking kv·(target_dot − qdot) term is too aggressive
+  # for the soft body to follow the faster wave. At 1.0 Hz the wave is
+  # slower, target_dot is smaller, and the soft body has time to track.
+  # Tradeoff: commanded velocity drops from 0.57 BL/s back to 0.38 BL/s,
+  # below Anderson 1995's biological 0.5-1.5 BL/s range.
+  frequency: 1.0
+  wave_number: 3.0
+  speed: 1.0
+  head_hold_joints: 0   # v3 (PI#3): straight-keeping OFF — whole body undulates, front included
+  head_ramp_joints: 0   # v3 (PI#3): no head-end taper (was 1/2)
+  head_ramp_min: 0.0
+leg_wave:
+  amplitudes:
+  - 0.6
+  - 0.40   # v3 (PI#1): higher lift — legbase_pitch/hip_pitch base 0.2 -> 0.40 (search scales 0.3-1.5x)
+  - 0.0
+  - 0.0
+  phase_offsets:
+  - -1.5707963
+  - 3.1415926
+  - 0.0
+  - 3.1415926
+  dc_offsets:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.5235987755982988
+  active_dofs:
+  - 0
+  - 1
+cpg:
+  enabled: true
+  coupling_omega: -2.5
+  leg_coupling_omega: -2.5
+simulation:
+  duration: 10.0
+  timestep: 0.004
+reference_targets:
+  # ── THE CONTROLLER'S REFERENCE TARGETS + THEIR CLOCK ─────────────────────────
+  # RENAMED 2026-07-16 (PI ruling: "改名impedance变成implicit内置的求解器了").
+  # WAS `impedance:` — that name is now a LIE and was retired. This block carries NO
+  # impedance and no gain of any kind. Every key below shapes the position/velocity
+  # TARGETS that controllers/impedance_controller_torch.py emits, or the clock that
+  # fades those targets in. The actual impedance lives in TWO places, neither of them here:
+  #   • the VALUE  -> env.set_joint_impedance({family: (Kp, Kv)})  in physical N*m/rad,
+  #                    families = env.s2_family_ids(); written straight to PhysX
+  #                    (envs/centipede_env.py: `set_joint_impedance`, `_apply_action_implicit_pd`)
+  #   • the SOLVER -> PhysX's built-in IMPLICIT PD. All feedback closes inside the solver;
+  #                    the controller reads no joint state and computes no torque.
+  # Torque caps are likewise not here: env.set_joint_effort_limit({family: tau_max_Nm|None}).
+  # Full story: docs/IMPLICIT_ONLY_MIGRATION_2026-07-16.md ; outputs/CURRENT_RESULT.md ;
+  #             DISPATCH_LOG.md 2026-07-16T19:34Z -> 22:05Z.
+  #
+  # DELETED from this block by S2b (the controller RAISES if any reappears — see
+  # controllers/impedance_controller_torch.py `_S2B_DEAD_YAML_KEYS`; a silently-ignored
+  # gain is a run whose author believes they set the stiffness):
+  #   body_kp / body_kv / body_kp_head / body_kv_head   (spine-yaw PD gains)
+  #   pitch_kp / pitch_kv                               (spine-pitch PD gains)
+  #   head_pitch_kp / head_pitch_kv                     (head-hold PD gains)
+  #   roll_kp / roll_kv                                 (spine-roll PD gains)
+  #   leg: {kp: [...], kv: [...]}                       (per-leg-DOF PD gains)
+  # Their values are preserved in git history, in the pre-S2b snapshot
+  # (configs/farms_controller.yaml.before_S2b_2026-07-16), and LIVE in
+  # configs/farms_controller_numpy_legacy.yaml — which keeps its `impedance:` block
+  # because its consumer (controllers/impedance_controller.py, the numpy reference) DOES
+  # still compute torque from those gains. That name is still accurate; do not rename it.
+  # ───────────────────────────────────────────────────────────
+
+  # ── heading servo (a TARGET: the head-yaw joint's commanded angle) ──
+  head_yaw_gain: 0.0
+  head_yaw_target_clip: 0.2
+  head_yaw_rate: 0.0
+
+  # ── head-up posture (a TARGET, not a gain) ──
+  # head_pitch_offset is the static hold angle written into pitch_target_final[0].
+  # head_pitch_joints is load-bearing beyond the controller: it defines the
+  # head_pitch / body_pitch family split in env.s2_family_ids().
+  # NOTE pitch_target_final[1:] == 0 — the spine-pitch joints carry NO CPG signal
+  # (only body yaw and leg base pitch/yaw do). This is why the block is NOT called
+  # `cpg_targets:`: head_pitch_offset is a static hold and head_yaw_* is a servo —
+  # neither is CPG-generated. The CPG proper is configured by `body_wave:` / `leg_wave:` / `cpg:`.
+  # PI-frozen head-up lock (OPTIMIZATION_SPEC_2026-07-17): negative is nose-up
+  # in the measured world-link convention.  Use this dedicated YAML through
+  # CENTIPEDE_CONTROLLER_YAML so concurrent legacy queues remain isolated.
+  head_pitch_offset: -1.0
+  head_pitch_joints: 1
+
+  # ── gait fade-in clock (shapes the target blend, not a gain) ──
+  # settle_time/ramp_time feed seg_blend(), which MULTIPLIES the emitted targets
+  # (controller: blend_flat * targets). With the gains gone they gate nothing else.
+  settle_time: 1.0
+  ramp_time: 1.0
+recording:
+  dt_record: 0.01

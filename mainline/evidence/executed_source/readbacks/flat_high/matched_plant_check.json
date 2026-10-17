@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "masses_and_inertias_exact": true,
+  "complete_uniform_173_joint_stiffness": true,
+  "initial_pose_local_matched": true,
+  "layout_exact": false,
+  "declared_replication_layout": true,
+  "complete_uniform_173_joint_damping": true,
+  "collision_enable_and_geometry_unchanged": true,
+  "contact_offset_m": 2e-05,
+  "world_pitch_feedback_and_declared_gain_taper": true
+}

@@ -133,6 +133,7 @@ def generate_arena_heightmap(
     blocks:              Optional[List[BlockSpec]] = None,
     edge_extrapolation_block_widths: float = 0.0,
     n_components:        int   = 8,
+    weight_kind:         str   = "tent",
 ) -> Tuple[np.ndarray, List[BlockSpec]]:
     """Generate the full multi-block arena heightmap with smooth transitions.
 
@@ -215,15 +216,41 @@ def generate_arena_heightmap(
             n_components=n_components,
         )
 
-        # Tent weight centered at this block's center.
+        # Per-block partition-of-unity weight centered at this block's center.
         cx_pix = (spec.bx + 0.5) * bs_x
         cy_pix = (spec.by + 0.5) * bs_y
         # Distance in BLOCK UNITS (1.0 = one block side)
         dx = (XX - cx_pix) / bs_x
         dy = (YY - cy_pix) / bs_y
-        wx = np.maximum(0.0, 1.0 - np.abs(dx))
-        wy = np.maximum(0.0, 1.0 - np.abs(dy))
-        W_b = wx * wy
+        # Tent ramp: 1 at center, 0 at adjacent block centers.
+        tx = np.maximum(0.0, 1.0 - np.abs(dx))
+        ty = np.maximum(0.0, 1.0 - np.abs(dy))
+        if weight_kind == "tent":
+            # Original C0 (piecewise-linear) blend. Slope (dH/dx) has a
+            # KINK of magnitude 2 |h_b(center)| / block_width at every
+            # block center because each block's tent ramp flips
+            # derivative sign there. Acceptable when block centers
+            # happen to have h ≈ 0, but produces visible slope jumps
+            # otherwise.
+            W_b = tx * ty
+        elif weight_kind == "smoothstep":
+            # Cubic smoothstep s(t) = t² (3 - 2t) applied to each axis,
+            # then tensor-product. Properties:
+            #   s(0) = 0, s(1) = 1
+            #   s'(0) = s'(1) = 0     -> ZERO derivative at endpoints
+            #   s(1-t) + s(t) = 1     -> partition-of-unity preserved on
+            #                            a regular grid (so Σ_blocks W_b
+            #                            stays = 1.0 inside the arena
+            #                            interior, same as tent).
+            # Net effect: H = Σ W_b · h_b is C1 EVERYWHERE, including
+            # block centers — no slope kink, no curvature blow-up.
+            sx = tx * tx * (3.0 - 2.0 * tx)
+            sy = ty * ty * (3.0 - 2.0 * ty)
+            W_b = sx * sy
+        else:
+            raise ValueError(
+                f"weight_kind={weight_kind!r}; expected 'tent' or 'smoothstep'."
+            )
 
         H_arena += W_b * H_b
         W_total += W_b
@@ -278,6 +305,142 @@ def generate_arena_heightmap(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Stage B-v0 Pass 3 (2026-05-07): flat → rough transition arena
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_flat_to_rough_transition_heightmap(
+    arena_size_m:           float = 1.8,
+    rough_wavelength_mm:    float = 18.0,
+    rough_amplitude_m:      float = 0.010,
+    seed:                   int   = 42,
+    image_size:             int   = 1024,
+    n_components:           int   = 8,
+    transition_wavelengths_mm: Tuple[float, ...] = (18.0, 18.0, 30.0, 50.0, 60.0),
+    transition_amplitudes_m:   Tuple[float, ...] = (0.010, 0.010, 0.010, 0.008, 0.006),
+) -> Tuple[np.ndarray, List[BlockSpec]]:
+    """Build a multi-block flat → rough heightmap with a WAVELENGTH GRADIENT.
+
+    The transition zone uses several blocks of progressively shorter
+    wavelength (and gradually-tapering amplitude). The rightmost block
+    is flat (amp = 0 → zero heightmap). The existing
+    `generate_arena_heightmap` machinery applies a partition-of-unity
+    tent-weight blend between blocks; with multiple wavelengths in
+    adjacent blocks, the spectral character of the heightmap smoothly
+    shifts as you move across x. Height itself is C0 continuous
+    everywhere (sum of weighted C∞ contributions). NO sudden height
+    change at any boundary.
+
+    Default block layout (n_blocks = 6 × 1, arena_size_m = 1.8 m,
+    each block 0.30 m wide ≈ 14 centipede body lengths):
+        block (0, 0)  centered at world x = -0.75 m  → λ=18 mm,  amp=10 mm  (rough_a)
+        block (1, 0)  centered at world x = -0.45 m  → λ=18 mm,  amp=10 mm  (rough_b, different seed)
+        block (2, 0)  centered at world x = -0.15 m  → λ=30 mm,  amp=10 mm  (medium)
+        block (3, 0)  centered at world x = +0.15 m  → λ=50 mm,  amp= 8 mm  (intermediate)
+        block (4, 0)  centered at world x = +0.45 m  → λ=60 mm,  amp= 6 mm  (long-wave)
+        block (5, 0)  centered at world x = +0.75 m  → flat      (amp= 0)
+
+    The 2 rough blocks have the SAME wavelength (18 mm) but DIFFERENT
+    random seeds, so they have independent random phases. The
+    smoothstep partition-of-unity blend between them produces a wider
+    rough zone (~0.75 m of effectively-rough terrain when clipped to
+    the arena bounds) without any visible seam.
+
+    Forward locomotion runs the centipede from the flat side
+    (block 3, x ≈ +0.15) toward decreasing x, sequentially encountering
+    the long-wavelength gentle block, the medium block, and finally
+    the full λ=18 mm rough block. There is NO sharp wavelength jump:
+    the partition-of-unity blend mixes neighbouring blocks' spectra.
+
+    Args
+    ----
+    arena_size_m
+        Total side length of the (square) heightmap in metres. Default
+        1.8 m (each block 0.30 m wide ≈ 14 centipede body lengths).
+        Sized so that even a robot spawned at the leftmost block centre
+        has > 100 mm of forward walking room PLUS a body half-length
+        (≈ 12 mm) of safety buffer before the arena boundary, even at
+        the verified gait speed (~17 mm/s × 6 s).
+    rough_wavelength_mm, rough_amplitude_m
+        Reference rough end (= block 0). Used as the FIRST entry of
+        `transition_wavelengths_mm` / `transition_amplitudes_m` if those
+        are left at defaults; ignored if the caller passes explicit
+        sequences. Kept for back-compat and as a "rough end" marker.
+    seed
+        Master RNG seed. Each block's seed is derived as `seed + bx`
+        so adjacent blocks have INDEPENDENT random phases (otherwise
+        they would correlate visibly at the boundary).
+    image_size
+        Heightmap resolution per side (default 1024; cell size at 0.4 m
+        is 0.39 mm/pix, well below the 18 mm wavelength).
+    n_components
+        Random sinusoids per block (default 8, matches arena.py default).
+    transition_wavelengths_mm
+        Per-rough-block wavelengths in mm, ROUGH → GENTLE order.
+        Default (18, 18, 30, 50, 60) — TWO rough blocks at λ=18 with
+        different per-block seeds give independent random phases that
+        the partition-of-unity blend stitches together into a wider
+        rough zone. Length defines the number of rough blocks; one
+        extra flat block (amp=0) is appended on the right.
+    transition_amplitudes_m
+        Per-rough-block amplitudes in metres, in the same order.
+        Default (0.010, 0.010, 0.010, 0.008, 0.006) — full amp for the
+        two rough blocks AND the medium block, tapered through the
+        intermediate λ=50 mm and long-wavelength gentle blocks.
+
+    Returns
+    -------
+    heightmap_m : (image_size, image_size) numpy.ndarray, float64.
+    blocks      : list of BlockSpec used (rough...gentle..flat order).
+    """
+    if len(transition_wavelengths_mm) != len(transition_amplitudes_m):
+        raise ValueError(
+            "transition_wavelengths_mm and transition_amplitudes_m must "
+            f"have the same length; got "
+            f"{len(transition_wavelengths_mm)} vs {len(transition_amplitudes_m)}"
+        )
+    n_rough = len(transition_wavelengths_mm)
+    n_total = n_rough + 1   # +1 flat block at the right
+    blocks: List[BlockSpec] = []
+    for i, (wl_mm, amp_m) in enumerate(zip(transition_wavelengths_mm,
+                                            transition_amplitudes_m)):
+        blocks.append(BlockSpec(
+            bx=i, by=0,
+            wavelength_mm=float(wl_mm),
+            amplitude_m=float(amp_m),
+            seed=int(seed) + i,
+        ))
+    # Final flat block (amp=0). Wavelength is irrelevant when amp=0
+    # (the heightmap collapses to zero in _spectral_band's std-norm
+    # division — the call short-circuits to zeros for amp=0).
+    # We still record the longest wavelength as a placeholder.
+    blocks.append(BlockSpec(
+        bx=n_total - 1, by=0,
+        wavelength_mm=float(max(transition_wavelengths_mm)),
+        amplitude_m=0.0,
+        seed=int(seed) + n_total - 1,
+    ))
+
+    # generate_arena_heightmap signature requires wavelength_range_mm
+    # and amplitude_range_m; with explicit blocks they are unused for
+    # block sampling (default_blocks is bypassed) but the validators
+    # still expect tuples. Provide tight ranges that contain the
+    # selected values.
+    min_wl_mm = float(min(transition_wavelengths_mm))
+    max_wl_mm = float(max(transition_wavelengths_mm))
+    return generate_arena_heightmap(
+        arena_size_m=arena_size_m,
+        n_blocks=(n_total, 1),
+        wavelength_range_mm=(min_wl_mm, max_wl_mm),
+        amplitude_range_m=(0.0, float(max(transition_amplitudes_m))),
+        image_size=image_size,
+        seed=int(seed),
+        blocks=blocks,
+        n_components=n_components,
+        weight_kind="smoothstep",   # C1-continuous slope, NO kink at block centers
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # USD mesh wrapper
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -329,6 +492,26 @@ def heightmap_value_at(heightmap_m: np.ndarray, arena_size_m: float,
          + (1 - tx) *     ty  * heightmap_m[iy1, ix0]
          +     tx  *     ty  * heightmap_m[iy1, ix1])
     return float(z)
+
+
+def heightmap_patch_max_at(heightmap_m: np.ndarray, arena_size_m: float,
+                           x_world: float, y_world: float,
+                           radius_m: float) -> float:
+    """Maximum sampled height in a square footprint around world ``(x, y)``."""
+    if radius_m <= 0.0:
+        return heightmap_value_at(heightmap_m, arena_size_m, x_world, y_world)
+    H, W = heightmap_m.shape
+    fx = (x_world + arena_size_m / 2.0) / arena_size_m * (W - 1)
+    fy = (y_world + arena_size_m / 2.0) / arena_size_m * (H - 1)
+    rx = radius_m / arena_size_m * (W - 1)
+    ry = radius_m / arena_size_m * (H - 1)
+    ix0 = max(0, int(np.floor(fx - rx)))
+    ix1 = min(W - 1, int(np.ceil(fx + rx)))
+    iy0 = max(0, int(np.floor(fy - ry)))
+    iy1 = min(H - 1, int(np.ceil(fy + ry)))
+    if ix0 > ix1 or iy0 > iy1:
+        return heightmap_value_at(heightmap_m, arena_size_m, x_world, y_world)
+    return float(np.max(heightmap_m[iy0:iy1 + 1, ix0:ix1 + 1]))
 
 
 # ─────────────────────────────────────────────────────────────────────────────

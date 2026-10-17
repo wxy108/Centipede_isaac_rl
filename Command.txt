@@ -1,8 +1,0 @@
-## Arena generator
-python scripts\view_arena.py --headless --duration 5 --arena-size 6.0 --n-blocks 5 --wavelength-min 15 --wavelength-max 80 --amplitude-min 0.005 --amplitude-max 0.020 --video videos\arena_5x5.mp4
-
-## Video realization
-python scripts\optimization\render_top_trials.py outputs\optimization\impedance_bio_rough_wl18_pd_corrected_wide_20260504_004956\all_trials.csv --top 5 --duration 8 --video-fps 30 --camera-mode chase --skip-existing
-
-## Parameters optimization
-python scripts\optimization\optimize_impedance_biological.py --headless --terrain-wavelength 18 --terrain-amplitude 0.01 --terrain-seed 42 --pretest --n-trials 800 --duration 8 --run-tag pd_corrected_wide

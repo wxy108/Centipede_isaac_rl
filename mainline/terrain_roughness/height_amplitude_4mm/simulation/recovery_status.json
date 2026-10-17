@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "jobs": [
+    {
+      "job": "libo_height_x2p00_low",
+      "attempt": "v2_capture",
+      "pid": 27628,
+      "exit": 1
+    },
+    {
+      "job": "libo_height_x2p00_high",
+      "attempt": "v2_capture",
+      "pid": 22204,
+      "exit": 0
+    },
+    {
+      "job": "narvik_height_x2p00_low",
+      "attempt": "v2_capture",
+      "pid": 16816,
+      "exit": 0
+    },
+    {
+      "job": "narvik_height_x2p00_high",
+      "attempt": "v2_capture",
+      "pid": 29288,
+      "exit": 0
+    },
+    {
+      "job": "libo_height_x1p50_low",
+      "attempt": "v2_capture",
+      "pid": 2868,
+      "exit": 1
+    }
+  ],
+  "elapsed_s": 145.04108142852783,
+  "meaning": "All pending conditions attempted; per-job success/failure retained, complete does not imply all passed"
+}

@@ -28,7 +28,7 @@ The exported YAML lives in the same run directory as
 `trial_<N>_params.yaml` and you can use it directly:
 
   copy outputs/optimization/<run_dir>/trial_47_params.yaml ^
-       configs/farms_controller.yaml
+       configs/farms_controller_numpy_legacy.yaml
   python scripts/test_walk.py --headless --duration 10 ^
        --video videos/trial_47.mp4 --camera-mode chase ^
        --terrain rough --terrain-wavelength 0.018 --terrain-amplitude 0.01
@@ -51,7 +51,18 @@ import yaml
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.normpath(os.path.join(SCRIPT_DIR, "..", ".."))
-CFG_PATH     = os.path.join(PROJECT_ROOT, "configs", "farms_controller.yaml")
+# 2026-07-16: repointed farms_controller.yaml -> farms_controller_numpy_legacy.yaml (this script was
+# MISSED by S2b's repoint of the other 7 numpy-family consumers). This tool patches CMA-ES gains into
+# a base yaml and exports a drop-in for the NUMPY controller (controllers/impedance_controller.py, via
+# scripts/test_walk.py), which still computes torque and NEEDS those gains. S2b made
+# farms_controller.yaml GAIN-FREE -- it configures the TARGETS-ONLY torch controller, whose gains come
+# from env.set_joint_impedance() -> PhysX -- so using it as the base made the leg-gain
+# `.get(..., [defaults])` in export_trial_as_yaml fall back SILENTLY to hard-coded values 35-168x off
+# the tuned ones. The gains live on, byte-identical, in the _numpy_legacy copy, which also KEEPS its
+# `impedance:` block name -- correctly: there it still carries real impedance. (configs/
+# farms_controller.yaml's block was renamed to `reference_targets:` on 2026-07-16 because it no longer
+# does.) See docs/IMPLICIT_ONLY_MIGRATION_2026-07-16.md.
+CFG_PATH     = os.path.join(PROJECT_ROOT, "configs", "farms_controller_numpy_legacy.yaml")
 BUCKLED_THR  = 1e4    # trials with cost above this are "buckled"
 
 
@@ -78,10 +89,24 @@ def f(row, key, default=0.0):
 
 def export_trial_as_yaml(row, base_yaml_path, out_path):
     """Build a drop-in YAML by patching the trial's params into the
-    current configs/farms_controller.yaml structure."""
+    configs/farms_controller_numpy_legacy.yaml structure (the NUMPY controller's config)."""
     with open(base_yaml_path, "r", encoding="utf-8") as fh:
         cfg = yaml.safe_load(fh)
-    imp = cfg.setdefault("impedance", {})
+    # setdefault would MASK a wrong base: pointed at the (gain-free) configs/farms_controller.yaml it
+    # would silently CREATE an empty block, and the leg-gain `.get(..., [defaults])` below would then
+    # inject hard-coded values 35-168x off the tuned ones. Require the real gain block instead.
+    # NOTE the exported yaml targets the NUMPY controller -- `impedance:` is still the right name there.
+    if "impedance" not in cfg:
+        raise ValueError(
+            "base yaml %r has no `impedance:` gain block.\n"
+            "If it has a `reference_targets:` block instead, it is configs/farms_controller.yaml -- "
+            "the TARGETS-ONLY torch controller's config, gain-free since 2026-07-16 (impedance is now "
+            "env.set_joint_impedance() -> PhysX, and the solver is PhysX's implicit PD). This exporter "
+            "produces a drop-in for the NUMPY controller and needs the real gains: use "
+            "configs/farms_controller_numpy_legacy.yaml (= CFG_PATH).\n"
+            "See docs/IMPLICIT_ONLY_MIGRATION_2026-07-16.md." % base_yaml_path
+        )
+    imp = cfg["impedance"]
     imp["body_kp"] = f(row, "body_kp")
     imp["body_kv"] = f(row, "body_kv")
     if "pitch_kp" in row:
@@ -225,7 +250,7 @@ def main():
         export_trial_as_yaml(target, CFG_PATH, out_path)
         print(f"\n✓ Wrote {out_path}")
         print(f"\nTo USE this gain set:")
-        print(f"  copy {out_path} configs\\farms_controller.yaml")
+        print(f"  copy {out_path} configs\\farms_controller_numpy_legacy.yaml")
         print(f"  python scripts/test_walk.py --headless --duration 10 \\")
         print(f"      --video videos/trial_{args.export}.mp4 \\")
         print(f"      --camera-mode chase --terrain rough \\")

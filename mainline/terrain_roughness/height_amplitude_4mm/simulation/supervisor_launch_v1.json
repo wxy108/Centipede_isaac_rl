@@ -1,0 +1,7 @@
+{
+  "pid": 29424,
+  "attempt": "v1",
+  "started_utc": "2026-09-29T22:49:53.1723282Z",
+  "runner": "run_height_amplitude.py",
+  "condition_count": 84
+}

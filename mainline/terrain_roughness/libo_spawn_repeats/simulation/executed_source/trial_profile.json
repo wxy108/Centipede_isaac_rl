@@ -1,0 +1,185 @@
+{
+  "schema": "centipede_trial_standard_v1",
+  "profile_id": "fixed_wave4_pd_cpu_0p5ms_p4t2_20260928",
+  "status": "User-defined standard for future research trials; no new physics run performed",
+  "authority": "User 2026-09-28: fixed identical PD/configuration across trials, 0.5ms; reuse prior parallel results without convergence sweeps; selected wave4 reference explicitly.",
+  "fixed_pd": {
+    "path": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\outputs\\trial_standard_2026-09-28\\pd_wave4_firm20.json",
+    "sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+    "per_wave_variation": false,
+    "per_trial_variation": false,
+    "amplitude_dependent_retuning": false,
+    "require_complete_name_mapping": true
+  },
+  "physics": {
+    "engine": "Isaac CPU PhysX",
+    "device": "cpu",
+    "solver": "TGS",
+    "timestep_s": 0.0005,
+    "position_iterations": 64,
+    "velocity_iterations": 16,
+    "external_forces_every_iteration": true,
+    "enable_stabilization": false,
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "contact_offset_m": 2e-05,
+    "rest_offset_m": 0.0,
+    "static_friction": 0.5,
+    "dynamic_friction": 0.5,
+    "friction_correlation_distance_m": 0.025,
+    "friction_offset_threshold_m": 0.04,
+    "bounce_threshold_m_s": 0.5,
+    "ccd": false,
+    "enhanced_determinism": false,
+    "articulation_sleep_threshold": 0.0,
+    "articulation_stabilization_threshold": 0.0,
+    "effort_limit_Nm": 1.0,
+    "joint_velocity_limit_rad_s": 1000000.0,
+    "added_armature": 0.0,
+    "added_joint_friction": 0.0,
+    "reference_effective_stage": "X:\\Data\\Centipede_HeadCollision_PitchDamping_2026-09-16\\cpu_demo_12s_n6_2026_09_17_v1\\effective_stage.usda",
+    "reference_effective_stage_sha256": "bd7bf1ecc4ec0e7c8a842201931da98e8d7e00a96b69d11b03d15a009ae9d5a8"
+  },
+  "control": {
+    "cpg_command_dt_s": 0.001,
+    "world_pitch_feedback_dt_s": 0.0005,
+    "controlled_joints": [
+      "body_pitch_0",
+      "body_pitch_1",
+      "body_pitch_2",
+      "body_pitch_3",
+      "body_pitch_4"
+    ],
+    "feedback": "Existing front5 world-horizontal implicit PD reference formula",
+    "feedback_source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\work\\runtime_speed_2026-09-17\\cpu_demo_12s\\world_feedback.py",
+    "feedback_sha256": "6d5a9b93d9350e5da8097944c75b9dff525e5ab717b9c9f7a7476bd141b14e79"
+  },
+  "parallel": {
+    "cpu_worker_processes": 4,
+    "environments_per_worker": 12,
+    "full_batch_environments": 48,
+    "kit_tasking_threads_per_worker": 2,
+    "physx_threads_per_worker": 2,
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 1,
+    "omp_threads": 1,
+    "mkl_threads": 1,
+    "openblas_threads": 1,
+    "numexpr_threads": 1,
+    "pxr_launch_thread_limit": 2,
+    "historical_pxr_readback": 28,
+    "thread_note": "Kit/PhysX thread settings do not bound the total OS thread count. Record actual PXR/library readback; keep runtime startup policy fixed.",
+    "partial_batch_policy": "Use actual conditions without inventing independent samples. Freeze worker allocation, environment count, slots and condition order for a matched comparison; record any smaller tail batch.",
+    "evidence_scope": "Transferred practical allocation from 1ms/32-16/48-environment benchmark; no claim of a measured 0.5ms optimum.",
+    "new_capacity_or_convergence_search": false
+  },
+  "collisions": {
+    "inter_robot": false,
+    "private_terrain_cross_environment": false,
+    "self_collision": false,
+    "head_collision": true,
+    "layout": "Explicitly isolated robot plus own terrain; same-origin placement permitted; fixed slots within comparisons"
+  },
+  "trial_defaults": {
+    "duration_s": 12.0,
+    "analysis_window_s": [
+      4.0,
+      12.0
+    ],
+    "trajectory_sample_dt_s": 0.01,
+    "finite_state_check_every_physics_step": true,
+    "logging_policy": "Choose one recording/contact-metric schema for the comparison and use it for all candidates; do not mix telemetry modes when ranking runtime."
+  },
+  "model_policy": {
+    "body_model_is_explicit_experimental_variable": true,
+    "record": [
+      "model_id",
+      "asset_sha256",
+      "geometry",
+      "mass_inertia",
+      "joint_name_mapping"
+    ],
+    "fixed_across_models": [
+      "numeric_solver",
+      "timestep",
+      "PD table for corresponding joints",
+      "threads",
+      "comparison layout protocol"
+    ],
+    "topology_changes": "Provide an explicit complete joint mapping or a new declared model-specific table; never silently fall back to old row PD.",
+    "optimization": "A/B can be optimized separately for each declared body model using the same stated objective and constraints. Report ideal-kinematic optimization separately from PD/contact dynamics."
+  },
+  "routine_checks": [
+    "complete PD coverage and native readback",
+    "effective solver/timestep/thread settings",
+    "finite states",
+    "native errors",
+    "collision isolation",
+    "run identity"
+  ],
+  "excluded_work": [
+    "new convergence sweeps",
+    "new maximum-capacity search",
+    "automatic resumption of soft-leg/Newton branches",
+    "automatic rewriting of historical runs or Clean"
+  ],
+  "provenance": {
+    "resource_timings": [
+      {
+        "configuration": "p1t4_first",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p1t4_first_analysis.json",
+        "source_sha256": "1cac65400c31f5a84943395725ad9dfe7b60a80ff1105271a35d45676ea626b4",
+        "wall_s": 470.3146324157715,
+        "peak_rss_bytes": 4979036160,
+        "end_to_end_envsteps_per_s": 1224.712055079757
+      },
+      {
+        "configuration": "p2t2_first",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p2t2_first_analysis.json",
+        "source_sha256": "883d05c1ec9362bd4d730e28a7f01650a22447d41db0b3036e60e2957f2a3804",
+        "wall_s": 472.49934124946594,
+        "peak_rss_bytes": 6801584128,
+        "end_to_end_envsteps_per_s": 1219.049318623047
+      },
+      {
+        "configuration": "p2t4_first",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p2t4_first_analysis.json",
+        "source_sha256": "98874fdc04bce0fbf0d5fedd507c831c13614af2b418619906013b690f9cbc7d",
+        "wall_s": 328.3261547088623,
+        "peak_rss_bytes": 6823632896,
+        "end_to_end_envsteps_per_s": 1754.3530776911705
+      },
+      {
+        "configuration": "p2t4_repeat1",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p2t4_repeat1_analysis.json",
+        "source_sha256": "8ba1e57dd42d342e815e5d804d09bf5e78512d06c5e16379ad3c5a95d029e175",
+        "wall_s": 330.3493161201477,
+        "peak_rss_bytes": 6815019008,
+        "end_to_end_envsteps_per_s": 1743.608876703439
+      },
+      {
+        "configuration": "p4t2_first",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p4t2_first_analysis.json",
+        "source_sha256": "e1f1ff064d32bd0fe5451b914dd0acc1296bc783b6ef0b207707c6ddf00b9c22",
+        "wall_s": 258.2926549911499,
+        "peak_rss_bytes": 10528980992,
+        "end_to_end_envsteps_per_s": 2230.028569800934
+      },
+      {
+        "configuration": "p4t2_repeat1",
+        "source": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\outputs\\scale_adaptation_2026-09-18\\cpu_resource_p4t2_repeat1_analysis.json",
+        "source_sha256": "49704b27da33f88cdf2377360e8d2d57e4be2517efb10314e30b84395a25551d",
+        "wall_s": 262.3039400577545,
+        "peak_rss_bytes": 10536939520,
+        "end_to_end_envsteps_per_s": 2195.925840355945
+      }
+    ],
+    "historical_max_capacity_note": "Old 240 is an environment count, not a worker-process count; not used as the operating default.",
+    "runtime_reference": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\work\\runtime_speed_2026-09-17\\cpu_demo_12s",
+    "physx_extension_reference": "omni.physx-107.3.18",
+    "python_environment": "C:/Users/wxy22/anaconda3/envs/isaaclab_50/python.exe"
+  }
+}

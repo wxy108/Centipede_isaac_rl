@@ -200,6 +200,13 @@ def mujoco_spawn_z(heightmap_m, sample_radius_m=None, world_size=1.0,
 
 # ── USD mesh baking ──────────────────────────────────────────────────────────
 
+# GO_CONTACT_COMPLIANCE_v2 (2026-07-10): default-OFF hook. Set COMPLIANT_MATERIAL to a dict of RigidBodyMaterialCfg
+# fields (static_friction, dynamic_friction, restitution, friction_combine_mode, restitution_combine_mode,
+# compliant_contact_stiffness, compliant_contact_damping) to bind a compliant physics material to the terrain collider.
+# Default None => the branch is skipped => the rigid terrain path is byte-identical.
+COMPLIANT_MATERIAL = None
+
+
 def build_terrain_mesh(stage, prim_path, heightmap_m, world_size=1.0,
                        mesh_resolution=1024, mujoco_compat=True):
     """Bake the given heightmap into a USD triangle mesh prim with PhysX
@@ -320,5 +327,17 @@ def build_terrain_mesh(stage, prim_path, heightmap_m, world_size=1.0,
     UsdPhysics.CollisionAPI.Apply(mesh.GetPrim())
     UsdPhysics.MeshCollisionAPI.Apply(mesh.GetPrim())
     # PhysX cooks the mesh as a triangle-mesh static collider (default).
+
+    # GO_CONTACT_COMPLIANCE_v2: OPTIONAL compliant material bind (default OFF -> skipped -> rigid path byte-identical).
+    if COMPLIANT_MATERIAL is not None:
+        import isaaclab.sim as _sim_su
+        from isaaclab.sim.utils import bind_physics_material as _bpm
+        _mat_path = prim_path + "/physicsMaterial"
+        _mcfg = _sim_su.RigidBodyMaterialCfg(**COMPLIANT_MATERIAL)
+        _mcfg.func(_mat_path, _mcfg)
+        _bpm(prim_path, _mat_path)
+        print(f"[terrain] COMPLIANT_MATERIAL bound to {prim_path}: "
+              f"k_c={COMPLIANT_MATERIAL.get('compliant_contact_stiffness')} "
+              f"c_c={COMPLIANT_MATERIAL.get('compliant_contact_damping')}", flush=True)
 
     return mesh

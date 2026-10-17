@@ -765,7 +765,9 @@ class VideoRecorder:
 
 def main():
     # Read timestep from config YAML so you only change it in one place
-    config_path = os.path.join(BASE_DIR, "configs", "farms_controller.yaml")
+    # S2b 2026-07-16: -> _numpy_legacy (this script drives the NUMPY controller, which needs the gains;
+    # farms_controller.yaml is now targets-only for the torch path and would silently default body_kp to 5.0).
+    config_path = os.path.join(BASE_DIR, "configs", "farms_controller_numpy_legacy.yaml")
     if not os.path.isfile(config_path):
         config_path = os.path.join(BASE_DIR, "..", "Centipede_MUJOCO-main",
                                    "configs", "farms_controller.yaml")
@@ -1118,7 +1120,9 @@ def main():
     print(f"{'='*60}")
 
     # ── Load controller config ──
-    config_path = os.path.join(BASE_DIR, "configs", "farms_controller.yaml")
+    # S2b 2026-07-16: -> _numpy_legacy (this script drives the NUMPY controller, which needs the gains;
+    # farms_controller.yaml is now targets-only for the torch path and would silently default body_kp to 5.0).
+    config_path = os.path.join(BASE_DIR, "configs", "farms_controller_numpy_legacy.yaml")
     if not os.path.isfile(config_path):
         config_path = os.path.join(BASE_DIR, "..", "Centipede_MUJOCO-main",
                                    "configs", "farms_controller.yaml")

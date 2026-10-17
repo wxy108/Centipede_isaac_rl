@@ -1,0 +1,190 @@
+{
+  "complete": false,
+  "batch": "pair01_cutoff_4mm_height_x2p25",
+  "started_unix": 1790903303.4920874,
+  "elapsed_s": 422.1930801868439,
+  "finished": [
+    {
+      "job": "cutoff_2mm_height_x2p25_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 5700,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        1
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        2
+      ]
+    },
+    {
+      "job": "cutoff_2mm_height_x2p25_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13972,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        4
+      ]
+    },
+    {
+      "job": "cutoff_2mm_height_x2p25_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 24244,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        5
+      ],
+      "interrupted_peer_source_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "job": "cutoff_2mm_height_x2p25_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23028,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        8
+      ]
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13592,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        1
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        2
+      ]
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 3920,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        4
+      ]
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 4416,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 2744,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "cutoff_8mm_height_x2p25_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6440,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "cutoff_8mm_height_x2p25_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6208,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "cutoff_8mm_height_x2p25_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 4156,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        6
+      ],
+      "interrupted_peer_source_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "job": "cutoff_8mm_height_x2p25_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13536,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": [
+        9
+      ]
+    }
+  ],
+  "current": [
+    {
+      "job": "cutoff_4mm_height_x2p25_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13120,
+      "exit": 1,
+      "status": "failed"
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 7420,
+      "exit": 1,
+      "status": "failed"
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s03_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 3188,
+      "exit": 1,
+      "status": "failed"
+    },
+    {
+      "job": "cutoff_4mm_height_x2p25_s03_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14144,
+      "exit": 1,
+      "status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "layout": "All environment transforms at world origin; robot and own terrain collision-isolated",
+  "pitch_m": 1.2,
+  "columns": 6,
+  "rows": 1,
+  "occupied_slots": [
+    15,
+    20,
+    25
+  ],
+  "offsets_m": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "parent_native_runner_sha256": "cb8d70b52c53e82dbc08ca8fade66105db83375ae67fdbf862e2d286c2f8f4a8"
+}

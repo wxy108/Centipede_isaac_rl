@@ -1,0 +1,219 @@
+{
+  "complete": true,
+  "source_metrics": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\RESULTS.json",
+  "source_metrics_sha256": "336aa7ab316f4c2a24292229dc7b2e1134831b8f4d57ca064869d1be8b8f8497",
+  "source_video_report_sha256": "95172a22723af61fc04d3d7eeea42d2410bc15d1d1fed40076fdfcc243334955",
+  "source_code": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\compare_wave_number.py",
+  "source_code_sha256": "74e7d11826e60f7a67022b79faf96c5e5d93b9db3ed828f083f07a536a837467",
+  "videos": [
+    {
+      "video": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_original_wave1p5.mp4",
+      "sha256": "e461ed3dee31cd3cd49c8ce67148d415ed12a568d4f85cc7e8e07b9433b35d1a",
+      "source_video": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_original_six_waves.mp4",
+      "source_video_sha256": "94cdd849f6678584b6a8923da77e4f0e626a0e8553386e9efc2e86c111ac6a7a",
+      "source_trajectory": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low\\trajectory.npz",
+      "source_trajectory_sha256": "faf51734911f21cdf9582e528d2a132731bdff1638c0aab592d267630ac1b167",
+      "level": "original",
+      "wave": 1.5,
+      "environment_index": 0,
+      "tile_box_xyxy": [
+        0,
+        167,
+        720,
+        647
+      ],
+      "cutoff_wavelength_mm": 8,
+      "terrain_grid_mm": 2,
+      "fps": 20,
+      "frame_count": 120,
+      "duration_s": 6.0,
+      "source_times_s": [
+        0,
+        5.95
+      ],
+      "exact_t6_forward_mm": 14.538712944668385,
+      "full_decode_passed": true,
+      "new_physics_steps": 0,
+      "geometry_camera_unchanged": true,
+      "source_hash_unchanged": true,
+      "review_image": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_original_wave1p5_review.jpg"
+    },
+    {
+      "video": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_lambda4mm_wave1p5.mp4",
+      "sha256": "52427be79df8bca94f171c696420ba489d6e7388fd3eac61e6abf9fb800441cd",
+      "source_video": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_restore4_six_waves.mp4",
+      "source_video_sha256": "7a6376e8a4207b1058bf792832cd6964344b308da29f4506c6ab53f4e41d4a38",
+      "source_trajectory": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low\\trajectory.npz",
+      "source_trajectory_sha256": "453b29898ad950620b45c23687f65e9ea1c516b1d697fc36cc9f62815474eeeb",
+      "level": "restore4",
+      "wave": 1.5,
+      "environment_index": 0,
+      "tile_box_xyxy": [
+        0,
+        167,
+        720,
+        647
+      ],
+      "cutoff_wavelength_mm": 4,
+      "terrain_grid_mm": 0.5,
+      "fps": 20,
+      "frame_count": 120,
+      "duration_s": 6.0,
+      "source_times_s": [
+        0,
+        5.95
+      ],
+      "exact_t6_forward_mm": 2.426070378869072,
+      "full_decode_passed": true,
+      "new_physics_steps": 0,
+      "geometry_camera_unchanged": true,
+      "source_hash_unchanged": true,
+      "review_image": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\demos\\libo_lambda4mm_wave1p5_review.jpg"
+    }
+  ],
+  "plots": [
+    {
+      "site": "libo",
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\libo_displacement_vs_wave_number.png",
+      "sha256": "8fd01ee67411a5fd635263708515f828b70c6c77244b6440986f091d6c2a153e",
+      "data": [
+        {
+          "level": "original",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            14.538712944668385,
+            102.86430854776509,
+            141.96146519867344,
+            122.96452422923329,
+            113.97283036390247,
+            94.82264381952257
+          ]
+        },
+        {
+          "level": "restore4",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            2.426070378869072,
+            109.06563655808206,
+            147.34260378355216,
+            117.1495598309802,
+            116.12295554411942,
+            99.34458720744223
+          ]
+        },
+        {
+          "level": "restore2",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            113.78957550448175,
+            141.37202049974331,
+            131.4472367067597,
+            121.37519513647126,
+            112.14101909046303,
+            102.60067826486942
+          ]
+        }
+      ],
+      "shared_y_limits_mm": [
+        0,
+        240
+      ],
+      "full_decode_passed": true
+    },
+    {
+      "site": "narvik",
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\narvik_displacement_vs_wave_number.png",
+      "sha256": "b1682c320e4996705bac51e49280678040fffea13c857d141e3bb022246a6bc5",
+      "data": [
+        {
+          "level": "original",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            198.0290498555608,
+            205.6734807413967,
+            176.78812163824688,
+            149.1884666944067,
+            128.7869639880249,
+            114.91617452851408
+          ]
+        },
+        {
+          "level": "restore4",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            219.05040976839973,
+            205.30706066562692,
+            177.364440183507,
+            139.92764610127037,
+            128.47383716166047,
+            113.40452263825526
+          ]
+        },
+        {
+          "level": "restore2",
+          "wave_numbers": [
+            1.5,
+            2,
+            2.5,
+            3,
+            3.5,
+            4
+          ],
+          "forward_displacement_mm": [
+            200.63678248110614,
+            205.21802552389937,
+            176.2932381967877,
+            139.81094384565483,
+            129.36581992562185,
+            112.39814218142875
+          ]
+        }
+      ],
+      "shared_y_limits_mm": [
+        0,
+        240
+      ],
+      "full_decode_passed": true
+    }
+  ],
+  "new_physics_steps": 0,
+  "amplitudes_PD_trajectories_unchanged": true,
+  "scope": "Completed shortwave-band comparison only; this is not the proposed fixed-cutoff height sweep.",
+  "all_two_plots_visually_reviewed": true,
+  "all_two_videos_first_middle_last_frames_visually_reviewed": true
+}

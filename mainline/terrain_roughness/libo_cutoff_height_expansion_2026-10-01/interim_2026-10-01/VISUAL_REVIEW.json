@@ -1,0 +1,24 @@
+{
+  "reviewed_unix": 1790879808.8453429,
+  "reviewer": "root visual inspection",
+  "reviewed_items": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\displacement_vs_roughness_4mm.png": "aca460422bc84bc153af5273356a9bd0cff7a4d4b0cdca681a6b99ac7ae81d25",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\paired_differences_and_incomplete_4mm.png": "1c7ded87f0072d4dbb9b4372be7209ce8ceff0dd46237237992422ba93f47571",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_all_terrains_t6.png": "697f3a6b807591408de0a7ecc6a90e43a04b0f5b453c7ff35e265cf576df8750",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_height_x2_five_waves_spawn12_top_t6.png": "4830b2b52aba142fb6f11165b7200ec1133d7edce178883a2cb2fbbb3614b464",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\demos\\libo_cutoff4mm_height_x1p75_five_waves_spawn12_decoded_review.jpg": "ad5ea3aa56ad3f63dd6c8785aec8ffece6ad2dc30eefbb96d837c50042082f4e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\demos\\libo_cutoff4mm_height_x2_five_waves_spawn12_decoded_review.jpg": "b25bcda40a3a49029f6cfa0f2d36393e545b54a7a14914a34558185431736f5e"
+  },
+  "figures": "Readable labels, uniform markers, connected flat controls, pale sample SD. Completion and raw paired panels qualify trimmed mean curves.",
+  "video_QA": "Both videos fully decoded by frozen renderer, 120 frames at20fps. Viewed first/middle/last decoded frames of each. All complete robots remain visible; fixed five-wave slots; three failed cells explicitly labeled and never substituted.",
+  "missing_video_cells": {
+    "height_x1p75": [
+      2.5
+    ],
+    "height_x2": [
+      1.5,
+      3.0
+    ]
+  },
+  "limitations": "Videos are saved actual Isaac poses rasterized with original USD visuals, not new physics or native RTX. Representative frames inspected; not every frame manually viewed."
+}

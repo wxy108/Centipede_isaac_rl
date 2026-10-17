@@ -1,0 +1,14 @@
+{
+  "pid": 16920,
+  "status": "resumed",
+  "stage": "matched_2_8mm_h0p25_2p00",
+  "runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_cutoff_height_expansion.py",
+  "runner_sha256": "bb0c32b58a36ef02bd440ea3b47c26d8a5c829972003949645e948d3cc31a1c8",
+  "worker_runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py",
+  "worker_runner_sha256": "859ca686f7f487583153df25dbf75eaf5f23bf91a1c587dfcb60339339fa5ed2",
+  "resumed_unix": 1790900566.35857,
+  "original_started_unix": 1790839120.861187,
+  "condition_count": 2400,
+  "scope": "Only the finite supplied terrain manifest; no implicit height continuation or other study",
+  "previous_receipt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\matched_2_8mm_h0p25_2p00\\simulation\\dispatch_resume_history\\dispatch_before_02.json"
+}

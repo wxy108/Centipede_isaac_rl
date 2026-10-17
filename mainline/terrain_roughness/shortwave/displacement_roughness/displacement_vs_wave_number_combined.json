@@ -1,0 +1,12 @@
+{
+  "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\displacement_vs_wave_number_combined.png",
+  "sha256": "ddb0c994abde4e283412ccc814d3e6279dcccae30510968d3bc5779dec102bc6",
+  "source_metrics": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\RESULTS.json",
+  "source_metrics_sha256": "336aa7ab316f4c2a24292229dc7b2e1134831b8f4d57ca064869d1be8b8f8497",
+  "source_code": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\combined_plot_source.py",
+  "source_code_sha256": "ff118fd85dfdea0d742a32cfa9f0e40ea7ba0deedb892728ad0bb0f06353378d",
+  "data_replotted": true,
+  "new_physics": false,
+  "visually_reviewed": true,
+  "original_source_code_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_preview.py"
+}

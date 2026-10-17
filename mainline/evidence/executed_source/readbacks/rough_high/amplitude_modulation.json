@@ -1,0 +1,53 @@
+{
+  "body_factors": [
+    0.7687729001045227,
+    0.3669390380382538,
+    0.15192437171936035
+  ],
+  "leg_factors": [
+    1.2698315382003784,
+    1.3152185678482056,
+    1.3705873489379883
+  ],
+  "cells": [
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 18,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 23,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 4.0,
+      "ci": 5,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 28,
+      "body_factor": 0.15192437582205834,
+      "leg_factor": 1.3705873073557169,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "pitch_variant": "original_sine"
+    }
+  ],
+  "only_body_and_leg_yaw": true,
+  "other_targets_bitexact": true,
+  "limits_passed": true
+}

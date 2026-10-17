@@ -1,0 +1,97 @@
+{
+  "unix": 1790905418.3480818,
+  "reason": "Classify reviewed startup-plugin native gate failure as terminal invalid trials; preserve zero-error gate; no scoring or retry.",
+  "sources": [
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_cutoff_height_expansion.py",
+      "previous_sha256": "bb0c32b58a36ef02bd440ea3b47c26d8a5c829972003949645e948d3cc31a1c8",
+      "new_sha256": "a7c7314c4919a03bdb56cd639cc49d76a07392caef4244a0e02f5f59510ff375"
+    },
+    {
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\analyze_libo_cutoff_height_expansion.py",
+      "previous_sha256": "f52ec97ad2f6ecda7c3f080be01d159c25c1e117b5cb9d0f65a11cb39c0e08f8",
+      "new_sha256": "d642e0da2a218cd46babe16a5737fba669d7971b3cd2e316a9ada4e31275cb07"
+    }
+  ],
+  "classified_source_ids": [
+    13,
+    14
+  ],
+  "classification_receipt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\NATIVE_FAILURE_CLASSIFICATION.json",
+  "scientific_worker_PD_amplitude_physics_inputs_unchanged": true,
+  "original_runner_unchanged": true,
+  "verification": [
+    "Resumer and analyzer receipt/rejection tests passed",
+    "Independent review accepted terminal exclusion without scoring/retry",
+    "All36 stage scientific pins and preserved RESULTS hashes match"
+  ],
+  "archive": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\orchestration_revision_native_failure_2026-10-01",
+  "deployment_passed": true,
+  "all_owned_processes_absent": true,
+  "absent_current_pids": [
+    16224,
+    13120,
+    7420,
+    3188,
+    14144
+  ],
+  "original_artifact_hashes": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\active.json": "703545c62070892a5020aad47cb480dc87a6b6bcc9a88df80ebffe164a1e7f43",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\input_contract_validation.json": "49e90b4600e234bf71f351a55a620b7e98b2088b8af8b0ba753fea374aa8e4dc",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\matched_plant_check.json": "52ef6769ef65deccdcab7e03ce0348c84e7872ffb6da9804bf6591da5a2bf6d8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\readback.json": "587d103601e99628da1bb3a24842db1a51903a1e9aa496ec8b90e7ba8e8b7766",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\native_error_audit.json": "e13c532d27707f6981221872e1f9d8e614daa9b20db9092502a75e086b26f3e1",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\results.json": "471444abf974824ec7666e145bd729bf9945f555791a1bdc0b356392fcd69707",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\trajectory.npz": "e4d23cc139772b887d837db8c5f11cfeb4728c1421e170d138a1e34f661073d9",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\cluster_contacts.npz": "0004639b800dcfe8b192c57e7eaba09f2c9736e1e9d9294f35af14e8a63447a4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\collision_guard.json": "d3133703c830a4cf9721a855eddf0d9c4493fb5623ee6a27ced2d87b6db3d55c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\worker.log": "a59849de671ddca263a145b6a1fb3774b1b1b16d8767c9a3decc14d7912fe448",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\manifest.json": "bb10ccdde026e321592a9b09b8d34930ce2677f8d5b5e88a809aaafef77c9c49",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\runtime.json": "f47f66440f4ab6e3e0ed0581276ec5944cb40f6ffe925c6f8c938653f7614b79",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\thread_settings.json": "fffab5b6ae77302068d3aefadcd4a634325b264ac93bb9c648007f10d24db2f2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\implementation_provenance.json": "50f87fc3610cc9c8807318f2124c486992013a8556efc25bb4723514007641ec"
+  },
+  "preserved_reports": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\results\\RESULTS.json": "1f7219061498dd6269c88279c47764afa2e528c34370518dbe8e8dd7a7c9bc6d",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\matched_2_8mm_h0p25_2p00\\results\\RESULTS.json": "4c39abc7a08f2409920b62d001ba8d6589e490552caff39a85dafb41a5d2a658",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v02\\RESULTS.json": "71a35258b808c344b4360545810a0dccd7468e16202ed213b3d344031e555e47"
+  },
+  "scientific_pins": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_repeats.py": "fb2e88b31a429e30562a1ed71ec39a5e6ce068f4bc5fa2fd055d5f0d89505f4d",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_shortwave.py": "a2afeefc2ce6de9c5482e466f6ea85111e1bf0cb4d2deaba79a0c9c017d0a970",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\trial_profile.json": "259f25df9989517d19ca909c59747205104f5f9156711ced4fc54ebfbd15cca5",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\pd_wave4_firm20.json": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\isaac_runtime.py": "0480ed0bdb9a5d10b5c2232932ddfbf2a8dd2c2152eb919d2161f8e99c93b293",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\simulation.py": "32cafcb447c8c2b6fb2aae24e97ea05a47c53f7739008ed1d04264e5eab31b0e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\world_pitch.py": "ef52de0b3d865705e058fc15f6cfe62e24060bc719ddfa22705b1214d1821d78",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\campaign.json": "905b86132def1aa525335d69587b5166137423d0702fdd75ca616a5bb2132412",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json": "6a41f78360ba5780db17f9eef9d0b44f22f6776c6dbdcf36caa719e88a6baa35",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\REPORT.json": "f414778dd5e0af218f5943f19575f89d97a46ac2b79db8040372412975d15b68",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\simulation\\executed_source\\adapted_functions.py": "b707bc46ddd8ded1794ff3f57412ff8bcfada75bd32d9a9905a01cb5007acdcd",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\common.usda": "bdfae3e4db7b4cc0d21ea87bffab9188ee6bd4bbd8f34048c19f285f6d910147",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_extension.py": "95bb40ef1292b52380ec755314ddfae9e5570456f74fa45d3bbae43ad72420df",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\simulation\\campaign.json": "f4bf96d8c0be10d7124be5eb9d4cd797837673f3cc1d9b676bf75f250e9fcc70",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\executed_source\\adapted_functions.py": "b707bc46ddd8ded1794ff3f57412ff8bcfada75bd32d9a9905a01cb5007acdcd",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\executed_source\\scheduler_functions.py": "98173cd0552b903af27ac1486264e46bef3546a56695836b5e1775631e2d387a",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\libo_height_x1p25.npz": "1d057ba40cf8045999ae80f5c50412eeaf5e4f4f3b5e97a83166884f912d35e0",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\libo_height_x1p50.npz": "83c189dc2c2905f5c26bfb738dc6f2b74eb5be1dd91b85594e0d93d945294358",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_spawn30.py": "d0453d5a0e1a1abe0ad3c5abf1ab1dad424ce42c99ba2584497a3a4ed2fa1d87",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\campaign.json": "9f7972d9bacd3578ca6616a3d28b70236e8f779d61798be5096c408c424be4e4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation\\executed_source\\adapted_functions.py": "b707bc46ddd8ded1794ff3f57412ff8bcfada75bd32d9a9905a01cb5007acdcd",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation\\executed_source\\scheduler_function.py": "c6918cc6e691b9bdb492cbe01b56b1badef70bba11fb91823cadc398015d4f22",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py": "859ca686f7f487583153df25dbf75eaf5f23bf91a1c587dfcb60339339fa5ed2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\higher_h2p25_c2_4_8\\TERRAINS.json": "5d3067a595f1597987f5d2b4c6ee7a6a1e44bc685fcd1edf3514d435d4254833",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\TERRAIN_MANIFEST.json": "5d3067a595f1597987f5d2b4c6ee7a6a1e44bc685fcd1edf3514d435d4254833",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation\\campaign.json": "0669622197b443adc37fae74217e70f0801f2cc52fa754b2aa79788fe6e78128",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\adapted_functions.py": "b707bc46ddd8ded1794ff3f57412ff8bcfada75bd32d9a9905a01cb5007acdcd",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\original_worker_function.py": "d3be4f2fd925189aaf8249c7dcff747a511060f68b67fc54f8d95997de4bff67",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\run_libo_cutoff_height_expansion.py": "859ca686f7f487583153df25dbf75eaf5f23bf91a1c587dfcb60339339fa5ed2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\run_libo_repeats.py": "fb2e88b31a429e30562a1ed71ec39a5e6ce068f4bc5fa2fd055d5f0d89505f4d",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\run_shortwave.py": "a2afeefc2ce6de9c5482e466f6ea85111e1bf0cb4d2deaba79a0c9c017d0a970",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\executed_source\\scheduler_function.py": "fc4a1db97d4d94b5947b8a52317a45d3e7b4483a18eabdcd59ecf442043c2e1c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\higher_h2p25_c2_4_8\\libo_cutoff2_height_x2p25.npz": "a289904d5bebd174261dae30d2bb42907c45a52964f2cbccfdb52c5a6b0f176c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\higher_h2p25_c2_4_8\\libo_cutoff4_height_x2p25.npz": "2b525563b30b8e59cc190e1edaef6d6d68313b5e668d7aa6d8bc281fd2a577bf",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\higher_h2p25_c2_4_8\\libo_cutoff8_height_x2p25.npz": "946fec06e42ae8d4210f730781dc688cae6ff897001548d09bcfe359c21f8bc2"
+  }
+}

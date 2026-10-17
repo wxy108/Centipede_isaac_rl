@@ -1,0 +1,219 @@
+{
+  "schema": "libo_cutoff_height_expansion_protocol_v1",
+  "explicit_start": true,
+  "authorization": "2026-10-01 user: 好，做1.75以上高度和2/8mm截断吧，今晚都做完，你有什么问题吗",
+  "stop_rule_user_confirmed": true,
+  "stop_rule_reply": "采用这个判据（建议）",
+  "priority": "matched_through2_then_increment",
+  "priority_source": "Suggested order asked asynchronously; adopted after allowing time to reply. User authorized all higher-height/cutoff work; no extra approval gate.",
+  "initial_new_condition_count": 2700,
+  "first_stage": {
+    "name": "initial_4mm_h1p75_2p00",
+    "cutoffs": [
+      4
+    ],
+    "heights": [
+      1.75,
+      2.0
+    ],
+    "conditions": 300
+  },
+  "second_stage": {
+    "name": "matched_2_8mm_h0p25_2p00",
+    "cutoffs": [
+      2,
+      8
+    ],
+    "heights": [
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ],
+    "conditions": 2400
+  },
+  "continuation": {
+    "height_increment": 0.25,
+    "start_height": 2.25,
+    "conditions_per_active_cutoff_per_height": 150,
+    "policy": "Evaluate each cutoff independently; extend progressing cutoffs. An eligible raw stall decision stops further heights for that cutoff. Insufficient complete trajectories hold that cutoff for user review, never classify numerical failures as stalled."
+  },
+  "stop_rule": {
+    "wave": 3.5,
+    "window_s": [
+      4,
+      6
+    ],
+    "signed_forward_threshold_mm": 2,
+    "minimum_complete": 24,
+    "minimum_stalled_fraction": 0.8,
+    "planned_attempts": 30,
+    "apply_outlier_omission": false,
+    "failed_trials_count_as_stalled": false
+  },
+  "waves": [
+    1.5,
+    2,
+    2.5,
+    3,
+    3.5
+  ],
+  "shared_spawn_campaign": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation\\campaign.json",
+  "shared_spawn_campaign_sha256": "0669622197b443adc37fae74217e70f0801f2cc52fa754b2aa79788fe6e78128",
+  "spawn_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "new_flat_conditions": 0,
+  "reused_previous_rough_conditions": 900,
+  "reused_flat_controls": 5,
+  "frozen_profile_sha256": "259f25df9989517d19ca909c59747205104f5f9156711ced4fc54ebfbd15cca5",
+  "fixed_173_PD_sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+  "amplitudes": [
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 0,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 5,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 10,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 15,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 20,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine"
+    }
+  ],
+  "physics_dt_s": 0.0005,
+  "CPG_command_dt_s": 0.001,
+  "workers": 4,
+  "threads_per_worker": 2,
+  "environments_per_formal_batch": [
+    3,
+    2,
+    3,
+    2
+  ],
+  "terrain_policy": "Use existing fine2/fine4 mother files, exact triangle subdivision of the historical nominal8 mother; all0.5mm grid, fixed area/phases and mean-preserving height multiplication. No RMS matching/filtering/new phase draw.",
+  "forward_metric": "Mass-weighted full-body COM projected onto each initial forward heading; signed displacement.",
+  "statistics": "Exactly one complete point farthest from group median omitted; tie lowestspawn index; same retained set for0–6/2–6/4–6 and A/B/C; sampleSTD ddof1. Failures separately retained.",
+  "boundary_guard_m": 0.015,
+  "paused_other_studies": [
+    "random_erasure_4060",
+    "random_erasure_light_remaining75",
+    "Newton_softleg",
+    "Clean_adoption"
+  ],
+  "no_shutdown": true,
+  "no_parameter_or_convergence_or_capacity_search": true,
+  "time_estimate": {
+    "reference_conditions": 600,
+    "reference_active_dispatch_min": 132,
+    "initial_2700_expected_active_hours": 9.9,
+    "extra_full_three_cutoff_height_expected_min": 99,
+    "note": "Planning estimate, excludes preparation/postprocessing and variable failures; unbounded height continuation cannot be guaranteed overnight."
+  },
+  "orchestration_sources": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\build_libo_cutoff_height_terrains.py": "a74f9c42b11e3e4de453169e82b936b474497e1636c2c9907bd522d7d2f4f4c4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py": "859ca686f7f487583153df25dbf75eaf5f23bf91a1c587dfcb60339339fa5ed2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_cutoff_height_expansion.py": "bb0c32b58a36ef02bd440ea3b47c26d8a5c829972003949645e948d3cc31a1c8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\analyze_libo_cutoff_height_expansion.py": "f52ec97ad2f6ecda7c3f080be01d159c25c1e117b5cb9d0f65a11cb39c0e08f8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py": "32e9a73e85feb71bad4488279bb9b5ca3662e7a68f1e6aebc0a8394df4470b99"
+  },
+  "created_unix": 1790831365.118809,
+  "orchestration_revisions": [
+    {
+      "unix": 1790865479.4853904,
+      "source": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_cutoff_height_expansion.py",
+      "previous_sha256": "f413f7f89445f19b0f175390eb8e4b4402d8801f3b96d0e8941348e7b8c1e245",
+      "new_sha256": "bb0c32b58a36ef02bd440ea3b47c26d8a5c829972003949645e948d3cc31a1c8",
+      "reason": "Protected non-Python processes reused historical PIDs after boot. Accept only readable positive unrelated executable identity; inaccessible Python/unknown still block.",
+      "scientific_worker_PD_amplitude_physics_inputs_unchanged": true,
+      "verification": [
+        "7 mock identity cases passed including blocking deniedPython/unknown",
+        "Live read-only418PID ownership audit passed;9 protected unrelated executable identities verified",
+        "Independent reviewer accepted narrow fallback"
+      ],
+      "current_boot_unix": 1790864681.4853904
+    }
+  ]
+}

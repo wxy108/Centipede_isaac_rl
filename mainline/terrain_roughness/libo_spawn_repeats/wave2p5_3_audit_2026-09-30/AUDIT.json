@@ -1,0 +1,577 @@
+{
+  "complete": true,
+  "date": "2026-09-30",
+  "new_physics_steps": 0,
+  "definitions": {
+    "metric": "All-251-body mass-weighted COM including rotated authored local offsets, signed projection along initial tail-to-head XY axis; 0-6 s and 4-6 s.",
+    "video": "Preselected spawn2 only, 20 fps, last frame 5.95 s; each panel camera independently follows spine center.",
+    "statistics": "Raw complete cases and user-specified one-farthest-from-median omission shown separately; failed runs have no six-second displacement."
+  },
+  "sources": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\results\\RESULTS.json": "0cfb842d73bcb2c68a580d694a906e7f048a128399da176669a31d5f04d1c86b",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\results\\RESULTS.json": "64efdb00fc116e9f951a70617dc9c99082514d60ddcdfc34fcc790a35d3d1ac5",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\trimmed_results\\SUMMARY.json": "d27867b20f4ab66fb3e4d142471ec8a6f997e4c715a1bc848e5aa242d2d646a1",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\analyze_libo_repeats.py": "82dd52f4ef076d9fd8b1c4c079f5fd4553d9a3a7b9393ba1f5e2e30063f2ac8b",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\render_libo_extension.py": "de7629bfa24d774144b5333bd9d3b059a66ba9bcc97df3b559ad1d3c25a06b1d",
+    "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\audit_wave2p5_3.py": "03706f5a840243552e1bcb39872f7dc0978c09e07a6c8890f7b651d0f4769d68",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_low\\trajectory.npz": "05c23daf70bfbf2812ce8e297a1f8a9d4ca4a6ba7764859cec51ec2960fa8876",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_low\\active.json": "59f5a782ebe2d81a9c4de0e49a856defe6336941da70b85cef1cfaf71ffeaa80",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_low\\articulation_binding.json": "c5d247205b69b3e3f88564c1a1bd7093e2fcf6d4f68fc6d6657a8da9b4c9ad73",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_low\\amplitude_modulation.json": "f5379fd56d734601e6a69217150480bffefa863e823f07f47744e11828429e6e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_high\\trajectory.npz": "4d4476ff18e828bc9d26e5f1f1288afd601a3dcea7e9ffd53c753e350a8e9303",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_high\\active.json": "60b0e295d2b6f7c41b24583e2442452a8e1d7f6daa66d0303ff3d35911368613",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_high\\articulation_binding.json": "ab01211692c6eb1e106c682c2d81a818451245a8a487ef98ba30b5d5a99da4a7",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_high\\amplitude_modulation.json": "bc6da3921c23bffaf3d8239b6c38113119e18f981601530cd1597b4ab088d7a2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_low\\trajectory.npz": "a5194c5dcc48446f2b9f93c74221b1ea72bfdb99f2007621f603cea0c4c6c6a4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_low\\active.json": "5593a535b2f7464f499f1b0652cbf6c8dec0eb94a6c8e0104452ebb975fe1d68",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_low\\articulation_binding.json": "c5d247205b69b3e3f88564c1a1bd7093e2fcf6d4f68fc6d6657a8da9b4c9ad73",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_low\\amplitude_modulation.json": "dd1bd8b239d1d66561f256386400d15a6fa6bcd1921ee0392404092265f1d2eb",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_high\\trajectory.npz": "64eca7309b456883727edbc20301205ba5c7f2e9a972deb1d689bd2212e8620a",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_high\\active.json": "b99c818b23355068a98005a0b3dbace7cc41676eb520897e18f9e99637c46649",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_high\\articulation_binding.json": "ab01211692c6eb1e106c682c2d81a818451245a8a487ef98ba30b5d5a99da4a7",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_high\\amplitude_modulation.json": "ad4768f41c7b1beada0e8442e4c9af381b7f0b075e487134a2a0aa387afa6ae2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\demos\\libo_height_x1p25_five_waves_spawn02.mp4": "809437282a064486b69c2feaf4d6261350d293fae9eb652d15910e637b6fcca0",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\demos\\libo_height_x1p50_five_waves_spawn02.mp4": "99566ab9476fba72702cf16bfd71a917632ec10ef1a7f58d8aa8dc4f35d85908",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\demos\\VIDEO_REPORT.json": "ed4161707a981cb59dbd1eb3d3feb5a7aeda3fc47e1ab09f21da7c6a3b30b213"
+  },
+  "comparisons": [
+    {
+      "height_scale": 1.0,
+      "paired_raw": {
+        "n": 10,
+        "mean_3_minus_2p5_mm": -14.444486881885982,
+        "std_3_minus_2p5_mm": 14.853733295334532,
+        "wave3_wins": 1,
+        "mean_late_3_minus_2p5_mm": -6.485295999793624,
+        "spawn_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "paired_after_both_omissions": {
+        "n": 8,
+        "mean_3_minus_2p5_mm": -19.261638740238247,
+        "std_3_minus_2p5_mm": 10.655591958577816,
+        "wave3_wins": 0,
+        "mean_late_3_minus_2p5_mm": -9.839217489329751,
+        "spawn_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      },
+      "pairs": [
+        {
+          "spawn_index": 0,
+          "wave2p5_mm": 150.6313358653286,
+          "wave3_mm": 131.93239942800784,
+          "difference_3_minus_2p5_mm": -18.698936437320754,
+          "difference_4_6_mm": -7.011593841079147,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 1,
+          "wave2p5_mm": 118.3495939841418,
+          "wave3_mm": 109.95725712546701,
+          "difference_3_minus_2p5_mm": -8.392336858674796,
+          "difference_4_6_mm": -0.41319307639702174,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 2,
+          "wave2p5_mm": 144.00972730518328,
+          "wave3_mm": 112.77220417696105,
+          "difference_3_minus_2p5_mm": -31.23752312822222,
+          "difference_4_6_mm": -12.293959956264274,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 3,
+          "wave2p5_mm": 110.70205518523191,
+          "wave3_mm": 104.06513358716533,
+          "difference_3_minus_2p5_mm": -6.6369215980665786,
+          "difference_4_6_mm": 7.419807478533215,
+          "omitted_wave2p5": true,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 4,
+          "wave2p5_mm": 146.96937666006298,
+          "wave3_mm": 124.09243470446212,
+          "difference_3_minus_2p5_mm": -22.876941955600856,
+          "difference_4_6_mm": -19.036672451584224,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 5,
+          "wave2p5_mm": 126.93129467871132,
+          "wave3_mm": 114.68675911450406,
+          "difference_3_minus_2p5_mm": -12.244535564207268,
+          "difference_4_6_mm": -8.563570941396108,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 6,
+          "wave2p5_mm": 146.52094489857393,
+          "wave3_mm": 108.64783970601312,
+          "difference_3_minus_2p5_mm": -37.873105192560814,
+          "difference_4_6_mm": -18.045746377795368,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 7,
+          "wave2p5_mm": 117.61726256460905,
+          "wave3_mm": 133.9024252657218,
+          "difference_3_minus_2p5_mm": 16.285162701112753,
+          "difference_4_6_mm": 6.440972438168558,
+          "omitted_wave2p5": false,
+          "omitted_wave3": true
+        },
+        {
+          "spawn_index": 8,
+          "wave2p5_mm": 136.80504559914124,
+          "wave3_mm": 125.67253035912515,
+          "difference_3_minus_2p5_mm": -11.13251524001609,
+          "difference_4_6_mm": -11.531829695883275,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 9,
+          "wave2p5_mm": 111.607312964517,
+          "wave3_mm": 99.97009741921383,
+          "difference_3_minus_2p5_mm": -11.637215545303178,
+          "difference_4_6_mm": -1.817173574238602,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        }
+      ],
+      "unpaired_raw": {
+        "2.5": {
+          "n": 10,
+          "mean_mm": 131.0143949705501
+        },
+        "3.0": {
+          "n": 10,
+          "mean_mm": 116.56990808866412
+        }
+      },
+      "unpaired_trimmed": {
+        "2.5": {
+          "n": 9,
+          "mean_mm": 133.27132161336326,
+          "omitted_spawn": 3
+        },
+        "3.0": {
+          "n": 9,
+          "mean_mm": 114.64407284676882,
+          "omitted_spawn": 7
+        }
+      },
+      "failed": []
+    },
+    {
+      "height_scale": 1.25,
+      "paired_raw": {
+        "n": 9,
+        "mean_3_minus_2p5_mm": -28.012393780875637,
+        "std_3_minus_2p5_mm": 22.550453491154848,
+        "wave3_wins": 0,
+        "mean_late_3_minus_2p5_mm": -13.816359378664966,
+        "spawn_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      },
+      "paired_after_both_omissions": {
+        "n": 7,
+        "mean_3_minus_2p5_mm": -23.409042072948658,
+        "std_3_minus_2p5_mm": 12.624863512884637,
+        "wave3_wins": 0,
+        "mean_late_3_minus_2p5_mm": -12.27449376057284,
+        "spawn_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          9
+        ]
+      },
+      "pairs": [
+        {
+          "spawn_index": 0,
+          "wave2p5_mm": 143.62129343324892,
+          "wave3_mm": 114.48676933615685,
+          "difference_3_minus_2p5_mm": -29.13452409709207,
+          "difference_4_6_mm": -9.947840333223994,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 1,
+          "wave2p5_mm": 137.94350405611397,
+          "wave3_mm": 101.2845346748309,
+          "difference_3_minus_2p5_mm": -36.65896938128307,
+          "difference_4_6_mm": 0.09955118106532979,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 2,
+          "wave2p5_mm": 125.28511190688708,
+          "wave3_mm": 115.16274785662674,
+          "difference_3_minus_2p5_mm": -10.122364050260344,
+          "difference_4_6_mm": -10.997286847095765,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 3,
+          "wave2p5_mm": 136.77693797344625,
+          "wave3_mm": 107.66994065752826,
+          "difference_3_minus_2p5_mm": -29.106997315917994,
+          "difference_4_6_mm": -11.674312477275052,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 4,
+          "wave2p5_mm": 154.2773312601556,
+          "wave3_mm": 117.44951476184521,
+          "difference_3_minus_2p5_mm": -36.82781649831038,
+          "difference_4_6_mm": -25.476701763763742,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 5,
+          "wave2p5_mm": 103.20871802241648,
+          "wave3_mm": 97.26500918573808,
+          "difference_3_minus_2p5_mm": -5.943708836678397,
+          "difference_4_6_mm": -11.091659764759271,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 6,
+          "wave2p5_mm": 131.73586981303578,
+          "wave3_mm": 52.65213357120862,
+          "difference_3_minus_2p5_mm": -79.08373624182715,
+          "difference_4_6_mm": -45.477807466722155,
+          "omitted_wave2p5": false,
+          "omitted_wave3": true
+        },
+        {
+          "spawn_index": 7,
+          "wave2p5_mm": 90.06018637587589,
+          "wave3_mm": 80.8956731004629,
+          "difference_3_minus_2p5_mm": -9.164513275412986,
+          "difference_4_6_mm": 7.0520293827473495,
+          "omitted_wave2p5": true,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 9,
+          "wave2p5_mm": 112.5133867009128,
+          "wave3_mm": 96.44447236981446,
+          "difference_3_minus_2p5_mm": -16.06891433109834,
+          "difference_4_6_mm": -16.8332063189574,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        }
+      ],
+      "unpaired_raw": {
+        "2.5": {
+          "n": 9,
+          "mean_mm": 126.15803772689918
+        },
+        "3.0": {
+          "n": 10,
+          "mean_mm": 97.86260153116775
+        }
+      },
+      "unpaired_trimmed": {
+        "2.5": {
+          "n": 8,
+          "mean_mm": 130.6702691457771,
+          "omitted_spawn": 7
+        },
+        "3.0": {
+          "n": 9,
+          "mean_mm": 102.88598686005211,
+          "omitted_spawn": 6
+        }
+      },
+      "failed": [
+        {
+          "wave": 2.5,
+          "spawn_index": 8,
+          "status": "state_divergence"
+        }
+      ]
+    },
+    {
+      "height_scale": 1.5,
+      "paired_raw": {
+        "n": 7,
+        "mean_3_minus_2p5_mm": -25.502161212208563,
+        "std_3_minus_2p5_mm": 21.439367658220554,
+        "wave3_wins": 1,
+        "mean_late_3_minus_2p5_mm": -13.672620282148298,
+        "spawn_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "paired_after_both_omissions": {
+        "n": 6,
+        "mean_3_minus_2p5_mm": -31.955904540379375,
+        "std_3_minus_2p5_mm": 14.202430705889254,
+        "wave3_wins": 0,
+        "mean_late_3_minus_2p5_mm": -15.34622482690562,
+        "spawn_indices": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "pairs": [
+        {
+          "spawn_index": 0,
+          "wave2p5_mm": 105.98893955983955,
+          "wave3_mm": 65.90372559145203,
+          "difference_3_minus_2p5_mm": -40.08521396838752,
+          "difference_4_6_mm": -15.276669806761078,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 1,
+          "wave2p5_mm": 108.40504139634223,
+          "wave3_mm": 86.9654714717723,
+          "difference_3_minus_2p5_mm": -21.439569924569923,
+          "difference_4_6_mm": -11.229743603049656,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 2,
+          "wave2p5_mm": 108.8976227567848,
+          "wave3_mm": 122.11792151360113,
+          "difference_3_minus_2p5_mm": 13.220298756816334,
+          "difference_4_6_mm": -3.630993013604339,
+          "omitted_wave2p5": false,
+          "omitted_wave3": true
+        },
+        {
+          "spawn_index": 4,
+          "wave2p5_mm": 123.02983375303822,
+          "wave3_mm": 97.30419374009205,
+          "difference_3_minus_2p5_mm": -25.725640012946172,
+          "difference_4_6_mm": -5.5691759007414845,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 5,
+          "wave2p5_mm": 119.18438333954617,
+          "wave3_mm": 75.37375106761979,
+          "difference_3_minus_2p5_mm": -43.81063227192638,
+          "difference_4_6_mm": -21.04003380446982,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 6,
+          "wave2p5_mm": 118.76557778674461,
+          "wave3_mm": 70.43846512676022,
+          "difference_3_minus_2p5_mm": -48.327112659984394,
+          "difference_4_6_mm": -26.317283224977622,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        },
+        {
+          "spawn_index": 7,
+          "wave2p5_mm": 84.83779004162683,
+          "wave3_mm": 72.49053163716495,
+          "difference_3_minus_2p5_mm": -12.347258404461883,
+          "difference_4_6_mm": -12.644442621434074,
+          "omitted_wave2p5": false,
+          "omitted_wave3": false
+        }
+      ],
+      "unpaired_raw": {
+        "2.5": {
+          "n": 9,
+          "mean_mm": 102.80273765707597
+        },
+        "3.0": {
+          "n": 8,
+          "mean_mm": 84.17022709345846
+        }
+      },
+      "unpaired_trimmed": {
+        "2.5": {
+          "n": 8,
+          "mean_mm": 106.54402053248268,
+          "omitted_spawn": 3
+        },
+        "3.0": {
+          "n": 7,
+          "mean_mm": 78.74912789058094,
+          "omitted_spawn": 2
+        }
+      },
+      "failed": [
+        {
+          "wave": 3.0,
+          "spawn_index": 3,
+          "status": "state_divergence"
+        },
+        {
+          "wave": 2.5,
+          "spawn_index": 8,
+          "status": "state_divergence"
+        },
+        {
+          "wave": 3.0,
+          "spawn_index": 9,
+          "status": "state_divergence"
+        }
+      ]
+    }
+  ],
+  "video_recomputations": [
+    {
+      "height_scale": 1.25,
+      "wave": 2.5,
+      "spawn_index": 2,
+      "start_yaw_deg": 90.0,
+      "forward_axis_xy": [
+        1.0903283225720286e-07,
+        -0.999999999999994
+      ],
+      "video_last_5p95_mm": 124.17587730666743,
+      "forward_exact_6_mm": 125.28511190688708,
+      "forward_4_6_mm": 57.012201888443784,
+      "lateral_exact_6_mm": -35.75397813372953,
+      "omitted_by_user_rule": false,
+      "max_abs_delta_from_video_metric_series_mm": 0.0,
+      "trajectory_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_low\\trajectory.npz",
+      "trajectory_sha256": "05c23daf70bfbf2812ce8e297a1f8a9d4ca4a6ba7764859cec51ec2960fa8876",
+      "row_binding": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "height_scale": 1.25,
+      "wave": 3.0,
+      "spawn_index": 2,
+      "start_yaw_deg": 90.0,
+      "forward_axis_xy": [
+        1.0903283225720286e-07,
+        -0.999999999999994
+      ],
+      "video_last_5p95_mm": 113.77018047457021,
+      "forward_exact_6_mm": 115.16274785662674,
+      "forward_4_6_mm": 46.01491504134802,
+      "lateral_exact_6_mm": -17.64915479019902,
+      "omitted_by_user_rule": false,
+      "max_abs_delta_from_video_metric_series_mm": 0.0,
+      "trajectory_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p25_s02_high\\trajectory.npz",
+      "trajectory_sha256": "4d4476ff18e828bc9d26e5f1f1288afd601a3dcea7e9ffd53c753e350a8e9303",
+      "row_binding": [
+        13,
+        14
+      ]
+    },
+    {
+      "height_scale": 1.5,
+      "wave": 2.5,
+      "spawn_index": 2,
+      "start_yaw_deg": 90.0,
+      "forward_axis_xy": [
+        1.0903283225720286e-07,
+        -0.999999999999994
+      ],
+      "video_last_5p95_mm": 106.9409966553666,
+      "forward_exact_6_mm": 108.8976227567848,
+      "forward_4_6_mm": 56.85257889777364,
+      "lateral_exact_6_mm": -20.206739460429578,
+      "omitted_by_user_rule": false,
+      "max_abs_delta_from_video_metric_series_mm": 0.0,
+      "trajectory_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_low\\trajectory.npz",
+      "trajectory_sha256": "a5194c5dcc48446f2b9f93c74221b1ea72bfdb99f2007621f603cea0c4c6c6a4",
+      "row_binding": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "height_scale": 1.5,
+      "wave": 3.0,
+      "spawn_index": 2,
+      "start_yaw_deg": 90.0,
+      "forward_axis_xy": [
+        1.0903283225720286e-07,
+        -0.999999999999994
+      ],
+      "video_last_5p95_mm": 121.4073717476864,
+      "forward_exact_6_mm": 122.11792151360113,
+      "forward_4_6_mm": 53.2215858841693,
+      "lateral_exact_6_mm": -33.41582443539281,
+      "omitted_by_user_rule": true,
+      "max_abs_delta_from_video_metric_series_mm": 0.0,
+      "trajectory_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_1p25_1p5\\simulation\\runs\\v1\\height_x1p50_s02_high\\trajectory.npz",
+      "trajectory_sha256": "64eca7309b456883727edbc20301205ba5c7f2e9a972deb1d689bd2212e8620a",
+      "row_binding": [
+        13,
+        14
+      ]
+    }
+  ],
+  "figure": {
+    "path": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\outputs\\wave2p5_3_audit_2026-09-30\\video_vs_shared_spawns.png",
+    "sha256": "142f7a52f9ec20fc9f73337465ba54423ac59b04b89660924e6169b27ecbdd73"
+  },
+  "finding": "At x1.5 demo spawn2 wave3 exceeds wave2.5, but only1/7 common complete spawns show this ranking. The demo wave3 case is the one omitted by the agreed rule; raw and paired comparisons still favor wave2.5 on average. No displacement projection or video binding mismatch found in this audit."
+}

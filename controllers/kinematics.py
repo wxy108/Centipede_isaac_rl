@@ -27,7 +27,12 @@ N_BODY_JOINTS = 19    # joint_body_1 .. joint_body_19
 N_PITCH       = 20    # joint_pitch_body_0 .. joint_pitch_body_19
 N_ROLL        = 20    # joint_roll_body_0  .. joint_roll_body_19
 N_LEGS        = 19    # leg index n = 0..18 per side
-N_LEG_DOF     = 4     # DOF 0 (hip yaw), 1 (hip pitch), 2 (tibia), 3 (tarsus)
+N_LEG_DOF     = 4     # LEGACY DEFAULT (deployed / renamed-4DOF): DOF 0 (hip yaw),
+                      # 1 (hip pitch), 2 (tibia/legbase_roll), 3 (tarsus/knee).
+                      # Block A (2026-07-07): this module constant stays the legacy
+                      # default; IsaacLabModelIndex now detects a PER-INSTANCE
+                      # `n_leg_dof` (4 for the 4-DOF models, 2 for the leaner rebuild)
+                      # from the joint names — the per-instance value wins downstream.
 ACTIVE_DOFS   = (0, 1)
 LINK_LENGTH   = 0.005  # metres
 
@@ -131,9 +136,61 @@ class IsaacLabModelIndex:
                 raise ValueError(f"Body not in articulation: {name!r}")
             return body_name_to_id[name]
 
-        # ── body yaw joint indices (19 joints: joint_body_1..19) ──
+        # ── P3 rename (2026-06-17): AUTO-DETECT naming scheme ──
+        # The deployed/rebuild models use joint_body_*/joint_pitch_body_*/
+        # joint_roll_body_*/joint_leg_*; the FUNCTION-RENAMED rebuild uses
+        # body_yaw_*/body_pitch_*/body_roll_*/legbase_*/knee_*. Detect which by
+        # presence and bind the matching name builders, so BOTH resolve to the
+        # SAME indices (joint order is preserved by the rename) — deployed stays
+        # byte-identical; the renamed variant resolves correctly.
+        _new_scheme = ("body_yaw_1" in joint_name_to_id) or ("body_pitch_0" in joint_name_to_id)
+        if _new_scheme:
+            _LEG_NEW = ("legbase_yaw", "legbase_pitch", "legbase_roll", "knee")
+            _bjn = lambda i: f"body_yaw_{i}"
+            _pjn = lambda i: f"body_pitch_{i}"
+            _rjn = lambda i: f"body_roll_{i}"
+            _ljn = lambda n, s, d: f"{_LEG_NEW[d]}_{n}_{s}"
+            _leg_full_names = _LEG_NEW
+        else:
+            _bjn, _pjn, _rjn, _ljn = (body_joint_name, pitch_joint_name,
+                                      roll_joint_name, leg_joint_name)
+            _leg_full_names = ("dof0", "dof1", "dof2", "dof3")
+        self.naming_scheme = "function_renamed" if _new_scheme else "legacy_joint_prefix"
+
+        # ── Block A (2026-07-07): PER-INSTANCE leg-DOF count (Option B) ──
+        # The leaner rebuild drops legbase_roll (DOF-2) + knee (DOF-3) → 2 active
+        # leg DOFs (legbase_yaw, legbase_pitch) + a distal PASSIVE tarsus_yaw; the
+        # deployed / renamed-4DOF rebuild keeps all 4 leg DOFs. Detect the count
+        # from the joint names actually present (probe leg 0 side L for DOF-2/3 via
+        # the bound _ljn) so N_LEG_DOF becomes per-instance. The module-level
+        # N_LEG_DOF (=4) stays the legacy default; this per-instance value wins
+        # everywhere downstream. For a 4-DOF model both DOF-2 and DOF-3 names
+        # resolve ⇒ n_leg_dof == 4 == the pre-Block-A constant, so the 4-DOF leg
+        # resolution is BYTE-IDENTICAL to before this change.
+        _has_dof2 = _ljn(0, 'L', 2) in joint_name_to_id
+        _has_dof3 = _ljn(0, 'L', 3) in joint_name_to_id
+        self.n_leg_dof = 4 if (_has_dof2 and _has_dof3) else 2
+        self.leg_dof_names = tuple(_leg_full_names[d] for d in range(self.n_leg_dof))
+
+        # ── Block A: distal PASSIVE tarsus_yaw joints (leaner model only) ──
+        # Resolved best-effort (like pitch/roll): present in the leaner rebuild
+        # (tarsus_yaw_{n}_{s}, 38 joints), absent in the 4-DOF models. NOT driven
+        # by the controller (no torque is written to these indices); handled
+        # passively by the sim / a dedicated passive actuator group. has_tarsus
+        # reflects presence so callers (e.g. the passive-spring harness) can skip
+        # them when absent.
+        tarsus_ids = []
+        for n in range(N_LEGS):
+            for side in ('L', 'R'):
+                name = f"tarsus_yaw_{n}_{side}"
+                if name in joint_name_to_id:
+                    tarsus_ids.append(joint_name_to_id[name])
+        self.tarsus_joint_ids = np.asarray(tarsus_ids, dtype=int)
+        self.has_tarsus = len(self.tarsus_joint_ids) > 0
+
+        # ── body yaw joint indices (19 joints) ──
         self.body_joint_ids = np.array(
-            [jid(body_joint_name(i + 1)) for i in range(N_BODY_JOINTS)],
+            [jid(_bjn(i + 1)) for i in range(N_BODY_JOINTS)],
             dtype=int,
         )
 
@@ -146,7 +203,7 @@ class IsaacLabModelIndex:
         # what's actually there.
         pitch_ids = []
         for i in range(N_PITCH):
-            name = pitch_joint_name(i)
+            name = _pjn(i)
             if name in joint_name_to_id:
                 pitch_ids.append(joint_name_to_id[name])
         self.pitch_joint_ids = np.asarray(pitch_ids, dtype=int)
@@ -155,19 +212,22 @@ class IsaacLabModelIndex:
         # ── roll joint indices (0 or N_ROLL joints) ──
         roll_ids = []
         for i in range(N_ROLL):
-            name = roll_joint_name(i)
+            name = _rjn(i)
             if name in joint_name_to_id:
                 roll_ids.append(joint_name_to_id[name])
         self.roll_joint_ids = np.asarray(roll_ids, dtype=int)
         self.has_roll = len(self.roll_joint_ids) > 0
 
         # ── leg joint indices [n, side, dof] ──
-        self.leg_joint_ids = np.zeros((N_LEGS, 2, N_LEG_DOF), dtype=int)
+        # Shape (N_LEGS, 2, self.n_leg_dof): 4-DOF for the deployed/renamed-4DOF
+        # models (byte-identical to the pre-Block-A (N_LEGS, 2, 4)), 2-DOF for the
+        # leaner rebuild (legbase_yaw, legbase_pitch only).
+        self.leg_joint_ids = np.zeros((N_LEGS, 2, self.n_leg_dof), dtype=int)
         for n in range(N_LEGS):
             for si, side in enumerate(('L', 'R')):
-                for dof in range(N_LEG_DOF):
+                for dof in range(self.n_leg_dof):
                     self.leg_joint_ids[n, si, dof] = jid(
-                        leg_joint_name(n, side, dof))
+                        _ljn(n, side, dof))
 
         # ── head body index (for heading quaternion) ──
         self.head_body_id = bid("link_body_0")
@@ -189,7 +249,9 @@ class IsaacLabModelIndex:
         n_roll  = len(self.roll_joint_ids)
         print(f"[IsaacLabModelIndex] Loaded (exact-name lookup): "
               f"{N_BODY_JOINTS} body yaw, "
-              f"{N_LEGS}x2x{N_LEG_DOF} leg, "
-              f"{n_pitch} pitch, {n_roll} roll joints")
+              f"{N_LEGS}x2x{self.n_leg_dof} leg, "
+              f"{n_pitch} pitch, {n_roll} roll joints "
+              f"(n_leg_dof={self.n_leg_dof}, has_tarsus={self.has_tarsus}, "
+              f"n_tarsus={len(self.tarsus_joint_ids)}, dofs={self.leg_dof_names})")
         print(f"[IsaacLabModelIndex] Total articulation joints: "
               f"{articulation.num_joints}, bodies: {articulation.num_bodies}")

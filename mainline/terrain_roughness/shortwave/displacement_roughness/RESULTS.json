@@ -1,0 +1,1150 @@
+{
+  "complete": true,
+  "scope": "Descriptive postprocessing of completed simulation_v2/runs/v2, no new physics or optimization",
+  "fixed_roughness_sampling": {
+    "foot_count": 38,
+    "unordered_pair_count": 703,
+    "foot_template_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\preview\\terrains.npz",
+    "template_key": "fixed_foot_xy_m",
+    "coordinate": "Neutral common-model foot sphere center XY, centered on 21-spine-body centroid",
+    "formula": "R_deg = degrees(sqrt(mean_placements(mean_unordered_pairs(atan2(abs(f(x_i,y_i)-f(x_j,y_j)), distance_xy_ij)^2))))",
+    "user_selection": "Uniform positions in simulation terrain region and all headings; same metric for all wave numbers",
+    "physics_roi_xy_m": [
+      [
+        -0.223,
+        0.321
+      ],
+      [
+        -0.353,
+        0.081
+      ]
+    ],
+    "template_max_radius_m": 0.048628308841621885,
+    "common_center_domain_xy_m": [
+      [
+        -0.1743716911583781,
+        0.2723716911583781
+      ],
+      [
+        -0.3043716911583781,
+        0.03237169115837812
+      ]
+    ],
+    "heading_range_rad": [
+      0,
+      6.283185307179586
+    ],
+    "sampling": "Shared scrambled Sobol samples in x, y, heading; no gait phase",
+    "sobol_power": 16,
+    "sobol_seed": 918,
+    "placement_count": 65536,
+    "computational_note": "One fixed sample budget, reused historical 2^16 and seed 918; no convergence or capacity search",
+    "interpolation": "Original collision-mesh triangle diagonal (x0,y0)-(x1,y1), float32 vertex coordinates",
+    "foot_own_z_used": false,
+    "per_gait_geometry_used": false,
+    "actual_contact_filter_used": false,
+    "averaging": "Mean squared pair angles then square root, not mean of per-placement RMS",
+    "spatial_samples_are_independent_trials": false
+  },
+  "displacement_definition": {
+    "reference": "Whole-body COM from native masses and authored local COMs transformed by saved rigid-body link poses",
+    "local_com_evidence": "effective_fields_after_pd.json records all 251 authored physics:centerOfMass values; native COM tensor not separately recorded",
+    "frame": "Terrain-local world frame; environment offsets were already subtracted by simulation.py",
+    "direction": "Initial XY tail link_body_20 to head link_body_0 unit vector, effectively -X; held fixed in time",
+    "total_window_s": [
+      0,
+      6
+    ],
+    "later_window_s": [
+      4,
+      6
+    ],
+    "current_heading_integral": false,
+    "path_length": false,
+    "common_duration_all_conditions": true
+  },
+  "roughness": [
+    {
+      "site": "libo",
+      "level": "original",
+      "fixed_pair_angle_rms_deg": 8.571256213884043,
+      "surface_path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "fixed_pair_angle_rms_deg": 8.691882080548407,
+      "surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz",
+      "surface_sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb"
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "fixed_pair_angle_rms_deg": 8.705109297778526,
+      "surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore2.npz",
+      "surface_sha256": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f"
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "fixed_pair_angle_rms_deg": 2.127327932575977,
+      "surface_path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Narvik-4-2-5-3_seed1501_512.npz",
+      "surface_sha256": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7"
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "fixed_pair_angle_rms_deg": 2.1612096926398117,
+      "surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore4.npz",
+      "surface_sha256": "c753bdbc3bf28ec37d0e3f5e89a69802c3bd11539f7c8c2dcf9e9a403ce63366"
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "fixed_pair_angle_rms_deg": 2.169650062559151,
+      "surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore2.npz",
+      "surface_sha256": "ac676c1062828e75474ca93ca23ceaa138d25598ef48510881b26ea95ec00034"
+    }
+  ],
+  "cells": [
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 1.5,
+      "run": "libo_original_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 14.538712944668385,
+      "forward_4_6_mm": 0.35220306967583603,
+      "lateral_0_6_mm": 14.265045132016883,
+      "com_delta_xyz_mm": [
+        -14.538711907763208,
+        -14.265046188814495,
+        -33.49466657306843
+      ],
+      "com_path_xy_0_6_mm": 185.85848412403288,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 2.0,
+      "run": "libo_original_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 102.86430854776509,
+      "forward_4_6_mm": 47.13339562447229,
+      "lateral_0_6_mm": -2.986156013989006,
+      "com_delta_xyz_mm": [
+        -102.8643087648241,
+        2.9861485369337832,
+        -33.45061625699791
+      ],
+      "com_path_xy_0_6_mm": 135.84942514365517,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 2.5,
+      "run": "libo_original_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 141.96146519867344,
+      "forward_4_6_mm": 61.50227971435534,
+      "lateral_0_6_mm": 40.60587011963058,
+      "com_delta_xyz_mm": [
+        -141.96146224709213,
+        -40.60588043860047,
+        -32.529292277451674
+      ],
+      "com_path_xy_0_6_mm": 155.00448823398,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 3.0,
+      "run": "libo_original_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 122.96452422923329,
+      "forward_4_6_mm": 51.761814270948676,
+      "lateral_0_6_mm": 4.6509501447805555,
+      "com_delta_xyz_mm": [
+        -122.96452389116224,
+        -4.650959082890857,
+        -32.00763348405223
+      ],
+      "com_path_xy_0_6_mm": 127.91518001989613,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 3.5,
+      "run": "libo_original_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 113.97283036390247,
+      "forward_4_6_mm": 47.69178360822214,
+      "lateral_0_6_mm": 1.7778636810228616,
+      "com_delta_xyz_mm": [
+        -113.97283023467187,
+        -1.777871965540176,
+        -31.899899031584994
+      ],
+      "com_path_xy_0_6_mm": 118.16605240374257,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "original",
+      "wave": 4.0,
+      "run": "libo_original_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 94.82264381952257,
+      "forward_4_6_mm": 38.60615446632642,
+      "lateral_0_6_mm": 2.7872952917008376,
+      "com_delta_xyz_mm": [
+        -94.82264361691793,
+        -2.7873021842192705,
+        -32.27975918309998
+      ],
+      "com_path_xy_0_6_mm": 98.43832281105962,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 8.571256213884043
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 1.5,
+      "run": "libo_restore4_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 2.426070378869072,
+      "forward_4_6_mm": 0.5895432696149001,
+      "lateral_0_6_mm": 16.458484424286066,
+      "com_delta_xyz_mm": [
+        -2.426069182526053,
+        -16.45848460063351,
+        -33.35012990948682
+      ],
+      "com_path_xy_0_6_mm": 186.47281009530008,
+      "change_from_original_0_6_mm": -12.112642565799312,
+      "change_from_original_4_6_mm": 0.23734019993906408,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 2.0,
+      "run": "libo_restore4_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 109.06563655808206,
+      "forward_4_6_mm": 48.99267671226311,
+      "lateral_0_6_mm": -4.844923244317927,
+      "com_delta_xyz_mm": [
+        -109.06563691025212,
+        4.844915316497292,
+        -34.30980639072936
+      ],
+      "com_path_xy_0_6_mm": 156.09277037151438,
+      "change_from_original_0_6_mm": 6.201328010316971,
+      "change_from_original_4_6_mm": 1.8592810877908192,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 2.5,
+      "run": "libo_restore4_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 147.34260378355216,
+      "forward_4_6_mm": 61.50209872564014,
+      "lateral_0_6_mm": 2.5057850129402084,
+      "com_delta_xyz_mm": [
+        -147.34260360140993,
+        -2.5057957230572443,
+        -31.329194619639825
+      ],
+      "com_path_xy_0_6_mm": 155.9570576219861,
+      "change_from_original_0_6_mm": 5.381138584878727,
+      "change_from_original_4_6_mm": -0.0001809887152006695,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 3.0,
+      "run": "libo_restore4_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 117.1495598309802,
+      "forward_4_6_mm": 48.82430621655713,
+      "lateral_0_6_mm": 1.347461372638115,
+      "com_delta_xyz_mm": [
+        -117.14955973303489,
+        -1.347469888067221,
+        -32.9418508091453
+      ],
+      "com_path_xy_0_6_mm": 121.99731105388209,
+      "change_from_original_0_6_mm": -5.814964398253096,
+      "change_from_original_4_6_mm": -2.937508054391543,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 3.5,
+      "run": "libo_restore4_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 116.12295554411942,
+      "forward_4_6_mm": 48.34167044997267,
+      "lateral_0_6_mm": 2.2078370607010727,
+      "com_delta_xyz_mm": [
+        -116.12295538363468,
+        -2.2078455015078213,
+        -32.54241178022076
+      ],
+      "com_path_xy_0_6_mm": 120.12795839074747,
+      "change_from_original_0_6_mm": 2.1501251802169463,
+      "change_from_original_4_6_mm": 0.6498868417505292,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore4",
+      "wave": 4.0,
+      "run": "libo_restore4_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 99.34458720744223,
+      "forward_4_6_mm": 42.907592351095516,
+      "lateral_0_6_mm": 0.3229332090877039,
+      "com_delta_xyz_mm": [
+        -99.34458718396843,
+        -0.32294043029955366,
+        -32.56614059495386
+      ],
+      "com_path_xy_0_6_mm": 103.1308686038328,
+      "change_from_original_0_6_mm": 4.521943387919663,
+      "change_from_original_4_6_mm": 4.3014378847690935,
+      "fixed_pair_angle_rms_deg": 8.691882080548407
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 1.5,
+      "run": "libo_restore2_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 113.78957550448175,
+      "forward_4_6_mm": 37.96084089014981,
+      "lateral_0_6_mm": 20.70871215468183,
+      "com_delta_xyz_mm": [
+        -113.78957399919565,
+        -20.708720425878568,
+        -33.88454295085183
+      ],
+      "com_path_xy_0_6_mm": 177.4550417070714,
+      "change_from_original_0_6_mm": 99.25086255981336,
+      "change_from_original_4_6_mm": 37.60863782047397,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 2.0,
+      "run": "libo_restore2_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 141.37202049974331,
+      "forward_4_6_mm": 69.28637565264923,
+      "lateral_0_6_mm": 43.222682333358755,
+      "com_delta_xyz_mm": [
+        -141.3720173579498,
+        -43.22269260948278,
+        -32.98486387837682
+      ],
+      "com_path_xy_0_6_mm": 174.10161440574288,
+      "change_from_original_0_6_mm": 38.50771195197822,
+      "change_from_original_4_6_mm": 22.152980028176934,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 2.5,
+      "run": "libo_restore2_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 131.4472367067597,
+      "forward_4_6_mm": 55.16353130471711,
+      "lateral_0_6_mm": 6.106072387832486,
+      "com_delta_xyz_mm": [
+        -131.44723626291795,
+        -6.106081942538672,
+        -32.310710661409054
+      ],
+      "com_path_xy_0_6_mm": 145.66001507404818,
+      "change_from_original_0_6_mm": -10.514228491913741,
+      "change_from_original_4_6_mm": -6.338748409638228,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 3.0,
+      "run": "libo_restore2_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 121.37519513647126,
+      "forward_4_6_mm": 54.761455329104166,
+      "lateral_0_6_mm": -10.425168712670676,
+      "com_delta_xyz_mm": [
+        -121.3751958942611,
+        10.425159890086327,
+        -32.30897721497406
+      ],
+      "com_path_xy_0_6_mm": 126.95983094863578,
+      "change_from_original_0_6_mm": -1.5893290927620285,
+      "change_from_original_4_6_mm": 2.9996410581554898,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 3.5,
+      "run": "libo_restore2_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 112.14101909046303,
+      "forward_4_6_mm": 45.982836210659315,
+      "lateral_0_6_mm": -1.0052866397430205,
+      "com_delta_xyz_mm": [
+        -112.14101916353556,
+        1.0052784883773647,
+        -32.008892922475766
+      ],
+      "com_path_xy_0_6_mm": 117.06187591810193,
+      "change_from_original_0_6_mm": -1.8318112734394418,
+      "change_from_original_4_6_mm": -1.7089473975628238,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "libo",
+      "level": "restore2",
+      "wave": 4.0,
+      "run": "libo_restore2_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 102.60067826486942,
+      "forward_4_6_mm": 44.75914518565388,
+      "lateral_0_6_mm": -9.051980101869372,
+      "com_delta_xyz_mm": [
+        -102.60067892284427,
+        9.05197264397703,
+        -32.1801490786033
+      ],
+      "com_path_xy_0_6_mm": 106.87030975626031,
+      "change_from_original_0_6_mm": 7.778034445346847,
+      "change_from_original_4_6_mm": 6.152990719327455,
+      "fixed_pair_angle_rms_deg": 8.705109297778526
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 1.5,
+      "run": "narvik_original_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 198.0290498555608,
+      "forward_4_6_mm": 81.83500209447533,
+      "lateral_0_6_mm": 97.75467859022622,
+      "com_delta_xyz_mm": [
+        -198.02904274991656,
+        -97.75469298466619,
+        -24.662347609731036
+      ],
+      "com_path_xy_0_6_mm": 231.7580051368326,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 2.0,
+      "run": "narvik_original_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 205.6734807413967,
+      "forward_4_6_mm": 86.60016422560581,
+      "lateral_0_6_mm": 7.657363909247314,
+      "com_delta_xyz_mm": [
+        -205.67348018479368,
+        -7.6573788593499446,
+        -24.21093609171947
+      ],
+      "com_path_xy_0_6_mm": 210.97863181344547,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 2.5,
+      "run": "narvik_original_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 176.78812163824688,
+      "forward_4_6_mm": 73.40244875852797,
+      "lateral_0_6_mm": -0.5019808178560258,
+      "com_delta_xyz_mm": [
+        -176.78812167473464,
+        0.5019679673876204,
+        -23.514006691551877
+      ],
+      "com_path_xy_0_6_mm": 179.32187130006722,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 3.0,
+      "run": "narvik_original_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 149.1884666944067,
+      "forward_4_6_mm": 61.57599752006989,
+      "lateral_0_6_mm": 4.8860081695430875,
+      "com_delta_xyz_mm": [
+        -149.18846633924957,
+        -4.886019013833176,
+        -23.517332756380004
+      ],
+      "com_path_xy_0_6_mm": 150.58131358731586,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 3.5,
+      "run": "narvik_original_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 128.7869639880249,
+      "forward_4_6_mm": 50.79884488242055,
+      "lateral_0_6_mm": -1.7403878704926552,
+      "com_delta_xyz_mm": [
+        -128.78696411453078,
+        1.7403785091577584,
+        -23.504438140376394
+      ],
+      "com_path_xy_0_6_mm": 131.27999185567114,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "original",
+      "wave": 4.0,
+      "run": "narvik_original_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 114.91617452851408,
+      "forward_4_6_mm": 48.32494845573936,
+      "lateral_0_6_mm": -2.5962267365392813,
+      "com_delta_xyz_mm": [
+        -114.91617471722968,
+        2.5962183834516566,
+        -23.702014366680608
+      ],
+      "com_path_xy_0_6_mm": 116.51137838922293,
+      "change_from_original_0_6_mm": 0.0,
+      "change_from_original_4_6_mm": 0.0,
+      "fixed_pair_angle_rms_deg": 2.127327932575977
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 1.5,
+      "run": "narvik_restore4_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 219.05040976839973,
+      "forward_4_6_mm": 89.74331599085764,
+      "lateral_0_6_mm": 68.11732647420914,
+      "com_delta_xyz_mm": [
+        -219.05040481705092,
+        -68.1173423966609,
+        -24.73394649972453
+      ],
+      "com_path_xy_0_6_mm": 240.89246357902636,
+      "change_from_original_0_6_mm": 21.021359912838932,
+      "change_from_original_4_6_mm": 7.90831389638231,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 2.0,
+      "run": "narvik_restore4_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 205.30706066562692,
+      "forward_4_6_mm": 85.31708282293128,
+      "lateral_0_6_mm": 12.385792749890758,
+      "com_delta_xyz_mm": [
+        -205.30705976532136,
+        -12.38580767335884,
+        -24.458845030929503
+      ],
+      "com_path_xy_0_6_mm": 210.66864745379064,
+      "change_from_original_0_6_mm": -0.3664200757697813,
+      "change_from_original_4_6_mm": -1.2830814026745259,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 2.5,
+      "run": "narvik_restore4_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 177.364440183507,
+      "forward_4_6_mm": 73.79627411272536,
+      "lateral_0_6_mm": 4.347927633547339,
+      "com_delta_xyz_mm": [
+        -177.3644398674621,
+        -4.347940525907479,
+        -23.779229650932454
+      ],
+      "com_path_xy_0_6_mm": 180.05020426387608,
+      "change_from_original_0_6_mm": 0.5763185452601363,
+      "change_from_original_4_6_mm": 0.3938253541973893,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 3.0,
+      "run": "narvik_restore4_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 139.92764610127037,
+      "forward_4_6_mm": 58.296531996021585,
+      "lateral_0_6_mm": 0.722010601586046,
+      "com_delta_xyz_mm": [
+        -139.9276460487881,
+        -0.7220207727207245,
+        -23.943835800266594
+      ],
+      "com_path_xy_0_6_mm": 141.50481682074613,
+      "change_from_original_0_6_mm": -9.260820593136344,
+      "change_from_original_4_6_mm": -3.2794655240483053,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 3.5,
+      "run": "narvik_restore4_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 128.47383716166047,
+      "forward_4_6_mm": 51.34096997937439,
+      "lateral_0_6_mm": -0.8015599415796845,
+      "com_delta_xyz_mm": [
+        -128.47383721992435,
+        0.8015506030055186,
+        -23.792510438420923
+      ],
+      "com_path_xy_0_6_mm": 131.11627117508328,
+      "change_from_original_0_6_mm": -0.31312682636442446,
+      "change_from_original_4_6_mm": 0.5421250969538391,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore4",
+      "wave": 4.0,
+      "run": "narvik_restore4_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 113.40452263825526,
+      "forward_4_6_mm": 47.772708354919914,
+      "lateral_0_6_mm": -2.7868756301044986,
+      "com_delta_xyz_mm": [
+        -113.40452284082886,
+        2.786867386896624,
+        -23.879818237325335
+      ],
+      "com_path_xy_0_6_mm": 115.03278540143421,
+      "change_from_original_0_6_mm": -1.5116518902588183,
+      "change_from_original_4_6_mm": -0.5522401008194464,
+      "fixed_pair_angle_rms_deg": 2.1612096926398117
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 1.5,
+      "run": "narvik_restore2_low",
+      "environment_index": 0,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 200.63678248110614,
+      "forward_4_6_mm": 80.37233269790997,
+      "lateral_0_6_mm": 82.60961250375883,
+      "com_delta_xyz_mm": [
+        -200.63677647633443,
+        -82.60962708775108,
+        -24.86659554333546
+      ],
+      "com_path_xy_0_6_mm": 228.5301466472585,
+      "change_from_original_0_6_mm": 2.6077326255453386,
+      "change_from_original_4_6_mm": -1.46266939656536,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 2.0,
+      "run": "narvik_restore2_low",
+      "environment_index": 1,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 205.21802552389937,
+      "forward_4_6_mm": 85.8083012007661,
+      "lateral_0_6_mm": 4.298268975584184,
+      "com_delta_xyz_mm": [
+        -205.21802521146398,
+        -4.298283892580454,
+        -24.482062854454057
+      ],
+      "com_path_xy_0_6_mm": 210.7022788626961,
+      "change_from_original_0_6_mm": -0.455455217497331,
+      "change_from_original_4_6_mm": -0.7918630248397136,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 2.5,
+      "run": "narvik_restore2_low",
+      "environment_index": 2,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 176.2932381967877,
+      "forward_4_6_mm": 73.03309890542364,
+      "lateral_0_6_mm": 1.9280880705681962,
+      "com_delta_xyz_mm": [
+        -176.2932380566374,
+        -1.928100885064246,
+        -23.756197574648475
+      ],
+      "com_path_xy_0_6_mm": 178.7687667816042,
+      "change_from_original_0_6_mm": -0.49488344145916585,
+      "change_from_original_4_6_mm": -0.36934985310432467,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 3.0,
+      "run": "narvik_restore2_high",
+      "environment_index": 0,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 139.81094384565483,
+      "forward_4_6_mm": 57.59510964801693,
+      "lateral_0_6_mm": 0.34318034242989987,
+      "com_delta_xyz_mm": [
+        -139.81094382070918,
+        -0.34319050508166415,
+        -24.010206600024556
+      ],
+      "com_path_xy_0_6_mm": 141.34765684873886,
+      "change_from_original_0_6_mm": -9.37752284875188,
+      "change_from_original_4_6_mm": -3.9808878720529606,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 3.5,
+      "run": "narvik_restore2_high",
+      "environment_index": 1,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 129.36581992562185,
+      "forward_4_6_mm": 52.132060764023535,
+      "lateral_0_6_mm": -1.3104670079344585,
+      "com_delta_xyz_mm": [
+        -129.36582002087744,
+        1.3104576045233767,
+        -23.809265356023552
+      ],
+      "com_path_xy_0_6_mm": 131.66302082947445,
+      "change_from_original_0_6_mm": 0.5788559375969555,
+      "change_from_original_4_6_mm": 1.3332158816029818,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    },
+    {
+      "site": "narvik",
+      "level": "restore2",
+      "wave": 4.0,
+      "run": "narvik_restore2_high",
+      "environment_index": 2,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "forward_axis_xy": [
+        -0.9999999999999973,
+        -7.268852842001506e-08
+      ],
+      "forward_0_6_mm": 112.39814218142875,
+      "forward_4_6_mm": 47.194270284085164,
+      "lateral_0_6_mm": -2.119597898615678,
+      "com_delta_xyz_mm": [
+        -112.39814233549892,
+        2.11958972856012,
+        -23.904575388642595
+      ],
+      "com_path_xy_0_6_mm": 113.96295255249608,
+      "change_from_original_0_6_mm": -2.518032347085324,
+      "change_from_original_4_6_mm": -1.1306781716541963,
+      "fixed_pair_angle_rms_deg": 2.169650062559151
+    }
+  ],
+  "checks": {
+    "analytic_metric_checks": {
+      "flat_zero": true,
+      "analytic_plane": true,
+      "pair_permutation": true,
+      "checkerboard": true,
+      "triangle_and_boundary": true,
+      "no_extrapolation": true
+    },
+    "rotation_library_check_max_error_m": 1.951563910473908e-18,
+    "max_difference_from_mass_weighted_link_origin_forward_mm": 0.4097604919212472,
+    "masses_identical_all_conditions": true,
+    "local_COM_identical_all_conditions": true,
+    "total_mass_kg": 0.0025360510942689096,
+    "forward_from_initial_tail_to_head": true,
+    "source_hashes_unchanged": true,
+    "images_decoded": true,
+    "all_36_points_inside_axes_in_every_plot": true,
+    "all_three_plots_visually_reviewed": true,
+    "input_hashes_and_preserved_analysis_source_verified": true
+  },
+  "source_hashes": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\workflow.py": "53efd2a6d91ee51be38f7a58ca479e61402716658b4f3c74092c67a6623abadd",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\SIMULATION_VERIFICATION.json": "a095224bf5a25b65345dd5763b76f84114e2bf7f3bf88c4b6d9cbef8e3ce5c98",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\campaign.json": "bbd43441874c10d7231e793d1f7a7bf0245ef592f42945ab0ab1fa5aa4af54f6",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\REPORT.json": "ba1c02e844cbb8f945b42ddaa1fd7e5822a5eb6ee83da127baac8e3b13d0fb4f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low\\trajectory.npz": "faf51734911f21cdf9582e528d2a132731bdff1638c0aab592d267630ac1b167",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low\\amplitude_modulation.json": "e4c481312844d7b6a43d82036349c6507f3e6a088b5340cd42293bdeac4bd8f3",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_high\\trajectory.npz": "cd51c7b0f5d0817525a5339b725db874810259a5818f43980f5764f6e42d2c89",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_high\\amplitude_modulation.json": "374ea9c07e60f9b440a064b42c927937fa2c21ea40d37665c6b181dc40d401a9",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low\\trajectory.npz": "453b29898ad950620b45c23687f65e9ea1c516b1d697fc36cc9f62815474eeeb",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low\\amplitude_modulation.json": "b71ca8eab8682fc79ebb8bbc3887134b8e8495f49e53d8e7e9d6a70ab87d36df",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_high\\trajectory.npz": "bc51029fa4382aa5fe251cd0f874d63ceaaf681cf76ef6674db14a525d470769",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_high\\amplitude_modulation.json": "fb7178ab62659ac4d76deaddcafcd79335f55f23c079bebc207a7880edcc2239",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_low\\trajectory.npz": "32f1d0252063df724220349a03766a1fbe37fe0e843a23bb7233587d5c0782f3",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_low\\amplitude_modulation.json": "d04221f0dc55b1cc72a97d96adf81aec32892c293ae7905efbc996c1b67a3167",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_high\\trajectory.npz": "77629ce6a15fc66363be9d4c8433da654174caa3acdf704f920ed883ba5ebeda",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_high\\amplitude_modulation.json": "539e533b33b5003701661b572366d7de4af42db784063de185920ecbb73acd65",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_low\\trajectory.npz": "5247e869720504b2cadc26c23aac8218d1cbcb2a746c29959630959eefa9f16c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_low\\amplitude_modulation.json": "3c8ead65c4760f4738228cff01a843048fc2483ed473717d9f5e9cddbfa0ffde",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_high\\trajectory.npz": "835186e0a8cc5e55b3f5336b43dea593e5ec5c9aabdfc9ec243373a34b4ccac6",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_high\\amplitude_modulation.json": "c9bd160d114fb4f041fe7016c6641b58345334c2657e54709a2662035909b6ca",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_low\\trajectory.npz": "91ab92c4308d9d210bbd7abaab068cadee140109814db03a6309a38cac490493",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_low\\amplitude_modulation.json": "527eb167d35d714290dfd28e50fce63fad68f834c11bb6e768213de2fcf198c1",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_high\\trajectory.npz": "836e92d3a90994bf2c6c45d57c1ddbb0065ef3979cc0136d0bcdd3e707819ff9",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_high\\amplitude_modulation.json": "df2568ec96f7dd813fbab1b7aca5b353a4d24827e26d2eb7ae29afb1de76286b",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_low\\trajectory.npz": "8a2cec9d547a17357bf993ffd6dbb70dc0b064cf120354f73a1a0bd540cb6b65",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_low\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_low\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_low\\amplitude_modulation.json": "ff45dac1e81b18054ea5db80b3e261b2d8479431044cd0c834375e03a7e6f214",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_high\\trajectory.npz": "d283919abb866f5ab67dea580ef12e4fde8bf52e9d278198fc7cf16854654915",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_high\\backend.npz": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_high\\effective_fields_after_pd.json": "eb6bafb8390540fd44ea11ecc8fcb3e59e01551729eb2882c0394a30844a539e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_high\\amplitude_modulation.json": "d26e76513ddd699fab99802d61127cc6d744f0409a2d7ea62025d9c1e9af5b45",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\preview\\terrains.npz": "e94d147215446c5b8bed936a95b80646770fa96b87ecf48884149438d4efa251",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore2.npz": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Narvik-4-2-5-3_seed1501_512.npz": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore4.npz": "c753bdbc3bf28ec37d0e3f5e89a69802c3bd11539f7c8c2dcf9e9a403ce63366",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore2.npz": "ac676c1062828e75474ca93ca23ceaa138d25598ef48510881b26ea95ec00034",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\analysis_source.py": "3021247d8c3e9a7887de38384bdea70c374cb8a3def636c4d2fe940d9239a91b"
+  },
+  "plots": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\forward_0_6.png",
+      "sha256": "070d55b3fe6bab868091ce12f162ae21b483dd605f39aa0b351cb47c1aa9b2da",
+      "width": 2048,
+      "height": 1104
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\change_from_original.png",
+      "sha256": "2a6c34cab625ec18a87c16bb391679d331078b39592a2aad6e7b8614c017aaf1",
+      "width": 2048,
+      "height": 1104
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\forward_4_6.png",
+      "sha256": "5ada9ca9f0616eb71e386a46ab78cb2d36a97925e5450ea2b01ad9eae02f7d79",
+      "width": 2048,
+      "height": 1104
+    }
+  ],
+  "limitations": [
+    "One seed and one start per condition; no independent replicates or statistical error bars.",
+    "Whole-region roughness is a common descriptor, not the exact terrain encountered by each trajectory.",
+    "Shortwave restoration changes more than this single scalar; line segments do not establish a general causal roughness law.",
+    "The 0-6 s window includes settling; terrain-dependent initial height uses the same original initialization rule.",
+    "4-6 s is a supplementary fixed window, not a validated steady-state interval.",
+    "This computes only the fixed-neutral geometry descriptor on six completed surfaces, not the pending per-gait sweep."
+  ],
+  "plot_revision": "Correct shared y-limits after both sites are plotted; separate close x tick labels. Numeric analysis unchanged.",
+  "previous_plot_hashes": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\forward_0_6.png",
+      "sha256": "af90368c9caea0b138a82267b46422f90566b7b0c2990044e1b103bb899fd533",
+      "width": 2048,
+      "height": 1104
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\change_from_original.png",
+      "sha256": "7c1240e2db67067660635831720b8b2882f944d249ff938589f9f2cea45359fa",
+      "width": 2048,
+      "height": 1104
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\forward_4_6.png",
+      "sha256": "6d2ef9babfdd2ad5d2c20e71e9f773252a6c6ed0caaefa50628727206a4ead26",
+      "width": 2048,
+      "height": 1104
+    }
+  ],
+  "render_source_sha256": "e1aa319d15de243df55f46b75fac64853a448cedf8eb310bdef643935644dd93",
+  "initial_analysis_source": {
+    "executed_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\displacement_roughness_analysis.py",
+    "preserved_snapshot": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\analysis_source.py",
+    "sha256": "3021247d8c3e9a7887de38384bdea70c374cb8a3def636c4d2fe940d9239a91b"
+  }
+}

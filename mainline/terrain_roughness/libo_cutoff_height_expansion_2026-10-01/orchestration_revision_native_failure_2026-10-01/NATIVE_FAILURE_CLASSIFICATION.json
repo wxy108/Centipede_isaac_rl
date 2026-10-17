@@ -1,0 +1,39 @@
+{
+  "schema": "libo_explicit_native_failure_v1",
+  "classification": "native_startup_error",
+  "source_ids": [
+    13,
+    14
+  ],
+  "scoring_allowed": false,
+  "retry_allowed": false,
+  "assessed_unix": 1790904768.1918063,
+  "native_errors": [
+    "2026-10-02T01:14:00Z [411ms] [Error] [omni.core.ITypeFactory] Circular dependency detected! Interface: omni::platforminfo::ICpuInfo requested. But plugin with an interface: c:/users/wxy22/anaconda3/envs/isaaclab_50/lib/site-packages/omni/kernel/plugins/omni.platforminfo.plugin.dll is already in resolving state.",
+    "2026-10-02T01:14:00Z [411ms] [Error] [carb] [Plugin: gpu.foundation.plugin] Dependency: [omni::platforminfo::ICpuInfo v1.0] failed to be resolved."
+  ],
+  "artifact_hashes": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\active.json": "703545c62070892a5020aad47cb480dc87a6b6bcc9a88df80ebffe164a1e7f43",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\input_contract_validation.json": "49e90b4600e234bf71f351a55a620b7e98b2088b8af8b0ba753fea374aa8e4dc",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\matched_plant_check.json": "52ef6769ef65deccdcab7e03ce0348c84e7872ffb6da9804bf6591da5a2bf6d8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\readback.json": "587d103601e99628da1bb3a24842db1a51903a1e9aa496ec8b90e7ba8e8b7766",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\native_error_audit.json": "e13c532d27707f6981221872e1f9d8e614daa9b20db9092502a75e086b26f3e1",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\results.json": "471444abf974824ec7666e145bd729bf9945f555791a1bdc0b356392fcd69707",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\trajectory.npz": "e4d23cc139772b887d837db8c5f11cfeb4728c1421e170d138a1e34f661073d9",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\cluster_contacts.npz": "0004639b800dcfe8b192c57e7eaba09f2c9736e1e9d9294f35af14e8a63447a4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\collision_guard.json": "d3133703c830a4cf9721a855eddf0d9c4493fb5623ee6a27ced2d87b6db3d55c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\worker.log": "a59849de671ddca263a145b6a1fb3774b1b1b16d8767c9a3decc14d7912fe448",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\manifest.json": "bb10ccdde026e321592a9b09b8d34930ce2677f8d5b5e88a809aaafef77c9c49",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\runtime.json": "f47f66440f4ab6e3e0ed0581276ec5944cb40f6ffe925c6f8c938653f7614b79",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\thread_settings.json": "fffab5b6ae77302068d3aefadcd4a634325b264ac93bb9c648007f10d24db2f2",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\higher_h2p25_c2_4_8\\simulation\\runs\\v1\\cutoff_4mm_height_x2p25_s02_high\\implementation_provenance.json": "50f87fc3610cc9c8807318f2124c486992013a8556efc25bb4723514007641ec"
+  },
+  "diagnosis": "The fixed worker saved six-second data, then rejected this attempt at the unchanged native-error gate. Two startup CPU information/plugin dependency errors occurred at411ms; their scientific impact is not established. Preserve as invalid/unvalidated, never silently accept or score.",
+  "observed_complete_data_without_native_validation": true,
+  "original_worker_exit_code": 1,
+  "no_failure_as_zero": true,
+  "no_physics_or_parameter_changes": true,
+  "quality_offender": false,
+  "disposition": "Both selected conditions count as terminal native_startup_error attempts. Do not retry. Other untouched or nonoffender peer conditions remain authorized.",
+  "independent_review": "Two agents agreed native startup error gate failure is distinct from numerical/boundary failures and external interruptions."
+}

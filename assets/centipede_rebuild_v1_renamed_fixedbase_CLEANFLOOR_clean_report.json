@@ -1,0 +1,39 @@
+{
+  "in": "assets/centipede_rebuild_v1_renamed_fixedbase.usd",
+  "out": "assets/centipede_rebuild_v1_renamed_fixedbase_CLEANFLOOR.usd",
+  "before": {
+    "roots": [
+      "/centipede_rebuild_v1_renamed/link_body_0/link_body_0",
+      "/centipede_rebuild_v1_renamed/worldBody"
+    ],
+    "floor": [
+      [
+        "/centipede_rebuild_v1_renamed/worldBody/floor/collisions/CollisionPlane",
+        true,
+        true
+      ]
+    ]
+  },
+  "after": {
+    "roots": [
+      "/centipede_rebuild_v1_renamed/link_body_0/link_body_0"
+    ],
+    "floor": [
+      [
+        "/centipede_rebuild_v1_renamed/worldBody/floor/collisions/CollisionPlane",
+        false,
+        true
+      ]
+    ]
+  },
+  "acted": [
+    [
+      "collision_off",
+      "/centipede_rebuild_v1_renamed/worldBody/floor/collisions/CollisionPlane"
+    ],
+    [
+      "remove_physxArt_worldBody",
+      "/centipede_rebuild_v1_renamed/worldBody"
+    ]
+  ]
+}

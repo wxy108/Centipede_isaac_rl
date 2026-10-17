@@ -1,0 +1,15 @@
+{
+  "automation_id": "libo",
+  "name": "Libo 高度与截断夜间完成跟进",
+  "kind": "heartbeat",
+  "status": "ACTIVE",
+  "interval_minutes": 30,
+  "target_thread_id": "01a0e9b6-86f3-70e1-9d8b-220d682785d6",
+  "authorization": "2026-10-01 user: 授权自动跟进; explicit response to the pending30-minute current-study-only follow-up request.",
+  "verified_saved_schedule": true,
+  "verified_unix": 1790833436.265796,
+  "scope": "Existing authorized Libo expansion only; monitor/reconcile unscored external interruption and complete figures/videos/QA/delivery; no duplicate launch.",
+  "constraints": "Frozen amplitudes/173PD/physics/resources/spawns; randomerasure/Newton/Clean held, no shutdown or convergence/capacity search.",
+  "notify_only": "Meaningful execution fault, user decision required, or completion; unchanged monitoring quiet.",
+  "close_condition": "Pause heartbeat after final evidence/figure/video QA and delivery; latest user instruction overrides."
+}

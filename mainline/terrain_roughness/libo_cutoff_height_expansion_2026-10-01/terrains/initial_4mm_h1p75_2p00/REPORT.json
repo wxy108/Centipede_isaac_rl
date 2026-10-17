@@ -1,0 +1,235 @@
+{
+  "schema": "libo_matched_cutoff_height_terrain_preparation_v1",
+  "complete": true,
+  "cutoffs_nominal_mm": [
+    4
+  ],
+  "height_scales": [
+    1.75,
+    2.0
+  ],
+  "grid_spacing_m": 0.0005,
+  "height_transform": "h_s = mean(h_0) + s * (h_0 - mean(h_0)); s=1 directly reuses the mother file",
+  "preserved": "Mother XY layout, phases, coordinate span, and normalized non-DC spectral shape; non-DC PSD scales by s^2. No common-RMS renormalization.",
+  "cutoff_note": "2/4 mm labels describe measured-spectrum restoration increment; original piecewise-planar high-frequency tails retained. Fine8 is exact triangle refinement of the old nominal8 control, not a new lowpass surface.",
+  "fidelity_status": "Measured-spectrum constrained synthetic surfaces; no new natural morphology/noise-floor validation or dynamics identity claim.",
+  "roughness_sampling": {
+    "foot_count": 38,
+    "unordered_pair_count": 703,
+    "foot_template_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\preview\\terrains.npz",
+    "template_key": "fixed_foot_xy_m",
+    "coordinate": "Neutral common-model foot sphere center XY, centered on 21-spine-body centroid",
+    "formula": "R_deg = degrees(sqrt(mean_placements(mean_unordered_pairs(atan2(abs(f(x_i,y_i)-f(x_j,y_j)), distance_xy_ij)^2))))",
+    "user_selection": "Uniform positions in simulation terrain region and all headings; same metric for all wave numbers",
+    "physics_roi_xy_m": [
+      [
+        -0.223,
+        0.321
+      ],
+      [
+        -0.353,
+        0.081
+      ]
+    ],
+    "template_max_radius_m": 0.048628308841621885,
+    "common_center_domain_xy_m": [
+      [
+        -0.1743716911583781,
+        0.2723716911583781
+      ],
+      [
+        -0.3043716911583781,
+        0.03237169115837812
+      ]
+    ],
+    "heading_range_rad": [
+      0,
+      6.283185307179586
+    ],
+    "sampling": "Shared scrambled Sobol samples in x, y, heading; no gait phase",
+    "sobol_power": 16,
+    "sobol_seed": 918,
+    "placement_count": 65536,
+    "computational_note": "One fixed sample budget, reused historical 2^16 and seed 918; no convergence or capacity search",
+    "interpolation": "Original collision-mesh triangle diagonal (x0,y0)-(x1,y1), float32 vertex coordinates",
+    "foot_own_z_used": false,
+    "per_gait_geometry_used": false,
+    "actual_contact_filter_used": false,
+    "averaging": "Mean squared pair angles then square root, not mean of per-placement RMS",
+    "spatial_samples_are_independent_trials": false
+  },
+  "frozen_function_receipt": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\workflow.py",
+      "source_sha256": "53efd2a6d91ee51be38f7a58ca479e61402716658b4f3c74092c67a6623abadd",
+      "function": "surface_height",
+      "ast_sha256": "1680842c18d25f7225fe7a36766f712d0d016bf29210a6d422d6503441cac513"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave_terrain.py",
+      "source_sha256": "767a5658d9e69c3d103e8eb6c19bac8db94e8cd2c550e0671fbaf39dbe0c94af",
+      "function": "exact_triangle_upsample",
+      "ast_sha256": "f62b282a090a2883b954a05ca2ad0d848c9f1a5ba296e52aff2ec2adb3406fa8"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_preview.py",
+      "source_sha256": "eeaa315f5bae45f73f66ecba8655c3789e02cbf132038fc5dcb7f9cfa2c5bccf",
+      "function": "sampler",
+      "ast_sha256": "7e8cfc9c08de9a27e4a66da1f3655ad0febe78fbaa1799f31bfb5d94e92883ba"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_preview.py",
+      "source_sha256": "eeaa315f5bae45f73f66ecba8655c3789e02cbf132038fc5dcb7f9cfa2c5bccf",
+      "function": "roughness",
+      "ast_sha256": "ad232cddb8cd4b3fc8b723a6b8e58df72c87f72620819bb03f3982e5be70a662"
+    }
+  ],
+  "mothers": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz",
+      "sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+      "existing_mother_reused": true,
+      "source_control_path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "source_control_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "spectral_construction_report": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\REPORT.json",
+      "no_filtering": true,
+      "no_RMS_normalization": true,
+      "new_spectral_phases": false,
+      "cutoff_wavelength_nominal_mm": 4,
+      "grid_spacing_m": 0.0005,
+      "shape": [
+        2045,
+        2045
+      ],
+      "mean_height_mm": 0.0008054910398163433,
+      "height_Sq_mm": 3.186312424808825,
+      "physical_span_m": [
+        -0.511,
+        0.511
+      ]
+    }
+  ],
+  "fine8_refinement": null,
+  "terrains": [
+    {
+      "site": "libo",
+      "cutoff_mm": 4,
+      "cutoff_wavelength_nominal_mm": 4,
+      "height_scale": 1.75,
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\initial_4mm_h1p75_2p00\\libo_cutoff4_height_x1p75.npz",
+      "sha256": "0dc1299853c03b519f50f1cda703c9adc828addf495159e9b55cbd67e8914339",
+      "reused_existing_surface": null,
+      "mother_surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz",
+      "mother_surface_sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+      "source_control_path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "source_control_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "shape": [
+        2045,
+        2045
+      ],
+      "grid_spacing_m": 0.0005,
+      "physical_span_m": [
+        -0.511,
+        0.511
+      ],
+      "mean_height_mm": 0.0008054910398162274,
+      "height_Sq_mm": 5.5760467434154455,
+      "min_height_mm": -11.895968502890902,
+      "max_height_mm": 19.27614953900789,
+      "fixed_pair_angle_rms_deg": 14.333610038724894
+    },
+    {
+      "site": "libo",
+      "cutoff_mm": 4,
+      "cutoff_wavelength_nominal_mm": 4,
+      "height_scale": 2.0,
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\libo_height_x2p00.npz",
+      "sha256": "c8c9ba9d365e525f3e11698ec294aa1091d4eb806f3bcdc1b2db9f4852187b23",
+      "reused_existing_surface": "existing_height_surface_array_exact",
+      "mother_surface_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz",
+      "mother_surface_sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+      "source_control_path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "source_control_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "shape": [
+        2045,
+        2045
+      ],
+      "grid_spacing_m": 0.0005,
+      "physical_span_m": [
+        -0.511,
+        0.511
+      ],
+      "mean_height_mm": 0.0008054910398161488,
+      "height_Sq_mm": 6.37262484961765,
+      "min_height_mm": -13.595507644881007,
+      "max_height_mm": 22.029770117289043,
+      "fixed_pair_angle_rms_deg": 16.031499050975604
+    }
+  ],
+  "figures": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\initial_4mm_h1p75_2p00\\libo_cutoff_height_preview.png",
+      "sha256": "5b3e951c909b48f1554729388841985d16cc9eddb5c8eef7e58c5a7653fb47ce",
+      "patch_center_xy_m": [
+        0.17,
+        -0.12
+      ],
+      "patch_width_m": 0.1,
+      "display_grid_m": 0.0005,
+      "z_limits_mm": [
+        -21.5,
+        21.5
+      ],
+      "camera": {
+        "elevation_deg": 29,
+        "azimuth_deg": -125
+      },
+      "vertical_display_exaggeration": 3,
+      "rows_cutoff_mm": [
+        4
+      ],
+      "columns_height_scales": [
+        1.75,
+        2.0
+      ],
+      "image_decoded": true,
+      "manual_visual_review": false
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\initial_4mm_h1p75_2p00\\roughness_vs_height_cutoff.png",
+      "sha256": "b781337eb2be42a3578314b1cb3a5c7abb486e1651574314b154fa36b3fea940",
+      "image_decoded": true,
+      "manual_visual_review": false
+    }
+  ],
+  "input_hashes": {
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore2.npz": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave_terrain.py": "767a5658d9e69c3d103e8eb6c19bac8db94e8cd2c550e0671fbaf39dbe0c94af",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\workflow.py": "53efd2a6d91ee51be38f7a58ca479e61402716658b4f3c74092c67a6623abadd",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_preview.py": "eeaa315f5bae45f73f66ecba8655c3789e02cbf132038fc5dcb7f9cfa2c5bccf",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\REPORT.json": "ba1c02e844cbb8f945b42ddaa1fd7e5822a5eb6ee83da127baac8e3b13d0fb4f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\displacement_roughness\\RESULTS.json": "336aa7ab316f4c2a24292229dc7b2e1134831b8f4d57ca064869d1be8b8f8497",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\REPORT.json": "f414778dd5e0af218f5943f19575f89d97a46ac2b79db8040372412975d15b68",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\preview\\terrains.npz": "e94d147215446c5b8bed936a95b80646770fa96b87ecf48884149438d4efa251",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\libo_height_x2p00.npz": "c8c9ba9d365e525f3e11698ec294aa1091d4eb806f3bcdc1b2db9f4852187b23"
+  },
+  "executed_source_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\initial_4mm_h1p75_2p00\\generation_source.py",
+  "executed_source_sha256": "287eb037521748f056f1c7951c313fcde12b4079d5c56e8157bab58b80770c0e",
+  "checks": {
+    "inputs_unchanged": true,
+    "saved_arrays_exact": true,
+    "mean_height_preserved": true,
+    "standard_deviation_scales_exactly": true,
+    "historical_4mm_R_matches": true,
+    "shared_38_foot_703_pair_sampling": true,
+    "roughness_increases_with_scale": true,
+    "no_overwrites": true,
+    "images_decoded": true
+  },
+  "preparation_only": true,
+  "new_physics_steps": 0,
+  "no_runtime_or_queue_created": true,
+  "generation_elapsed_s": 13.791971921920776
+}

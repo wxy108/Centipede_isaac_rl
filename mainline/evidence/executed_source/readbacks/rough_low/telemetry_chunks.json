@@ -1,0 +1,6 @@
+{
+  "chunks": [],
+  "chunk_io_s": 0.0,
+  "complete": true,
+  "schema": "diagnostic telemetry chunks when enabled; intentionally empty when disabled"
+}

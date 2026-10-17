@@ -1,0 +1,9 @@
+{
+  "pid": 25904,
+  "status": "started",
+  "new_condition_count": 600,
+  "scope": "six existing4mm Libo heights,20 new shared spawns,five waves",
+  "launched_utc": "2026-09-30T23:07:15.0882612Z",
+  "runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_spawn30.py",
+  "simulation_directory": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation"
+}

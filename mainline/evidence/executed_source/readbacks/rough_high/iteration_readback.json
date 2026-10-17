@@ -1,0 +1,17 @@
+[
+  {
+    "path": "/World/env_0/Robot/link_body_0/link_body_0",
+    "position": 64,
+    "velocity": 16
+  },
+  {
+    "path": "/World/env_1/Robot/link_body_0/link_body_0",
+    "position": 64,
+    "velocity": 16
+  },
+  {
+    "path": "/World/env_2/Robot/link_body_0/link_body_0",
+    "position": 64,
+    "velocity": 16
+  }
+]

@@ -1,0 +1,319 @@
+{
+  "jobs": [
+    {
+      "name": "flat_low",
+      "args": {
+        "rows": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json",
+        "name": "flat_low",
+        "duration": 12.0,
+        "dt": 0.0005,
+        "position_iterations": 64,
+        "velocity_iterations": 16,
+        "external_forces_every_iteration": true,
+        "experiment_plan": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\flat_low_plan.json",
+        "experiment_plan_sha256": "5504a5de2b0fcb7934a7884fd9f0df6f05ab963503a6f2a027649939770f5268",
+        "enable_cameras": false,
+        "xr": false,
+        "device": "cpu",
+        "cpu": false,
+        "verbose": false,
+        "info": false,
+        "rendering_mode": null,
+        "kit_args": "--/plugins/carb.tasking.plugin/threadCount=2 --/persistent/physics/numThreads=2",
+        "anim_recording_enabled": false,
+        "anim_recording_start_time": 0,
+        "anim_recording_stop_time": 10,
+        "headless": true,
+        "hide_ui": true,
+        "create_new_stage": false,
+        "physics_gpu": 0,
+        "active_gpu": 0
+      },
+      "source_ids": [
+        0,
+        5,
+        10
+      ],
+      "cells": [
+        {
+          "wave": 1.5,
+          "ci": 0,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 0,
+          "body_factor": 1.166354908863849,
+          "leg_factor": 1.1149783493659917,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 2.0,
+          "ci": 1,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 5,
+          "body_factor": 1.033197558348571,
+          "leg_factor": 0.9794417835888279,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 2.5,
+          "ci": 2,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 10,
+          "body_factor": 0.8571706566095518,
+          "leg_factor": 1.0330056786855668,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "pitch_variant": "original_sine"
+        }
+      ]
+    },
+    {
+      "name": "rough_low",
+      "args": {
+        "rows": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json",
+        "name": "rough_low",
+        "duration": 12.0,
+        "dt": 0.0005,
+        "position_iterations": 64,
+        "velocity_iterations": 16,
+        "external_forces_every_iteration": true,
+        "experiment_plan": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rough_low_plan.json",
+        "experiment_plan_sha256": "cbd82b59e616648207cfb1e702368c6de7a0826f9d75293353aa737bf9f97b6b",
+        "enable_cameras": false,
+        "xr": false,
+        "device": "cpu",
+        "cpu": false,
+        "verbose": false,
+        "info": false,
+        "rendering_mode": null,
+        "kit_args": "--/plugins/carb.tasking.plugin/threadCount=2 --/persistent/physics/numThreads=2",
+        "anim_recording_enabled": false,
+        "anim_recording_start_time": 0,
+        "anim_recording_stop_time": 10,
+        "headless": true,
+        "hide_ui": true,
+        "create_new_stage": false,
+        "physics_gpu": 0,
+        "active_gpu": 0
+      },
+      "source_ids": [
+        3,
+        8,
+        13
+      ],
+      "cells": [
+        {
+          "wave": 1.5,
+          "ci": 0,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 3,
+          "body_factor": 1.166354908863849,
+          "leg_factor": 1.1149783493659917,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 2.0,
+          "ci": 1,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 8,
+          "body_factor": 1.033197558348571,
+          "leg_factor": 0.9794417835888279,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 2.5,
+          "ci": 2,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 13,
+          "body_factor": 0.8571706566095518,
+          "leg_factor": 1.0330056786855668,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "pitch_variant": "original_sine"
+        }
+      ]
+    },
+    {
+      "name": "flat_high",
+      "args": {
+        "rows": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json",
+        "name": "flat_high",
+        "duration": 12.0,
+        "dt": 0.0005,
+        "position_iterations": 64,
+        "velocity_iterations": 16,
+        "external_forces_every_iteration": true,
+        "experiment_plan": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\flat_high_plan.json",
+        "experiment_plan_sha256": "f2281e7f8c88c41f41613fb20741bff4d9bd465223845013831d716eee626c9c",
+        "enable_cameras": false,
+        "xr": false,
+        "device": "cpu",
+        "cpu": false,
+        "verbose": false,
+        "info": false,
+        "rendering_mode": null,
+        "kit_args": "--/plugins/carb.tasking.plugin/threadCount=2 --/persistent/physics/numThreads=2",
+        "anim_recording_enabled": false,
+        "anim_recording_start_time": 0,
+        "anim_recording_stop_time": 10,
+        "headless": true,
+        "hide_ui": true,
+        "create_new_stage": false,
+        "physics_gpu": 0,
+        "active_gpu": 0
+      },
+      "source_ids": [
+        15,
+        20,
+        25
+      ],
+      "cells": [
+        {
+          "wave": 3.0,
+          "ci": 3,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 15,
+          "body_factor": 0.7687729296687619,
+          "leg_factor": 1.2698314968120348,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 3.5,
+          "ci": 4,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 20,
+          "body_factor": 0.36693903095794816,
+          "leg_factor": 1.3152185248723594,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 4.0,
+          "ci": 5,
+          "arm": "pure_cluster",
+          "surface": "flat",
+          "source_id": 25,
+          "body_factor": 0.15192437582205834,
+          "leg_factor": 1.3705873073557169,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "pitch_variant": "original_sine"
+        }
+      ]
+    },
+    {
+      "name": "rough_high",
+      "args": {
+        "rows": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json",
+        "name": "rough_high",
+        "duration": 12.0,
+        "dt": 0.0005,
+        "position_iterations": 64,
+        "velocity_iterations": 16,
+        "external_forces_every_iteration": true,
+        "experiment_plan": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rough_high_plan.json",
+        "experiment_plan_sha256": "09fcb12df677978140385f5a26165e03bbb23cc681de11fd72b0fc0dc8e0304f",
+        "enable_cameras": false,
+        "xr": false,
+        "device": "cpu",
+        "cpu": false,
+        "verbose": false,
+        "info": false,
+        "rendering_mode": null,
+        "kit_args": "--/plugins/carb.tasking.plugin/threadCount=2 --/persistent/physics/numThreads=2",
+        "anim_recording_enabled": false,
+        "anim_recording_start_time": 0,
+        "anim_recording_stop_time": 10,
+        "headless": true,
+        "hide_ui": true,
+        "create_new_stage": false,
+        "physics_gpu": 0,
+        "active_gpu": 0
+      },
+      "source_ids": [
+        18,
+        23,
+        28
+      ],
+      "cells": [
+        {
+          "wave": 3.0,
+          "ci": 3,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 18,
+          "body_factor": 0.7687729296687619,
+          "leg_factor": 1.2698314968120348,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 3.5,
+          "ci": 4,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 23,
+          "body_factor": 0.36693903095794816,
+          "leg_factor": 1.3152185248723594,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "pitch_variant": "original_sine"
+        },
+        {
+          "wave": 4.0,
+          "ci": 5,
+          "arm": "pure_cluster",
+          "surface": "rough",
+          "source_id": 28,
+          "body_factor": 0.15192437582205834,
+          "leg_factor": 1.3705873073557169,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "pitch_variant": "original_sine"
+        }
+      ]
+    }
+  ],
+  "profile": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\trial_profile.json",
+  "profile_sha256": "259f25df9989517d19ca909c59747205104f5f9156711ced4fc54ebfbd15cca5",
+  "fixed_pd_sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+  "rows_sha256": "6a41f78360ba5780db17f9eef9d0b44f22f6776c6dbdcf36caa719e88a6baa35",
+  "execution_and_input_pins": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\isaac_runtime.py": "0480ed0bdb9a5d10b5c2232932ddfbf2a8dd2c2152eb919d2161f8e99c93b293",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\simulation.py": "32cafcb447c8c2b6fb2aae24e97ea05a47c53f7739008ed1d04264e5eab31b0e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\world_pitch.py": "ef52de0b3d865705e058fc15f6cfe62e24060bc719ddfa22705b1214d1821d78",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\amplitude_search_v1\\baseline_resource_v2_n32_batch00\\backend.npz": "f8884b0abf98a9ebce7b8619e52581890c0e9bac726bcce5593982520cd7eeb6",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\amplitude_search_v1\\baseline_resource_v2_n32_batch00\\readback.json": "76941bd7eeaf586743d0ed3db4fd1d0519a93f730f76c2017cc270aee765e563",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\amplitude_search_v1\\baseline_resource_v2_n32_batch00\\command_audit.json": "c783e36ba5a1c888c239b83a5aa601437985b734e4161a643f8c52c3ad247fd5",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\common.usda": "bdfae3e4db7b4cc0d21ea87bffab9188ee6bd4bbd8f34048c19f285f6d910147",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\mapping.json": "a3ddd2fd7c3289f5d2fec5a7a65a8f2fef63be85960b2cd2265439750249f9d3",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\common.xml": "1e3cda186d3c9da830c80d9162222feb030de10f550d6b33025f3c5374bc79cb",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+  },
+  "workers": 4,
+  "threads_per_worker": 2,
+  "environments_per_worker": 3,
+  "partial_batch": true,
+  "duplicate_conditions": false,
+  "organization_note": "Canonical X-drive launcher; path bindings migrated only. Recorded v4 data and executed source preserved byte-for-byte. No new simulation during organization."
+}

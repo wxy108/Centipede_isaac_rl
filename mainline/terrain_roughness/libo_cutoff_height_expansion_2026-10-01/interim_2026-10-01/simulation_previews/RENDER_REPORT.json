@@ -1,0 +1,283 @@
+{
+  "schema": "libo_cutoff_height_spawn12_saved_trajectory_renderer_v1",
+  "complete": true,
+  "stage": "initial_4mm_h1p75_2p00",
+  "video_mode": false,
+  "selected_spawn_index": 12,
+  "selected_spawn_yaw_deg": 90.78408689413732,
+  "preselection": "Spawn12 fixed for every terrain before performance inspection; incomplete cells never substituted.",
+  "physics": "Actual saved Isaac Lab CPU PhysX6s trajectories",
+  "backend": "VTK OpenGL rasterization of original USD visuals; not native RTX",
+  "new_physics_steps_for_render": 0,
+  "pid": 29436,
+  "started_unix": 1790879600.7788203,
+  "input_hashes": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\render_demo.py": "f4d58d09df48ee32a676f18147b9a5ca3ffb41a1f76cff5f24a9f44e73b958ee",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\render_libo_spawn30.py": "58a6c761931ed658fc8ee621360fb4d04194c22beeaf2bf6f233d85091fdbd1e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\usd_visual_geometry.json": "ecb62c0308bf94b603a6ef5b41e08dcd49d40b9b27019fbe4bcd9beb8356a87c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\usd_visual_geometry.npz": "2b4515aed8332f844e283b134c6e99404e3db6277e636ee1ac9f938c85ebc400",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\campaign.json": "8261c58d74425257f7bb29c0b36f7de4559f9335a297d985ce36b68a83fe6aa7",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\supervisor.json": "7307e38002d1f665762a78087ca8e38d8d00f5310b54d555eddd10e194d31aaa",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\results\\RESULTS.json": "1f7219061498dd6269c88279c47764afa2e528c34370518dbe8e8dd7a7c9bc6d",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\results\\forward_timeseries.npz": "fb5c4d9ee4eaf62ff31c84d9bb3c9b9ecdeb7991ea2b75c89d26d6e60ab5acbc",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\terrains\\initial_4mm_h1p75_2p00\\libo_cutoff4_height_x1p75.npz": "0dc1299853c03b519f50f1cda703c9adc828addf495159e9b55cbd67e8914339",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x1p75_s12_low\\trajectory.npz": "de2ac6b96289e173a6c6e8695cb10fd5315c9a9d68d4c4c8f2dcc53bdeda3f0d",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x1p75_s12_low\\manifest.json": "b05b8238febe00997f4b39495cbcb573d864fe047135f963ece45221d7f67aa0",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x1p75_s12_low\\results.json": "e5c5b15735f32bfdef43b3c8390e8b81c75e25cc8df1b656c0857972a445da6e",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x1p75_s12_low\\native_error_audit.json": "1d23e2c2a64b9ed3112d1d209cea1be980602d96fa8668060f66b98085e6f81f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\v1\\cutoff_4mm_height_x1p75_s12_high\\trajectory.npz": "7a2c56a4cda5e82745fcc765738535c490470327eec487ec751da50b5a6287e6",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\v1\\cutoff_4mm_height_x1p75_s12_high\\manifest.json": "2a604bf6a7fe659f8b672ccb0e53aaa28b8df47e4bd01632538aae32a5db43b4",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\v1\\cutoff_4mm_height_x1p75_s12_high\\results.json": "09b801b99e9b650f3b7565e4aba6d97de43f00129e0ead9beaf2991188d0e1da",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\v1\\cutoff_4mm_height_x1p75_s12_high\\native_error_audit.json": "1d23e2c2a64b9ed3112d1d209cea1be980602d96fa8668060f66b98085e6f81f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\height_amplitude_4mm\\libo_height_x2p00.npz": "c8c9ba9d365e525f3e11698ec294aa1091d4eb806f3bcdc1b2db9f4852187b23",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_low\\trajectory.npz": "b1c33f01c24f1271d3a2a31dcd247d459505dc3b092d67110800251c2278bef5",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_low\\manifest.json": "3005cadbcbe71478a8a14a5ce683deecd3fe1e16e61da225a1a8dbba2a36bbf8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_low\\results.json": "072af9678157e905d161535137bd3f31aeeb91ac0e64757bede0112c24012a78",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_low\\native_error_audit.json": "1d23e2c2a64b9ed3112d1d209cea1be980602d96fa8668060f66b98085e6f81f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_high\\trajectory.npz": "d37909372a4a8338b1402d7f6f28363f1b85095c447e9c86546be3534a3fd491",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_high\\manifest.json": "c11ae2b289fcede44be4d35d6fdc9e99966eb430d78e1e891522bf3e09afb5d9",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_high\\results.json": "f3bba8f5a3d2ca188b87856727962a83d9848facefa5e977a855b51462083bf5",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_high\\native_error_audit.json": "1d23e2c2a64b9ed3112d1d209cea1be980602d96fa8668060f66b98085e6f81f"
+  },
+  "sources": [
+    {
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x1p75_s12_low",
+      "trajectory_sha256": "de2ac6b96289e173a6c6e8695cb10fd5315c9a9d68d4c4c8f2dcc53bdeda3f0d",
+      "manifest_sha256": "b05b8238febe00997f4b39495cbcb573d864fe047135f963ece45221d7f67aa0"
+    },
+    {
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\v1\\cutoff_4mm_height_x1p75_s12_high",
+      "trajectory_sha256": "7a2c56a4cda5e82745fcc765738535c490470327eec487ec751da50b5a6287e6",
+      "manifest_sha256": "2a604bf6a7fe659f8b672ccb0e53aaa28b8df47e4bd01632538aae32a5db43b4"
+    },
+    {
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_low",
+      "trajectory_sha256": "b1c33f01c24f1271d3a2a31dcd247d459505dc3b092d67110800251c2278bef5",
+      "manifest_sha256": "3005cadbcbe71478a8a14a5ce683deecd3fe1e16e61da225a1a8dbba2a36bbf8"
+    },
+    {
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\initial_4mm_h1p75_2p00\\simulation\\runs\\peer1_from_v1\\cutoff_4mm_height_x2_s12_high",
+      "trajectory_sha256": "d37909372a4a8338b1402d7f6f28363f1b85095c447e9c86546be3534a3fd491",
+      "manifest_sha256": "c11ae2b289fcede44be4d35d6fdc9e99966eb430d78e1e891522bf3e09afb5d9"
+    }
+  ],
+  "renderer_sha256": "1b639be8f4763c72bea517067aee7bc5e66204f1fa0337e18704ca9617f29067",
+  "function_receipt": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\render_demo.py",
+      "source_sha256": "f4d58d09df48ee32a676f18147b9a5ca3ffb41a1f76cff5f24a9f44e73b958ee",
+      "function": "poly_for",
+      "ast_sha256": "487b44511aa8f946a4413124127154b30b517ea58de177da07fe141885ee6a0d"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\render_demo.py",
+      "source_sha256": "f4d58d09df48ee32a676f18147b9a5ca3ffb41a1f76cff5f24a9f44e73b958ee",
+      "function": "rotation",
+      "ast_sha256": "7a35c32e45c236c16d7924e1d522a7fb66cdfa46240be2b60b1c2e222d8e615a"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\render_libo_spawn30.py",
+      "source_sha256": "58a6c761931ed658fc8ee621360fb4d04194c22beeaf2bf6f233d85091fdbd1e",
+      "function": "ground_mapper",
+      "ast_sha256": "2530c88e2e5fc722599633e8e54e9df01c0ac7ba7b2469e171a96961ddc42464"
+    }
+  ],
+  "geometry_sha256": "2b4515aed8332f844e283b134c6e99404e3db6277e636ee1ac9f938c85ebc400",
+  "asset_sha256": "bdfae3e4db7b4cc0d21ea87bffab9188ee6bd4bbd8f34048c19f285f6d910147",
+  "body_binding_count": 251,
+  "visual_parts": 289,
+  "fixed_amplitudes": [
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 0,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 5,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 10,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 15,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 20,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine"
+    }
+  ],
+  "fixed_pd_sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+  "camera_follows_spine_center": true,
+  "same_world_camera_orientation": true,
+  "camera_offsets_world_m": {
+    "oblique": [
+      0.11960559840750093,
+      0.029639514665115742,
+      0.085
+    ],
+    "top": [
+      0.0,
+      0.0,
+      0.2
+    ]
+  },
+  "camera_half_heights_m": {
+    "oblique": 0.04626834958796864,
+    "top": 0.06969376976493025
+  },
+  "shared_physical_scale_scope": "All selected complete trajectories/terrains within this stage",
+  "terrain_vertical_exaggeration": 1.0,
+  "waves": [
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5
+  ],
+  "planned_selected_conditions": 10,
+  "complete_selected_conditions": 7,
+  "incomplete_selected_conditions": 3,
+  "figures": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_height_x1p75_five_waves_spawn12_oblique_t6.png",
+      "sha256": "fb8bcce847b851fd9334fdc96c2c73a15e25736dfb8c3af5396a53a445f72115",
+      "time_s": 6.0,
+      "view": "oblique",
+      "level": "cutoff4mm_height_x1p75",
+      "complete_waves": [
+        1.5,
+        2.0,
+        3.0,
+        3.5
+      ],
+      "incomplete_waves": [
+        2.5
+      ],
+      "image_decoded": true
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_height_x1p75_five_waves_spawn12_top_t6.png",
+      "sha256": "6714a91f8753ca4968e43006b39f3800aebed056fbac78e976090bbfdfb016a9",
+      "time_s": 6.0,
+      "view": "top",
+      "level": "cutoff4mm_height_x1p75",
+      "complete_waves": [
+        1.5,
+        2.0,
+        3.0,
+        3.5
+      ],
+      "incomplete_waves": [
+        2.5
+      ],
+      "image_decoded": true
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_height_x2_five_waves_spawn12_oblique_t6.png",
+      "sha256": "fc1d23a9262dc07940cda8cdcd77f3d9ff46aae7149ea4a49310b3aef1beb806",
+      "time_s": 6.0,
+      "view": "oblique",
+      "level": "cutoff4mm_height_x2",
+      "complete_waves": [
+        2.0,
+        2.5,
+        3.5
+      ],
+      "incomplete_waves": [
+        1.5,
+        3.0
+      ],
+      "image_decoded": true
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_height_x2_five_waves_spawn12_top_t6.png",
+      "sha256": "4830b2b52aba142fb6f11165b7200ec1133d7edce178883a2cb2fbbb3614b464",
+      "time_s": 6.0,
+      "view": "top",
+      "level": "cutoff4mm_height_x2",
+      "complete_waves": [
+        2.0,
+        2.5,
+        3.5
+      ],
+      "incomplete_waves": [
+        1.5,
+        3.0
+      ],
+      "image_decoded": true
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\libo_cutoff4mm_all_terrains_t6.png",
+      "sha256": "697f3a6b807591408de0a7ecc6a90e43a04b0f5b453c7ff35e265cf576df8750",
+      "cutoff_mm": 4.0,
+      "time_s": 6.0,
+      "scientific_terrain_by_wave_mosaic": true
+    }
+  ],
+  "videos": [],
+  "no_video_terrains": [],
+  "ground_meshes": {
+    "cutoff4mm_height_x1p75": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "dd994a9e8b68608f641087b6b7ad030c6cf80bb5dc53b0f8975686b90d772f3a",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "cutoff4mm_height_x2": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "9b1753d16ba3fa9c41ad964c1f58c09120a5c9cca3f9d26b563e8523b94d6fe6",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    }
+  },
+  "manually_reviewed": false,
+  "elapsed_s": 6.8794636726379395,
+  "minimum_visual_frustum_margin_m": 0.007435984755209247,
+  "no_native_physics": true,
+  "executed_source_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\interim_2026-10-01\\simulation_previews\\rendering_source.py",
+  "executed_source_sha256": "1b639be8f4763c72bea517067aee7bc5e66204f1fa0337e18704ca9617f29067"
+}

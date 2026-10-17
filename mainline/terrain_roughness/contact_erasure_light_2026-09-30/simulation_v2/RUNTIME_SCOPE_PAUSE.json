@@ -1,0 +1,2554 @@
+{
+  "status": "dispatch_paused_awaiting_runtime_scope_choice",
+  "reason": "User originally requested approximately1hour. Materialoverrun disclosed; awaiting choice between partialbudget closeout and another45to55minutes for complete280.",
+  "stopped_supervisor_pid": 2948,
+  "current_workers_allowed_to_finish": [
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 19924,
+      "exit": null
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 26588,
+      "exit": 1
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 8624,
+      "exit": null
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 8008,
+      "exit": null
+    }
+  ],
+  "completed_registry": [
+    {
+      "job": "endpoint_p0_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8348,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_low"
+    },
+    {
+      "job": "endpoint_p0_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6976,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_high"
+    },
+    {
+      "job": "endpoint_p1_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 19316,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_low"
+    },
+    {
+      "job": "endpoint_p1_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29584,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_high"
+    },
+    {
+      "job": "pilot_p050_bin010_w3",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6560,
+      "exit": 1,
+      "status": "failed",
+      "reused": true,
+      "diagnostic_only": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation\\runs\\v1\\pilot_p050_bin010_w3"
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 9232,
+      "status": "external_interruption",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_peer1_from_v1\\bin010_p040_b00",
+      "exit": null,
+      "external_interruption": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 2304,
+      "status": "external_interruption",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_peer1_from_v1\\bin020_p030_b00",
+      "exit": null,
+      "external_interruption": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 28056,
+      "status": "external_interruption",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_peer1_from_v1\\bin020_p040_b00",
+      "exit": null,
+      "external_interruption": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "pid": 25076,
+      "status": "external_interruption",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_peer1_from_v1\\bin050_p040_b00",
+      "exit": null,
+      "external_interruption": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 11648,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 27284,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 24056,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 23636,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 30236,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p090_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30136,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin010_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 22748,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p030_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 22652,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 12240,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        1
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 21748,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30080,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 27320,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p090_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 10604,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin020_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "pid": 16608,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin050_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 10928,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin050_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 23628,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin050_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 14208,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin050_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 26820,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer1_from_v1\\bin050_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p090_b00",
+      "attempt": "peer2_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 30228,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\peer2_from_v1\\bin050_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin010_p010_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 21708,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p010_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin010_p020_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 10604,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p020_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin010_p030_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 4116,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p030_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 18844,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 9924,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29916,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p070_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 19348,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p080_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29512,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p090_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29544,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin010_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p010_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30084,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p010_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin020_p020_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 12160,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p020_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 17340,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p030_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 13532,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29712,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 16140,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p070_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 11524,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p080_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 22032,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p090_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 13200,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin020_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p010_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29004,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p010_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin050_p020_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 8484,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p020_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin050_p030_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 29836,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p030_b00",
+      "exit": 0
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 27780,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p040_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 17468,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p050_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 11952,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p060_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p070_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30260,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p070_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p080_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 8460,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p080_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p090_b00",
+      "attempt": "v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 14788,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\v1\\bin050_p090_b00",
+      "exit": 1,
+      "offender_source_ids": [
+        3,
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 13560,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 8788,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 15912,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 10712,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 5596,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 3928,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 7692,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "isolated_resume01_s09",
+      "keep": [
+        9
+      ],
+      "pid": 2984,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s09\\bin020_p030_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 18616,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 12344,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 10856,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin010_p040_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 24024,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 11120,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 18948,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 9812,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin010_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "isolated_resume01_s09",
+      "keep": [
+        9
+      ],
+      "pid": 3564,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s09\\bin010_p040_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 25928,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 11216,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 2232,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 10132,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin020_p040_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 8404,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 10904,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 10588,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "isolated_resume01_s09",
+      "keep": [
+        9
+      ],
+      "pid": 9080,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s09\\bin020_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 7812,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 6580,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 3864,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s04",
+      "keep": [
+        4
+      ],
+      "pid": 25408,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s04\\bin050_p040_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 2916,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 14176,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 15812,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin050_p040_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "isolated_resume01_s09",
+      "keep": [
+        9
+      ],
+      "pid": 11268,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s09\\bin050_p040_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 10764,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin010_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 16020,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin010_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 3440,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin010_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 15076,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin010_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 8404,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin010_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 15416,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin010_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 24788,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin010_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 3564,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin010_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 9780,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin020_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 14616,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin020_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 7756,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin020_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s04",
+      "keep": [
+        4
+      ],
+      "pid": 3744,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s04\\bin020_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 19328,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin020_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 3660,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin020_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 2156,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin020_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 25280,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin020_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 11340,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin050_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 19244,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin050_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 25016,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin050_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 22920,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin050_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s04",
+      "keep": [
+        4
+      ],
+      "pid": 19220,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s04\\bin050_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 10088,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin050_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 3612,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin050_p050_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 9012,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin050_p050_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 14264,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin010_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 24304,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin010_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 12452,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin010_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 26568,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin010_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 11548,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin010_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s07",
+      "keep": [
+        7
+      ],
+      "pid": 25252,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s07\\bin010_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 10192,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin010_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "isolated_resume01_s09",
+      "keep": [
+        9
+      ],
+      "pid": 5916,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s09\\bin010_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s00",
+      "keep": [
+        0
+      ],
+      "pid": 15728,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s00\\bin020_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s01",
+      "keep": [
+        1
+      ],
+      "pid": 13612,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s01\\bin020_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        1
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s02",
+      "keep": [
+        2
+      ],
+      "pid": 17844,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s02\\bin020_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s03",
+      "keep": [
+        3
+      ],
+      "pid": 11668,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s03\\bin020_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s04",
+      "keep": [
+        4
+      ],
+      "pid": 26592,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s04\\bin020_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": []
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s05",
+      "keep": [
+        5
+      ],
+      "pid": 10488,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s05\\bin020_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s06",
+      "keep": [
+        6
+      ],
+      "pid": 11108,
+      "exit": 0,
+      "status": "finished",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s06\\bin020_p060_b00",
+      "isolated_recovery": true
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "isolated_resume01_s08",
+      "keep": [
+        8
+      ],
+      "pid": 4708,
+      "exit": 1,
+      "status": "failed",
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation_v2\\runs\\isolated_resume01_s08\\bin020_p060_b00",
+      "isolated_recovery": true,
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": []
+    }
+  ],
+  "no_stochastic_worker_killed": true,
+  "new_layout_controls_already_approved": true,
+  "recorded_unix": 1790788082.929186,
+  "latest_stochastic_snapshot": {
+    "planned": 270,
+    "completed": 130,
+    "numerical_divergences": 65,
+    "unscored": 75
+  },
+  "native_workers_active": false,
+  "matched_endpoint_controls_complete": true,
+  "matched_endpoint_supervisor": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\layout_controls\\supervisor.json",
+  "latest_readonly_audit": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\divergence_audit\\DIVERGENCE_AUDIT.json",
+  "updated_unix": 1790789817.5151894
+}

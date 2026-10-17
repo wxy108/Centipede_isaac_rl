@@ -1,0 +1,1591 @@
+{
+  "status": "existing_data_replot_complete",
+  "new_physics_steps": 0,
+  "input": {
+    "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\observed_contact_loss_preview\\PREVIEW.json",
+    "sha256": "c94752d1617aa71c21cc5970fce295a9f6f62e7b6b8172029817cac3022b80b5"
+  },
+  "verified_source_files": 124,
+  "window_s": [
+    0,
+    6
+  ],
+  "contact_snapshot_dt_s": 0.01,
+  "contact_force_threshold_N": 1e-08,
+  "flat_reference": "One existing flat trial per wave; matching commanded CPG clock and foot ID.",
+  "x_axis": "Number of foot-time samples with flat contact and absent rough contact, not a percentage.",
+  "y_axis": "Six-second mass-weighted COM displacement projected on each trial's initial heading, mm.",
+  "statistics": "Same 267 retained trials and per-group omissions as original displacement graph; mean and sample SD (ddof=1) in both axes. Single flat reference has no estimated SD.",
+  "curve_order": "Source height conditions in increasing order, without showing terrain roughness on either axis; straight segments join measured group means, no curve fitting.",
+  "interpretation": "Crossings here compare wave curves at observed missing-sample counts; they are not automatically the same shared-terrain crossovers from the earlier roughness-axis graph.",
+  "flat_expected_sample_counts": {
+    "1.5": 8360,
+    "2": 7728,
+    "2.5": 7366,
+    "3": 7708,
+    "3.5": 7421
+  },
+  "groups": [
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 0,
+      "retained_spawn_indices": [
+        2
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 1,
+        "mean": 0.0,
+        "std": null,
+        "values": [
+          0.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 1,
+        "mean": 224.14788198063982,
+        "std": null,
+        "values": [
+          224.14788198063982
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 0,
+      "retained_spawn_indices": [
+        2
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 1,
+        "mean": 0.0,
+        "std": null,
+        "values": [
+          0.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 1,
+        "mean": 212.53967124497305,
+        "std": null,
+        "values": [
+          212.53967124497305
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 0,
+      "retained_spawn_indices": [
+        2
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 1,
+        "mean": 0.0,
+        "std": null,
+        "values": [
+          0.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 1,
+        "mean": 180.17220865725668,
+        "std": null,
+        "values": [
+          180.17220865725668
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 0,
+      "retained_spawn_indices": [
+        2
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 1,
+        "mean": 0.0,
+        "std": null,
+        "values": [
+          0.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 1,
+        "mean": 153.37054495095936,
+        "std": null,
+        "values": [
+          153.37054495095936
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 0,
+      "retained_spawn_indices": [
+        2
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 1,
+        "mean": 0.0,
+        "std": null,
+        "values": [
+          0.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 1,
+        "mean": 131.69014970952932,
+        "std": null,
+        "values": [
+          131.69014970952932
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 0.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 2338.625,
+        "std": 266.78827212390195,
+        "values": [
+          2014.0,
+          2060.0,
+          2508.0,
+          2733.0,
+          2190.0,
+          2234.0,
+          2651.0,
+          2319.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 212.2616864515694,
+        "std": 7.343906832990852,
+        "values": [
+          201.29150911003637,
+          220.96802160090925,
+          216.74282164519485,
+          213.90757142295922,
+          216.08011419253188,
+          210.99265362419032,
+          216.86068091810932,
+          201.2501190986239
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 0.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 1919.5555555555557,
+        "std": 307.3792897671829,
+        "values": [
+          1685.0,
+          1792.0,
+          2249.0,
+          2309.0,
+          1941.0,
+          1536.0,
+          2295.0,
+          1918.0,
+          1551.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 204.43638598772478,
+        "std": 4.755582013595821,
+        "values": [
+          202.84868944243567,
+          207.19445027235236,
+          209.12644684450302,
+          210.34277082373336,
+          205.11706378703036,
+          205.00330268390314,
+          198.29329520425972,
+          206.08919230628712,
+          195.91226252501815
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 0.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 1883.4444444444443,
+        "std": 333.19330392097885,
+        "values": [
+          1619.0,
+          1721.0,
+          2230.0,
+          2304.0,
+          1967.0,
+          1486.0,
+          2259.0,
+          1915.0,
+          1450.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 175.1543333122283,
+        "std": 1.8508912785663691,
+        "values": [
+          178.3292066613012,
+          174.65205636572622,
+          173.96760456877172,
+          175.9268666813812,
+          173.9294783662184,
+          177.0603213665757,
+          175.30146570867956,
+          175.21578806637984,
+          172.00621202502072
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 0.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 2028.888888888889,
+        "std": 326.14546004982367,
+        "values": [
+          1778.0,
+          1856.0,
+          2279.0,
+          2524.0,
+          2016.0,
+          1671.0,
+          2372.0,
+          2166.0,
+          1598.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 149.9095273012201,
+        "std": 2.4255381757710364,
+        "values": [
+          148.88488972528356,
+          146.53558749612307,
+          148.74112068855672,
+          151.3340154755565,
+          153.15993699724646,
+          153.60184314851998,
+          150.03386237025254,
+          147.27510313357195,
+          149.6193866758701
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 0.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 2005.2222222222222,
+        "std": 280.19046101615317,
+        "values": [
+          1708.0,
+          1846.0,
+          2431.0,
+          1933.0,
+          1778.0,
+          2146.0,
+          2423.0,
+          2058.0,
+          1724.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 128.12625351784942,
+        "std": 1.63319919512857,
+        "values": [
+          128.21545948809376,
+          128.73339815720777,
+          126.91858757247269,
+          128.9776918750253,
+          125.32426889162662,
+          127.74680889722782,
+          131.26559242190686,
+          128.64198288135998,
+          127.31249147572419
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 0.5,
+      "retained_spawn_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3427.6666666666665,
+        "std": 257.65432268836474,
+        "values": [
+          3483.0,
+          3502.0,
+          3868.0,
+          3232.0,
+          3282.0,
+          3538.0,
+          3325.0,
+          3640.0,
+          2979.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 183.90689266506809,
+        "std": 11.841247311623567,
+        "values": [
+          193.81744875841332,
+          202.4977726062547,
+          180.3357090903158,
+          179.51870611621248,
+          199.3614364052308,
+          173.39296321016218,
+          168.7766988999438,
+          176.0871437318411,
+          181.37415516723826
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 0.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 2901.0,
+        "std": 214.48426515714388,
+        "values": [
+          2836.0,
+          2983.0,
+          3084.0,
+          3277.0,
+          2825.0,
+          2718.0,
+          3005.0,
+          2838.0,
+          2543.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 192.25147402772632,
+        "std": 6.43539170810503,
+        "values": [
+          198.61628767211238,
+          203.16029753084692,
+          197.93145942953052,
+          185.15946176933608,
+          194.2832995130565,
+          187.16678540887557,
+          188.52923929769563,
+          189.14387409616248,
+          186.27256153192073
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 0.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 2863.777777777778,
+        "std": 177.25460345064226,
+        "values": [
+          2732.0,
+          2917.0,
+          2974.0,
+          3170.0,
+          2826.0,
+          2604.0,
+          2730.0,
+          3041.0,
+          2780.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 162.8512292007725,
+        "std": 5.651895546883058,
+        "values": [
+          160.49683619298304,
+          156.65236576430877,
+          168.02397748103456,
+          159.9638762982636,
+          171.22810442966778,
+          168.0681587193261,
+          154.03801946491134,
+          163.99557539248477,
+          163.19414906397273
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 0.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3042.0,
+        "std": 226.51269280108787,
+        "values": [
+          2804.0,
+          3132.0,
+          3066.0,
+          3417.0,
+          2950.0,
+          3119.0,
+          3093.0,
+          3169.0,
+          2628.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 141.96388879522036,
+        "std": 2.61518713165981,
+        "values": [
+          142.36795390474873,
+          141.41122022822526,
+          142.41842383703258,
+          137.758758097238,
+          146.97319034778988,
+          140.6590597286863,
+          144.54675875260153,
+          140.90524235653487,
+          140.63439190412592
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 0.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3016.6666666666665,
+        "std": 163.39522636845913,
+        "values": [
+          2952.0,
+          3011.0,
+          3076.0,
+          3253.0,
+          2849.0,
+          2968.0,
+          3266.0,
+          2997.0,
+          2778.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 123.34831797964196,
+        "std": 2.5065816924090196,
+        "values": [
+          125.99351481593631,
+          121.21871801305466,
+          121.61570495894061,
+          120.80607941100783,
+          124.28829761898288,
+          120.23456667131614,
+          123.36986625653581,
+          127.08321270434857,
+          125.52490136665494
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 0.75,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4290.666666666667,
+        "std": 368.4718442432203,
+        "values": [
+          4074.0,
+          3851.0,
+          4420.0,
+          4747.0,
+          4139.0,
+          4916.0,
+          4232.0,
+          4387.0,
+          3850.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 163.57525016385796,
+        "std": 12.70754327894838,
+        "values": [
+          183.0740026825663,
+          166.94029269947038,
+          148.2349247580405,
+          173.69781622278026,
+          161.6340496977942,
+          148.24029070295717,
+          162.35656267976998,
+          151.3157729251123,
+          176.68353910623054
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 0.75,
+      "retained_spawn_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3652.222222222222,
+        "std": 246.61852007593518,
+        "values": [
+          3519.0,
+          3364.0,
+          3905.0,
+          3426.0,
+          3912.0,
+          3958.0,
+          3742.0,
+          3338.0,
+          3706.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 158.304767644726,
+        "std": 13.616857560152285,
+        "values": [
+          160.5591332414686,
+          172.65995113322555,
+          178.47072393406773,
+          168.1315923690855,
+          134.21980713997087,
+          152.88514715886498,
+          154.41770168945374,
+          157.0443666149402,
+          146.35448552145712
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 0.75,
+      "retained_spawn_indices": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 3408.125,
+        "std": 246.51655261723445,
+        "values": [
+          3217.0,
+          3207.0,
+          3815.0,
+          3413.0,
+          3562.0,
+          3652.0,
+          3120.0,
+          3279.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 147.78582730935338,
+        "std": 6.282433050808315,
+        "values": [
+          151.73775735884183,
+          151.67263451853975,
+          143.58045579751388,
+          145.97975306009369,
+          148.4539000418593,
+          135.03671906425762,
+          150.7849111768485,
+          155.04048745687246
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 0.75,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3663.0,
+        "std": 257.42765974152815,
+        "values": [
+          3433.0,
+          3619.0,
+          3402.0,
+          3915.0,
+          3477.0,
+          3798.0,
+          4181.0,
+          3518.0,
+          3624.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 136.34906835959342,
+        "std": 8.997160181113353,
+        "values": [
+          138.0637560311486,
+          127.91582903563742,
+          120.71134685863895,
+          135.71794189214367,
+          151.05177054572366,
+          144.44528796843974,
+          137.60811295112302,
+          140.54233250845814,
+          131.0852374450273
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 0.75,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3512.0,
+        "std": 228.94813823222063,
+        "values": [
+          3537.0,
+          3216.0,
+          3232.0,
+          3725.0,
+          3463.0,
+          3541.0,
+          3925.0,
+          3358.0,
+          3611.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 117.57184357392387,
+        "std": 4.360719195875298,
+        "values": [
+          123.2930023104186,
+          111.10052174893808,
+          115.64183568074412,
+          119.5142656471386,
+          119.46388858218953,
+          118.8476712867996,
+          112.93306410380131,
+          114.15652250765035,
+          123.19582029763461
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 1.0,
+      "retained_spawn_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 5206.875,
+        "std": 340.0085870764359,
+        "values": [
+          5026.0,
+          5010.0,
+          5301.0,
+          4880.0,
+          5435.0,
+          5559.0,
+          5694.0,
+          4750.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 96.97686562417775,
+        "std": 32.90433718650197,
+        "values": [
+          90.28400561518231,
+          85.62430648378246,
+          47.553803910517956,
+          143.00651581066094,
+          142.4101047593366,
+          89.2697212440597,
+          105.97395063256205,
+          71.69251653732
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 1.0,
+      "retained_spawn_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4418.777777777777,
+        "std": 354.47065385507506,
+        "values": [
+          4384.0,
+          4320.0,
+          4545.0,
+          3785.0,
+          4582.0,
+          4735.0,
+          5015.0,
+          4208.0,
+          4195.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 127.43807235370049,
+        "std": 14.871241589775154,
+        "values": [
+          111.51164195333155,
+          132.85228624282476,
+          136.9404616988611,
+          144.36798996045104,
+          138.93697695155709,
+          143.30466751705833,
+          105.08720765337797,
+          118.79855434535436,
+          115.14286486048829
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 1.0,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3923.1111111111113,
+        "std": 304.7771499163136,
+        "values": [
+          3659.0,
+          3945.0,
+          3984.0,
+          3628.0,
+          4360.0,
+          4350.0,
+          4107.0,
+          3560.0,
+          3715.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 133.27132161336326,
+        "std": 14.872762934776858,
+        "values": [
+          150.6313358653286,
+          118.3495939841418,
+          144.00972730518328,
+          146.96937666006298,
+          126.93129467871132,
+          146.52094489857393,
+          117.61726256460905,
+          136.80504559914124,
+          111.607312964517
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 1.0,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4097.0,
+        "std": 291.8424232355536,
+        "values": [
+          3907.0,
+          4267.0,
+          4067.0,
+          4201.0,
+          3682.0,
+          4258.0,
+          4673.0,
+          3864.0,
+          3954.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 114.64407284676882,
+        "std": 10.597469813004928,
+        "values": [
+          131.93239942800784,
+          109.95725712546701,
+          112.77220417696105,
+          104.06513358716533,
+          124.09243470446212,
+          114.68675911450406,
+          108.64783970601312,
+          125.67253035912515,
+          99.97009741921383
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 1.0,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 3947.3333333333335,
+        "std": 246.10719209320155,
+        "values": [
+          4208.0,
+          3715.0,
+          3802.0,
+          4000.0,
+          3646.0,
+          4216.0,
+          4298.0,
+          3719.0,
+          3922.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 111.79090595398083,
+        "std": 3.6098408365754793,
+        "values": [
+          112.92663220041112,
+          105.18340008194482,
+          114.05345842165315,
+          106.3479085795916,
+          115.86029995438663,
+          111.69742021043793,
+          112.67023063169712,
+          113.72643741520741,
+          113.65236609049768
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 1.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 5979.25,
+        "std": 412.93678174060216,
+        "values": [
+          6154.0,
+          6084.0,
+          6048.0,
+          5856.0,
+          6391.0,
+          6506.0,
+          5462.0,
+          5333.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 25.48204231846537,
+        "std": 28.55410939897984,
+        "values": [
+          -11.27770744799853,
+          26.16509979772371,
+          -12.550809133873589,
+          75.49166883651147,
+          33.72305129928462,
+          29.7594089923055,
+          42.5616946515021,
+          19.9839315522677
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 1.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4799.666666666667,
+        "std": 318.84243757693235,
+        "values": [
+          4486.0,
+          4772.0,
+          4701.0,
+          5388.0,
+          4470.0,
+          5059.0,
+          4943.0,
+          4951.0,
+          4427.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 109.91874910150915,
+        "std": 23.90289205287952,
+        "values": [
+          129.36636766048966,
+          82.09945957863715,
+          121.0498351172854,
+          129.1984141709646,
+          131.13898189631718,
+          97.85291756394442,
+          121.62256703107977,
+          113.670353622985,
+          63.26984527187899
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 1.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 4300.625,
+        "std": 288.8291326323279,
+        "values": [
+          4244.0,
+          4184.0,
+          3909.0,
+          4550.0,
+          4294.0,
+          4671.0,
+          4603.0,
+          3950.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 130.6702691457771,
+        "std": 16.601025594332505,
+        "values": [
+          143.62129343324892,
+          137.94350405611397,
+          125.28511190688708,
+          136.77693797344625,
+          154.2773312601556,
+          103.20871802241648,
+          131.73586981303578,
+          112.5133867009128
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 1.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4563.0,
+        "std": 380.94619042589204,
+        "values": [
+          4592.0,
+          4259.0,
+          4333.0,
+          4725.0,
+          4313.0,
+          4808.0,
+          5415.0,
+          4392.0,
+          4230.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 102.88598686005211,
+        "std": 11.9206917517051,
+        "values": [
+          114.48676933615685,
+          101.2845346748309,
+          115.16274785662674,
+          107.66994065752826,
+          117.44951476184521,
+          97.26500918573808,
+          80.8956731004629,
+          95.31521979746552,
+          96.44447236981446
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 1.25,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4309.444444444444,
+        "std": 309.9952060561224,
+        "values": [
+          4312.0,
+          4135.0,
+          3972.0,
+          4327.0,
+          4443.0,
+          4712.0,
+          4824.0,
+          4138.0,
+          3922.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 103.49266962465508,
+        "std": 9.971068352783975,
+        "values": [
+          89.81016931411118,
+          101.98100919188882,
+          103.87106275904102,
+          104.54913528029539,
+          101.67434516675198,
+          92.1395549370817,
+          124.68330602642504,
+          108.22086764663382,
+          104.50457629966672
+        ]
+      }
+    },
+    {
+      "wave": 1.5,
+      "height_scale_source_condition": 1.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 8360,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 6481.555555555556,
+        "std": 354.5740793935419,
+        "values": [
+          6592.0,
+          6837.0,
+          6580.0,
+          6441.0,
+          5922.0,
+          6710.0,
+          6907.0,
+          5929.0,
+          6416.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 21.5654660625414,
+        "std": 23.32127920343425,
+        "values": [
+          -4.6121838415889265,
+          21.428598059897148,
+          -6.498364924999662,
+          11.589248328514461,
+          44.50209495202638,
+          25.54376524408581,
+          32.41317194015546,
+          64.5726333065033,
+          5.150231498278634
+        ]
+      }
+    },
+    {
+      "wave": 2,
+      "height_scale_source_condition": 1.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7728,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 5387.222222222223,
+        "std": 354.7625183759474,
+        "values": [
+          5265.0,
+          5633.0,
+          5108.0,
+          5678.0,
+          4922.0,
+          5486.0,
+          6007.0,
+          4989.0,
+          5397.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 64.48943224843379,
+        "std": 27.093037086236684,
+        "values": [
+          53.593029692151646,
+          27.969791037336883,
+          98.48686177462329,
+          67.71516451026538,
+          88.42327549683827,
+          104.2782319424613,
+          48.21355217340887,
+          54.19337999303656,
+          37.53160361578192
+        ]
+      }
+    },
+    {
+      "wave": 2.5,
+      "height_scale_source_condition": 1.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7366,
+      "missing_expected_support_samples": {
+        "n": 8,
+        "mean": 4793.875,
+        "std": 336.39663557855545,
+        "values": [
+          4896.0,
+          4796.0,
+          4359.0,
+          4554.0,
+          4656.0,
+          4801.0,
+          5512.0,
+          4777.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 8,
+        "mean": 106.54402053248268,
+        "std": 15.139057170055755,
+        "values": [
+          105.98893955983955,
+          108.40504139634223,
+          108.8976227567848,
+          123.02983375303822,
+          119.18438333954617,
+          118.76557778674461,
+          84.83779004162683,
+          83.24297562593901
+        ]
+      }
+    },
+    {
+      "wave": 3,
+      "height_scale_source_condition": 1.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected_support_samples_in_flat_reference": 7708,
+      "missing_expected_support_samples": {
+        "n": 7,
+        "mean": 5091.0,
+        "std": 381.1985484407481,
+        "values": [
+          5208.0,
+          4983.0,
+          4597.0,
+          5307.0,
+          5319.0,
+          5613.0,
+          4610.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 7,
+        "mean": 78.74912789058094,
+        "std": 10.897880671506243,
+        "values": [
+          65.90372559145203,
+          86.9654714717723,
+          97.30419374009205,
+          75.37375106761979,
+          70.43846512676022,
+          72.49053163716495,
+          82.7677565992053
+        ]
+      }
+    },
+    {
+      "wave": 3.5,
+      "height_scale_source_condition": 1.5,
+      "retained_spawn_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected_support_samples_in_flat_reference": 7421,
+      "missing_expected_support_samples": {
+        "n": 9,
+        "mean": 4754.333333333333,
+        "std": 369.66505109355415,
+        "values": [
+          4884.0,
+          4767.0,
+          4165.0,
+          4690.0,
+          4577.0,
+          4969.0,
+          5267.0,
+          4297.0,
+          5173.0
+        ]
+      },
+      "forward_displacement_mm": {
+        "n": 9,
+        "mean": 90.320227172809,
+        "std": 19.133614624988976,
+        "values": [
+          74.11758579526372,
+          71.50349713022908,
+          103.80756557175391,
+          103.20103302436542,
+          107.15716099763792,
+          74.77651335428791,
+          121.77729655272486,
+          87.19606164908191,
+          69.34533047993628
+        ]
+      }
+    }
+  ],
+  "checks": {
+    "source_hashes_match": true,
+    "support_sample_partition": true,
+    "original_displacement_mean_sd_unchanged": true,
+    "count_to_fraction_identity": true,
+    "group_count": 35,
+    "retained_trial_count": 267,
+    "raw_complete_trial_count": 297,
+    "existing_failed_trials_excluded_from_six_second_scores": 8
+  },
+  "visual_review": "PNG inspected: all five wave curves, complete axis labels and legend, uniform markers, pale horizontal/vertical sample SD, no terrain-roughness axis or point labels; no clipping.",
+  "outputs": {
+    "png": {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\observed_contact_loss_preview\\displacement_vs_missing_expected_support.png",
+      "sha256": "a1c7a20ff9b3b3e4138f146fe8e949dd5e55a7a5c3f39db8321165dbccfd19d2"
+    },
+    "svg": {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\observed_contact_loss_preview\\displacement_vs_missing_expected_support.svg",
+      "sha256": "e0a8d8ac13a67a181d47bc7b008397c164774a3525bde7471197c68c1de95b58"
+    },
+    "executed_source": {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\observed_contact_loss_preview\\displacement_vs_missing_expected_support_source.py",
+      "sha256": "9a23451d3e4d1a24d08681cb107b97e18f59e1decd1782090d77bf82161ad4f5"
+    }
+  }
+}

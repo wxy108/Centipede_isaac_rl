@@ -1,0 +1,495 @@
+{
+  "complete": true,
+  "attempt": "v2",
+  "physics": "Actual saved Isaac Lab CPU PhysX, 6 s per condition",
+  "backend": "VTK OpenGL rasterization of original USD visuals; not native RTX",
+  "new_physics_steps_for_render": 0,
+  "sources": [
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_low",
+      "trajectory_sha256": "faf51734911f21cdf9582e528d2a132731bdff1638c0aab592d267630ac1b167"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_original_high",
+      "trajectory_sha256": "cd51c7b0f5d0817525a5339b725db874810259a5818f43980f5764f6e42d2c89"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_low",
+      "trajectory_sha256": "453b29898ad950620b45c23687f65e9ea1c516b1d697fc36cc9f62815474eeeb"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore4_high",
+      "trajectory_sha256": "bc51029fa4382aa5fe251cd0f874d63ceaaf681cf76ef6674db14a525d470769"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_low",
+      "trajectory_sha256": "32f1d0252063df724220349a03766a1fbe37fe0e843a23bb7233587d5c0782f3"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\libo_restore2_high",
+      "trajectory_sha256": "77629ce6a15fc66363be9d4c8433da654174caa3acdf704f920ed883ba5ebeda"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_low",
+      "trajectory_sha256": "5247e869720504b2cadc26c23aac8218d1cbcb2a746c29959630959eefa9f16c"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_original_high",
+      "trajectory_sha256": "835186e0a8cc5e55b3f5336b43dea593e5ec5c9aabdfc9ec243373a34b4ccac6"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_low",
+      "trajectory_sha256": "91ab92c4308d9d210bbd7abaab068cadee140109814db03a6309a38cac490493"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore4_high",
+      "trajectory_sha256": "836e92d3a90994bf2c6c45d57c1ddbb0065ef3979cc0136d0bcdd3e707819ff9"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_low",
+      "trajectory_sha256": "8a2cec9d547a17357bf993ffd6dbb70dc0b064cf120354f73a1a0bd540cb6b65"
+    },
+    {
+      "run": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2\\narvik_restore2_high",
+      "trajectory_sha256": "d283919abb866f5ab67dea580ef12e4fde8bf52e9d278198fc7cf16854654915"
+    }
+  ],
+  "renderer_sha256": "76330f7870f504b3abf20eb559528169cfe8f6af68967945e38a435a97fe1788",
+  "parent_renderer_sha256": "f4d58d09df48ee32a676f18147b9a5ca3ffb41a1f76cff5f24a9f44e73b958ee",
+  "geometry_sha256": "2b4515aed8332f844e283b134c6e99404e3db6277e636ee1ac9f938c85ebc400",
+  "asset_sha256": "bdfae3e4db7b4cc0d21ea87bffab9188ee6bd4bbd8f34048c19f285f6d910147",
+  "camera_half_heights_m": {
+    "oblique": 0.04601742624325651,
+    "top": 0.04638928052586333
+  },
+  "fixed_amplitudes": [
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 0,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 5,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 10,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 15,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 20,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 4.0,
+      "ci": 5,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 25,
+      "body_factor": 0.15192437582205834,
+      "leg_factor": 1.3705873073557169,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "pitch_variant": "original_sine"
+    }
+  ],
+  "fixed_pd_sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+  "camera_follows_spine_center": true,
+  "same_world_camera_orientation": true,
+  "terrain_vertical_exaggeration": 1.0,
+  "figures": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_original_oblique_t4.5.png",
+      "sha256": "659b9ba792a09295175babbeedc79b85899f90c941d8a795c51dce405ec29c67",
+      "site": "libo",
+      "level": "original",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_original_oblique_t6.png",
+      "sha256": "bb2aef7e0c8a858c1ac6e513dfff2674f617f6520a4880fcacfc273390b3969c",
+      "site": "libo",
+      "level": "original",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_original_top_t6.png",
+      "sha256": "fbd3172971303cee747108ecf580b28432d78790754538c03960d74ad6fc1205",
+      "site": "libo",
+      "level": "original",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore4_oblique_t4.5.png",
+      "sha256": "5d9bd131fd494cd3c826f4338b4f87dab68415356e1a626c73f63533ae9f58cb",
+      "site": "libo",
+      "level": "restore4",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore4_oblique_t6.png",
+      "sha256": "a69f830f5bf72b5f0ed8142e85a346bd089b0187c4f0c663afd2298f790fb57e",
+      "site": "libo",
+      "level": "restore4",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore4_top_t6.png",
+      "sha256": "2e9dafb13d8169f0fc051b02ff836e8ec4f47f1d04ba0d2ac59e29a84c91ffcf",
+      "site": "libo",
+      "level": "restore4",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore2_oblique_t4.5.png",
+      "sha256": "a1892912c75db1b971c29c00834d97d6b20162a763224440c175518392b135de",
+      "site": "libo",
+      "level": "restore2",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore2_oblique_t6.png",
+      "sha256": "6faa184d21c8649843967322139dbdc16598290d557e64bbdda78723487d7f54",
+      "site": "libo",
+      "level": "restore2",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_restore2_top_t6.png",
+      "sha256": "999b15e0f5bd7d9796a685a79391c70532782538ee9d06f89b6ee5e6450c80c3",
+      "site": "libo",
+      "level": "restore2",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_original_oblique_t4.5.png",
+      "sha256": "bc44b3a10726337df534ea50a55d2d159238f13419ad90e93fc41712595a89ab",
+      "site": "narvik",
+      "level": "original",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_original_oblique_t6.png",
+      "sha256": "41b59798c2188ebb1e17fdaf4f6a91a99fa775a54687b0dce255b2747416cca7",
+      "site": "narvik",
+      "level": "original",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_original_top_t6.png",
+      "sha256": "3044cd934654684cd8f745894406d0184b2c053a7245dfc9b0af238e1866a29c",
+      "site": "narvik",
+      "level": "original",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore4_oblique_t4.5.png",
+      "sha256": "a0527f0fa1024cbf34e0b43ff0e9c0d48686bf67f37412333a3aab114a849913",
+      "site": "narvik",
+      "level": "restore4",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore4_oblique_t6.png",
+      "sha256": "f3f4ba439eb330280cc24e83aa3f10fa3dca3d71b07fcd5844c7ad5850d7cc75",
+      "site": "narvik",
+      "level": "restore4",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore4_top_t6.png",
+      "sha256": "7aa7be41602b8e0d4d9e323f6849d8c5f05520f88397b7d9822a5e8cea747acd",
+      "site": "narvik",
+      "level": "restore4",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore2_oblique_t4.5.png",
+      "sha256": "65348509233253a05635359a4e89b6725f011fb0e697cc9aa859fc9d21d064dc",
+      "site": "narvik",
+      "level": "restore2",
+      "time_s": 4.5,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore2_oblique_t6.png",
+      "sha256": "6f15589788db2ef4da720b8e5de0cbee3b9c340906693a4ca0abb69a689efeb6",
+      "site": "narvik",
+      "level": "restore2",
+      "time_s": 6.0,
+      "view": "oblique",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_restore2_top_t6.png",
+      "sha256": "0a7291fe0c215142386ca898f265de84f1376401bfacf44e69361d907d9df9da",
+      "site": "narvik",
+      "level": "restore2",
+      "time_s": 6.0,
+      "view": "top",
+      "waves": [
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    }
+  ],
+  "ground_meshes": {
+    "libo_original": {
+      "vertices": 59514,
+      "triangles": 118048,
+      "vertex_sha256": "12d1e4db63490218bfd6bcf0cef758f87d24158e9c5cea7d9e807ebf155db3ae",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "libo_restore4": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "440e71ad199c9563d34c44db57d719c6fb1711631574aea061e949f56fa948c3",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "libo_restore2": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "a4511d7da00a39f101c2981913466078839a42964a347588d9edaff608898f62",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "narvik_original": {
+      "vertices": 59514,
+      "triangles": 118048,
+      "vertex_sha256": "3fd8f35a76da1d52ba06efef80f64169b47c21073fc8abc2218041381e9a21db",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "narvik_restore4": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "c89b05d36621def8bdbfd90b1cae04357044d47434606d5c113b7e4d9121f1a2",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    },
+    "narvik_restore2": {
+      "vertices": 946341,
+      "triangles": 1888768,
+      "vertex_sha256": "469bbce39d149e9672deecf4dcc178c0e39d28db7f5966e340f2d46e1aeddb49",
+      "float32_collision_geometry": true,
+      "display_normals_smoothed": true
+    }
+  },
+  "minimum_visual_frustum_margin_m": 0.0073956596030154125,
+  "body_binding_count": 251,
+  "visual_parts": 289,
+  "condition_count": 36,
+  "manually_reviewed": true,
+  "manual_review_scope": "Both six-wave by three-terrain overviews (all 36 conditions at t=6 s), Libo restore2 oblique t=6 s, and Narvik restore2 top t=6 s. All 20 PNGs decoded; all rendered camera bounds passed.",
+  "decoded_png_count": 20,
+  "overview_images": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\libo_all_waves_all_terrains.png",
+      "sha256": "6d1a398db780498455696d998481ea028b2b1ffce6c4b4aaaeff200f8c2ceae9"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\narvik_all_waves_all_terrains.png",
+      "sha256": "487aaa6ba42ffb47570005ba77839b21b0135f302d1311abb76ba3c65b467ec6"
+    }
+  ],
+  "renderer_source_snapshot": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_previews\\rendering_source.py"
+}

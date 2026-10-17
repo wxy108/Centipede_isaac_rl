@@ -1,0 +1,20 @@
+{
+  "pid": 12536,
+  "runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py",
+  "runner_sha256": "32e9a73e85feb71bad4488279bb9b5ca3662e7a68f1e6aebc0a8394df4470b99",
+  "started_unix": 1790961630.329632,
+  "status": "resumed",
+  "command": [
+    "C:\\Users\\wxy22\\anaconda3\\envs\\isaaclab_50\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py",
+    "--resume"
+  ],
+  "previous_receipt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\controller_resume_history\\resume_05\\CONTROLLER_DISPATCH.json",
+  "interruption_audit": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\controller_resume_history\\resume_05\\INTERRUPTION_AUDIT.json",
+  "stdout": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\controller_resume_history\\resume_05\\controller_resume_stdout.log",
+  "stderr": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\controller_resume_history\\resume_05\\controller_resume_stderr.log",
+  "scope": "Restore exactly seven verified external-unscored conditions in their four original layouts; existing unfinished owned conditions only; preserve all failures and native-invalid exclusions. No scientific changes or shutdown."
+}

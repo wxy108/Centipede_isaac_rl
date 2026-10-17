@@ -1,0 +1,1255 @@
+{
+  "schema": "paired_shortwave_recovery_v1",
+  "status": "GENERATED_NOT_NATURAL_FIDELITY_VALIDATED",
+  "source_hashes": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave_terrain.py": "767a5658d9e69c3d103e8eb6c19bac8db94e8cd2c550e0671fbaf39dbe0c94af",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\measured_candidates.npz": "d7235054ccc944667730fa8df6bb8293a679299c42e3a92ad12893d825b9cf53",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\PREPARATION.json": "21df8bed6ed057735957d06c2cbfcf49c499ca9eab9d16b2816de1d5d0639d0b",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\terrain_preview.py": "e3939c3d35ab614bca96e90e82ee3e16406ee64275975a9da5e9043d480f1b91",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\workflow.py": "53efd2a6d91ee51be38f7a58ca479e61402716658b4f3c74092c67a6623abadd"
+  },
+  "method": "Exact triangle-refined old mesh; measured directional PSD replaces short-band power with smooth convex-power crossovers and shared phases; all complex coefficients <=62.5 cycles/m held fixed on 1.024 m periodic construction field.",
+  "transition_note": "16-8 mm blends old into measured PSD. Cutoff labels describe the restoration increment, not the tiny high-frequency tails of piecewise-planar old geometry.",
+  "grid_note": "Old mesh remains 512 x 512 at 2 mm; restored 2045 x 2045 at 0.5 mm. Same physical span [-511,511] mm; three periodic closure rows/columns omitted.",
+  "representation_note": "Old physical f(x,y) preserved exactly by triangle subdivision. Long Fourier coefficients frozen before boundary crop; a cropped/windowed spectrum is not claimed identical.",
+  "no_CDF_projection": true,
+  "no_global_Sq_normalization": true,
+  "physics_run": false,
+  "roughness_sweep": false,
+  "sites": {
+    "libo": {
+      "source_control": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "source_control_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "raw_plane_coefficients": [
+        1.5492329274580827e-11,
+        0.010585965225787829,
+        -0.010905947027166803
+      ],
+      "raw_statistics": {
+        "Sq_mm": 3.151798867309084,
+        "skewness": 0.7240196594640907,
+        "kurtosis": 3.2063475686419496,
+        "rms_gradient": 0.5767519920998355,
+        "gradient_anisotropy": 1.9533853952471179,
+        "gradient_direction_deg": 121.23477055998606,
+        "min_mm": -6.170509538388554,
+        "max_mm": 10.767219144266019
+      },
+      "exact_triangle_refinement_max_error_m": 6.591949208711867e-17,
+      "source_PSD_method": "Plane removed; Hann power-corrected directional PSD; Gaussian sigma 0.65 spectral bins; bilinear PSD interpolation; no height normalization",
+      "seed": 2026092901,
+      "levels": {
+        "original": {
+          "path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+          "sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+          "grid_spacing_m": 0.002,
+          "shape": [
+            512,
+            512
+          ],
+          "statistics": {
+            "Sq_mm": 3.188006130212629,
+            "skewness": 0.704384734373924,
+            "kurtosis": 3.1236526853065945,
+            "rms_gradient": 0.40610487302278786,
+            "gradient_anisotropy": 1.5832260649154046,
+            "gradient_direction_deg": 89.9944274404738,
+            "min_mm": -6.0455011151673546,
+            "max_mm": 10.487837432749886
+          }
+        },
+        "restore4": {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore4.npz",
+          "sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+          "grid_spacing_m": 0.0005,
+          "shape": [
+            2045,
+            2045
+          ],
+          "restoration_frequency_range_cycles_per_m": [
+            62.5,
+            250.0
+          ],
+          "full_replacement_frequency_range_cycles_per_m": [
+            125.0,
+            200.0
+          ],
+          "correction_rolloff_cycles_per_m": [
+            200.0,
+            250.0
+          ],
+          "periodic_long_band_relative_change": 1.3715111727908884e-16,
+          "imaginary_residual_m": 0.0,
+          "statistics": {
+            "Sq_mm": 3.186312424808825,
+            "skewness": 0.700950228631373,
+            "kurtosis": 3.128040713246554,
+            "rms_gradient": 0.4835044215169634,
+            "gradient_anisotropy": 1.851159385566976,
+            "gradient_direction_deg": 101.57737881680062,
+            "min_mm": -6.798156567960411,
+            "max_mm": 11.014482313124613
+          },
+          "periodic_variance_mm2": 10.152881843538077,
+          "added_height_rms_mm": 0.26437618203905955,
+          "no_global_height_normalization": true,
+          "mesh_coordinate_span_m": [
+            -0.511,
+            0.511
+          ]
+        },
+        "restore2": {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\libo_restore2.npz",
+          "sha256": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f",
+          "grid_spacing_m": 0.0005,
+          "shape": [
+            2045,
+            2045
+          ],
+          "restoration_frequency_range_cycles_per_m": [
+            62.5,
+            500.0
+          ],
+          "full_replacement_frequency_range_cycles_per_m": [
+            125.0,
+            400.0
+          ],
+          "correction_rolloff_cycles_per_m": [
+            400.0,
+            500.0
+          ],
+          "periodic_long_band_relative_change": 1.3906820243775445e-16,
+          "imaginary_residual_m": 0.0,
+          "statistics": {
+            "Sq_mm": 3.1884078463226118,
+            "skewness": 0.6994844361288495,
+            "kurtosis": 3.1276498383559748,
+            "rms_gradient": 0.5233617603600299,
+            "gradient_anisotropy": 1.8052045498167246,
+            "gradient_direction_deg": 104.62968449781246,
+            "min_mm": -6.772308525661758,
+            "max_mm": 11.269746120008318
+          },
+          "periodic_variance_mm2": 10.166265593789005,
+          "added_height_rms_mm": 0.2891205822675549,
+          "no_global_height_normalization": true,
+          "mesh_coordinate_span_m": [
+            -0.511,
+            0.511
+          ]
+        }
+      },
+      "raw_height_power_fractions": {
+        "1-2mm": 0.0015458344726808934,
+        "2-4mm": 0.0020666299929016268,
+        "4-8mm": 0.0069021428571756326,
+        "8-16mm": 0.038232829545611406,
+        "16-100.5mm": 0.9508762802348485
+      },
+      "fidelity_status": "Measured-spectrum constrained paired synthetic detail; short-scale measurement noise and phase topology not validated. No exact height-CDF claim.",
+      "matched_window_checks": {
+        "original": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 3.240064127777767,
+              "skewness": 0.6979994700480031,
+              "kurtosis": 3.1088050484395304,
+              "rms_gradient": 0.44115459717445726,
+              "gradient_anisotropy": 1.758568622440119,
+              "gradient_direction_deg": 95.03185345371217,
+              "min_mm": -6.644975214574911,
+              "max_mm": 10.061696254048334
+            },
+            {
+              "Sq_mm": 2.930180866555833,
+              "skewness": 0.6166605935839328,
+              "kurtosis": 2.538231327050864,
+              "rms_gradient": 0.41512945438650356,
+              "gradient_anisotropy": 1.4543710536781076,
+              "gradient_direction_deg": 89.08593399519876,
+              "min_mm": -5.321927494882567,
+              "max_mm": 7.790207543494493
+            },
+            {
+              "Sq_mm": 2.8862125056476384,
+              "skewness": 0.4494458692361759,
+              "kurtosis": 3.51383619729337,
+              "rms_gradient": 0.4009062478747117,
+              "gradient_anisotropy": 1.9688203080905837,
+              "gradient_direction_deg": 102.65539312304202,
+              "min_mm": -5.9952932481125405,
+              "max_mm": 11.308157231352423
+            },
+            {
+              "Sq_mm": 2.842264156796687,
+              "skewness": 0.705577438074319,
+              "kurtosis": 3.043727265418916,
+              "rms_gradient": 0.41426435366911185,
+              "gradient_anisotropy": 1.5499255608382623,
+              "gradient_direction_deg": 90.25868465596949,
+              "min_mm": -5.922111302212239,
+              "max_mm": 8.52220123671587
+            },
+            {
+              "Sq_mm": 3.075602595956418,
+              "skewness": 0.15237956664283772,
+              "kurtosis": 2.0103150401294685,
+              "rms_gradient": 0.4521111770482166,
+              "gradient_anisotropy": 1.6134844006459534,
+              "gradient_direction_deg": 84.23434720790826,
+              "min_mm": -7.1290688962562285,
+              "max_mm": 7.006065731305489
+            },
+            {
+              "Sq_mm": 3.21612535782371,
+              "skewness": 0.9581596476100396,
+              "kurtosis": 3.434940517046041,
+              "rms_gradient": 0.4324606822482662,
+              "gradient_anisotropy": 1.8135888633499622,
+              "gradient_direction_deg": 90.91182257350135,
+              "min_mm": -5.842937145415378,
+              "max_mm": 9.426763295389623
+            },
+            {
+              "Sq_mm": 2.7878871893471215,
+              "skewness": 0.8584966070853317,
+              "kurtosis": 3.507409991286609,
+              "rms_gradient": 0.40318631788283027,
+              "gradient_anisotropy": 1.4677487583336826,
+              "gradient_direction_deg": 109.41552342233126,
+              "min_mm": -6.306560045679284,
+              "max_mm": 8.255188815486108
+            },
+            {
+              "Sq_mm": 3.2850113626783175,
+              "skewness": 0.25945347105605615,
+              "kurtosis": 2.413037087202366,
+              "rms_gradient": 0.4937523787677365,
+              "gradient_anisotropy": 2.1496323127501986,
+              "gradient_direction_deg": 81.81381245022718,
+              "min_mm": -8.29759039042756,
+              "max_mm": 9.570173726651916
+            },
+            {
+              "Sq_mm": 2.669531064866521,
+              "skewness": 0.6565574270767932,
+              "kurtosis": 3.1003802475384186,
+              "rms_gradient": 0.43697482942530913,
+              "gradient_anisotropy": 1.5902911416890646,
+              "gradient_direction_deg": 89.38655659842023,
+              "min_mm": -5.6010725562904256,
+              "max_mm": 7.905240058404624
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.26450042691951314,
+              0.5208988440670553,
+              1.0105332173184938,
+              1.8379580741161108,
+              2.9721629198210953,
+              3.974715271660906,
+              3.9538918842575197
+            ],
+            "y": [
+              0.3425561569943673,
+              0.6762889268816424,
+              1.3135654201560047,
+              2.371956965199895,
+              3.7202718919010986,
+              4.833154902265199,
+              4.184176186598265
+            ]
+          }
+        },
+        "restore4": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 3.2565923453002945,
+              "skewness": 0.6943357357082014,
+              "kurtosis": 3.1014205345353645,
+              "rms_gradient": 0.5106405591071393,
+              "gradient_anisotropy": 2.030898558652387,
+              "gradient_direction_deg": 102.68086127927685,
+              "min_mm": -6.901951756298394,
+              "max_mm": 10.342959238679562
+            },
+            {
+              "Sq_mm": 2.9484880500180477,
+              "skewness": 0.6181507632252465,
+              "kurtosis": 2.557568835339985,
+              "rms_gradient": 0.4882077263240146,
+              "gradient_anisotropy": 1.731840904996593,
+              "gradient_direction_deg": 101.07190403790176,
+              "min_mm": -5.48114878560024,
+              "max_mm": 7.940419917253895
+            },
+            {
+              "Sq_mm": 2.9081714888669556,
+              "skewness": 0.4565187921014985,
+              "kurtosis": 3.510621752791977,
+              "rms_gradient": 0.4762433807130896,
+              "gradient_anisotropy": 2.2887171162187796,
+              "gradient_direction_deg": 106.84291704301083,
+              "min_mm": -6.271005391940832,
+              "max_mm": 11.52442070627986
+            },
+            {
+              "Sq_mm": 2.861588636469017,
+              "skewness": 0.7180651259671319,
+              "kurtosis": 3.097175466959276,
+              "rms_gradient": 0.48933484231587887,
+              "gradient_anisotropy": 1.8144404596454329,
+              "gradient_direction_deg": 104.0087658676867,
+              "min_mm": -6.368622786601847,
+              "max_mm": 8.75227507413573
+            },
+            {
+              "Sq_mm": 3.09527092510504,
+              "skewness": 0.1581325397427899,
+              "kurtosis": 2.0334492400637143,
+              "rms_gradient": 0.5222336989417518,
+              "gradient_anisotropy": 1.795417187369297,
+              "gradient_direction_deg": 96.79160877844943,
+              "min_mm": -7.218962324125959,
+              "max_mm": 7.914484375675174
+            },
+            {
+              "Sq_mm": 3.2297471351976577,
+              "skewness": 0.9535489269018352,
+              "kurtosis": 3.443499963120859,
+              "rms_gradient": 0.503013904711434,
+              "gradient_anisotropy": 2.0244032263445124,
+              "gradient_direction_deg": 100.79495640435815,
+              "min_mm": -6.348311147496325,
+              "max_mm": 9.582810575518375
+            },
+            {
+              "Sq_mm": 2.8066350110650196,
+              "skewness": 0.8581513375067319,
+              "kurtosis": 3.499243162665634,
+              "rms_gradient": 0.4743081303243122,
+              "gradient_anisotropy": 1.8134148543645758,
+              "gradient_direction_deg": 112.14689635924675,
+              "min_mm": -6.546563216331173,
+              "max_mm": 8.711872144742378
+            },
+            {
+              "Sq_mm": 3.3009179962179385,
+              "skewness": 0.26278113674020825,
+              "kurtosis": 2.4023809514533747,
+              "rms_gradient": 0.5541057833286318,
+              "gradient_anisotropy": 2.12108771943203,
+              "gradient_direction_deg": 90.4029807072133,
+              "min_mm": -8.083932272001986,
+              "max_mm": 9.814387079555473
+            },
+            {
+              "Sq_mm": 2.6903044971262764,
+              "skewness": 0.6601960810945967,
+              "kurtosis": 3.129401310624063,
+              "rms_gradient": 0.5121587364502116,
+              "gradient_anisotropy": 1.8678726561314078,
+              "gradient_direction_deg": 100.48236904682133,
+              "min_mm": -6.025920130333684,
+              "max_mm": 8.155832012861163
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.29998970677855674,
+              0.5836341983773701,
+              1.0893149496912784,
+              1.90010205352387,
+              3.0098958375615092,
+              4.002252858751124,
+              3.9804510481937645
+            ],
+            "y": [
+              0.40464033260797866,
+              0.7839540954108977,
+              1.4345784388888954,
+              2.413278958828505,
+              3.752746827286608,
+              4.85822802493718,
+              4.210410828424083
+            ]
+          }
+        },
+        "restore2": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 3.258559098428262,
+              "skewness": 0.6930682534189383,
+              "kurtosis": 3.101555775581546,
+              "rms_gradient": 0.5493508569770038,
+              "gradient_anisotropy": 1.958836985183132,
+              "gradient_direction_deg": 104.88695577706585,
+              "min_mm": -7.001882480822905,
+              "max_mm": 10.43584724825793
+            },
+            {
+              "Sq_mm": 2.9507821299803436,
+              "skewness": 0.6163276258537473,
+              "kurtosis": 2.558454938523856,
+              "rms_gradient": 0.5276702809040333,
+              "gradient_anisotropy": 1.7141134885478426,
+              "gradient_direction_deg": 104.18268645915222,
+              "min_mm": -5.618607123275249,
+              "max_mm": 8.187626896227712
+            },
+            {
+              "Sq_mm": 2.909980659557161,
+              "skewness": 0.454439976865225,
+              "kurtosis": 3.507739465033959,
+              "rms_gradient": 0.5171056219136936,
+              "gradient_anisotropy": 2.1777855071673464,
+              "gradient_direction_deg": 108.49926852423053,
+              "min_mm": -6.3130124921373225,
+              "max_mm": 11.262787993235088
+            },
+            {
+              "Sq_mm": 2.8640612351195953,
+              "skewness": 0.7164630737919327,
+              "kurtosis": 3.097659308200347,
+              "rms_gradient": 0.5299200523762418,
+              "gradient_anisotropy": 1.7769150098945516,
+              "gradient_direction_deg": 107.00008127007565,
+              "min_mm": -6.513133239263389,
+              "max_mm": 8.94136975485441
+            },
+            {
+              "Sq_mm": 3.0974938456345265,
+              "skewness": 0.1580182170068813,
+              "kurtosis": 2.036343147089983,
+              "rms_gradient": 0.5606179010845622,
+              "gradient_anisotropy": 1.7413966021273228,
+              "gradient_direction_deg": 100.20851569063508,
+              "min_mm": -7.311955113628855,
+              "max_mm": 7.873933112158213
+            },
+            {
+              "Sq_mm": 3.231998727672807,
+              "skewness": 0.951596543313761,
+              "kurtosis": 3.4420752096896763,
+              "rms_gradient": 0.5404965373386028,
+              "gradient_anisotropy": 1.9513312035058608,
+              "gradient_direction_deg": 103.50263984576608,
+              "min_mm": -6.539919370525146,
+              "max_mm": 9.715048354124141
+            },
+            {
+              "Sq_mm": 2.8092011192243116,
+              "skewness": 0.8563630900329539,
+              "kurtosis": 3.4971127311720074,
+              "rms_gradient": 0.5154568663970339,
+              "gradient_anisotropy": 1.8050311019413412,
+              "gradient_direction_deg": 113.80337986281783,
+              "min_mm": -6.593514493796778,
+              "max_mm": 8.660544368913223
+            },
+            {
+              "Sq_mm": 3.3028602861132192,
+              "skewness": 0.2623490154275136,
+              "kurtosis": 2.4033174923020173,
+              "rms_gradient": 0.5886789214678292,
+              "gradient_anisotropy": 1.9968280876903868,
+              "gradient_direction_deg": 92.7937380783095,
+              "min_mm": -8.262183610758495,
+              "max_mm": 9.874833162976147
+            },
+            {
+              "Sq_mm": 2.6925517046627303,
+              "skewness": 0.6580854274445165,
+              "kurtosis": 3.129468596185553,
+              "rms_gradient": 0.5488141497826445,
+              "gradient_anisotropy": 1.8077229440698572,
+              "gradient_direction_deg": 103.0976853183028,
+              "min_mm": -5.989697683023164,
+              "max_mm": 8.293261548633248
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.32842193881638365,
+              0.6105368376846915,
+              1.101919252847092,
+              1.9068021384309461,
+              3.01421593154646,
+              4.005623929698412,
+              3.983866363150011
+            ],
+            "y": [
+              0.4314099193600335,
+              0.8071995263996842,
+              1.4425916278491184,
+              2.418908059517905,
+              3.7564264615328358,
+              4.860851577360618,
+              4.213520745380894
+            ]
+          }
+        }
+      }
+    },
+    "narvik": {
+      "source_control": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Narvik-4-2-5-3_seed1501_512.npz",
+      "source_control_sha256": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7",
+      "raw_plane_coefficients": [
+        6.9880089074480845e-12,
+        0.006613475869203616,
+        0.0016772849134556395
+      ],
+      "raw_statistics": {
+        "Sq_mm": 0.7750397849084466,
+        "skewness": 0.33335248638869003,
+        "kurtosis": 2.360350735918363,
+        "rms_gradient": 0.17334405790158272,
+        "gradient_anisotropy": 1.6788022657120263,
+        "gradient_direction_deg": 0.3137733320924383,
+        "min_mm": -1.8162100495851299,
+        "max_mm": 2.632545309023986
+      },
+      "exact_triangle_refinement_max_error_m": 1.620882247865829e-17,
+      "source_PSD_method": "Plane removed; Hann power-corrected directional PSD; Gaussian sigma 0.65 spectral bins; bilinear PSD interpolation; no height normalization",
+      "seed": 2026092902,
+      "levels": {
+        "original": {
+          "path": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Narvik-4-2-5-3_seed1501_512.npz",
+          "sha256": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7",
+          "grid_spacing_m": 0.002,
+          "shape": [
+            512,
+            512
+          ],
+          "statistics": {
+            "Sq_mm": 0.78289650153097,
+            "skewness": 0.33280430251640397,
+            "kurtosis": 2.323276989052439,
+            "rms_gradient": 0.1009572104232541,
+            "gradient_anisotropy": 3.7921465194737043,
+            "gradient_direction_deg": 179.99930128172596,
+            "min_mm": -1.6394307812171742,
+            "max_mm": 2.503144398843896
+          }
+        },
+        "restore4": {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore4.npz",
+          "sha256": "c753bdbc3bf28ec37d0e3f5e89a69802c3bd11539f7c8c2dcf9e9a403ce63366",
+          "grid_spacing_m": 0.0005,
+          "shape": [
+            2045,
+            2045
+          ],
+          "restoration_frequency_range_cycles_per_m": [
+            62.5,
+            250.0
+          ],
+          "full_replacement_frequency_range_cycles_per_m": [
+            125.0,
+            200.0
+          ],
+          "correction_rolloff_cycles_per_m": [
+            200.0,
+            250.0
+          ],
+          "periodic_long_band_relative_change": 1.417588101316314e-16,
+          "imaginary_residual_m": 0.0,
+          "statistics": {
+            "Sq_mm": 0.7820643351220533,
+            "skewness": 0.3299235733264374,
+            "kurtosis": 2.339829986178964,
+            "rms_gradient": 0.1236403219207331,
+            "gradient_anisotropy": 2.6557599958378475,
+            "gradient_direction_deg": 0.004327591685154175,
+            "min_mm": -1.779092424954564,
+            "max_mm": 2.718580992760005
+          },
+          "periodic_variance_mm2": 0.612090475610124,
+          "added_height_rms_mm": 0.06986676758369431,
+          "no_global_height_normalization": true,
+          "mesh_coordinate_span_m": [
+            -0.511,
+            0.511
+          ]
+        },
+        "restore2": {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\narvik_restore2.npz",
+          "sha256": "ac676c1062828e75474ca93ca23ceaa138d25598ef48510881b26ea95ec00034",
+          "grid_spacing_m": 0.0005,
+          "shape": [
+            2045,
+            2045
+          ],
+          "restoration_frequency_range_cycles_per_m": [
+            62.5,
+            500.0
+          ],
+          "full_replacement_frequency_range_cycles_per_m": [
+            125.0,
+            400.0
+          ],
+          "correction_rolloff_cycles_per_m": [
+            400.0,
+            500.0
+          ],
+          "periodic_long_band_relative_change": 1.440322503112475e-16,
+          "imaginary_residual_m": 0.0,
+          "statistics": {
+            "Sq_mm": 0.7832439082841334,
+            "skewness": 0.32832552197625514,
+            "kurtosis": 2.3435308867498006,
+            "rms_gradient": 0.14414022549457606,
+            "gradient_anisotropy": 2.025774128939434,
+            "gradient_direction_deg": 179.34554765765492,
+            "min_mm": -1.8449099895062315,
+            "max_mm": 2.7772032705650065
+          },
+          "periodic_variance_mm2": 0.6139433733765616,
+          "added_height_rms_mm": 0.0821494870786418,
+          "no_global_height_normalization": true,
+          "mesh_coordinate_span_m": [
+            -0.511,
+            0.511
+          ]
+        }
+      },
+      "raw_height_power_fractions": {
+        "1-2mm": 0.0031459234294542284,
+        "2-4mm": 0.0032786783010966855,
+        "4-8mm": 0.007247405481195706,
+        "8-16mm": 0.016784139740856525,
+        "16-100.5mm": 0.9688106093099925
+      },
+      "fidelity_status": "Measured-spectrum constrained paired synthetic detail; short-scale measurement noise and phase topology not validated. No exact height-CDF claim.",
+      "matched_window_checks": {
+        "original": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 0.5954889231111812,
+              "skewness": -0.03982249281307553,
+              "kurtosis": 2.2652457140491777,
+              "rms_gradient": 0.08677427602334514,
+              "gradient_anisotropy": 2.3927809604099903,
+              "gradient_direction_deg": 2.7274422809138628,
+              "min_mm": -1.3632222979944502,
+              "max_mm": 1.2046330791996855
+            },
+            {
+              "Sq_mm": 0.515429559261713,
+              "skewness": 0.3625905243704308,
+              "kurtosis": 2.237814459825699,
+              "rms_gradient": 0.09203051617306801,
+              "gradient_anisotropy": 2.7618836974990257,
+              "gradient_direction_deg": 177.79301689979894,
+              "min_mm": -1.0473903540184448,
+              "max_mm": 1.493418736117977
+            },
+            {
+              "Sq_mm": 0.60769617595716,
+              "skewness": -0.06930305999617674,
+              "kurtosis": 2.401634326224301,
+              "rms_gradient": 0.10049498743661671,
+              "gradient_anisotropy": 2.6969496094625702,
+              "gradient_direction_deg": 6.565030132672234,
+              "min_mm": -1.7673942986435733,
+              "max_mm": 1.5843370954574452
+            },
+            {
+              "Sq_mm": 0.6122509680681871,
+              "skewness": 0.10792720780494072,
+              "kurtosis": 2.247992289909731,
+              "rms_gradient": 0.105217824342802,
+              "gradient_anisotropy": 3.7182498345011585,
+              "gradient_direction_deg": 171.79852409785607,
+              "min_mm": -1.1875842731826647,
+              "max_mm": 1.5492981376508972
+            },
+            {
+              "Sq_mm": 0.5418577417121511,
+              "skewness": 0.595450250060288,
+              "kurtosis": 2.848147020795234,
+              "rms_gradient": 0.08709212701274185,
+              "gradient_anisotropy": 2.8254974332977447,
+              "gradient_direction_deg": 177.09018928318642,
+              "min_mm": -1.2853529585150505,
+              "max_mm": 1.6256138686652937
+            },
+            {
+              "Sq_mm": 0.6457335395551392,
+              "skewness": -0.1951165642310915,
+              "kurtosis": 2.6366865763440637,
+              "rms_gradient": 0.09206203334418535,
+              "gradient_anisotropy": 2.959951713195372,
+              "gradient_direction_deg": 2.534903667587713,
+              "min_mm": -1.8370239403576676,
+              "max_mm": 1.703810720206504
+            },
+            {
+              "Sq_mm": 0.6252014104852697,
+              "skewness": 0.2718938730389802,
+              "kurtosis": 2.43110291789702,
+              "rms_gradient": 0.11000176012444678,
+              "gradient_anisotropy": 4.443617070462049,
+              "gradient_direction_deg": 178.3908401936594,
+              "min_mm": -1.7291668460556677,
+              "max_mm": 1.7459655328657013
+            },
+            {
+              "Sq_mm": 0.7119786707583149,
+              "skewness": 0.5289314269472652,
+              "kurtosis": 2.7367697388666845,
+              "rms_gradient": 0.10111981512196476,
+              "gradient_anisotropy": 4.223193091653075,
+              "gradient_direction_deg": 5.4234001338339795,
+              "min_mm": -1.1234436268482706,
+              "max_mm": 2.4623042537253403
+            },
+            {
+              "Sq_mm": 0.5832999224277097,
+              "skewness": 0.02648040881579174,
+              "kurtosis": 2.883443872129647,
+              "rms_gradient": 0.09338878583474051,
+              "gradient_anisotropy": 4.417191961555738,
+              "gradient_direction_deg": 4.505143414208646,
+              "min_mm": -1.770443995642326,
+              "max_mm": 1.5348821044732677
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.0844655975395618,
+              0.16639537076903146,
+              0.3219697872158263,
+              0.576564103113188,
+              0.8638043954515927,
+              0.9961100864353466,
+              0.9234303311306533
+            ],
+            "y": [
+              0.04689918554202781,
+              0.09209214674129672,
+              0.17751840426145452,
+              0.3148325805329554,
+              0.49676395123746975,
+              0.6786331205262952,
+              0.8711830437994563
+            ]
+          }
+        },
+        "restore4": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 0.6000793319393848,
+              "skewness": -0.03742345771054225,
+              "kurtosis": 2.267877661567974,
+              "rms_gradient": 0.10888452665473969,
+              "gradient_anisotropy": 1.8396612392840899,
+              "gradient_direction_deg": 2.8840280100514804,
+              "min_mm": -1.465140193808566,
+              "max_mm": 1.3199713062269436
+            },
+            {
+              "Sq_mm": 0.5211985046194945,
+              "skewness": 0.35178363919422423,
+              "kurtosis": 2.2384318472373153,
+              "rms_gradient": 0.11453313824360992,
+              "gradient_anisotropy": 2.139474500757091,
+              "gradient_direction_deg": 177.87057535371272,
+              "min_mm": -1.1128855083053562,
+              "max_mm": 1.5292823798419966
+            },
+            {
+              "Sq_mm": 0.6127238987746776,
+              "skewness": -0.06805522968138421,
+              "kurtosis": 2.396998347583954,
+              "rms_gradient": 0.12193235397639887,
+              "gradient_anisotropy": 2.1633352133882395,
+              "gradient_direction_deg": 5.68375152410897,
+              "min_mm": -1.8710684165459166,
+              "max_mm": 1.6162475055477783
+            },
+            {
+              "Sq_mm": 0.6171440663174098,
+              "skewness": 0.10859095531334692,
+              "kurtosis": 2.261459716512301,
+              "rms_gradient": 0.12638428397310006,
+              "gradient_anisotropy": 2.6603982548492,
+              "gradient_direction_deg": 174.05226119436625,
+              "min_mm": -1.3308094359914149,
+              "max_mm": 1.6699353564385766
+            },
+            {
+              "Sq_mm": 0.5475620999880325,
+              "skewness": 0.5875824816235429,
+              "kurtosis": 2.8610040865343294,
+              "rms_gradient": 0.11032190560477746,
+              "gradient_anisotropy": 2.0922646642088147,
+              "gradient_direction_deg": 179.31783302136193,
+              "min_mm": -1.310675801601982,
+              "max_mm": 1.6939577839813387
+            },
+            {
+              "Sq_mm": 0.6503697393314897,
+              "skewness": -0.19110557037335932,
+              "kurtosis": 2.6300560046865114,
+              "rms_gradient": 0.11521454928339155,
+              "gradient_anisotropy": 2.225627864600649,
+              "gradient_direction_deg": 1.9646489038730124,
+              "min_mm": -2.013252709543477,
+              "max_mm": 1.7089447593506841
+            },
+            {
+              "Sq_mm": 0.6296618809493496,
+              "skewness": 0.2650945928110674,
+              "kurtosis": 2.4234043063565522,
+              "rms_gradient": 0.12957475516783146,
+              "gradient_anisotropy": 2.92008191663438,
+              "gradient_direction_deg": 178.6317659067276,
+              "min_mm": -1.7902426767197364,
+              "max_mm": 1.7759860417902587
+            },
+            {
+              "Sq_mm": 0.716191719637151,
+              "skewness": 0.5233350413817998,
+              "kurtosis": 2.742386976201728,
+              "rms_gradient": 0.12033424686930817,
+              "gradient_anisotropy": 2.886915044476,
+              "gradient_direction_deg": 5.163230332512029,
+              "min_mm": -1.209678350530831,
+              "max_mm": 2.5766796077654575
+            },
+            {
+              "Sq_mm": 0.5890939103550278,
+              "skewness": 0.027234885667568636,
+              "kurtosis": 2.900140468416931,
+              "rms_gradient": 0.1169749105740256,
+              "gradient_anisotropy": 2.7328162264590135,
+              "gradient_direction_deg": 3.4745346830202095,
+              "min_mm": -1.9131968932776138,
+              "max_mm": 1.6232681535386773
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.09920995430840605,
+              0.19120568369691163,
+              0.3464715629327217,
+              0.5854524261998332,
+              0.8705704195536705,
+              1.0018473204417482,
+              0.9300513047312364
+            ],
+            "y": [
+              0.06445858396905199,
+              0.12187336736383296,
+              0.20886779641888406,
+              0.33313837673298574,
+              0.508213974348363,
+              0.6870673670430367,
+              0.8775804597640247
+            ]
+          }
+        },
+        "restore2": {
+          "window_centers_m": [
+            [
+              -0.2,
+              -0.2
+            ],
+            [
+              0.0,
+              -0.2
+            ],
+            [
+              0.2,
+              -0.2
+            ],
+            [
+              -0.2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              0
+            ],
+            [
+              -0.2,
+              0.2
+            ],
+            [
+              0,
+              0.2
+            ],
+            [
+              0.2,
+              0.2
+            ]
+          ],
+          "statistics": [
+            {
+              "Sq_mm": 0.601626827800405,
+              "skewness": -0.037183537703796905,
+              "kurtosis": 2.273689411055229,
+              "rms_gradient": 0.13082740401451542,
+              "gradient_anisotropy": 1.5286990122704616,
+              "gradient_direction_deg": 0.7787672295798131,
+              "min_mm": -1.5134207902666765,
+              "max_mm": 1.3304304467253332
+            },
+            {
+              "Sq_mm": 0.5230346264747896,
+              "skewness": 0.34859829616156124,
+              "kurtosis": 2.2491280350331206,
+              "rms_gradient": 0.13664671401617798,
+              "gradient_anisotropy": 1.6948233699360202,
+              "gradient_direction_deg": 176.8152148439759,
+              "min_mm": -1.1375726367408936,
+              "max_mm": 1.5667219948488096
+            },
+            {
+              "Sq_mm": 0.6142388230394761,
+              "skewness": -0.06695718863628823,
+              "kurtosis": 2.404370896109472,
+              "rms_gradient": 0.14360894341668676,
+              "gradient_anisotropy": 1.7287821670326333,
+              "gradient_direction_deg": 4.531708064588713,
+              "min_mm": -1.8630578323930786,
+              "max_mm": 1.7055532971355287
+            },
+            {
+              "Sq_mm": 0.6186462882281071,
+              "skewness": 0.1076039476994618,
+              "kurtosis": 2.2682910173369404,
+              "rms_gradient": 0.14665821945491517,
+              "gradient_anisotropy": 1.9752876000777935,
+              "gradient_direction_deg": 173.66655362196937,
+              "min_mm": -1.380057684862788,
+              "max_mm": 1.6944463196260255
+            },
+            {
+              "Sq_mm": 0.5491591179981526,
+              "skewness": 0.5818836075139248,
+              "kurtosis": 2.8586272790500113,
+              "rms_gradient": 0.13281539552065058,
+              "gradient_anisotropy": 1.6746635320017054,
+              "gradient_direction_deg": 179.39711365839236,
+              "min_mm": -1.3173946209909397,
+              "max_mm": 1.7662506288804385
+            },
+            {
+              "Sq_mm": 0.65178428272614,
+              "skewness": -0.18927124658048447,
+              "kurtosis": 2.632522352038595,
+              "rms_gradient": 0.13715513612440863,
+              "gradient_anisotropy": 1.791115934414592,
+              "gradient_direction_deg": 0.4627860694017727,
+              "min_mm": -2.0056095545776866,
+              "max_mm": 1.788199265418286
+            },
+            {
+              "Sq_mm": 0.6311948105922127,
+              "skewness": 0.2617822051321447,
+              "kurtosis": 2.428079767017511,
+              "rms_gradient": 0.14948037022422192,
+              "gradient_anisotropy": 2.152536443983393,
+              "gradient_direction_deg": 177.99260123710636,
+              "min_mm": -1.8169448319063293,
+              "max_mm": 1.8040541507045242
+            },
+            {
+              "Sq_mm": 0.7174299922048568,
+              "skewness": 0.5202564851764122,
+              "kurtosis": 2.7431995890202643,
+              "rms_gradient": 0.1414523411698436,
+              "gradient_anisotropy": 2.0845598714852906,
+              "gradient_direction_deg": 3.864185769834961,
+              "min_mm": -1.2888172033380514,
+              "max_mm": 2.6118037025715277
+            },
+            {
+              "Sq_mm": 0.5906856822553935,
+              "skewness": 0.028426438208960323,
+              "kurtosis": 2.898279164744218,
+              "rms_gradient": 0.139127936917587,
+              "gradient_anisotropy": 1.9699939068322343,
+              "gradient_direction_deg": 3.158222070365923,
+              "min_mm": -1.891496704058585,
+              "max_mm": 1.643968320684435
+            }
+          ],
+          "separation_mm": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "height_difference_rms_mm": {
+            "x": [
+              0.11242988439979085,
+              0.20304091158188156,
+              0.3513756350671174,
+              0.5885801815905982,
+              0.8727245973575101,
+              1.0036636038412787,
+              0.9320770491840468
+            ],
+            "y": [
+              0.08307489690144422,
+              0.14010866341093123,
+              0.21650104049499092,
+              0.3385568789677088,
+              0.5119606611394582,
+              0.689793565498478,
+              0.8797019778277783
+            ]
+          }
+        }
+      }
+    }
+  },
+  "generation_elapsed_s": 15.453665256500244,
+  "preview_complete": true
+}

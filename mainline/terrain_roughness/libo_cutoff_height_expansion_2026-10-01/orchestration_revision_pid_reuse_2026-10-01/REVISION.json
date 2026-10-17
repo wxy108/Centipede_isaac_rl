@@ -1,0 +1,14 @@
+{
+  "unix": 1790865479.4853904,
+  "source": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_cutoff_height_expansion.py",
+  "previous_sha256": "f413f7f89445f19b0f175390eb8e4b4402d8801f3b96d0e8941348e7b8c1e245",
+  "new_sha256": "bb0c32b58a36ef02bd440ea3b47c26d8a5c829972003949645e948d3cc31a1c8",
+  "reason": "Protected non-Python processes reused historical PIDs after boot. Accept only readable positive unrelated executable identity; inaccessible Python/unknown still block.",
+  "scientific_worker_PD_amplitude_physics_inputs_unchanged": true,
+  "verification": [
+    "7 mock identity cases passed including blocking deniedPython/unknown",
+    "Live read-only418PID ownership audit passed;9 protected unrelated executable identities verified",
+    "Independent reviewer accepted narrow fallback"
+  ],
+  "current_boot_unix": 1790864681.4853904
+}

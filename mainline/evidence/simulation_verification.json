@@ -1,0 +1,596 @@
+{
+  "schema": "unified_demo_verification_v1",
+  "attempt": "v4",
+  "complete": true,
+  "physics_conditions": 12,
+  "physics_steps_per_condition": 24000,
+  "profile_sha256": "259f25df9989517d19ca909c59747205104f5f9156711ced4fc54ebfbd15cca5",
+  "fixed_pd_sha256": "1136668ef593f0f5a9080ac730b41aa35034692741f3b1025a6d0e361fb10cda",
+  "workers": [
+    {
+      "worker": "flat_low",
+      "run_directory": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\runs\\v4\\flat_low",
+      "source_ids": [
+        0,
+        5,
+        10
+      ],
+      "trajectory_sha256": "7a1ef0407a03aa4cb25bbd167fdad579c9852756b8594976a9061e3771b62809",
+      "backend_sha256": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+      "steps": 24000,
+      "wall_s": 203.15600000000086,
+      "thread_settings": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "exact_complete_pd": true,
+      "native_errors": [],
+      "finite_every_step": true
+    },
+    {
+      "worker": "rough_low",
+      "run_directory": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\runs\\v4\\rough_low",
+      "source_ids": [
+        3,
+        8,
+        13
+      ],
+      "trajectory_sha256": "fe72d31cca11481302655bd557f9262d80a205f9a6ac25b9e3518a3a06a07008",
+      "backend_sha256": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+      "steps": 24000,
+      "wall_s": 207.82799999999952,
+      "thread_settings": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "exact_complete_pd": true,
+      "native_errors": [],
+      "finite_every_step": true
+    },
+    {
+      "worker": "flat_high",
+      "run_directory": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\runs\\v4\\flat_high",
+      "source_ids": [
+        15,
+        20,
+        25
+      ],
+      "trajectory_sha256": "7451624ac7734e2d067222f37b9a8e455ecc6290c288865d78bbd9652474d529",
+      "backend_sha256": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+      "steps": 24000,
+      "wall_s": 203.15599999999904,
+      "thread_settings": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "exact_complete_pd": true,
+      "native_errors": [],
+      "finite_every_step": true
+    },
+    {
+      "worker": "rough_high",
+      "run_directory": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\runs\\v4\\rough_high",
+      "source_ids": [
+        18,
+        23,
+        28
+      ],
+      "trajectory_sha256": "9450682853aebe3275288283c351d71a61d6a5ca9853073fb2ad733ae43e561f",
+      "backend_sha256": "93b7d871e00adeb8487e7b1c56a47b374bd1a02780dcf1e99bb837a850b74baa",
+      "steps": 24000,
+      "wall_s": 206.73399999999856,
+      "thread_settings": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "exact_complete_pd": true,
+      "native_errors": [],
+      "finite_every_step": true
+    }
+  ],
+  "conditions": [
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 0,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine",
+      "worker": "flat_low",
+      "local_slot": 0,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -359.1974792480469,
+        -68.60843658447266,
+        -0.00047497451305389404
+      ],
+      "com_net_xy_distance_mm": 365.6910705566406,
+      "max_sampled_body_speed_m_s": 0.5886445641517639,
+      "max_sampled_joint_speed_rad_s": 382.9428405761719,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.3609110116958618,
+        -0.11359173059463501
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.01790439710021019
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 5,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine",
+      "worker": "flat_low",
+      "local_slot": 1,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -350.6094665527344,
+        9.60322093963623,
+        0.006730668246746063
+      ],
+      "com_net_xy_distance_mm": 350.740966796875,
+      "max_sampled_body_speed_m_s": 0.7922729849815369,
+      "max_sampled_joint_speed_rad_s": 678.45556640625,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.35092756152153015,
+        -0.015562877058982849
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.030355729162693024
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 10,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine",
+      "worker": "flat_low",
+      "local_slot": 2,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -297.3985290527344,
+        12.45163345336914,
+        0.0007562339305877686
+      ],
+      "com_net_xy_distance_mm": 297.6590881347656,
+      "max_sampled_body_speed_m_s": 0.5886445641517639,
+      "max_sampled_joint_speed_rad_s": 361.3140869140625,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.28096503019332886,
+        -0.013707702048122883
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.03218633681535721
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 3,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine",
+      "worker": "rough_low",
+      "local_slot": 0,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -48.50445556640625,
+        8.053228378295898,
+        -0.6056838035583496
+      ],
+      "com_net_xy_distance_mm": 49.168453216552734,
+      "max_sampled_body_speed_m_s": 2.53010630607605,
+      "max_sampled_joint_speed_rad_s": 2087.9267578125,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        0.06547889858484268,
+        -0.16666580736637115
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.09624803811311722
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 8,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine",
+      "worker": "rough_low",
+      "local_slot": 1,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -204.5055389404297,
+        45.66736602783203,
+        0.938719630241394
+      ],
+      "com_net_xy_distance_mm": 209.54241943359375,
+      "max_sampled_body_speed_m_s": 2.6762447357177734,
+      "max_sampled_joint_speed_rad_s": 2149.38037109375,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.13199664652347565,
+        -0.15748459100723267
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.07369516044855118
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 13,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine",
+      "worker": "rough_low",
+      "local_slot": 2,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -233.72915649414062,
+        -123.63047790527344,
+        -0.008609145879745483
+      ],
+      "com_net_xy_distance_mm": 264.4122009277344,
+      "max_sampled_body_speed_m_s": 1.6892242431640625,
+      "max_sampled_joint_speed_rad_s": 1677.1405029296875,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.18490874767303467,
+        -0.2847842574119568
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.10289379954338074
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 15,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine",
+      "worker": "flat_high",
+      "local_slot": 0,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -253.56089782714844,
+        2.557614326477051,
+        -0.0003371387720108032
+      ],
+      "com_net_xy_distance_mm": 253.5738067626953,
+      "max_sampled_body_speed_m_s": 0.7271624207496643,
+      "max_sampled_joint_speed_rad_s": 623.458984375,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.2226264625787735,
+        -0.011501412838697433
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.016065968200564384
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 20,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine",
+      "worker": "flat_high",
+      "local_slot": 1,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -215.49449157714844,
+        3.6982178688049316,
+        -0.0006970949470996857
+      ],
+      "com_net_xy_distance_mm": 215.52621459960938,
+      "max_sampled_body_speed_m_s": 0.5886445641517639,
+      "max_sampled_joint_speed_rad_s": 216.75619506835938,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.17297518253326416,
+        -0.010559018701314926
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.01743161492049694
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 4.0,
+      "ci": 5,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 25,
+      "body_factor": 0.15192437582205834,
+      "leg_factor": 1.3705873073557169,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "pitch_variant": "original_sine",
+      "worker": "flat_high",
+      "local_slot": 2,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -192.51429748535156,
+        2.0765116214752197,
+        -0.004392582923173904
+      ],
+      "com_net_xy_distance_mm": 192.52549743652344,
+      "max_sampled_body_speed_m_s": 0.5886445641517639,
+      "max_sampled_joint_speed_rad_s": 201.90057373046875,
+      "foot_contact_frames": 1189,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.14147016406059265,
+        -0.010646521113812923
+      ],
+      "max_body_center_xy_m": [
+        0.22257773578166962,
+        0.014016003347933292
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": null,
+      "surface_sha256": null
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 18,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine",
+      "worker": "rough_high",
+      "local_slot": 0,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -196.17691040039062,
+        -18.37882423400879,
+        3.2105138301849365
+      ],
+      "com_net_xy_distance_mm": 197.0359344482422,
+      "max_sampled_body_speed_m_s": 1.4000029563903809,
+      "max_sampled_joint_speed_rad_s": 1422.4808349609375,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.1461293250322342,
+        -0.15320751070976257
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.1045810803771019
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 23,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine",
+      "worker": "rough_high",
+      "local_slot": 1,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -190.838134765625,
+        -12.105688095092773,
+        3.131120443344116
+      ],
+      "com_net_xy_distance_mm": 191.22171020507812,
+      "max_sampled_body_speed_m_s": 1.4000029563903809,
+      "max_sampled_joint_speed_rad_s": 828.0579833984375,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.13518792390823364,
+        -0.15196210145950317
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.10456059128046036
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    },
+    {
+      "wave": 4.0,
+      "ci": 5,
+      "arm": "pure_cluster",
+      "surface": "rough",
+      "source_id": 28,
+      "body_factor": 0.15192437582205834,
+      "leg_factor": 1.3705873073557169,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "pitch_variant": "original_sine",
+      "worker": "rough_high",
+      "local_slot": 2,
+      "duration_s": 12,
+      "analysis_window_s": [
+        4,
+        12
+      ],
+      "com_displacement_mm": [
+        -166.82427978515625,
+        7.129594802856445,
+        4.344285488128662
+      ],
+      "com_net_xy_distance_mm": 166.9765625,
+      "max_sampled_body_speed_m_s": 3.085785388946533,
+      "max_sampled_joint_speed_rad_s": 3229.680419921875,
+      "foot_contact_frames": 1193,
+      "total_contact_frames": 1200,
+      "min_body_center_xy_m": [
+        -0.10278597474098206,
+        -0.13588595390319824
+      ],
+      "max_body_center_xy_m": [
+        0.22250008583068848,
+        -0.10364969074726105
+      ],
+      "body_centers_inside_terrain": true,
+      "surface_file": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\open_loop_review_2026-09-16\\optimization_surfaces_v1\\Libo-9-3-1-3_seed1501_512.npz",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321"
+    }
+  ],
+  "interpretation": "Fixed-PD replay of previously optimized kinematic amplitudes. No dynamic optimum or convergence claim.",
+  "historical_failures": {
+    "v1": "Windows hidden-process output handle failed before physics",
+    "v2": "Sandbox could not read pinned Warp 1.8.1; version assertion stopped before physics",
+    "v3": "NumPy integer origin rejected by USD vector constructor before physics",
+    "v4": "Completed requested 12-second episodes"
+  }
+}

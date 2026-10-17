@@ -1,0 +1,6 @@
+{
+  "correlation_m": 0.025,
+  "offset_threshold_m": 0.04,
+  "material_friction_unchanged": true,
+  "native_getter_verified": false
+}
