@@ -1,0 +1,7 @@
+{
+  "diagnostic_telemetry": false,
+  "all_step_finite": true,
+  "trajectory_stride_s": 0.01,
+  "physics_contact_processing_unchanged": true,
+  "scope": "Disable diagnostic contact/momentum sampling and chunk writes only; retain report allocation, all-step state checks and stored trajectories"
+}

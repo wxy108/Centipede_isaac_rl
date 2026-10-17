@@ -1,0 +1,303 @@
+{
+  "status": "PREPARATION_ONLY_PENDING_USER_CHOICES",
+  "no_sweep_or_physics_run": true,
+  "pending": [
+    "measured surface family",
+    "height variants and treatment of plane",
+    "placement/heading sampling and nominal phase windows"
+  ],
+  "metric": "sqrt(mean_frames(mean_unordered_pairs(atan2(abs(delta_height),distance_XY)**2)))",
+  "metric_units": "Degrees after square root; calculate angles in radians",
+  "fixed_pair_count": 703,
+  "nominal_stance_pair_count": 171,
+  "foot_point_definition": "Foot-sphere center XY projected onto height surface; not finite-sphere tangent contact or measured force contact",
+  "foot_radius_mm": 0.45,
+  "coordinate_frame": "Level link_body_1, centered at 21-spine-body centroid",
+  "fixed_candidates": [
+    {
+      "pitch_deg": 0,
+      "foot_span_xyz_mm": [
+        90.00001661479473,
+        19.711696931483463,
+        0.0
+      ],
+      "mean_foot_z_mm": -3.437499314546588
+    },
+    {
+      "pitch_deg": 20,
+      "foot_span_xyz_mm": [
+        90.00001670887232,
+        17.559452372726103,
+        8.673617379884035e-15
+      ],
+      "mean_foot_z_mm": -5.665492033272463
+    }
+  ],
+  "terrains": [
+    {
+      "id": "libo",
+      "label": "Libo measured rock",
+      "source": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\rock_joint\\database\\Libo\\01 PLY File\\Libo-9-3-1-3.ply",
+      "shape": [
+        201,
+        201
+      ],
+      "vertex_span_mm": [
+        100.0,
+        100.0
+      ],
+      "spacing_mm": [
+        0.5000000000000004,
+        0.5000000000000004
+      ],
+      "observed_fraction": 1.0,
+      "fitted_plane_coefficients": [
+        1.5492326851080615e-11,
+        0.010585965225787836,
+        -0.010905947027166739
+      ],
+      "residual_Sq_mm": 3.151798867309084
+    },
+    {
+      "id": "narvik",
+      "label": "Narvik measured rock",
+      "source": "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\rock_joint\\database\\Narvik\\01 PLY File\\Narvik-4-2-5-3.ply",
+      "shape": [
+        201,
+        201
+      ],
+      "vertex_span_mm": [
+        100.0,
+        100.0
+      ],
+      "spacing_mm": [
+        0.5000000000000004,
+        0.5000000000000004
+      ],
+      "observed_fraction": 1.0,
+      "fitted_plane_coefficients": [
+        6.9880092804558775e-12,
+        0.006613475869203617,
+        0.0016772849134556586
+      ],
+      "residual_Sq_mm": 0.7750397849084465
+    },
+    {
+      "id": "soil_1",
+      "label": "Measured soil window 1",
+      "source": "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\full_fft_roundtrip.npz",
+      "shape": [
+        128,
+        128
+      ],
+      "vertex_span_mm": [
+        508.0,
+        508.0
+      ],
+      "spacing_mm": [
+        4.0000000000000036,
+        4.0000000000000036
+      ],
+      "observed_fraction": 0.993896484375,
+      "fitted_plane_coefficients": [
+        -1.0446065254363923,
+        0.14166746730679308,
+        -0.04635818848093709
+      ],
+      "residual_Sq_mm": 10.394030346069904
+    },
+    {
+      "id": "soil_2",
+      "label": "Measured soil window 2",
+      "source": "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\full_fft_roundtrip.npz",
+      "shape": [
+        128,
+        128
+      ],
+      "vertex_span_mm": [
+        508.0,
+        508.0
+      ],
+      "spacing_mm": [
+        4.0000000000000036,
+        4.0000000000000036
+      ],
+      "observed_fraction": 0.99755859375,
+      "fitted_plane_coefficients": [
+        -0.955536291026875,
+        0.13139087567551846,
+        -0.04032866835184019
+      ],
+      "residual_Sq_mm": 9.139583419731895
+    },
+    {
+      "id": "soil_3",
+      "label": "Measured soil window 3",
+      "source": "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\full_fft_roundtrip.npz",
+      "shape": [
+        128,
+        128
+      ],
+      "vertex_span_mm": [
+        508.0,
+        508.0
+      ],
+      "spacing_mm": [
+        4.0000000000000036,
+        4.0000000000000036
+      ],
+      "observed_fraction": 0.9949951171875,
+      "fitted_plane_coefficients": [
+        -0.8754780299932464,
+        0.13348708330752962,
+        -0.02337207657887376
+      ],
+      "residual_Sq_mm": 9.308838167971729
+    },
+    {
+      "id": "soil_4",
+      "label": "Measured soil window 4",
+      "source": "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\full_fft_roundtrip.npz",
+      "shape": [
+        128,
+        128
+      ],
+      "vertex_span_mm": [
+        508.0,
+        508.0
+      ],
+      "spacing_mm": [
+        4.0000000000000036,
+        4.0000000000000036
+      ],
+      "observed_fraction": 0.99456787109375,
+      "fitted_plane_coefficients": [
+        -0.7952030162687159,
+        0.11915345164351528,
+        -0.03980960185807277
+      ],
+      "residual_Sq_mm": 9.540788641890837
+    }
+  ],
+  "gait_cells": [
+    {
+      "wave": 1.5,
+      "ci": 0,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 0,
+      "body_factor": 1.166354908863849,
+      "leg_factor": 1.1149783493659917,
+      "A_deg": 32.008333333333326,
+      "B_deg": 24.7025808701428,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.0,
+      "ci": 1,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 5,
+      "body_factor": 1.033197558348571,
+      "leg_factor": 0.9794417835888279,
+      "A_deg": 27.820833333333333,
+      "B_deg": 29.000402751172626,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 2.5,
+      "ci": 2,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 10,
+      "body_factor": 0.8571706566095518,
+      "leg_factor": 1.0330056786855668,
+      "A_deg": 22.241666666666664,
+      "B_deg": 34.97604319503777,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.0,
+      "ci": 3,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 15,
+      "body_factor": 0.7687729296687619,
+      "leg_factor": 1.2698314968120348,
+      "A_deg": 17.704166666666662,
+      "B_deg": 33.33285961711886,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 3.5,
+      "ci": 4,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 20,
+      "body_factor": 0.36693903095794816,
+      "leg_factor": 1.3152185248723594,
+      "A_deg": 7.583333333333333,
+      "B_deg": 43.288040917978634,
+      "pitch_variant": "original_sine"
+    },
+    {
+      "wave": 4.0,
+      "ci": 5,
+      "arm": "pure_cluster",
+      "surface": "flat",
+      "source_id": 25,
+      "body_factor": 0.15192437582205834,
+      "leg_factor": 1.3705873073557169,
+      "A_deg": 2.698958333333333,
+      "B_deg": 41.85124765921162,
+      "pitch_variant": "original_sine"
+    }
+  ],
+  "original_command_cycle_vs_old_cache_max_error_rad": 0.0,
+  "latest_geometry_vs_old_cache_max_coordinate_difference_mm": 4.4170335951380295,
+  "historical_nominal_stance_count_range": [
+    19,
+    19
+  ],
+  "cycle_source_indices": [
+    6000,
+    6999
+  ],
+  "sample_hold_s": 0.001,
+  "gait_max_radius_mm": 53.58112743632072,
+  "gait_geometry_limits": "Nominal CPG/FK geometry; no terrain contact, compliance, world-pitch feedback or dynamic body motion.",
+  "checks": {
+    "flat_zero": true,
+    "analytic_plane": true,
+    "pair_permutation": true,
+    "checkerboard": true,
+    "triangle_and_boundary": true,
+    "no_extrapolation": true
+  },
+  "sources": {
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\extracted\\B_sample_plot\\III_plot_1_processed\\sfm_timelapse\\2021-07-21\\timelapse\\dense\\dense_4.ply": "4513ded510ca6e83edbbe83dde21f07f5b0676d0522f49ca710a19e4db598985",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\rock_joint\\database\\Libo\\01 PLY File\\Libo-9-3-1-3.ply": "564497679edad9e1a5eea52f4d98f28f846f7691aa9960ea6184f5dce880cd56",
+    "X:\\Data\\Centipede_Terrain_Surface_2026-09-15\\rock_joint\\database\\Narvik\\01 PLY File\\Narvik-4-2-5-3.ply": "4e16659bd5072265a226d491900a54993bd97987c5e584d660706737c0d9d893",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\open_loop_review_2026-09-16\\optimization\\command_cache_nonnegative.py": "11ce115d9e297e7c96a978d31491912ca8a3acb832d64d8b8f9ae78890607750",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\full_fft_roundtrip.npz": "ad4e8ca1fea5db58db5bd0bad10dbdb92b01251fc700186e2ca5f0306547efd2",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\outputs\\terrain_surface_reconstruction_2026-09-15\\RECONSTRUCTION_AUDIT.json": "4cc4e937a47fbb727de83dbeff040a0975d7b12aa10915ac7be3eb451135b106",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\common.xml": "1e3cda186d3c9da830c80d9162222feb030de10f550d6b33025f3c5374bc79cb",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\assets\\mapping.json": "a3ddd2fd7c3289f5d2fec5a7a65a8f2fef63be85960b2cd2265439750249f9d3",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\COMMON_CONTRACT.json": "87e086420efdd86d519a91c7b427079963c2ecdf5079a71d496cb6a0a3f2aa7a",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\round9_wave_amplitude_2026-09-14\\shared.py": "679fe828fc0b331bc446a1faaa2799a87fc9c1d7c71f2a4a52cb5cef221eb635",
+    "X:\\Projects\\_archive\\Codex\\2026-09-11\\con\\terrain_surface_stage1_2026-09-15\\inspect_cloud.py": "fdaaaa4ecfb6b91469a4bccfbbf80341071f0a09b98c12b7e37986b503cc3097",
+    "X:\\Projects\\_archive\\Codex\\2026-09-15\\ni\\work\\world_pitch_front2_12s_2026-09-16\\commands_12s.npz": "88d27708c2b428c95f986dfa25973697dc48c22d3733343faed0954a2ba2f835",
+    "X:\\Projects\\_archive\\Codex\\2026-09-17\\w-m\\work\\footprints.npz": "10d45259327f5a726c0fc326dc0720b6ec1944ae977a7f9660c6d351d2e574fe",
+    "X:\\Projects\\_archive\\Codex\\2026-09-17\\w-m\\work\\roughness_scan.py": "a0437044e0b7e50c50fefd8fb7b5adb5f83b553f86b38ccbb036615c9f075cc8",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\campaign.json": "905b86132def1aa525335d69587b5166137423d0702fdd75ca616a5bb2132412",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\flat_high_plan.json": "f2281e7f8c88c41f41613fb20741bff4d9bd465223845013831d716eee626c9c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\flat_low_plan.json": "5504a5de2b0fcb7934a7884fd9f0df6f05ab963503a6f2a027649939770f5268",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\rows.json": "6a41f78360ba5780db17f9eef9d0b44f22f6776c6dbdcf36caa719e88a6baa35",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\workflow.py": "f5592ec7532e36bec3a7183bd40ba499730d8bc5410d970658550843d1175545",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\unified_trial\\simulation.py": "32cafcb447c8c2b6fb2aae24e97ea05a47c53f7739008ed1d04264e5eab31b0e"
+  },
+  "fixed_definition": "One shared neutral 38-foot XY template; foot Z excluded; pitch is not a sweep parameter",
+  "clarification_2026_09_29": "User: metric samples terrain f(x,y) at feet XY; foot pitch/down/up and foot Z are not direct metric inputs. Prior pitch options are diagnostic only.",
+  "executed_preparation_workflow_sha256_before_clarification": "f5592ec7532e36bec3a7183bd40ba499730d8bc5410d970658550843d1175545",
+  "current_workflow_sha256": "53efd2a6d91ee51be38f7a58ca479e61402716658b4f3c74092c67a6623abadd"
+}

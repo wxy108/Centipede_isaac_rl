@@ -60,6 +60,7 @@ def convert(input_xml: str, output_usd: str):
     print(f"  3. Check collision geometry")
     print(f"  4. Run: python scripts/run_standalone.py --mode stand")
 
+    print("PROBE_DONE finished", flush=True)  # watchdog kill marker (pre-teardown)
     sim_app.close()
     return usd_path
 

@@ -1,0 +1,89 @@
+# Pass 12 RELAXED B4 — PPO variant: e_clip 0.2 → 0.1
+#
+# Rationale (from outputs/analysis/ppo_drift_diagnosis.md):
+#   With e_clip=0.2, PPO allows the importance-sampling ratio to shift
+#   ±20% per inner-epoch update before clipping kicks in. Combined with
+#   mini_epochs=4, cumulative per-batch policy displacement is large.
+#   Halving e_clip to 0.1 caps each per-step move and is the canonical
+#   PPO knob for reducing per-update KL drift.
+#
+# This is variant C in the PPO variant matrix.
+# Use via:
+#   train_stage_b_smoke.py --agent-cfg tasks\agents\rl_games_stage_b_smoke_pass12_ppo_eclip01.yaml
+#
+# Difference from rl_games_stage_b_smoke_cfg.yaml: only e_clip (0.2 → 0.1).
+# Created 2026-05-10.
+
+params:
+  seed: 42
+
+  env:
+    clip_actions: 5.0
+
+  algo:
+    name: a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: actor_critic
+    separate: False
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -0.7
+        fixed_sigma: False
+    mlp:
+      units: [256, 128]
+      activation: elu
+      d2rl: False
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+  load_checkpoint: False
+  load_path: ''
+
+  config:
+    name: centipede_stage_b_transition_global6d_smoke
+    env_name: rlgpu
+    device: 'cuda:0'
+    device_name: 'cuda:0'
+    multi_gpu: False
+    ppo: True
+    mixed_precision: False
+    normalize_input: True
+    normalize_value: True
+    value_bootstrap: True
+    num_actors: -1
+    reward_shaper:
+      scale_value: 1.0
+    normalize_advantage: True
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 0.0003
+    lr_schedule: adaptive
+    schedule_type: legacy
+    kl_threshold: 0.005
+    score_to_win: 1000000000.0
+    max_epochs: 10
+    save_best_after: 5
+    save_frequency: 5
+    grad_norm: 1.0
+    entropy_coef: 0.005
+    truncate_grads: True
+    e_clip: 0.1                     # CHANGED from 0.2 (variant C)
+    horizon_length: 32
+    minibatch_size: 128
+    mini_epochs: 4
+    critic_coef: 2.0
+    clip_value: True
+    seq_length: 4
+    bounds_loss_coef: 0.005

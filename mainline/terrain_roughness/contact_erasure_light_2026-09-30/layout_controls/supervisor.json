@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "pid": 17364,
+  "finished": [
+    {
+      "job": "matched_endpoint_p0",
+      "pid": 8108,
+      "exit": 0
+    },
+    {
+      "job": "matched_endpoint_p1",
+      "pid": 3716,
+      "exit": 0
+    }
+  ],
+  "current": [],
+  "started_unix": 1790789292.3851814,
+  "elapsed_s": 284.03504848480225,
+  "guard": "No stochastic native workers active. Stochastic dispatcher remains paused for runtime-scope choice. Only two user-approved p0/p1 matched-layout jobs; original interrupted supervisor remains preserved.",
+  "physical_instance_count": 20,
+  "unique_endpoint_count": 10,
+  "new_independent_random_samples": 0
+}

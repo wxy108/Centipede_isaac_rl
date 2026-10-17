@@ -1,0 +1,141 @@
+# Stage B-v0 Pass 5 LONG-TRAINING rl_games PPO config
+# (2026-05-07).
+#
+# Sized for a real ~4-hour training session on RTX 5070 Laptop /
+# Isaac Sim 5.0 / Win11 at num_envs=32 (the verified capacity ceiling
+# from the Stage B capacity sweep).
+#
+# Key changes vs the smoke config (rl_games_stage_b_smoke_cfg.yaml):
+#   - max_epochs   10  -> 300        (real training, not smoke)
+#   - minibatch   128  -> 256        (32 envs * 32 horizon = 1024
+#                                     batch / 256 minibatch = 4
+#                                     minibatches per PPO epoch
+#                                     → same as smoke at 16 envs)
+#   - save_best_after  5  -> 25      (don't save 'best' too eagerly)
+#   - save_frequency   5  -> 25      (checkpoint every 25 PPO iters)
+#   - score_to_win        identical (1e9 sentinel)
+#   - learning_rate, kl_threshold, lr_schedule unchanged from smoke
+#     (3e-4 + adaptive + kl 0.01 worked on 10-epoch smoke, no reason
+#      to perturb that knob in this run)
+#
+# Batch math at num_envs=32, horizon=32, minibatch=256:
+#   batch_size = 32 * 32 = 1024
+#   1024 / 256 = 4 minibatches/epoch
+#   * mini_epochs=4 = 16 grad updates per PPO iter
+#   * 300 PPO iters = 4800 grad updates total
+#
+# Throughput estimate (extrapolating from Pass 4 smoke memory):
+#   Smoke: 16 envs, 10 PPO epochs, 4.5 min wall time = ~27 s/epoch
+#   At 32 envs the per-epoch cost roughly doubles
+#   (env-steps + grad updates both scale with num_envs).
+#   So expect ~50-60 s per PPO iter on 32 envs.
+#   300 iters * 55 s = 16500 s ≈ 4.6 hours.
+
+params:
+  seed: 42
+
+  env:
+    clip_actions: 5.0
+
+  algo:
+    name: a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: actor_critic
+    separate: False
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -0.7                  # Pass 6 (audit-driven): was 0.
+                                     # exp(-0.7) ~= 0.50 -> sigma_init = 0.50.
+                                     # Audit found |raw_a|>2 in 99.9% of
+                                     # trained-policy steps. With sigma=1.0
+                                     # locked, training-time noise pushed mu
+                                     # to the saturation rails to be
+                                     # 'stable under noise'. Halving the
+                                     # init exploration variance (and
+                                     # making it learnable below) lets PPO
+                                     # commit to smoother actions once the
+                                     # policy starts improving.
+        fixed_sigma: False           # Pass 6 (audit-driven): was True.
+                                     # Allow logstd to be a learnable
+                                     # parameter so PPO decays exploration
+                                     # noise over training.
+    mlp:
+      units: [256, 128]
+      activation: elu
+      d2rl: False
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+  load_checkpoint: False
+  load_path: ''
+
+  config:
+    name: centipede_stage_b_transition_global6d_train
+    env_name: rlgpu
+    device: 'cuda:0'
+    device_name: 'cuda:0'
+    multi_gpu: False
+    ppo: True
+    mixed_precision: False              # off for stability; the smoke
+                                        # PPO ran fine without AMP and
+                                        # we don't yet have a good
+                                        # reason to risk new NaN modes
+    normalize_input: True
+    normalize_value: True
+    value_bootstrap: True
+    num_actors: -1                      # set from script
+    reward_shaper:
+      scale_value: 1.0
+    normalize_advantage: True
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 0.0003               # plain decimal — PyYAML 1.1
+                                        # parses '3.0e-4' as a STRING
+                                        # because the exponent has no
+                                        # explicit sign; rl_games then
+                                        # tries numpy `>` between Float32
+                                        # reward and Str -> crash. See
+                                        # project memory entry
+                                        # project_centipede_stage_b_v0_smoke_passed.md
+    lr_schedule: adaptive
+    schedule_type: legacy
+    kl_threshold: 0.01
+    score_to_win: 1000000000.0          # 1e9 sentinel; never auto-stop
+    max_epochs: 300                     # real training run
+    save_best_after: 25
+    save_frequency: 25
+    grad_norm: 1.0
+    entropy_coef: 0.005
+    truncate_grads: True
+    e_clip: 0.2
+    horizon_length: 32
+    minibatch_size: 256                 # 32 envs * 32 horizon = 1024 batch
+                                        # 1024 / 256 = 4 minibatches/epoch
+    mini_epochs: 4
+    critic_coef: 2.0
+    clip_value: True
+    seq_length: 4
+    bounds_loss_coef: 0.005           # Pass 6 (audit-driven): was 0.0.
+                                      # rl_games adds (mu^2 - 1)^2 [if mu
+                                      # outside [-1,1]] to the actor loss.
+                                      # Audit showed |raw_a|>2 99.9% of
+                                      # the time and |raw_a|>3 99.7%; the
+                                      # tanh derivative there is ~e^-10,
+                                      # so PPO gradient through
+                                      # _bounded_scale vanished. A small
+                                      # bounds-loss pulls mu back toward
+                                      # the well-behaved [-1,1] region
+                                      # where the action map is locally
+                                      # near-linear.

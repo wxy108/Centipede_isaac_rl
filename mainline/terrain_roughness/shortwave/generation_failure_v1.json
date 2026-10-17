@@ -1,0 +1,1 @@
+{"phase":"before any terrain saved","failure":"Imaginary-residual assertion on first Libo spectral assembly","cause":"Conjugate symmetry roundoff in near-zero old Fourier coefficients was amplified by phase normalization","repair":"Explicit Hermitian projection of old FFT and shared random phase FFT before normalizing; long-band check retained"}

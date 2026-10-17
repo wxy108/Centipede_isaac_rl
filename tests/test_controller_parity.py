@@ -1,11 +1,32 @@
 """
-Parity tests: torch port must reproduce the numpy reference.
+Parity tests: the torch module's STATELESS HELPERS must reproduce the numpy reference.
 
-The numpy controller (controllers/impedance_controller.py) is the parity
-oracle. Each test below pins one piece of the torch port against the
-numpy reference for a known input.
+SCOPE NARROWED BY S2b (2026-07-16, PI-signed; DISPATCH_LOG 2026-07-16T19:34Z)
+-----------------------------------------------------------------------------
+This file was born as "the torch port reproduces the numpy reference's TORQUE".
+That contract is VOID: S1 deleted the env's explicit torque path, S2a made an env-side
+impedance table the only gain source, and S2b deleted `pd_torque`, every kp/kv, the
+effort clamps and the `tau` return from controllers/impedance_controller_torch.py.
+There is no torque left in the torch controller to compare.
 
-Run all parity tests:
+DELETED with the feature (do not resurrect without resurrecting the torque path):
+  * test_pd_torque_matches_formula   -- port.pd_torque no longer exists.
+  * test_heading_servo_parity        -- compared joint-0 TORQUE against the numpy ref.
+  * test_full_step_torque_parity     -- compared the full tau rollout against the numpy ref.
+Note these could not run regardless: they build the numpy reference from the shared
+config fixture, and S2b made configs/farms_controller.yaml gain-free (the numpy ref now
+raises there by design and reads configs/farms_controller_numpy_legacy.yaml instead).
+
+WHAT STILL HAS PARITY VALUE, and is still tested here:
+  * the stateless helpers -- quat_to_yaw, kuramoto_body_step, kuramoto_leg_step,
+    build_body_amp_scale, seg_blend. These are the CPG maths and they are untouched by S2b.
+  * test_step_n_envs_independence -- re-expressed on the controller's live output (the
+    published TARGETS) instead of torque. Still torch-vs-torch; no numpy oracle needed.
+
+The controller's own S2b bit-identity evidence (targets unchanged vs the pre-S2b snapshot
+over a 400-step rollout + partial reset) is separate; see the S2b report.
+
+Run:
     pytest tests/test_controller_parity.py -v
 """
 
@@ -39,6 +60,17 @@ def test_module_constants_consistent():
     assert N_LEG_DOF == 4
 
 
+def test_leg_phase_anchor_uses_segment_midpoint():
+    controller = object.__new__(port.ImpedanceTravelingWaveControllerTorch)
+    controller.n_wave_scalar = 3.0
+    controller.speed_scalar = 1.0
+    controller.wave_number_scale_runtime = torch.tensor([0.5, 1.0, 4.0 / 3.0])
+    body = torch.zeros((3, 19))
+    anchor = controller._leg_phase_anchor(body)
+    expected = 0.5 * controller._cpg_delta().expand_as(anchor)
+    assert torch.allclose(anchor, expected)
+
+
 # =============================================================================
 # Section 1: stateless helpers
 # =============================================================================
@@ -57,17 +89,9 @@ def test_quat_to_yaw_matches_numpy(yaw_true: float):
     )
 
 
-def test_pd_torque_matches_formula(rng):
-    n_envs, n_joints = 4, 19
-    target = torch.from_numpy(rng.standard_normal((n_envs, n_joints)))
-    q = torch.from_numpy(rng.standard_normal((n_envs, n_joints)))
-    target_dot = torch.from_numpy(rng.standard_normal((n_envs, n_joints)))
-    qdot = torch.from_numpy(rng.standard_normal((n_envs, n_joints)))
-    kp = torch.from_numpy(rng.uniform(0.01, 1.0, size=(n_envs, n_joints)))
-    kv = torch.from_numpy(rng.uniform(0.001, 0.1, size=(n_envs, n_joints)))
-    tau_port = port.pd_torque(kp, kv, target, q, target_dot, qdot)
-    tau_ref = kp * (target - q) + kv * (target_dot - qdot)
-    assert torch.allclose(tau_port, tau_ref, atol=1e-12, rtol=0.0)
+# test_pd_torque_matches_formula: DELETED by S2b (2026-07-16). port.pd_torque is gone --
+# the torch controller computes no torque; PhysX's implicit PD does, from the env's
+# impedance table + this controller's targets. There is nothing left to compare.
 
 
 def test_kuramoto_body_step_matches_numpy(rng):
@@ -206,8 +230,15 @@ def test_seg_blend_parity(t):
 
 
 # =============================================================================
-# Section 2: integrated controller parity
+# Section 2: integrated controller behaviour
+#
+# S2b (2026-07-16): the two TORQUE-parity tests that lived here
+# (test_heading_servo_parity, test_full_step_torque_parity) are DELETED -- the torch
+# controller returns None and holds no gains, so there is no torque to compare against
+# the numpy reference. What remains is the multi-env consistency check, now asserted on
+# the controller's actual output: the published position/velocity TARGETS.
 # =============================================================================
+
 
 def _make_paired_mocks(num_envs=1):
     """Return (art_ref, art_port) mocks with identical structure."""
@@ -231,82 +262,6 @@ def _set_head_quat_yaw(art, env_idx, yaw):
     q = torch.tensor([math.cos(half), 0.0, 0.0, math.sin(half)],
                      dtype=art.data.body_quat_w.dtype)
     art.data.body_quat_w[env_idx, 0] = q
-
-
-def test_heading_servo_parity(config_path, capsys):
-    """With a known head yaw and head_yaw_gain>0, joint-0 torque must match."""
-    art_ref, art_port = _make_paired_mocks(num_envs=1)
-    n_joints = art_ref.num_joints
-    pos = np.zeros((1, n_joints), dtype=np.float32)
-    vel = np.zeros((1, n_joints), dtype=np.float32)
-    _set_joint_state(art_ref, pos, vel)
-    _set_joint_state(art_port, pos, vel)
-    _set_head_quat_yaw(art_ref, 0, 0.3)
-    _set_head_quat_yaw(art_port, 0, 0.3)
-
-    capsys.readouterr()
-    ctrl_ref = ref.ImpedanceTravelingWaveController(art_ref, config_path, env_idx=0)
-    ctrl_port = port.ImpedanceTravelingWaveControllerTorch(
-        art_port, config_path, num_envs=1, device="cpu", dtype=torch.float64,
-    )
-    capsys.readouterr()
-    ctrl_ref.head_yaw_gain = 1.0
-    ctrl_port.head_yaw_gain = 1.0
-
-    dt = 5e-4
-    ctrl_ref.step(0.0, dt)
-    tau_ref_step1 = art_ref.last_effort_target.clone().squeeze(0)
-    tau_port_step1 = ctrl_port.step(0.0, dt).squeeze(0)
-    body_id_0 = int(ctrl_ref.idx.body_joint_ids[0])
-    assert torch.allclose(
-        tau_port_step1[body_id_0].to(torch.float32),
-        tau_ref_step1[body_id_0],
-        atol=1e-6, rtol=0.0,
-    ), f"joint-0 torque mismatch: ref={tau_ref_step1[body_id_0]}, port={tau_port_step1[body_id_0]}"
-
-
-def test_full_step_torque_parity(config_path, capsys):
-    """Multi-step rollout: full torque output matches numpy reference per-step."""
-    art_ref, art_port = _make_paired_mocks(num_envs=1)
-    rng_local = np.random.default_rng(seed=123)
-    n_joints = art_ref.num_joints
-    pos = (rng_local.standard_normal((1, n_joints)).astype(np.float32) * 0.02)
-    vel = (rng_local.standard_normal((1, n_joints)).astype(np.float32) * 0.02)
-    _set_joint_state(art_ref, pos, vel)
-    _set_joint_state(art_port, pos, vel)
-
-    capsys.readouterr()
-    ctrl_ref = ref.ImpedanceTravelingWaveController(art_ref, config_path, env_idx=0)
-    ctrl_port = port.ImpedanceTravelingWaveControllerTorch(
-        art_port, config_path, num_envs=1, device="cpu", dtype=torch.float64,
-    )
-    capsys.readouterr()
-
-    # Compress settle/ramp so the 50-step rollout exercises the full gait
-    # transition: settle (~10 steps) -> ramp -> active wave with CPG init.
-    for ctrl in (ctrl_ref, ctrl_port):
-        ctrl.settle_time = 0.005
-        ctrl.ramp_time = 0.005
-
-    dt = 5e-4
-    n_steps = 50
-    max_diff = 0.0
-    max_tau = 0.0
-    for step_idx in range(n_steps):
-        t = step_idx * dt
-        ctrl_ref.step(t, dt)
-        tau_ref = art_ref.last_effort_target.squeeze(0)
-        tau_port = ctrl_port.step(t, dt).squeeze(0)
-        diff = (tau_port.to(torch.float32) - tau_ref).abs().max().item()
-        max_diff = max(max_diff, diff)
-        max_tau = max(max_tau, tau_ref.abs().max().item())
-        assert diff < 1e-5, (
-            f"Step {step_idx} (t={t:.4f}): "
-            f"max diff = {diff}, ref_max = {tau_ref.abs().max().item()}"
-        )
-    # Non-triviality: at least one step must produce a nonzero torque,
-    # otherwise the test is comparing 0 to 0 and proves nothing.
-    assert max_tau > 1e-6, "Test inputs produced near-zero torque"
 
 
 def test_step_n_envs_independence(config_path, capsys):
@@ -350,12 +305,17 @@ def test_step_n_envs_independence(config_path, capsys):
     dt = 5e-4
     for step_idx in range(10):
         t = step_idx * dt
-        tau_a = ctrl_a.step(t, dt).squeeze(0)
-        tau_b = ctrl_b.step(t, dt).squeeze(0)
-        tau_multi = ctrl_multi.step(t, dt)
-        assert torch.allclose(tau_multi[0], tau_a, atol=1e-12, rtol=0.0), (
-            f"Step {step_idx}: env 0 of multi-env diverged from solo"
-        )
-        assert torch.allclose(tau_multi[1], tau_b, atol=1e-12, rtol=0.0), (
-            f"Step {step_idx}: env 1 of multi-env diverged from solo"
+        # S2b: step() returns None; the output is the published target stash.
+        assert ctrl_a.step(t, dt) is None, "step() must return None since S2b"
+        ctrl_b.step(t, dt)
+        ctrl_multi.step(t, dt)
+        for _nm in ("_pd_pos_target", "_pd_vel_target"):
+            solo_a = getattr(ctrl_a, _nm).squeeze(0)
+            solo_b = getattr(ctrl_b, _nm).squeeze(0)
+            multi = getattr(ctrl_multi, _nm)
+            assert torch.allclose(multi[0], solo_a, atol=1e-12, rtol=0.0), (
+                f"Step {step_idx}: env 0 of multi-env diverged from solo ({_nm})"
+            )
+            assert torch.allclose(multi[1], solo_b, atol=1e-12, rtol=0.0), (
+                f"Step {step_idx}: env 1 of multi-env diverged from solo ({_nm})"
         )

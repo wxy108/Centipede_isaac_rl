@@ -1,0 +1,8 @@
+{
+  "requested": 2,
+  "tasking": 2,
+  "physics": 2,
+  "pxr": "28",
+  "torch_threads": 1,
+  "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+}

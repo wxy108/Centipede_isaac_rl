@@ -1,0 +1,69 @@
+{
+  "purpose": "Comparable full-domain statistics on a common 0.5 mm sampling grid; no regeneration or physics",
+  "sites": {
+    "libo": {
+      "original_common_0p5mm": {
+        "Sq_mm": 3.1709146432184374,
+        "skewness": 0.7006234865786681,
+        "kurtosis": 3.122329206753145,
+        "rms_gradient": 0.4144140900832841,
+        "gradient_anisotropy": 1.6033114719945496,
+        "gradient_direction_deg": 91.63415542241337,
+        "min_mm": -6.046295414555938,
+        "max_mm": 10.487043133361304
+      },
+      "restore4": {
+        "Sq_mm": 3.186312424808825,
+        "skewness": 0.700950228631373,
+        "kurtosis": 3.128040713246554,
+        "rms_gradient": 0.4835044215169634,
+        "gradient_anisotropy": 1.851159385566976,
+        "gradient_direction_deg": 101.57737881680062,
+        "min_mm": -6.798156567960411,
+        "max_mm": 11.014482313124613
+      },
+      "restore2": {
+        "Sq_mm": 3.1884078463226118,
+        "skewness": 0.6994844361288495,
+        "kurtosis": 3.1276498383559748,
+        "rms_gradient": 0.5233617603600299,
+        "gradient_anisotropy": 1.8052045498167246,
+        "gradient_direction_deg": 104.62968449781246,
+        "min_mm": -6.772308525661758,
+        "max_mm": 11.269746120008318
+      }
+    },
+    "narvik": {
+      "original_common_0p5mm": {
+        "Sq_mm": 0.778303179513031,
+        "skewness": 0.33209636503223555,
+        "kurtosis": 2.329990429815292,
+        "rms_gradient": 0.1029842137014005,
+        "gradient_anisotropy": 3.7687971429074643,
+        "gradient_direction_deg": 179.50167114171893,
+        "min_mm": -1.6388752934379898,
+        "max_mm": 2.5036998866230804
+      },
+      "restore4": {
+        "Sq_mm": 0.7820643351220533,
+        "skewness": 0.3299235733264374,
+        "kurtosis": 2.339829986178964,
+        "rms_gradient": 0.1236403219207331,
+        "gradient_anisotropy": 2.6557599958378475,
+        "gradient_direction_deg": 0.004327591685154175,
+        "min_mm": -1.779092424954564,
+        "max_mm": 2.718580992760005
+      },
+      "restore2": {
+        "Sq_mm": 0.7832439082841334,
+        "skewness": 0.32832552197625514,
+        "kurtosis": 2.3435308867498006,
+        "rms_gradient": 0.14414022549457606,
+        "gradient_anisotropy": 2.025774128939434,
+        "gradient_direction_deg": 179.34554765765492,
+        "min_mm": -1.8449099895062315,
+        "max_mm": 2.7772032705650065
+      }
+    }
+  }
+}

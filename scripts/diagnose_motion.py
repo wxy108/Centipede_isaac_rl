@@ -99,7 +99,12 @@ from controllers.kinematics import (
 )
 from terrain import generate_single_wavelength_heightmap, build_terrain_mesh
 
-CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller.yaml")
+# S2b 2026-07-16: repointed farms_controller.yaml -> farms_controller_numpy_legacy.yaml.
+# This script drives the NUMPY controller (controllers/impedance_controller.py), which still computes torque
+# and NEEDS the impedance gains. S2b stripped the gains out of farms_controller.yaml because the LIVE torch
+# controller is targets-only now; the numpy ref would have SILENTLY DEFAULTED (body_kp 0.14396 -> 5.0, 35x).
+# The gains live on, byte-identical, in the _numpy_legacy copy.
+CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller_numpy_legacy.yaml")
 USD_PATH = os.path.join(PROJECT_ROOT, "assets", "centipede.usd")
 
 

@@ -1,0 +1,9 @@
+{
+  "original_source_sha256": "9c4cf240543d727571fad7d94dee5b311860444731a19229fbee075f27106bbd",
+  "capture_source_sha256": "9b9a79d8a56141c696c0115662172294bf7444033a74afca201a7a8bb0b1e89c",
+  "source_script_sha256": "32301e6757c4921b4968092c29b57cb696e5ab50634dd89b000752b89f33fca0",
+  "trigger": "Libo height1.5 low group boundary failure at 1.5555s with margin -1.279938m; original guard raised before final trajectory save",
+  "change": "Save offending state and already-recorded frames before the same exception; no stepping, controller, PD, initial state, terrain or boundary rule changed",
+  "pending_batch": "All four 2x jobs, preserving original three-condition slots and 4x2 worker allocation",
+  "bounded_diagnostic": "One isolated three-condition rerun of Libo height1.5 low group with two threads; not an independent statistical replicate or adopted resource setting"
+}

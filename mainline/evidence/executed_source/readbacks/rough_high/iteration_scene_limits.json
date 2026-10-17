@@ -1,0 +1,9 @@
+{
+  "values": {
+    "minPosition": 1,
+    "maxPosition": 255,
+    "minVelocity": 0,
+    "maxVelocity": 255
+  },
+  "scope": "USD post-reset limits and articulation requests; not direct native getter"
+}

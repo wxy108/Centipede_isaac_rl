@@ -1,0 +1,1276 @@
+{
+  "stage": "higher_h2p25_c2_4_8",
+  "checked_unix": 1790961631.527758,
+  "recorded_pids": [
+    {
+      "pid": 260,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 580,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 632,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 636,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 680,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2100,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2360,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2420,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2508,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2620,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2632,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2700,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2704,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2744,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2788,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2812,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 2868,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3188,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3476,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3540,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3580,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3620,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3828,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3836,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3900,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 3920,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4084,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4156,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4340,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4344,
+      "alive": true,
+      "owned": false,
+      "command": null,
+      "name": "svchost.exe",
+      "executable": "C:\\Windows\\System32\\svchost.exe",
+      "create_time": 1790961383.5511048,
+      "command_access_denied": true,
+      "identity_basis": "Readable non-Python executable; fixed campaign workers use python.exe"
+    },
+    {
+      "pid": 4416,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4620,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4696,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4704,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 4840,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5364,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5500,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5564,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5700,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5856,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5868,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5884,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5908,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5952,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 5964,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6068,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6184,
+      "alive": true,
+      "owned": false,
+      "command": null,
+      "name": "svchost.exe",
+      "executable": "C:\\Windows\\System32\\svchost.exe",
+      "create_time": 1790961386.3483703,
+      "command_access_denied": true,
+      "identity_basis": "Readable non-Python executable; fixed campaign workers use python.exe"
+    },
+    {
+      "pid": 6188,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6208,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6440,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6520,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6656,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 6704,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7420,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7492,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7580,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7768,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7784,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 7996,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8072,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8132,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8152,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8164,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8224,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8452,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8460,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8552,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8576,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 8756,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9032,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9052,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9068,
+      "alive": true,
+      "owned": false,
+      "command": null,
+      "name": "svchost.exe",
+      "executable": "C:\\Windows\\System32\\svchost.exe",
+      "create_time": 1790961385.880734,
+      "command_access_denied": true,
+      "identity_basis": "Readable non-Python executable; fixed campaign workers use python.exe"
+    },
+    {
+      "pid": 9120,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9128,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9184,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9468,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9472,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9508,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9528,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9568,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9672,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9720,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9748,
+      "alive": true,
+      "owned": false,
+      "command": null,
+      "name": "codex-windows-sandbox-service.exe",
+      "executable": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.928.4866.0_x64__2p2nqsd0c76g0\\app\\resources\\codex-windows-sandbox-service.exe",
+      "create_time": 1790961385.44685,
+      "command_access_denied": true,
+      "identity_basis": "Readable non-Python executable; fixed campaign workers use python.exe"
+    },
+    {
+      "pid": 9908,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9928,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 9984,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10072,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10084,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10168,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10220,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10232,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10244,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10620,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 10924,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11020,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11052,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11096,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11124,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11212,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11336,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11564,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11644,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11652,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11748,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 11760,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12008,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12088,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12300,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12304,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12348,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12492,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12500,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12616,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12812,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12908,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12940,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 12956,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13076,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13120,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13128,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13188,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13208,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13460,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13536,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13592,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13632,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13648,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13864,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13908,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 13972,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14004,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14044,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14068,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14144,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14308,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14356,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14504,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14688,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14924,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 14992,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15128,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15336,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15416,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15620,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15680,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15684,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15796,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15844,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15872,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 15996,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16156,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16232,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16284,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16336,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16376,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16512,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16860,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16868,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16884,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 16900,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17136,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17164,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17196,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17452,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17480,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17532,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17564,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17612,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17852,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17948,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 17976,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 18132,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 18240,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 18700,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19064,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19336,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19340,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19344,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19504,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19864,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 19872,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20036,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20088,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20120,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20144,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20164,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20216,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20340,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20388,
+      "alive": true,
+      "owned": false,
+      "command": [
+        "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe",
+        "--type=renderer",
+        "--enable-dinosaur-easter-egg-alt-images",
+        "--user-data-dir=C:\\Users\\wxy22\\AppData\\Local\\NVIDIA Corporation\\NVIDIA Overlay\\CefCache",
+        "--no-sandbox",
+        "--video-capture-use-gpu-memory-buffer",
+        "--lang=en-US",
+        "--device-scale-factor=1.5",
+        "--num-raster-threads=4",
+        "--enable-main-frame-before-activation",
+        "--renderer-client-id=5",
+        "--time-ticks-at-unix-epoch=-1790961350870400",
+        "--launch-time-ticks=39645054",
+        "--field-trial-handle=4936,i,3191332947839503994,12136767185670328527,262144",
+        "--variations-seed-version",
+        "--enable-logging=handle",
+        "--log-file=4960",
+        "--mojo-platform-channel-handle=4956",
+        "/prefetch:1"
+      ],
+      "create_time": 1790961390.5187476
+    },
+    {
+      "pid": 20520,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20640,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20664,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20728,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20740,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20940,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 20976,
+      "alive": true,
+      "owned": false,
+      "command": [
+        "C:\\Windows\\uus\\AMD64\\MoNotificationUx.exe",
+        "/NotificationType",
+        "Scan_Seeker_Available",
+        "/FormFactor",
+        "Passive",
+        "/Branding",
+        "Os",
+        "/CV",
+        "zDu4MXwxyk6k7Hb7.1.0.0"
+      ],
+      "create_time": 1790961507.4719155
+    },
+    {
+      "pid": 21344,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 21348,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 21436,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 21580,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 21936,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22128,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22148,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22152,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22452,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22632,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22828,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 22952,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23028,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23116,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23256,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23416,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23676,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23956,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 23996,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24176,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24244,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24364,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24516,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24656,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24688,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24696,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24728,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24752,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 24816,
+      "alive": true,
+      "owned": false,
+      "command": null,
+      "name": "svchost.exe",
+      "executable": "C:\\Windows\\System32\\svchost.exe",
+      "create_time": 1790961405.8799248,
+      "command_access_denied": true,
+      "identity_basis": "Readable non-Python executable; fixed campaign workers use python.exe"
+    },
+    {
+      "pid": 24876,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25000,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25172,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25204,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25248,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25328,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25348,
+      "alive": true,
+      "owned": false,
+      "command": [
+        "C:\\Users\\wxy22\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2134bcb1950af07e\\bin\\node_repl.exe"
+      ],
+      "create_time": 1790961409.6301332
+    },
+    {
+      "pid": 25356,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25364,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25380,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25412,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25464,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25532,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25572,
+      "alive": false,
+      "owned": false
+    },
+    {
+      "pid": 25588,
+      "alive": false,
+      "owned": false
+    }
+  ],
+  "other_live_owned_processes": [],
+  "no_processes_killed": true
+}

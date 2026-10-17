@@ -1,0 +1,90 @@
+{
+  "started_unix": 1790831365.4196131,
+  "finished_stages": [
+    "initial_4mm_h1p75_2p00",
+    "matched_2_8mm_h0p25_2p00"
+  ],
+  "execution_finished": false,
+  "pid": 16224,
+  "status": "needs_attention",
+  "updated_unix": 1790903725.7055712,
+  "controller_source_sha256": "32e9a73e85feb71bad4488279bb9b5ca3662e7a68f1e6aebc0a8394df4470b99",
+  "active_action": "higher_h2p25_c2_4_8_run",
+  "active_command": [
+    "C:\\Users\\wxy22\\anaconda3\\envs\\isaaclab_50\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_libo_cutoff_height_expansion.py",
+    "run",
+    "--stage",
+    "higher_h2p25_c2_4_8"
+  ],
+  "active_returncode": 1,
+  "error": "Traceback (most recent call last):\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 150, in main\n    perform_stage(stage, active, [height], state, allow_resume)\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 77, in perform_stage\n    execute('run_libo_cutoff_height_expansion.py', ['run', '--stage', name], state, f'{name}_run')\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\continue_libo_cutoff_height_expansion.py\", line 55, in execute\n    raise RuntimeError(f'{label} returned {returncode}; retained log {log_path}')\nRuntimeError: higher_h2p25_c2_4_8_run returned 1; retained log X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\logs\\higher_h2p25_c2_4_8_run.log\n",
+  "controller_resumes": [
+    {
+      "unix": 1790865040.8029442,
+      "previous_pid": 32892
+    },
+    {
+      "unix": 1790865479.5819783,
+      "previous_pid": 22692
+    },
+    {
+      "unix": 1790900441.623176,
+      "previous_pid": 21944
+    }
+  ],
+  "latest_combined_results": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v02\\RESULTS.json",
+  "cutoff_decisions": {
+    "2": {
+      "status": "progressing",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 2.0,
+        "height_scale": 2.0,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 27,
+        "n_stalled_raw": 2,
+        "stalled_fraction": 0.07407407407407407,
+        "eligible": true,
+        "stop": false,
+        "status": "progressing"
+      }
+    },
+    "4": {
+      "status": "progressing",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 4.0,
+        "height_scale": 2.0,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 25,
+        "n_stalled_raw": 2,
+        "stalled_fraction": 0.08,
+        "eligible": true,
+        "stop": false,
+        "status": "progressing"
+      }
+    },
+    "8": {
+      "status": "progressing",
+      "stopping_observation": null,
+      "latest_observation": {
+        "cutoff_mm": 8.0,
+        "height_scale": 2.0,
+        "wave": 3.5,
+        "n_planned": 30,
+        "n_complete": 26,
+        "n_stalled_raw": 1,
+        "stalled_fraction": 0.038461538461538464,
+        "eligible": true,
+        "stop": false,
+        "status": "progressing"
+      }
+    }
+  }
+}

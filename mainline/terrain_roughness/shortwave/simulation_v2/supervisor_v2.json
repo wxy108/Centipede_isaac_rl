@@ -1,0 +1,95 @@
+{
+  "attempt": "v2",
+  "level": "restore2",
+  "started_unix": 1790716664.949645,
+  "elapsed_s": 504.1706840991974,
+  "available_memory_gib": 18.758541107177734,
+  "finished": [
+    {
+      "job": "libo_original_low",
+      "pid": 23316,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_original_high",
+      "pid": 17008,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_original_low",
+      "pid": 3784,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_original_high",
+      "pid": 2704,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_restore4_low",
+      "pid": 25868,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_restore4_high",
+      "pid": 27396,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_restore4_low",
+      "pid": 3016,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_restore4_high",
+      "pid": 25736,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_restore2_low",
+      "pid": 27604,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_restore2_high",
+      "pid": 27524,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_restore2_low",
+      "pid": 31040,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_restore2_high",
+      "pid": 29628,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    }
+  ],
+  "current": [],
+  "complete": true
+}

@@ -1,0 +1,8 @@
+{
+  "native_separation": "empirically pre-step in analytic sphere fixture; verify for robot",
+  "force": "impulse over completed step divided by dt",
+  "momentum": "world COM linear velocities times native masses",
+  "limitation": "Normal plus separately stored friction force used; articulated momentum closure remains unresolved",
+  "pose_storage": "pre-step link poses every physics step",
+  "contact_processing_disabled": false
+}

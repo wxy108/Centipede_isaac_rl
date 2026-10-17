@@ -1,0 +1,853 @@
+{
+  "complete": true,
+  "condition_count": 36,
+  "physics_seconds_per_condition": 6,
+  "checks": {
+    "input_hashes": true,
+    "frozen_flat_cluster_amplitudes": true,
+    "all173_native_PD_exact": true,
+    "physics_0p5ms": true,
+    "CPG_1ms_two_step_hold": true,
+    "TGS64_16": true,
+    "four_workers_two_threads": true,
+    "all_step_finite": true,
+    "collision_isolation": true,
+    "crop_interior_guard": true,
+    "native_error_free": true,
+    "all_trajectories_saved": true
+  },
+  "initialization_note": "Original initial() rule on each full terrain, conservative maximum clearance; height can differ by terrain",
+  "physics_roi_m": [
+    -0.223,
+    0.321,
+    -0.353,
+    0.081
+  ],
+  "scope": "Short visualization previews; not full locomotion performance validation, optimization or convergence evidence",
+  "runs": [
+    {
+      "job": "libo_original_low",
+      "site": "libo",
+      "level": "original",
+      "duration_s": 6.0,
+      "trajectory_sha256": "faf51734911f21cdf9582e528d2a132731bdff1638c0aab592d267630ac1b167",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -14.263764381408691,
+            -14.00454330444336
+          ],
+          "path_length_xy_mm": 188.60019743442535,
+          "body_z_range_mm": [
+            -5.150755867362022,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 7.458333333333333
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -102.77909088134766,
+            2.8335750102996826
+          ],
+          "path_length_xy_mm": 136.99325919151306,
+          "body_z_range_mm": [
+            -5.294397473335266,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 7.043333333333333
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -141.8727569580078,
+            -40.74233627319336
+          ],
+          "path_length_xy_mm": 155.03667294979095,
+          "body_z_range_mm": [
+            -4.94169257581234,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 6.995
+        }
+      ],
+      "wall_s": 150.53199999999993
+    },
+    {
+      "job": "libo_original_high",
+      "site": "libo",
+      "level": "original",
+      "duration_s": 6.0,
+      "trajectory_sha256": "cd51c7b0f5d0817525a5339b725db874810259a5818f43980f5764f6e42d2c89",
+      "surface_sha256": "caeede88cd6e4b2681090ae1d3112f75f81157646754642773b0ebd77d09e321",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -122.92382049560547,
+            -4.846692085266113
+          ],
+          "path_length_xy_mm": 128.11744213104248,
+          "body_z_range_mm": [
+            -4.954423289746046,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 7.333333333333333
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -113.96539306640625,
+            -1.785404920578003
+          ],
+          "path_length_xy_mm": 118.21840703487396,
+          "body_z_range_mm": [
+            -4.975654184818268,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 6.761666666666667
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -94.77911376953125,
+            -2.797544002532959
+          ],
+          "path_length_xy_mm": 98.42393547296524,
+          "body_z_range_mm": [
+            -4.973161034286022,
+            36.60774230957031
+          ],
+          "mean_contacted_feet": 6.59
+        }
+      ],
+      "wall_s": 149.875
+    },
+    {
+      "job": "narvik_original_low",
+      "site": "narvik",
+      "level": "original",
+      "duration_s": 6.0,
+      "trajectory_sha256": "5247e869720504b2cadc26c23aac8218d1cbcb2a746c29959630959eefa9f16c",
+      "surface_sha256": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -197.86131286621094,
+            -97.71659851074219
+          ],
+          "path_length_xy_mm": 232.44716227054596,
+          "body_z_range_mm": [
+            -0.8110385970212519,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 10.231666666666667
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -205.5544891357422,
+            -7.823437690734863
+          ],
+          "path_length_xy_mm": 210.65248548984528,
+          "body_z_range_mm": [
+            -0.8839892107062042,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 9.54
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -176.73263549804688,
+            0.5129799246788025
+          ],
+          "path_length_xy_mm": 179.33350801467896,
+          "body_z_range_mm": [
+            -0.7978065987117589,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 8.833333333333334
+        }
+      ],
+      "wall_s": 147.688
+    },
+    {
+      "job": "narvik_original_high",
+      "site": "narvik",
+      "level": "original",
+      "duration_s": 6.0,
+      "trajectory_sha256": "835186e0a8cc5e55b3f5336b43dea593e5ec5c9aabdfc9ec243373a34b4ccac6",
+      "surface_sha256": "72f9f2af6ee9fc6719df05114936ef36941e19c1159dc579e8676611428a5ae7",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -149.1491241455078,
+            -4.986695766448975
+          ],
+          "path_length_xy_mm": 150.6342589855194,
+          "body_z_range_mm": [
+            -0.8136517717503011,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 8.985
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -128.75125122070312,
+            1.7650947570800781
+          ],
+          "path_length_xy_mm": 131.34080171585083,
+          "body_z_range_mm": [
+            -0.8081096457317472,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 8.583333333333334
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -114.89965057373047,
+            2.5983452796936035
+          ],
+          "path_length_xy_mm": 116.53642356395721,
+          "body_z_range_mm": [
+            -0.8081126725301147,
+            29.487300664186478
+          ],
+          "mean_contacted_feet": 8.603333333333333
+        }
+      ],
+      "wall_s": 147.15699999999993
+    },
+    {
+      "job": "libo_restore4_low",
+      "site": "libo",
+      "level": "restore4",
+      "duration_s": 6.0,
+      "trajectory_sha256": "453b29898ad950620b45c23687f65e9ea1c516b1d697fc36cc9f62815474eeeb",
+      "surface_sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -2.1660327911376953,
+            -16.1993350982666
+          ],
+          "path_length_xy_mm": 187.27341294288635,
+          "body_z_range_mm": [
+            -5.75535511597991,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.238333333333333
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -108.97225952148438,
+            4.807188987731934
+          ],
+          "path_length_xy_mm": 156.8891555070877,
+          "body_z_range_mm": [
+            -5.74409868568182,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.215
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -147.2666015625,
+            -2.461597442626953
+          ],
+          "path_length_xy_mm": 156.10121190547943,
+          "body_z_range_mm": [
+            -4.941872786730528,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.263333333333334
+        }
+      ],
+      "wall_s": 172.7500000000001
+    },
+    {
+      "job": "libo_restore4_high",
+      "site": "libo",
+      "level": "restore4",
+      "duration_s": 6.0,
+      "trajectory_sha256": "bc51029fa4382aa5fe251cd0f874d63ceaaf681cf76ef6674db14a525d470769",
+      "surface_sha256": "4ac46df511d99a62ca42b17284a2c9c9809269c1f41dbf0784051ef7567ab7eb",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -117.11225891113281,
+            -1.4809741973876953
+          ],
+          "path_length_xy_mm": 122.20356613397598,
+          "body_z_range_mm": [
+            -5.010506138205528,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.668333333333333
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -116.1115951538086,
+            -2.280540704727173
+          ],
+          "path_length_xy_mm": 120.1915368437767,
+          "body_z_range_mm": [
+            -4.8931799829006195,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.7716666666666665
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -99.32713317871094,
+            -0.327184796333313
+          ],
+          "path_length_xy_mm": 103.1869649887085,
+          "body_z_range_mm": [
+            -5.020552314817905,
+            36.93738579750061
+          ],
+          "mean_contacted_feet": 6.425
+        }
+      ],
+      "wall_s": 171.235
+    },
+    {
+      "job": "narvik_restore4_low",
+      "site": "narvik",
+      "level": "restore4",
+      "duration_s": 6.0,
+      "trajectory_sha256": "91ab92c4308d9d210bbd7abaab068cadee140109814db03a6309a38cac490493",
+      "surface_sha256": "c753bdbc3bf28ec37d0e3f5e89a69802c3bd11539f7c8c2dcf9e9a403ce63366",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49985456466676,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -218.82122802734375,
+            -67.99900817871094
+          ],
+          "path_length_xy_mm": 241.56704545021057,
+          "body_z_range_mm": [
+            -0.8599538123235106,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 10.436666666666667
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -205.1776123046875,
+            -12.577713012695312
+          ],
+          "path_length_xy_mm": 210.40719747543335,
+          "body_z_range_mm": [
+            -0.9248116402886808,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 9.703333333333333
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -177.30911254882812,
+            -4.357755184173584
+          ],
+          "path_length_xy_mm": 180.06166815757751,
+          "body_z_range_mm": [
+            -0.7658607792109251,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 9.018333333333333
+        }
+      ],
+      "wall_s": 168.46899999999994
+    },
+    {
+      "job": "narvik_restore4_high",
+      "site": "narvik",
+      "level": "restore4",
+      "duration_s": 6.0,
+      "trajectory_sha256": "836e92d3a90994bf2c6c45d57c1ddbb0065ef3979cc0136d0bcdd3e707819ff9",
+      "surface_sha256": "c753bdbc3bf28ec37d0e3f5e89a69802c3bd11539f7c8c2dcf9e9a403ce63366",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49985456466676,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -139.885986328125,
+            -0.8288100361824036
+          ],
+          "path_length_xy_mm": 141.58135652542114,
+          "body_z_range_mm": [
+            -0.8780652424320579,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 9.0
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -128.439453125,
+            0.8178725838661194
+          ],
+          "path_length_xy_mm": 131.17727637290955,
+          "body_z_range_mm": [
+            -0.8119384292513132,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 8.68
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -113.39024353027344,
+            2.804875373840332
+          ],
+          "path_length_xy_mm": 115.05648493766785,
+          "body_z_range_mm": [
+            -0.8117355173453689,
+            29.69810552895069
+          ],
+          "mean_contacted_feet": 8.796666666666667
+        }
+      ],
+      "wall_s": 167.15599999999995
+    },
+    {
+      "job": "libo_restore2_low",
+      "site": "libo",
+      "level": "restore2",
+      "duration_s": 6.0,
+      "trajectory_sha256": "32f1d0252063df724220349a03766a1fbe37fe0e843a23bb7233587d5c0782f3",
+      "surface_sha256": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -113.59415435791016,
+            -20.6422061920166
+          ],
+          "path_length_xy_mm": 178.34913730621338,
+          "body_z_range_mm": [
+            -5.823278799653053,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 6.973333333333334
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -141.14736938476562,
+            -43.523536682128906
+          ],
+          "path_length_xy_mm": 174.77013170719147,
+          "body_z_range_mm": [
+            -5.074111744761467,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 6.72
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -131.37692260742188,
+            -6.176426887512207
+          ],
+          "path_length_xy_mm": 145.88536322116852,
+          "body_z_range_mm": [
+            -4.767483565956354,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 7.401666666666666
+        }
+      ],
+      "wall_s": 128.78099999999995
+    },
+    {
+      "job": "libo_restore2_high",
+      "site": "libo",
+      "level": "restore2",
+      "duration_s": 6.0,
+      "trajectory_sha256": "77629ce6a15fc66363be9d4c8433da654174caa3acdf704f920ed883ba5ebeda",
+      "surface_sha256": "36b03fa0e7a0368b2332d8461183f9dae5d6827383ee7f6ef5bc4562da31bd3f",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -121.34790802001953,
+            10.365769386291504
+          ],
+          "path_length_xy_mm": 127.04780697822571,
+          "body_z_range_mm": [
+            -4.720934666693211,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 7.723333333333334
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -112.12417602539062,
+            0.990256667137146
+          ],
+          "path_length_xy_mm": 117.16082692146301,
+          "body_z_range_mm": [
+            -4.497927147895098,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 7.1866666666666665
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -102.59151458740234,
+            9.080902099609375
+          ],
+          "path_length_xy_mm": 106.88814520835876,
+          "body_z_range_mm": [
+            -4.7202021814882755,
+            37.16603294014931
+          ],
+          "mean_contacted_feet": 6.905
+        }
+      ],
+      "wall_s": 126.01600000000008
+    },
+    {
+      "job": "narvik_restore2_low",
+      "site": "narvik",
+      "level": "restore2",
+      "duration_s": 6.0,
+      "trajectory_sha256": "8a2cec9d547a17357bf993ffd6dbb70dc0b064cf120354f73a1a0bd540cb6b65",
+      "surface_sha256": "ac676c1062828e75474ca93ca23ceaa138d25598ef48510881b26ea95ec00034",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 1.5,
+          "A_deg": 32.008333333333326,
+          "B_deg": 24.7025808701428,
+          "center_displacement_xy_mm": [
+            -200.4547119140625,
+            -82.51200866699219
+          ],
+          "path_length_xy_mm": 229.27406430244446,
+          "body_z_range_mm": [
+            -0.8553421357646585,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 10.355
+        },
+        {
+          "wave": 2.0,
+          "A_deg": 27.820833333333333,
+          "B_deg": 29.000402751172626,
+          "center_displacement_xy_mm": [
+            -205.10430908203125,
+            -4.457019329071045
+          ],
+          "path_length_xy_mm": 210.379958152771,
+          "body_z_range_mm": [
+            -0.9306770516559482,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 9.715
+        },
+        {
+          "wave": 2.5,
+          "A_deg": 22.241666666666664,
+          "B_deg": 34.97604319503777,
+          "center_displacement_xy_mm": [
+            -176.2368927001953,
+            -1.9200220108032227
+          ],
+          "path_length_xy_mm": 178.78004908561707,
+          "body_z_range_mm": [
+            -0.7614773930981755,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 9.088333333333333
+        }
+      ],
+      "wall_s": 123.04700000000003
+    },
+    {
+      "job": "narvik_restore2_high",
+      "site": "narvik",
+      "level": "restore2",
+      "duration_s": 6.0,
+      "trajectory_sha256": "d283919abb866f5ab67dea580ef12e4fde8bf52e9d278198fc7cf16854654915",
+      "surface_sha256": "ac676c1062828e75474ca93ca23ceaa138d25598ef48510881b26ea95ec00034",
+      "native_PD_exact": true,
+      "native_error_count": 0,
+      "whole_batch_finite": true,
+      "minimum_saved_body_center_boundary_margin_mm": 98.49991416931154,
+      "thread_readback": {
+        "requested": 2,
+        "tasking": 2,
+        "physics": 2,
+        "pxr": "28",
+        "torch_threads": 1,
+        "scope": "Kit settings readback; not a claim that every requested thread is continuously occupied"
+      },
+      "cells": [
+        {
+          "wave": 3.0,
+          "A_deg": 17.704166666666662,
+          "B_deg": 33.33285961711886,
+          "center_displacement_xy_mm": [
+            -139.76808166503906,
+            -0.4578903317451477
+          ],
+          "path_length_xy_mm": 141.42931997776031,
+          "body_z_range_mm": [
+            -0.8674709242768586,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 9.053333333333333
+        },
+        {
+          "wave": 3.5,
+          "A_deg": 7.583333333333333,
+          "B_deg": 43.288040917978634,
+          "center_displacement_xy_mm": [
+            -129.3313446044922,
+            1.3268663883209229
+          ],
+          "path_length_xy_mm": 131.71200454235077,
+          "body_z_range_mm": [
+            -0.8089910843409598,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 8.725
+        },
+        {
+          "wave": 4.0,
+          "A_deg": 2.698958333333333,
+          "B_deg": 41.85124765921162,
+          "center_displacement_xy_mm": [
+            -112.38465118408203,
+            2.130828857421875
+          ],
+          "path_length_xy_mm": 113.99204283952713,
+          "body_z_range_mm": [
+            -0.8077020174823701,
+            29.753468930721283
+          ],
+          "mean_contacted_feet": 8.771666666666667
+        }
+      ],
+      "wall_s": 121.95299999999997
+    }
+  ],
+  "earlier_attempt": {
+    "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation\\runs\\v1",
+    "failure": "Narvik low group reached 15 mm cropped-domain guard at 5.089 s; no solver/PD failure; expanded common ROI and reran matched previews in simulation_v2. Original attempt retained."
+  },
+  "attempt": "v2",
+  "runs_directory": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v2",
+  "verification_source_sha256": "5ba7920abcbf64efb69dddfbe3bfa49b1539016bdcf8dfa084f3d35176a9f3f3",
+  "interrupted_attempt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\shortwave\\simulation_v2\\runs\\v1"
+}

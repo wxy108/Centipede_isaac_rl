@@ -1,0 +1,5 @@
+{
+  "exact_executed_source": true,
+  "comment_erratum": "The inherited comment beside the feedback loop said 1 ms here. Executed dt and every-step feedback were 0.5 ms, verified by launch, readback and loop. Reusable work copy now corrects that comment only; AST identical.",
+  "raw_runs": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\runs\\v4"
+}

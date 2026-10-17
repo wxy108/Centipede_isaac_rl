@@ -1,0 +1,35 @@
+{
+  "invert": true,
+  "groups": [
+    {
+      "environment": 0,
+      "includes": [
+        "/World/env_0"
+      ],
+      "allowed_groups": [
+        "/World/collisions/group0"
+      ]
+    },
+    {
+      "environment": 1,
+      "includes": [
+        "/World/env_1"
+      ],
+      "allowed_groups": [
+        "/World/collisions/group1"
+      ]
+    },
+    {
+      "environment": 2,
+      "includes": [
+        "/World/env_2"
+      ],
+      "allowed_groups": [
+        "/World/collisions/group2"
+      ]
+    }
+  ],
+  "global_paths": [],
+  "isolation": "Robot and own terrain together; no cross-environment groups allowed",
+  "probe_receipt": "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-15\\ni\\work\\overnight_validation_2026-09-17\\small_isaac_cpu\\overlap_filter_probe.json"
+}

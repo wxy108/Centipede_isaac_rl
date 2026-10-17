@@ -1,0 +1,6 @@
+{
+  "/physics/updateToUsd": false,
+  "/physics/suppressReadback": false,
+  "/physics/updateVelocitiesToUsd": false,
+  "/physics/updateForceSensorsToUsd": false
+}

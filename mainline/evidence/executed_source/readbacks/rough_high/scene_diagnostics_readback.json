@@ -1,0 +1,117 @@
+{
+  "scene_path": "/physicsScene",
+  "attribute": "physxScene:enableExternalForcesEveryIteration",
+  "requested": true,
+  "pre_authoring_value": false,
+  "pre_authoring_had_authored_value": false,
+  "configured_before_reset": true,
+  "post_reset_value": true,
+  "post_reset_has_authored_value": true,
+  "readback_layer": "Effective USD scene configuration after reset, NOT a direct internal PxSceneFlag query",
+  "gravity_direction": [
+    0.0,
+    0.0,
+    -1.0
+  ],
+  "gravity_magnitude": 9.8100004196167,
+  "gravity_vector_m_s2": [
+    0.0,
+    0.0,
+    -9.8100004196167
+  ],
+  "meters_per_unit": 1.0,
+  "up_axis": "Z",
+  "solver_type": "TGS",
+  "gpu_dynamics": false,
+  "extensions": [
+    {
+      "name": "omni.physx",
+      "enabled": true,
+      "enabled_id": "omni.physx-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "4dceec88551300852e09d13f58e087b1a4540bd8823fec0b1f3ce1aee56bb373",
+      "native_plugin_binaries": [
+        {
+          "path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\bin\\omni.physx.plugin.dll",
+          "sha256": "1d32c48b027f6f8b012159abd8e1cc6e3b3d7a8d350dd2dbc0ade4b9144e1d0b"
+        }
+      ]
+    },
+    {
+      "name": "omni.physics.physx",
+      "enabled": true,
+      "enabled_id": "omni.physics.physx-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physics.physx-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physics.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "8f31e7d8c6df384f05b4362798a1b342c3b3f9a73763b458aba272d79d7611c9",
+      "native_plugin_binaries": [
+        {
+          "path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physics.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\bin\\omni.physics.physx.plugin.dll",
+          "sha256": "aa750adb450d73f9452e9e5a8b23c5b032cc47c02157972a500c9965bb0e1620"
+        }
+      ]
+    },
+    {
+      "name": "omni.physx.foundation",
+      "enabled": true,
+      "enabled_id": "omni.physx.foundation-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.foundation-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.foundation-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "b02f7fece2acdee909350df27767837a5da93bb2d0b638b8d10b551eae2b7ea0",
+      "native_plugin_binaries": [
+        {
+          "path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.foundation-107.3.18+107.3.1.wx64.r.cp311.u353\\bin\\omni.physx.foundation.plugin.dll",
+          "sha256": "a597ef82e66e7701ead5e7c798d5882feea7c9769c822c4e7756fbf9e40a44cc"
+        }
+      ]
+    },
+    {
+      "name": "omni.physx.tensors",
+      "enabled": true,
+      "enabled_id": "omni.physx.tensors-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.tensors-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.tensors-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "dbb7c2827c71e2093107a215fa3d1fbec49ff9e6a1e0df3c02a136bda75d8ebc",
+      "native_plugin_binaries": [
+        {
+          "path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physx.tensors-107.3.18+107.3.1.wx64.r.cp311.u353\\bin\\omni.physx.tensors.plugin.dll",
+          "sha256": "03c3d13c8cecd28f8d23bac7c86e174cf35f15fdab4de7d1efc61c7f515a2afd"
+        }
+      ]
+    },
+    {
+      "name": "omni.physics.tensors",
+      "enabled": true,
+      "enabled_id": "omni.physics.tensors-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physics.tensors-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.physics.tensors-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "f8fda99b552a97da5b4ddf621acb1a201c351ac1ba4467fed0397cc192b65c69",
+      "native_plugin_binaries": []
+    },
+    {
+      "name": "omni.usd.schema.physx",
+      "enabled": true,
+      "enabled_id": "omni.usd.schema.physx-107.3.18",
+      "package_version": "107.3.18",
+      "extension_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.usd.schema.physx-107.3.18+107.3.1.wx64.r.cp311.u353",
+      "config_path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.usd.schema.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\config\\extension.toml",
+      "config_sha256": "da46ec0391d11213c6d2f682e9d3575f63556c84daba980abca09afeb27701bb",
+      "native_plugin_binaries": [],
+      "schema_source": {
+        "path": "c:\\users\\wxy22\\anaconda3\\envs\\isaaclab_50\\lib\\site-packages\\isaacsim\\extscache\\omni.usd.schema.physx-107.3.18+107.3.1.wx64.r.cp311.u353\\plugins\\PhysxSchema\\resources\\schema.usda",
+        "sha256": "fe075bce4bde5ba7db69c6ccef0c4c26909336ab34c619129fc276f7cb4d7abc",
+        "first_line": 318,
+        "excerpt": "    bool physxScene:enableExternalForcesEveryIteration = false (\n        customData = {\n            string apiName = \"enableExternalForcesEveryIteration\"\n        }\n\n        displayGroup = \"Advanced\"\n        displayName = \"Enable External Forces Every Iteration\"\n        doc = \"\"\"Enables greater TGS solver stability.\"\"\"\n    )\n\n    bool physxScene:enableSceneQuerySupport = true (\n        customData = {"
+      }
+    }
+  ],
+  "version_scope": "Enabled Kit/PhysX plugin package versions and binary hashes are runtime readback. These are NOT automatically the underlying PhysX SDK semantic version. SDK 5.7/5.8 documentation applicability remains a separate review.",
+  "experiment_scope": "Diagnostic scheduling A/B only. Explicit false preserves the currently documented default; true is never automatically adopted for locomotion.",
+  "python_executable": "C:\\Users\\wxy22\\anaconda3\\envs\\isaaclab_50\\python.exe"
+}

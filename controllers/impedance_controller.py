@@ -94,6 +94,29 @@ class ImpedanceTravelingWaveController:
 
         # ── impedance gains ──
         imp = cfg.get("impedance", {})
+        # S2b GUARD (2026-07-16, PI-signed). This controller still computes TORQUE and so still needs
+        # these gains -- but every gain read below has a SILENT DEFAULT, and the defaults are nowhere
+        # near the tuned values (body_kp 5.0 vs the CMA-ES trial#167 0.14396 = 35x; leg kp [0.25]*4 vs
+        # tuned tibia 0.0014870 = 168x). S2b stripped the gains out of configs/farms_controller.yaml
+        # because the LIVE torch controller is targets-only now; without this guard, pointing this
+        # class at that file would silently run 35-168x gains and report the numbers as real.
+        # Use configs/farms_controller_numpy_legacy.yaml (byte-identical gains to pre-S2b).
+        _need = ("body_kp", "body_kv", "pitch_kp", "pitch_kv", "roll_kp", "roll_kv", "leg")
+        _missing = [k for k in _need if k not in imp]
+        _explicit = (body_kp, body_kv, pitch_kp, pitch_kv, roll_kp, roll_kv)
+        if _missing and not all(v is not None for v in _explicit):
+            raise ValueError(
+                "controller YAML %r is MISSING impedance gain key(s) %s, and this (numpy) controller "
+                "would SILENTLY FALL BACK to hard-coded defaults 35-168x off the tuned values "
+                "(body_kp 5.0 vs 0.14396; leg kp 0.25 vs tibia 0.0014870).\n"
+                "Almost certainly you pointed it at configs/farms_controller.yaml, which S2b "
+                "(2026-07-16) made GAIN-FREE: that file now configures the TARGETS-ONLY torch "
+                "controller (controllers/impedance_controller_torch.py), whose gains come from "
+                "env.set_joint_impedance() -> PhysX.\n"
+                "This class needs configs/farms_controller_numpy_legacy.yaml (gains byte-identical "
+                "to pre-S2b), or pass the gains explicitly as constructor kwargs."
+                % (config_path, _missing)
+            )
         self.body_kp = body_kp if body_kp is not None else float(imp.get("body_kp", 5.0))
         self.body_kv = body_kv if body_kv is not None else float(imp.get("body_kv", 0.05))
         self.body_kp_head = float(imp.get("body_kp_head", self.body_kp))
@@ -311,8 +334,12 @@ class ImpedanceTravelingWaveController:
     def _init_cpg_phases(self, t0):
         body = self.omega * t0 - self._spatial_phases
         self.body_phases = body.copy()
-        self.leg_phases  = body[:N_LEGS].copy()
+        self.leg_phases = self._leg_phase_anchor(body).copy()
         self._cpg_initialized = True
+
+    def _leg_phase_anchor(self, body_phases):
+        """Sample leg roots halfway between adjacent body-yaw phase samples."""
+        return body_phases[:N_LEGS] + 0.5 * self.cpg_delta
 
     def _integrate_cpg_phases(self, dt):
         phi = self.body_phases
@@ -344,7 +371,7 @@ class ImpedanceTravelingWaveController:
         leg_amp_ref = float(self.leg_amps[0]) if len(self.leg_amps) > 0 else 1.0
         gain_leg = leg_amp_ref * self.cpg_leg_omega
         lphi = self.leg_phases
-        fdot_leg = self.omega + gain_leg * np.sin(lphi - new_phi[:N_LEGS])
+        fdot_leg = self.omega + gain_leg * np.sin(lphi - self._leg_phase_anchor(new_phi))
         self.leg_phases = lphi + fdot_leg * dt
 
     # ──────────────────────────────────────────────────────────────
@@ -462,7 +489,9 @@ class ImpedanceTravelingWaveController:
         if self.use_cpg and self._cpg_initialized:
             leg_base_phases = self.leg_phases  # (N_LEGS,)
         else:
-            leg_base_phases = self.omega * t - self._spatial_phases[:N_LEGS]
+            leg_base_phases = self._leg_phase_anchor(
+                self.omega * t - self._spatial_phases
+            )
 
         # Expand base phases to flat layout: each leg has 2*4=8 entries
         base_flat = leg_base_phases[self._leg_seg_idx]  # (N_LEGS*2*4,)

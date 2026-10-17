@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "checked_unix": 1790831587.683621,
+  "scope": "First formal four-worker batch native startup; not a full-trajectory or numerical-stability claim",
+  "receipts": [
+    {
+      "job": "cutoff_4mm_height_x1p75_s00_low",
+      "n_environments": 3,
+      "full173_native_PD_exact": true,
+      "frozen_physics_and_threads_verified": true,
+      "amplitudes_exact": true,
+      "active": {
+        "pid": 11368,
+        "job": "cutoff_4mm_height_x1p75_s00_low",
+        "status": "failed",
+        "source_ids": [
+          0,
+          1,
+          2
+        ],
+        "started_unix": 1790831389.0081449,
+        "exit_code": 1,
+        "finished_unix": 1790831558.3326967
+      }
+    },
+    {
+      "job": "cutoff_4mm_height_x1p75_s00_high",
+      "n_environments": 2,
+      "full173_native_PD_exact": true,
+      "frozen_physics_and_threads_verified": true,
+      "amplitudes_exact": true,
+      "active": {
+        "pid": 31856,
+        "job": "cutoff_4mm_height_x1p75_s00_high",
+        "status": "finished",
+        "source_ids": [
+          3,
+          4
+        ],
+        "started_unix": 1790831391.0149257,
+        "exit_code": 0,
+        "finished_unix": 1790831545.7625391
+      }
+    },
+    {
+      "job": "cutoff_4mm_height_x1p75_s01_low",
+      "n_environments": 3,
+      "full173_native_PD_exact": true,
+      "frozen_physics_and_threads_verified": true,
+      "amplitudes_exact": true,
+      "active": {
+        "pid": 8188,
+        "job": "cutoff_4mm_height_x1p75_s01_low",
+        "status": "running",
+        "source_ids": [
+          5,
+          6,
+          7
+        ],
+        "started_unix": 1790831393.0464938
+      }
+    },
+    {
+      "job": "cutoff_4mm_height_x1p75_s01_high",
+      "n_environments": 2,
+      "full173_native_PD_exact": true,
+      "frozen_physics_and_threads_verified": true,
+      "amplitudes_exact": true,
+      "active": {
+        "pid": 16820,
+        "job": "cutoff_4mm_height_x1p75_s01_high",
+        "status": "finished",
+        "source_ids": [
+          8,
+          9
+        ],
+        "started_unix": 1790831395.0648096,
+        "exit_code": 0,
+        "finished_unix": 1790831545.0113695
+      }
+    }
+  ]
+}

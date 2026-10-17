@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "independent_review_passed": true,
+  "reviewed_ids": [
+    13,
+    14
+  ],
+  "draft_hashes": {
+    "resume_libo_cutoff_height_expansion.py": "a7c7314c4919a03bdb56cd639cc49d76a07392caef4244a0e02f5f59510ff375",
+    "analyze_libo_cutoff_height_expansion.py": "d642e0da2a218cd46babe16a5737fba669d7971b3cd2e316a9ada4e31275cb07"
+  },
+  "checks": [
+    "Both final validators pass read-only exact current receipt and14original-artifact hashes",
+    "All3 draft scripts compile without creating X bytecode",
+    "Agent resumer17 synthetic receipt, mutation rejection, accounting and original-quality-path tests passed",
+    "Analyzer actual-receipt, invalid-ID, error, hash and exclusion tests passed; statistical/contact/stop AST unchanged",
+    "Independent reviewer accepted exact terminal invalid exclusion, unchanged gate and offender protections"
+  ],
+  "original_scientific_sources_edited": false,
+  "native_physics_started": false,
+  "unix": 1790905340.9641025
+}

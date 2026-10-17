@@ -1,0 +1,28 @@
+{
+  "head_colliders": [
+    {
+      "environment": 0,
+      "path": "/World/env_0/Robot/link_body_0/link_body_0/collisions/link_0/link_0",
+      "rigid_body": "/World/env_0/Robot/link_body_0/link_body_0",
+      "enabled": true
+    },
+    {
+      "environment": 1,
+      "path": "/World/env_1/Robot/link_body_0/link_body_0/collisions/link_0/link_0",
+      "rigid_body": "/World/env_1/Robot/link_body_0/link_body_0",
+      "enabled": true
+    },
+    {
+      "environment": 2,
+      "path": "/World/env_2/Robot/link_body_0/link_body_0/collisions/link_0/link_0",
+      "rigid_body": "/World/env_2/Robot/link_body_0/link_body_0",
+      "enabled": true
+    }
+  ],
+  "enabled_counts": [
+    249,
+    249,
+    249
+  ],
+  "head_visual_retained": true
+}

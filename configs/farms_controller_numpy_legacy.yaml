@@ -1,0 +1,105 @@
+# farms_controller_numpy_legacy.yaml — the PRE-S2b controller config, gains INTACT.
+# ═══════════════════════════════════════════════════════════════════════════════════════
+# WHY THIS FILE EXISTS (S2b, 2026-07-16):
+#   `configs/farms_controller.yaml` had TWO consumers with OPPOSITE requirements:
+#     (a) controllers/impedance_controller_torch.py — the LIVE IsaacLab/env path. Since S2b it
+#         computes TARGETS ONLY; gains come from env.set_joint_impedance() -> PhysX. It now
+#         RAISES if the YAML carries a gain key (a silently-ignored gain is a lie).
+#     (b) controllers/impedance_controller.py — the NUMPY reference. It still computes torque
+#         and still NEEDS those gains. Critically, it SILENTLY DEFAULTS when they are absent
+#         (body_kp -> 5.0 vs the tuned 0.14396 = 35x; leg kp -> [0.25]*4 vs tuned tibia
+#         0.0014870 = 168x). Stripping the shared file would have silently changed (b)'s
+#         physics by up to 168x with no diagnostic.
+#   So the file was SPLIT rather than stripped. This copy is (b)'s config and is byte-identical
+#   to configs/farms_controller.yaml as of the pre-S2b snapshot (.before_S2b_2026-07-16).
+#   The gains below are the CMA-ES three_eval_v1 rank-5 trial #167 point.
+#
+#   Consumers (repointed here by S2b): scripts/optimization/optimize_impedance_{biological,
+#   bayesian,three_eval}.py, scripts/optimization/render_top_trials.py, scripts/test_walk.py,
+#   scripts/diagnose_motion.py, scripts/probe_frozen_joint.py.
+#   The numpy controller now RAISES instead of defaulting, so a future strip cannot go silent.
+# ═══════════════════════════════════════════════════════════════════════════════════════
+body_wave:
+  amplitude: 0.4
+  # 2026-05-05: reverted 1.5 → 1.0 Hz. At 1.5 Hz the soft-body gain sets
+  # discovered by the constraint-cost optimizer (rank 1 trial #196 has
+  # body_kp ≈ 0.01) flipped on fine-mesh single-wavelength rough terrain
+  # because the PD-tracking kv·(target_dot − qdot) term is too aggressive
+  # for the soft body to follow the faster wave. At 1.0 Hz the wave is
+  # slower, target_dot is smaller, and the soft body has time to track.
+  # Tradeoff: commanded velocity drops from 0.57 BL/s back to 0.38 BL/s,
+  # below Anderson 1995's biological 0.5-1.5 BL/s range.
+  frequency: 1.0
+  wave_number: 3.0
+  speed: 1.0
+  head_hold_joints: 0   # v3 (PI#3): straight-keeping OFF — whole body undulates, front included
+  head_ramp_joints: 0   # v3 (PI#3): no head-end taper (was 1/2)
+  head_ramp_min: 0.0
+leg_wave:
+  amplitudes:
+  - 0.6
+  - 0.40   # v3 (PI#1): higher lift — legbase_pitch/hip_pitch base 0.2 -> 0.40 (search scales 0.3-1.5x)
+  - 0.0
+  - 0.0
+  phase_offsets:
+  - -1.5707963
+  - 3.1415926
+  - 0.0
+  - 3.1415926
+  dc_offsets:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.5235987755982988
+  active_dofs:
+  - 0
+  - 1
+cpg:
+  enabled: true
+  coupling_omega: -2.5
+  leg_coupling_omega: -2.5
+simulation:
+  duration: 10.0
+  timestep: 0.004
+impedance:
+  # ── 2026-05-05: FINAL — three_eval_v1 rank 5, trial #167 (cost=22.76) ──
+  # Source: outputs/optimization/impedance_three_eval_three_eval_v1_20260505_133109
+  # Three-eval design: each trial averaged over (flat 2Hz, rough λ=18mm 1Hz,
+  # rough λ=18mm 2Hz). Trial #167 per-eval performance:
+  #   eval A — flat 2Hz:       speed=90.0 mm/s = 0.88 BL/s,  CoT=21.49 J/m
+  #   eval B — rough λ18 1Hz:  speed=23.6 mm/s,              CoT= 7.75 J/m
+  #   eval C — rough λ18 2Hz:  speed=49.6 mm/s,              CoT=39.04 J/m
+  # Architecture: medium body + active hip + very soft tibia. Family
+  # Stiff-body (body_kp=0.144). Robust across 1–2 Hz frequency range —
+  # the test the previous arena-run rank-1 winner (body_kp=0.0096) failed.
+  # Was: trial #141 from pd_corrected_wide run (kept in git history).
+  body_kp: 0.14396435461660606
+  body_kv: 0.003710391030836182
+  body_kp_head: 0.05
+  body_kv_head: 0.01
+  head_yaw_gain: 0.0
+  head_yaw_target_clip: 0.2
+  head_yaw_rate: 0.0
+  pitch_kp: 0.00714500246182836
+  pitch_kv: 4.682691432301573e-05
+  head_pitch_offset: -0.25
+  head_pitch_joints: 1
+  head_pitch_kp: 0.05
+  head_pitch_kv: 0.0125
+  roll_kp: 0.005
+  roll_kv: 0.002
+  settle_time: 1.0
+  ramp_time: 1.0
+  leg:
+    kp:
+    - 0.0762341873055933      # hip_yaw   — moderate active drive
+    - 0.10410070483808535     # hip_pitch — coxa lift
+    - 0.0014869886879781957   # tibia     — VERY SOFT (terrain-conforming)
+    - 0.14185816765501905     # tarsus    — moderate foot-tip stiffness
+    kv:
+    - 1.2233473366963375e-05
+    - 3.7409077982351254e-08
+    - 1.6068234215749776e-07
+    - 0.0035528652774281773
+recording:
+  dt_record: 0.01

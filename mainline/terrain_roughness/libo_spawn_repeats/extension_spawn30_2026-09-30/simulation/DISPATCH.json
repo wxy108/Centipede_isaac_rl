@@ -1,0 +1,10 @@
+{
+  "pid": 25396,
+  "status": "resumed",
+  "runner": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\resume_libo_spawn30.py",
+  "resumed_unix": 1790824486.1299074,
+  "original_started_unix": 1790809652.7356353,
+  "new_condition_count": 600,
+  "scope": "Only600 new observations at existing Libo4mm heights; no higher-height/cutoff/random-erasure runs",
+  "previous_receipt": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_spawn_repeats\\extension_spawn30_2026-09-30\\simulation\\dispatch_resume_history\\dispatch_before_01.json"
+}

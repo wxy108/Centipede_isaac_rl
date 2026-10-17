@@ -71,6 +71,16 @@ from datetime import datetime
 
 import numpy as np
 
+# Windows cmd.exe defaults to the GBK (cp936) codec, which cannot encode the
+# ✓/✗ status glyphs this script prints — an unguarded print then raises
+# UnicodeEncodeError and aborts the whole batch mid-render. Force UTF-8 on the
+# streams so status prints never crash the run regardless of console locale.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Args + Isaac Sim boot — this MUST happen before any isaaclab imports
@@ -80,7 +90,12 @@ PROJECT_ROOT = os.path.normpath(os.path.join(SCRIPT_DIR, "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, SCRIPT_DIR)
 
-CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller.yaml")
+# S2b 2026-07-16: repointed farms_controller.yaml -> farms_controller_numpy_legacy.yaml.
+# This script drives the NUMPY controller (controllers/impedance_controller.py), which still computes torque
+# and NEEDS the impedance gains. S2b stripped the gains out of farms_controller.yaml because the LIVE torch
+# controller is targets-only now; the numpy ref would have SILENTLY DEFAULTED (body_kp 0.14396 -> 5.0, 35x).
+# The gains live on, byte-identical, in the _numpy_legacy copy.
+CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller_numpy_legacy.yaml")
 USD_PATH = os.path.join(PROJECT_ROOT, "assets", "centipede.usd")
 
 parser = argparse.ArgumentParser(description=__doc__,
@@ -201,7 +216,12 @@ def row_to_params(row):
               "hip_pitch_kp", "hip_pitch_kv",
               "tibia_kp", "tibia_kv",
               "tarsus_kp", "tarsus_kv",
-              "pitch_kp", "pitch_kv"):
+              "pitch_kp", "pitch_kv",
+              "head_yaw_gain"):   # A3 fidelity: the de-spin heading servo the
+                                  # candidates rely on — apply_params() handles
+                                  # it, but it was never EXTRACTED here, so the
+                                  # render ran the default 1.0 (would show a
+                                  # spin the optimized controller doesn't have).
         if k in row and row[k] != "":
             try:
                 p[k] = float(row[k])
@@ -323,6 +343,11 @@ def apply_params(controller, params):
             if k > 0:   # skip head pitch
                 controller.pitch_kp_vec[k] = kp
                 controller.pitch_kv_vec[k] = kv
+    # STAGE A: apply the swept head_yaw_gain (proprioceptive hold-initial-heading
+    # de-spin servo) so the rendered gait matches the optimized winner. Mirrors
+    # apply_params() in optimize_impedance_biological.py.
+    if "head_yaw_gain" in params:
+        controller.head_yaw_gain = float(params["head_yaw_gain"])
 
 
 def reset_robot(robot, controller, sim, n_settle=8):
@@ -651,6 +676,9 @@ def main():
     print(f"\nWhen you've picked a winner:")
     print(f"  copy <yaml_dir>\\rank_<NN>_trial_<TTT>.yaml configs\\farms_controller.yaml")
 
+    # Canonical completion marker so run_isaaclab_with_watchdog.ps1 force-kills
+    # python on teardown (Omniverse cleanup otherwise hangs 5-6 min).
+    print(f"[viz] report -> {video_dir}", flush=True)
     sim_app.close()
     return 0
 

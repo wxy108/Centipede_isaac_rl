@@ -1,0 +1,60 @@
+{
+  "pid": 19232,
+  "elapsed_s": 32.012357234954834,
+  "error": "Traceback (most recent call last):\n  File \"X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\run_contact_erasure_light.py\", line 224, in run\n    pilot=batch([('pilot_p050_bin010_w3','v1',None)],'random_channel_check');assert pilot[0]['exit']==0\n                                                                                    ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished": [
+    {
+      "job": "endpoint_p0_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8348,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_low"
+    },
+    {
+      "job": "endpoint_p0_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6976,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_high"
+    },
+    {
+      "job": "endpoint_p1_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 19316,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_low"
+    },
+    {
+      "job": "endpoint_p1_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29584,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_high"
+    },
+    {
+      "job": "pilot_p050_bin010_w3",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6560,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        0
+      ],
+      "interrupted_peer_source_ids": []
+    }
+  ],
+  "queued_peers": []
+}

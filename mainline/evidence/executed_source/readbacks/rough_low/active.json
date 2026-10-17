@@ -1,0 +1,14 @@
+{
+  "pid": 28348,
+  "job": "rough_low",
+  "status": "finished",
+  "command": [
+    "C:\\Users\\wxy22\\Documents\\Codex\\2026-09-28\\read-conversation-centipede-catchup\\work\\unified_demo_2026-09-28\\launch.py",
+    "rough_low",
+    "--attempt",
+    "v4",
+    "--/plugins/carb.tasking.plugin/threadCount=2",
+    "--/persistent/physics/numThreads=2"
+  ],
+  "exit_code": 0
+}

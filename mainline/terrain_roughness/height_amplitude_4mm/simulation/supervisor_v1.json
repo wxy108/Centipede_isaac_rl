@@ -1,0 +1,180 @@
+{
+  "attempt": "v1",
+  "level": "height_x1p50",
+  "started_unix": 1790722197.246748,
+  "elapsed_s": 768.2517018318176,
+  "available_memory_gib": 18.547237396240234,
+  "finished": [
+    {
+      "job": "libo_height_x0p25_low",
+      "pid": 28820,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x0p25_high",
+      "pid": 31172,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p25_low",
+      "pid": 29200,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p25_high",
+      "pid": 29852,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x0p50_low",
+      "pid": 30104,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x0p50_high",
+      "pid": 11468,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p50_low",
+      "pid": 26492,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p50_high",
+      "pid": 11164,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x0p75_low",
+      "pid": 25828,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x0p75_high",
+      "pid": 27860,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p75_low",
+      "pid": 30392,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x0p75_high",
+      "pid": 7256,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x1p00_low",
+      "pid": 25608,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x1p00_high",
+      "pid": 19072,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p00_low",
+      "pid": 29560,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p00_high",
+      "pid": 23160,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x1p25_low",
+      "pid": 23004,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x1p25_high",
+      "pid": 31656,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p25_low",
+      "pid": 28048,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p25_high",
+      "pid": 16236,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    }
+  ],
+  "current": [
+    {
+      "job": "libo_height_x1p50_low",
+      "pid": 26120,
+      "exit": 1,
+      "status": "failed",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_height_x1p50_high",
+      "pid": 28036,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p50_low",
+      "pid": 28052,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_height_x1p50_high",
+      "pid": 10896,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    }
+  ],
+  "complete": false
+}

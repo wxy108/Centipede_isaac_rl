@@ -1,0 +1,39 @@
+{
+  "attempt": "v1",
+  "level": "original",
+  "started_unix": 1790709990.2286289,
+  "elapsed_s": 218.08001852035522,
+  "available_memory_gib": 15.938411712646484,
+  "finished": [],
+  "current": [
+    {
+      "job": "libo_original_low",
+      "pid": 25996,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "libo_original_high",
+      "pid": 3440,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_original_low",
+      "pid": 12024,
+      "exit": 1,
+      "status": "failed",
+      "rss_gib": null
+    },
+    {
+      "job": "narvik_original_high",
+      "pid": 24736,
+      "exit": 0,
+      "status": "finished",
+      "rss_gib": null
+    }
+  ],
+  "complete": false
+}

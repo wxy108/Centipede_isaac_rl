@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "zero_trajectory_identity": [
+    {
+      "wave": 1.5,
+      "p0_bitexact": true,
+      "forward_2_6_mm": 182.44270919895973
+    },
+    {
+      "wave": 2,
+      "p0_bitexact": true,
+      "forward_2_6_mm": 175.40726747331084
+    },
+    {
+      "wave": 2.5,
+      "p0_bitexact": true,
+      "forward_2_6_mm": 148.70709600450823
+    },
+    {
+      "wave": 3,
+      "p0_bitexact": true,
+      "forward_2_6_mm": 126.48579973770848
+    },
+    {
+      "wave": 3.5,
+      "p0_bitexact": true,
+      "forward_2_6_mm": 108.10331985164761
+    }
+  ],
+  "all_leg_off_native_contact_zero": true,
+  "random_restoration_native_mask_verified": true,
+  "restoration_quality_is_reported_not_assumed": true,
+  "no_physics_parameter_retuning": true,
+  "pilot_stable_six_seconds": false,
+  "pilot_status": "state_divergence_at2.9s; all5800completed steps native deletion correct; record as failure, never zero displacement",
+  "gate_revision_reason": "Do not require an experimentally modified random trajectory to stay numerically stable to validate physical deletion. Fullp0 identity and fullp1 nativezero remain required."
+}

@@ -167,6 +167,10 @@ parser.add_argument("--no-tune-distal", dest="tune_distal", action="store_false"
 parser.add_argument("--tune-pitch",     dest="tune_pitch",  action="store_true",
                     default=True, help="Tune body pitch (default on).")
 parser.add_argument("--no-tune-pitch",  dest="tune_pitch",  action="store_false")
+parser.add_argument("--tune-head-yaw",  dest="tune_head_yaw", action="store_true",
+                    default=False, help="STAGE A: add head_yaw_gain (proprioceptive "
+                    "hold-initial-heading servo; 0.0=off in the spinning baseline) to the "
+                    "search to de-spin (baseline net_yaw ~30deg). Default off.")
 parser.add_argument("--seed-from", default=None,
                     help="Seed first trial from a best_params.yaml.")
 parser.add_argument("--resume", default=None,
@@ -240,11 +244,88 @@ parser.add_argument("--w-torque-jerk", type=float, default=1e-3,
                          "torque commands are unbiological. Default scales "
                          "the typically-large jerk magnitude (~1e3-1e5) "
                          "down to comparable units with the other terms.")
-parser.add_argument("--w-cot",         type=float, default=0.5,
-                    help="NEW (2026-05-03): penalty on cost-of-transport "
-                         "(total positive joint work / displacement). "
-                         "Biological systems minimise energy per metre. "
-                         "Default 0.5 means a CoT of 1 J/m → +0.5 cost.")
+parser.add_argument("--w-cot",         type=float, default=0.0,
+                    help="Cost-of-transport weight (total positive joint "
+                         "work / SIGNED forward progress). STAGE-A "
+                         "(2026-06-15): this is the live forward-dominant "
+                         "objective's CoT term (limits['w_cot']); default "
+                         "0.0 so the A0 baseline is pure SIGNED-forward. It "
+                         "ALSO feeds the diagnostic cost_legacy CoT term "
+                         "(the legacy weighted-sum cost is dead / not "
+                         "returned to TPE). Was 0.5 pre-Stage-A.")
+# ── STAGE-A (2026-06-15): signed-forward objective + anti-spin flags. ──
+# The optimizer's live objective is redesigned to reward SIGNED forward
+# displacement (not direction-blind ‖com_xy‖) and to reject spinning gaits
+# via a net-yaw constraint. All floors default to 0 (and fwd_frac_min to
+# 0.6, fwd_cap_m to 0.1 m, yaw_tol to 15°) so the A0 baseline run is NOT
+# additionally gated; tighten them in A1+ runs.
+parser.add_argument("--fwd-axis", type=int, default=0,
+                    help="STAGE-A: world axis index for forward progress "
+                         "(0=x, 1=y). Forward = fwd-sign × Δaxis. Default 0.")
+parser.add_argument("--fwd-sign", type=float, default=-1.0,
+                    help="STAGE-A: sign convention for forward. Forward "
+                         "progress = fwd_sign × (com[axis][-1] − com[axis][0]). "
+                         "Default −1.0 to match v_forward = −root_lin_vel_w[:,0].")
+parser.add_argument("--yaw-tol-deg", type=float, default=15.0,
+                    help="STAGE-A anti-spin constraint: |net heading change| "
+                         "(deg) over the active window. Above this the trial "
+                         "is infeasible. Default 15°.")
+parser.add_argument("--straightness-floor", type=float, default=0.0,
+                    help="STAGE-A constraint floor on straightness "
+                         "(=‖displacement‖/path_length). Default 0.0 (OFF — "
+                         "complementary wander gate, kept as-is).")
+parser.add_argument("--fwd-floor-m", type=float, default=0.0,
+                    help="STAGE-A constraint floor on SIGNED forward "
+                         "displacement (m). Below this the trial is "
+                         "infeasible. Default 0.0 (OFF for A0 baseline).")
+parser.add_argument("--fwd-frac-min", type=float, default=0.6,
+                    help="STAGE-A constraint: minimum fraction of recorded "
+                         "steps with positive signed-forward increment. "
+                         "Default 0.6.")
+parser.add_argument("--fwd-cap-m", type=float, default=0.1,
+                    help="STAGE-A: cap (m) on the rewarded signed-forward "
+                         "displacement per spawn, so one runaway spawn can't "
+                         "dominate the multi-spawn mean. Default 0.1 m.")
+parser.add_argument("--w-fwd", type=float, default=100.0,
+                    help="STAGE-A: weight on SIGNED forward progress in the "
+                         "live objective (cost = −w_fwd·min(fwd,cap) + "
+                         "w_cot·CoT − w_compl·compliance). Default 100.0.")
+parser.add_argument("--w-compl", type=float, default=0.0,
+                    help="STAGE-A: reward weight on pitch-joint compliance in "
+                         "the live objective. Default 0.0 (OFF for A0).")
+parser.add_argument("--stage-a-baseline", dest="stage_a_baseline",
+                    action="store_true", default=False,
+                    help="STAGE-A A0 MEASUREMENT: skip the Optuna study "
+                         "entirely. Run ONE trial with the controller's "
+                         "CURRENT (YAML / known-good) gains through the same "
+                         "multi-spawn eval path, then print a per-spawn + "
+                         "mean block of fwd_signed, net_yaw_deg, straightness, "
+                         "yaw_rate_rms_deg_s, displacement_m, the raw signed "
+                         "Δcom along the forward axis (value + sign), and "
+                         "speed_mps. No sweep, no param patching.")
+# ── ROUND 2 STABILITY BATTERY (RE-SCOPE v2, 2026-06-16) ──
+parser.add_argument("--battery", dest="battery", default=None,
+                    help="ROUND 2 STABILITY BATTERY: skip the Optuna study and "
+                         "re-evaluate the top-N controllers from this ROUND 1 "
+                         "all_trials.csv across {this terrain} x {--battery-freqs} "
+                         "Hz via controller.set_frequency (limits['gait_freq_hz'] "
+                         "and commanded_velocity recomputed per cell). Writes "
+                         "battery_<terrain>.csv next to the ROUND 1 CSV. Invoke "
+                         "ONCE PER TERRAIN (rough l60/A16, rough l18/A10, --flat); "
+                         "5 Hz on --flat is the hard stressor.")
+parser.add_argument("--battery-top-n", dest="battery_top_n", type=int, default=5,
+                    help="How many lowest-cost (non-buckled) ROUND 1 controllers "
+                         "to run through the battery. Default 5.")
+parser.add_argument("--battery-freqs", dest="battery_freqs", default="1,2,3,5",
+                    help="Comma-separated gait frequencies (Hz). Default '1,2,3,5'.")
+parser.add_argument("--battery-z-bound-m", dest="battery_z_bound_m", type=float,
+                    default=0.06,
+                    help="Max post-settle root-z peak-to-peak (m) to PASS a cell "
+                         "(bounce / fly-off guard). Default 0.06.")
+parser.add_argument("--battery-fwd-min-m", dest="battery_fwd_min_m", type=float,
+                    default=0.01,
+                    help="Min signed-forward displacement (m) for 'non-trivial "
+                         "forward' in a battery cell. Default 0.01.")
 parser.add_argument("--speed-cap-mps", type=float, default=0.025,
                     help="(legacy) cap on speed reward in the weighted-sum "
                          "cost. Now retained only for the diagnostic "
@@ -354,6 +435,26 @@ parser.add_argument("--wavelengths-mm",    type=str,   default="",
                          "ANY patch buckles, the trial is pruned (Optuna "
                          "discards it). Lets us optimize for terrain "
                          "robustness without the blended-arena complexity.")
+parser.add_argument("--amplitudes-mm",     type=str,   default="",
+                    help="STAGE-A (2026-06-15): comma-separated PER-WAVELENGTH "
+                         "peak amplitudes in mm, parallel to --wavelengths-mm "
+                         "(e.g. --wavelengths-mm '60,18' --amplitudes-mm "
+                         "'16,10' -> the lambda=60mm patch gets A=16mm, the "
+                         "lambda=18mm patch gets A=10mm). When set it MUST have "
+                         "the same length as --wavelengths-mm. When EMPTY, all "
+                         "patches fall back to the single --terrain-amplitude "
+                         "(legacy behaviour). Each patch is its own TERRAIN; "
+                         "this is the key wiring for the two-terrain Stage-A "
+                         "eval (target lambda=60/A=16mm S=0.267 + secondary "
+                         "lambda=18/A=10mm S=0.556).")
+parser.add_argument("--stage-a-target-wavelength", dest="stage_a_target_wavelength",
+                    type=float, default=60.0,
+                    help="STAGE-A (2026-06-15): which tiled patch is the "
+                         "OBJECTIVE terrain (the RL rough end). The Optuna "
+                         "cost returned per trial = THAT patch's "
+                         "forward-dominant _obj; feasibility is gated "
+                         "WORST-CASE across ALL patches. Matched by nearest "
+                         "patch wavelength (mm). Default 60.0.")
 parser.add_argument("--n-spawns",          type=int,   default=3,
                     help="When --arena is set WITHOUT --wavelengths-mm, "
                          "number of spawn offsets in the multi-block arena "
@@ -419,6 +520,13 @@ import yaml
 try:
     import optuna
     from optuna.samplers import TPESampler
+    # Silence optuna's per-trial INFO line ("Trial N finished with value ...").
+    # The IsaacLab watchdog (run_isaaclab_with_watchdog.ps1) treats the bare
+    # substring 'finished' as a SUCCESS marker, so that per-trial line falsely
+    # trips completion after trial 0 and force-kills the sweep. The harness's
+    # own "[trial N] cost=..." prints + all_trials.csv retain every number; the
+    # real end marker is "[bio] report -> sweep complete".
+    optuna.logging.set_verbosity(optuna.logging.WARNING)
 except ImportError:
     print("ERROR: optuna required. Install with: pip install optuna")
     sim_app.close()
@@ -438,7 +546,12 @@ from terrain import (
 )
 
 
-CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller.yaml")
+# S2b 2026-07-16: repointed farms_controller.yaml -> farms_controller_numpy_legacy.yaml.
+# This script drives the NUMPY controller (controllers/impedance_controller.py), which still computes torque
+# and NEEDS the impedance gains. S2b stripped the gains out of farms_controller.yaml because the LIVE torch
+# controller is targets-only now; the numpy ref would have SILENTLY DEFAULTED (body_kp 0.14396 -> 5.0, 35x).
+# The gains live on, byte-identical, in the _numpy_legacy copy.
+CFG_PATH = os.path.join(PROJECT_ROOT, "configs", "farms_controller_numpy_legacy.yaml")
 USD_PATH = os.path.join(PROJECT_ROOT, "assets", "centipede.usd")
 OUTPUT_ROOT = os.path.join(PROJECT_ROOT, "outputs", "optimization")
 
@@ -591,6 +704,26 @@ def build_scene(sim, run_dir):
             patch_size = 1.0  # m per patch — same as the single-wavelength path
             spacing    = patch_size + 0.05  # 5 cm gap between adjacent patches
 
+            # -- STAGE-A (2026-06-15): PER-WAVELENGTH amplitude --
+            # --amplitudes-mm gives each tiled patch its OWN peak amplitude
+            # (mm), parallel to --wavelengths-mm. Each patch is then a
+            # distinct TERRAIN (e.g. lambda=60/A=16mm S=0.267 target +
+            # lambda=18/A=10mm S=0.556 secondary). When --amplitudes-mm is
+            # empty every patch falls back to the scalar --terrain-amplitude
+            # (legacy behaviour, bit-identical to the pre-Stage-A path).
+            amp_str = (getattr(args, "amplitudes_mm", "") or "").strip()
+            if amp_str:
+                amplitudes_m = [float(x) * 1e-3
+                                for x in amp_str.split(',') if x.strip()]
+                if len(amplitudes_m) != len(wavelengths_mm):
+                    raise ValueError(
+                        "[scene] --amplitudes-mm has %d entries but "
+                        "--wavelengths-mm has %d; they must be parallel "
+                        "(one amplitude per wavelength)."
+                        % (len(amplitudes_m), len(wavelengths_mm)))
+            else:
+                amplitudes_m = [float(args.terrain_amplitude)] * len(wavelengths_mm)
+
             patches = []   # list of dicts
             from pxr import UsdGeom as _UsdGeom, Gf as _Gf
             for k, wl_mm in enumerate(wavelengths_mm):
@@ -599,9 +732,10 @@ def build_scene(sim, run_dir):
                 y_off = 0.0
 
                 wavelength_m = wl_mm * 1e-3
+                amplitude_m  = amplitudes_m[k]   # per-patch amplitude (STAGE-A)
                 h_m, rms_m, peak_m = generate_single_wavelength_heightmap(
                     wavelength_m=wavelength_m,
-                    amplitude_m=args.terrain_amplitude,
+                    amplitude_m=amplitude_m,
                     seed=args.terrain_seed + k,   # unique seed per patch
                 )
 
@@ -626,17 +760,22 @@ def build_scene(sim, run_dir):
                     y_off       = y_off,
                     world_size  = patch_size,
                     wavelength_mm = wl_mm,
+                    amplitude_m   = amplitude_m,   # per-patch (STAGE-A)
                     rms_m       = rms_m,
                     peak_m      = peak_m,
                 ))
-                print(f"[scene] patch[{k}]  λ={wl_mm:5.1f}mm  "
+                print(f"[scene] patch[{k}]  l={wl_mm:5.1f}mm  "
+                      f"A={amplitude_m*1000:5.1f}mm  "
                       f"x_off={x_off:+.3f}m  rms={rms_m*1000:.2f}mm  "
                       f"peak={peak_m*1000:.2f}mm", flush=True)
 
             np.save(os.path.join(run_dir, "patch_wavelengths_mm.npy"),
                     np.array(wavelengths_mm))
+            np.save(os.path.join(run_dir, "patch_amplitudes_m.npy"),
+                    np.array(amplitudes_m))
             with open(os.path.join(run_dir, "patches.json"), "w") as f:
                 json.dump([dict(wavelength_mm=p["wavelength_mm"],
+                                amplitude_m=p["amplitude_m"],
                                 x_off=p["x_off"], y_off=p["y_off"],
                                 world_size=p["world_size"],
                                 rms_m=p["rms_m"], peak_m=p["peak_m"])
@@ -670,12 +809,14 @@ def build_scene(sim, run_dir):
                 spawns.append((p["x_off"], p["y_off"], dz))
             build_scene._spawn_offsets = spawns
 
-            print(f"[scene] {len(patches)} tiled wavelengths "
-                  f"({wavelengths_mm} mm), spacing={spacing:.2f}m, "
-                  f"amp={args.terrain_amplitude*1000:.1f}mm:", flush=True)
+            print(f"[scene] {len(patches)} tiled terrains "
+                  f"(l={wavelengths_mm} mm, "
+                  f"A={[round(a*1000,1) for a in amplitudes_m]} mm), "
+                  f"spacing={spacing:.2f}m:", flush=True)
             for i_, (sx, sy, sz) in enumerate(spawns):
                 print(f"        spawn[{i_}]  ({sx:+.3f}, {sy:+.3f}, "
-                      f"{sz:+.4f}) m  on  λ={wavelengths_mm[i_]:.1f}mm",
+                      f"{sz:+.4f}) m  on  l={wavelengths_mm[i_]:.1f}mm "
+                      f"A={amplitudes_m[i_]*1000:.1f}mm",
                       flush=True)
 
         else:
@@ -926,6 +1067,9 @@ class SensorRecorder:
         self.root_quat    = []   # (T, 4) wxyz
         self.joint_torque = []   # (T, n_joints) applied torque
         self.joint_vel    = []   # (T, n_joints) joint velocity
+        # ── STAGE-A (2026-06-15): world-frame root yaw rate ω_z (rad/s),
+        #    diagnostic for the anti-spin (net-yaw) constraint. ──
+        self.root_ang_vel = []   # (T,) world-frame ω_z (rad/s)
 
         # Mass + gravity for force normalisation
         try:
@@ -949,6 +1093,7 @@ class SensorRecorder:
         self.root_quat.clear()
         self.joint_torque.clear()
         self.joint_vel.clear()
+        self.root_ang_vel.clear()
         self._next_t = -1.0
 
     def maybe_record(self, t):
@@ -1025,6 +1170,14 @@ class SensorRecorder:
         self.root_quat.append(root_q.copy())
         self.joint_torque.append(jtau.copy())
         self.joint_vel.append(jvel.copy())
+        # ── STAGE-A (2026-06-15): world-frame yaw rate ω_z (rad/s). One
+        #    scalar per recorded step (kept length-aligned with the other
+        #    buffers; append 0.0 if the tensor is unavailable). ──
+        try:
+            self.root_ang_vel.append(
+                float(self.articulation.data.root_ang_vel_w[0][2].cpu().numpy()))
+        except Exception:
+            self.root_ang_vel.append(0.0)
         # ── Foot contact force (2026-05-04) ──
         # Read from the ContactSensor created at scene build time. The
         # sensor matches all `foot_<n>_<side>` prims and returns net
@@ -1077,6 +1230,9 @@ def apply_params(controller, params):
                     if hasattr(controller, "pitch_is_head") else (k > 0):
                 controller.pitch_kp_vec[k] = kp
                 controller.pitch_kv_vec[k] = kv
+
+    if "head_yaw_gain" in params:
+        controller.head_yaw_gain = float(params["head_yaw_gain"])
 
     # NOTE: body_amp / leg_amp / frequency are NOT in the search space.
     # The optimizer tunes ONLY impedance gains (kp, kv); the gait
@@ -1246,6 +1402,16 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
     rmse_body_deg = float(np.degrees(np.sqrt(np.mean((body_q - body_tgt) ** 2))))
     rmse_leg_deg  = float(np.degrees(np.sqrt(np.mean((leg_q  - leg_tgt ) ** 2))))
 
+    # STAGE A RE-SCOPE v2 (2026-06-16, PI directive — realized-wave gate):
+    # body_kp is tracking STIFFNESS, not commanded amplitude, so a "winner"
+    # could barely realize the sin wave (near-zero oscillation) yet pass the
+    # gates. Diagnostic = RMS (about each joint's post-settle mean → the true
+    # oscillation amplitude) of the MEASURED body-yaw joint angles, averaged
+    # over the body joints. Near-zero ⇒ wave not realized ⇒ de-spin claim void.
+    # Reported per top-N; NOT in the cost.
+    realized_body_yaw_rms_deg = float(np.degrees(
+        np.sqrt(np.mean(np.var(body_q, axis=0))))) if body_q.size else 0.0
+
     com_xy = np.asarray(recorder.com_pos)[mask, :2]
     com_z  = np.asarray(recorder.com_pos)[mask, 2]
     if len(com_xy) < 3:
@@ -1254,6 +1420,58 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
     seg_lens       = np.linalg.norm(np.diff(com_xy, axis=0), axis=1)
     path_length_m  = float(seg_lens.sum())
     straightness   = float(np.clip(displacement_m / max(path_length_m, 1e-9), 0.0, 1.0))
+
+    # ── STAGE-A (2026-06-15): SIGNED forward displacement + anti-spin ──
+    # The legacy objective rewards ‖com_xy‖ (direction-blind) so a fast
+    # spin-in-place or sideways drift scores as well as honest forward
+    # travel. Stage A re-anchors the objective on SIGNED forward progress
+    # along a chosen world axis (default world-x, sign −1 to match
+    # v_forward = −root_lin_vel_w[:,0]) and adds a net-yaw constraint that
+    # rejects spinning gaits. `displacement_m` (magnitude) is kept ONLY
+    # for the straightness gate, the parts dict, and cost_legacy — never
+    # in the active cost or a feasibility constraint.
+    _ax  = int(limits.get("fwd_axis", 0))
+    _sgn = float(limits.get("fwd_sign", -1.0))
+    fwd_signed = float(_sgn * (com_xy[-1, _ax] - com_xy[0, _ax]))
+    _dstep = _sgn * np.diff(com_xy[:, _ax])
+    fwd_frac = float(np.mean(_dstep > 0)) if _dstep.size else 0.0
+
+    # Net yaw (heading change) over the active window, from root quat.
+    # yaw = atan2(2(wz + xy), 1 − 2(y² + z²)); unwrap so multi-turn spins
+    # accumulate instead of wrapping to ±π.
+    rq_yaw = np.asarray(recorder.root_quat)
+    if rq_yaw.ndim == 2 and rq_yaw.shape[1] == 4 and rq_yaw.shape[0] == mask.shape[0]:
+        rq_yaw = rq_yaw[mask]
+    if rq_yaw.ndim == 2 and rq_yaw.shape[1] == 4 and rq_yaw.shape[0] >= 2:
+        wq, xq, yq, zq = rq_yaw[:, 0], rq_yaw[:, 1], rq_yaw[:, 2], rq_yaw[:, 3]
+        yaw = np.arctan2(2.0 * (wq * zq + xq * yq),
+                         1.0 - 2.0 * (yq * yq + zq * zq))
+        yaw_u = np.unwrap(yaw)
+        net_yaw_deg = float(np.degrees(yaw_u[-1] - yaw_u[0]))
+    else:
+        yaw_u = np.zeros(1)
+        net_yaw_deg = 0.0
+
+    # Yaw-rate RMS (deg/s). Prefer the recorded world-frame ω_z; fall back
+    # to a finite difference of the unwrapped heading (diagnostic only).
+    rav = np.asarray(recorder.root_ang_vel)
+    if rav.ndim == 1 and rav.size == mask.shape[0]:
+        rav_m = rav[mask]
+        yaw_rate_rms_deg_s = float(np.degrees(np.sqrt(np.mean(rav_m ** 2)))) \
+            if rav_m.size else 0.0
+    elif rav.ndim == 1 and rav.size >= 2:
+        # length mismatch (e.g. partial buffer) — guard by trimming to mask len
+        n = min(rav.size, mask.shape[0])
+        rav_m = rav[:n][mask[:n]]
+        yaw_rate_rms_deg_s = float(np.degrees(np.sqrt(np.mean(rav_m ** 2)))) \
+            if rav_m.size else 0.0
+    elif yaw_u.size >= 2:
+        _dt_yaw = max(float(np.median(np.diff(t[mask]))), 1e-4) \
+            if mask.sum() >= 2 else 1e-4
+        yaw_rate = np.diff(yaw_u) / _dt_yaw
+        yaw_rate_rms_deg_s = float(np.degrees(np.sqrt(np.mean(yaw_rate ** 2))))
+    else:
+        yaw_rate_rms_deg_s = 0.0
 
     active_time = max(float(t[mask][-1] - t[mask][0]), 1e-3)
     speed_mps   = displacement_m / active_time
@@ -1345,7 +1563,10 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
         # Instantaneous mechanical power per joint ≈ |τ · q̇|
         joint_power = np.abs(jt_post * jv_post)
         total_work = float(np.sum(joint_power) * dt_record)
-        cot = total_work / max(displacement_m, 1e-3)
+        # STAGE-A: CoT denominator is SIGNED forward progress (work spent
+        # going backward / spinning no longer "earns" a low CoT). Floor at
+        # 1e-3 m so a stuck/backward gait gets a large (bad) CoT.
+        cot = total_work / max(fwd_signed, 1e-3)
     else:
         total_work = 0.0
         cot = 0.0
@@ -1396,7 +1617,11 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
     nominal_clearance = float(limits.get("nominal_clearance_m", 0.0258))
     commanded_velocity = float(limits.get("commanded_velocity_mps", 0.040))
 
-    velocity_quality       = speed_mps / max(commanded_velocity, 1e-6)
+    # STAGE-A: velocity_quality is SIGNED forward velocity / commanded
+    # velocity (was speed_mps = ‖displacement‖ / time, direction-blind).
+    # A backward / spinning gait now reads negative quality and trips the
+    # min_velocity_quality floor instead of passing it on raw |speed|.
+    velocity_quality       = (fwd_signed / active_time) / max(commanded_velocity, 1e-6)
     # Use TERRAIN-AWARE clearance variation (rewards body drape, penalises
     # rigidity AND bouncing). Falls back to body_z RMS only if no heightmap
     # was stashed (e.g. unusual scene config).
@@ -1419,16 +1644,55 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
     if peak_fw > limits["force_limit"]:
         violations["force"] = peak_fw - limits["force_limit"]
 
+    # ── STAGE-A (2026-06-15) anti-spin / forward-progress constraints. ──
+    # All four thresholds default to OFF-equivalent values (floors = 0,
+    # frac_min = 0.6, yaw_tol = 15°) so the A0 baseline run is gated only
+    # by the existing constraints; A1+ tightens them via CLI / limits.
+    _yt = float(limits.get("yaw_tol_deg", 15.0))
+    if abs(net_yaw_deg) > _yt:
+        violations["net_yaw"] = abs(net_yaw_deg) - _yt
+    _sf = float(limits.get("straightness_floor", 0.0))
+    if straightness < _sf:
+        violations["straightness"] = _sf - straightness
+    _ff = float(limits.get("fwd_floor_m", 0.0))
+    if fwd_signed < _ff:
+        violations["fwd_floor"] = _ff - fwd_signed
+    _fm = float(limits.get("fwd_frac_min", 0.6))
+    if fwd_frac < _fm:
+        violations["fwd_frac"] = _fm - fwd_frac
+
     violation_total = sum(violations.values())
     constraint_penalty = 100.0 * violation_total
 
+    # ── STAGE-A (2026-06-15): FORWARD-DOMINANT objective. ──
+    # The legacy feasible cost was CoT alone (and CoT used ‖displacement‖),
+    # so a fast spin-in-place with low work scored well. Stage A makes the
+    # primary objective SIGNED forward progress (capped so a single
+    # runaway spawn can't dominate the multi-spawn mean), with optional
+    # CoT and compliance terms (default weight 0 → pure forward at A0).
+    #   _obj = −w_fwd·min(fwd_signed, cap)  +  w_cot·CoT  −  w_compl·compliance
+    # Lower is better, so −w_fwd·(forward) rewards going forward.
+    # STAGE A (2026-06-15, PI consolidated): objective = forward speed in
+    # BODY-LENGTHS PER CYCLE, UNCAPPED. BL_per_cycle = v_fwd / (f * L_body);
+    # v_fwd = fwd_signed/active_time (signed -x speed, m/s); f = gait freq Hz;
+    # L_body = measured body length m. CoT is DIAGNOSTIC ONLY now (removed from
+    # the objective). No cap (CPG coupling locks gait speed - PI 2026-06-15).
+    # Lower cost = faster forward, so -w_fwd*BL_per_cycle.
+    _Lb  = float(limits.get("L_body_m", 1.0))
+    _fhz = float(limits.get("gait_freq_hz", 1.0))
+    fwd_speed_mps = fwd_signed / active_time
+    BL_per_cycle  = fwd_speed_mps / max(_fhz * _Lb, 1e-9)
+    _obj = (
+        -float(limits.get("w_fwd", 100.0)) * BL_per_cycle
+        - float(limits.get("w_compl", 0.0)) * compliance_reward_d
+    )
     if violation_total > 0:
-        # Trial is infeasible. Cost = CoT + linear violation penalty so
-        # TPE gets a gradient back toward feasibility.
-        cost = cot + constraint_penalty
+        # Trial is infeasible. Add a linear violation penalty so TPE gets
+        # a gradient back toward feasibility.
+        cost = _obj + 100.0 * violation_total
     else:
-        # All constraints satisfied. Return CoT alone.
-        cost = cot
+        # All constraints satisfied. Forward-dominant objective alone.
+        cost = _obj
 
     # Legacy weighted-sum cost (DIAGNOSTIC ONLY — not used by optimizer):
     cost_legacy = (
@@ -1448,11 +1712,16 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
     parts = dict(
         buckled=False,
         rmse_body_yaw_deg=rmse_body_deg,
+        realized_body_yaw_rms_deg=realized_body_yaw_rms_deg,   # RE-SCOPE v2 realized-wave gate
         rmse_leg_deg=rmse_leg_deg,
         body_excess=body_excess,
         leg_excess=leg_excess,
         straightness=straightness,
         wobble=wobble,
+        fwd_signed=fwd_signed,
+        fwd_frac=fwd_frac,
+        net_yaw_deg=net_yaw_deg,
+        yaw_rate_rms_deg_s=yaw_rate_rms_deg_s,
         displacement_m=displacement_m,
         path_length_m=path_length_m,
         speed_mps=speed_mps,
@@ -1469,11 +1738,21 @@ def compute_cost(buckled, buckle_reason, recorder, weights, limits, settle_s):
         total_work_J=total_work,
         cost_of_transport=cot,
         velocity_quality=velocity_quality,
+        BL_per_cycle=BL_per_cycle,
+        fwd_speed_mps=fwd_speed_mps,
+        gait_freq_hz=_fhz,
+        L_body_m=_Lb,
         z_rms_ratio=z_rms_ratio,
         constraint_violations=";".join(
             f"{k}={v:.4f}" for k, v in violations.items()) if violations else "",
         n_violations=len(violations),
+        violation_total=float(violation_total),   # STAGE-A: sum of magnitudes
         constraint_penalty=constraint_penalty,
+        # STAGE-A (2026-06-15): the BARE forward-dominant objective (no
+        # violation penalty added). The two-terrain aggregation returns the
+        # TARGET patch's `obj` as the Optuna cost and adds the cross-patch
+        # violation penalty separately, so we expose it here unpenalised.
+        obj=float(_obj),
         cost_legacy=cost_legacy,
         cost=cost,
     )
@@ -1530,6 +1809,21 @@ def main():
         max_z_rms_ratio         = float(getattr(args, "max_z_rms_ratio", 0.10)),
         max_clearance_rms_ratio = float(getattr(args, "max_clearance_rms_ratio", 0.10)),
         max_roll_deg            = float(getattr(args, "max_roll_deg", 5.0)),
+        # ── STAGE-A (2026-06-15): signed-forward objective + anti-spin. ──
+        # Floors default to 0 (and fwd_frac_min to 0.6, the legacy-neutral
+        # value) so the A0 baseline run is NOT additionally gated; A1+
+        # tightens these via the new CLI flags.
+        fwd_axis           = int(getattr(args, "fwd_axis", 0)),
+        fwd_sign           = float(getattr(args, "fwd_sign", -1.0)),
+        yaw_tol_deg        = float(getattr(args, "yaw_tol_deg", 15.0)),
+        straightness_floor = float(getattr(args, "straightness_floor", 0.0)),
+        fwd_floor_m        = float(getattr(args, "fwd_floor_m", 0.0)),
+        fwd_frac_min       = float(getattr(args, "fwd_frac_min", 0.6)),
+        fwd_cap_m          = float(getattr(args, "fwd_cap_m", 0.1)),
+        w_fwd              = float(getattr(args, "w_fwd", 100.0)),
+        w_cot              = float(getattr(args, "w_cot", 0.0)),
+        w_compl            = float(getattr(args, "w_compl", 0.0)),
+        gait_freq_hz       = _freq,
     )
     print(f"[bio-opt] weights: {weights}", flush=True)
     print(f"[bio-opt] limits : {limits}",  flush=True)
@@ -1571,11 +1865,332 @@ def main():
     print(f"[opt] articulation loaded: {robot.num_joints} joints, "
           f"{robot.num_bodies} bodies", flush=True)
 
+    # STAGE A (2026-06-15): measure body length root->tail from the loaded
+    # model (bounding-box longest axis at the default/reset pose) and feed it
+    # to the BL_per_cycle objective via limits. f*L_body is constant in ROUND 1
+    # (single freq), so this sets the reported BL/cycle units + the ROUND 2
+    # per-frequency normalization; it does NOT change ROUND 1 ranking.
+    _bp = robot.data.body_pos_w[0]                       # (num_bodies, 3) world
+    _spans = (_bp.max(dim=0).values - _bp.min(dim=0).values)
+    L_body_m = float(_spans.max().item())
+    limits["L_body_m"] = L_body_m
+    print(f"[bio] L_body = {L_body_m:.4f} m (root->tail, bbox longest axis); "
+          f"gait_freq = {_freq:.2f} Hz", flush=True)
+
     controller = ImpedanceTravelingWaveController(robot, CFG_PATH)
     settle_s   = controller.settle_time + controller.ramp_time + 0.5
 
     recorder = SensorRecorder(robot, controller, dt_record=1/200.0,
                               settle_time=settle_s)
+
+    # ════════════════════════════════════════════════════════════════════
+    # STAGE-A A0 MEASUREMENT (--stage-a-baseline): no sweep. ──────────────
+    # Run ONE trial per spawn with the controller's CURRENT (YAML / known-
+    # good) gains through the SAME multi-spawn eval path (same reset /
+    # run_trial / compute_cost), then print a per-spawn + mean block of the
+    # signed-forward + anti-spin diagnostics. This is the baseline against
+    # which the Stage-A objective redesign is judged. Reuses the existing
+    # plumbing verbatim; adds no parameter patching and no Optuna study.
+    # ════════════════════════════════════════════════════════════════════
+    if args.stage_a_baseline:
+        spawn_offsets = list(getattr(build_scene, "_spawn_offsets",
+                                     [(0.0, 0.0, 0.0)]))
+        terrain_patches = getattr(build_scene, "_terrain_patches", None)
+        _fwd_ax  = int(limits.get("fwd_axis", 0))
+        _fwd_sgn = float(limits.get("fwd_sign", -1.0))
+        _ax_name = {0: "x", 1: "y"}.get(_fwd_ax, str(_fwd_ax))
+
+        rows_a0 = []   # one dict per spawn
+        print("\n" + "=" * 72, flush=True)
+        print("[stage-a A0] BASELINE (current YAML gains) - no sweep", flush=True)
+        print(f"[stage-a A0] forward axis = world-{_ax_name} (idx {_fwd_ax}), "
+              f"fwd_sign = {_fwd_sgn:+.1f}  "
+              f"(forward = {_fwd_sgn:+.0f}*d_com_{_ax_name})", flush=True)
+        print(f"[stage-a A0] {len(spawn_offsets)} spawn(s)", flush=True)
+        print("=" * 72, flush=True)
+
+        t0 = time.time()
+        for s_idx, spawn_off in enumerate(spawn_offsets):
+            if terrain_patches is not None and s_idx < len(terrain_patches):
+                patch = terrain_patches[s_idx]
+                build_scene._last_heightmap    = patch["heightmap"]
+                build_scene._last_arena_size_m = float(patch["world_size"])
+                build_scene._active_x_offset   = float(patch["x_off"])
+                build_scene._active_y_offset   = float(patch["y_off"])
+
+            reset_robot_and_controller(robot, controller, sim,
+                                       spawn_offset_xyz=spawn_off)
+            recorder.reset()
+            buckled_s, reason_s = run_trial(sim, robot, controller, recorder,
+                                            args.duration)
+
+            # Raw signed Δcom along the forward axis, from the post-settle
+            # recorder buffer (same settle mask compute_cost uses). Printed
+            # ALONGSIDE the cost's fwd_signed so the sign is auditable.
+            t_arr = np.asarray(recorder.times)
+            _mask = t_arr >= settle_s
+            raw_dcom = float("nan")
+            if np.asarray(recorder.com_pos).ndim == 2 and _mask.sum() >= 2:
+                _cax = np.asarray(recorder.com_pos)[_mask, _fwd_ax]
+                raw_dcom = float(_cax[-1] - _cax[0])
+
+            cost_s, parts_s = compute_cost(buckled_s, reason_s, recorder,
+                                           weights, limits, settle_s=settle_s)
+            # STAGE-A (2026-06-15): per-TERRAIN feasibility. A patch is
+            # feasible iff it did not buckle AND compute_cost found no
+            # constraint violations on it (n_violations == 0). The terrain
+            # label (l, A) is pulled from the active patch dict.
+            _buck   = bool(parts_s.get("buckled", False))
+            _nviol  = int(parts_s.get("n_violations", 1 if _buck else 0))
+            _feas_s = (not _buck) and (_nviol == 0)
+            if terrain_patches is not None and s_idx < len(terrain_patches):
+                _wl_s  = float(terrain_patches[s_idx]["wavelength_mm"])
+                _amp_s = float(terrain_patches[s_idx]["amplitude_m"])
+            else:
+                _wl_s  = float(args.terrain_wavelength)
+                _amp_s = float(args.terrain_amplitude)
+            row = dict(
+                spawn=s_idx,
+                wavelength_mm=_wl_s,
+                amplitude_m=_amp_s,
+                buckled=_buck,
+                reason=parts_s.get("reason", ""),
+                cost=float(cost_s),
+                obj=float(parts_s.get("obj", cost_s)),
+                n_violations=_nviol,
+                violation_total=float(parts_s.get("violation_total", 0.0)),
+                constraint_violations=parts_s.get("constraint_violations", ""),
+                feasible=bool(_feas_s),
+                fwd_signed=float(parts_s.get("fwd_signed", float("nan"))),
+                net_yaw_deg=float(parts_s.get("net_yaw_deg", float("nan"))),
+                straightness=float(parts_s.get("straightness", float("nan"))),
+                body_roll_rms_deg=float(
+                    parts_s.get("body_roll_rms_deg", float("nan"))),
+                yaw_rate_rms_deg_s=float(
+                    parts_s.get("yaw_rate_rms_deg_s", float("nan"))),
+                displacement_m=float(parts_s.get("displacement_m", float("nan"))),
+                speed_mps=float(parts_s.get("speed_mps", float("nan"))),
+                raw_dcom=raw_dcom,
+            )
+            rows_a0.append(row)
+            _sign_txt = ("+" if (row["raw_dcom"] == row["raw_dcom"]
+                                 and row["raw_dcom"] >= 0) else "-")
+            print(f"  terrain {s_idx:2d} (l={_wl_s:5.1f}mm A={_amp_s*1000:5.1f}mm): "
+                  f"buckled={int(row['buckled'])}  "
+                  f"feasible={int(row['feasible'])}  "
+                  f"fwd_signed={row['fwd_signed']:+.5f} m  "
+                  f"net_yaw={row['net_yaw_deg']:+8.2f} deg  "
+                  f"straight={row['straightness']:.3f}  "
+                  f"roll={row['body_roll_rms_deg']:5.2f} deg  "
+                  f"yaw_rate_rms={row['yaw_rate_rms_deg_s']:7.2f} deg/s  "
+                  f"speed={row['speed_mps']*1000:6.2f} mm/s  "
+                  f"raw dcom_{_ax_name}={row['raw_dcom']:+.5f} m ({_sign_txt})  "
+                  f"cost={row['cost']:.4f}",
+                  flush=True)
+            if row["n_violations"] > 0 and row["constraint_violations"]:
+                print(f"            (violations: {row['constraint_violations']})",
+                      flush=True)
+            if row["buckled"] and row["reason"]:
+                print(f"            (buckle reason: {row['reason']})", flush=True)
+        wall = time.time() - t0
+
+        def _mean(key):
+            vals = [r[key] for r in rows_a0
+                    if isinstance(r[key], float) and r[key] == r[key]]
+            return float(np.mean(vals)) if vals else float("nan")
+
+        n_buck = sum(int(r["buckled"]) for r in rows_a0)
+
+        # -- STAGE-A (2026-06-15) WORST-CASE verdict across terrains --
+        # The baseline is FEASIBLE only if EVERY terrain is feasible (no
+        # buckle AND zero violations) - the same worst-case gate the Optuna
+        # objective uses. The TARGET terrain (nearest --stage-a-target-
+        # wavelength) supplies the reported objective.
+        target_wl = float(getattr(args, "stage_a_target_wavelength", 60.0))
+        if terrain_patches is not None and len(terrain_patches) > 0:
+            _t_idx = int(np.argmin([abs(float(p["wavelength_mm"]) - target_wl)
+                                    for p in terrain_patches]))
+        else:
+            _t_idx = 0
+        _t_idx = min(_t_idx, len(rows_a0) - 1)
+        worst_feasible = all(bool(r["feasible"]) for r in rows_a0)
+        cross_viol = float(sum(float(r["violation_total"]) for r in rows_a0))
+        target_obj = float(rows_a0[_t_idx].get("obj", rows_a0[_t_idx]["cost"]))
+
+        print("-" * 72, flush=True)
+        print(f"[stage-a A0] PER-TERRAIN feasibility ({n_buck} buckled):",
+              flush=True)
+        for r in rows_a0:
+            print(f"             terrain {r['spawn']:2d} "
+                  f"(l={r['wavelength_mm']:5.1f}mm A={r['amplitude_m']*1000:5.1f}mm): "
+                  f"feasible={int(r['feasible'])}  "
+                  f"buckled={int(r['buckled'])}  "
+                  f"n_viol={r['n_violations']}  "
+                  f"fwd={r['fwd_signed']:+.5f}m  "
+                  f"net_yaw={r['net_yaw_deg']:+7.2f}deg  "
+                  f"straight={r['straightness']:.3f}  "
+                  f"roll={r['body_roll_rms_deg']:5.2f}deg  "
+                  f"yaw_rate_rms={r['yaw_rate_rms_deg_s']:6.2f}deg/s",
+                  flush=True)
+            if r["constraint_violations"]:
+                print(f"                       viol: {r['constraint_violations']}",
+                      flush=True)
+        print("-" * 72, flush=True)
+        print(f"[stage-a A0] MEAN over {len(rows_a0)} terrain(s):", flush=True)
+        print(f"             fwd_signed         = {_mean('fwd_signed'):+.5f} m",
+              flush=True)
+        print(f"             net_yaw_deg        = {_mean('net_yaw_deg'):+.2f} deg",
+              flush=True)
+        print(f"             straightness       = {_mean('straightness'):.3f}",
+              flush=True)
+        print(f"             body_roll_rms_deg  = {_mean('body_roll_rms_deg'):.2f} deg",
+              flush=True)
+        print(f"             yaw_rate_rms_deg_s = {_mean('yaw_rate_rms_deg_s'):.2f} deg/s",
+              flush=True)
+        print(f"             displacement_m     = {_mean('displacement_m'):.5f} m",
+              flush=True)
+        print(f"             speed_mps          = {_mean('speed_mps')*1000:.2f} mm/s",
+              flush=True)
+        print(f"             raw dcom_{_ax_name}          = {_mean('raw_dcom'):+.5f} m",
+              flush=True)
+        print("-" * 72, flush=True)
+        _t_wl = (float(terrain_patches[_t_idx]["wavelength_mm"])
+                 if terrain_patches is not None and _t_idx < len(terrain_patches)
+                 else float(args.terrain_wavelength))
+        _verdict = "FEASIBLE" if worst_feasible else "INFEASIBLE"
+        print(f"[stage-a A0] WORST-CASE verdict      = {_verdict}", flush=True)
+        print(f"[stage-a A0] target terrain          = [{_t_idx}] l={_t_wl:.1f}mm "
+              f"(nearest to {target_wl:.1f}mm)", flush=True)
+        print(f"[stage-a A0] target objective (_obj) = {target_obj:.4f}", flush=True)
+        print(f"[stage-a A0] cross-terrain violation = {cross_viol:.4f}", flush=True)
+        _two_terr_cost = target_obj if worst_feasible \
+            else target_obj + 100.0 * cross_viol
+        print(f"[stage-a A0] two-terrain Optuna cost = {_two_terr_cost:.4f}",
+              flush=True)
+        print(f"[stage-a A0] done in {wall:.1f}s - no study written.", flush=True)
+        print("=" * 72, flush=True)
+        print("[bio] report -> stage-a baseline complete", flush=True)
+        sim_app.close()
+        return 0
+
+    # ════════════════════════════════════════════════════════════════════
+    # ROUND 2 STABILITY BATTERY (--battery, RE-SCOPE v2 2026-06-16) ────────
+    # Re-evaluate the top-N lowest-cost ROUND 1 controllers across {this
+    # terrain} x {--battery-freqs} Hz. Reuses the SAME plumbing as the search
+    # (apply_params / set_frequency / reset_robot_and_controller / run_trial /
+    # compute_cost) so metrics cannot drift. ONE terrain per invocation (the
+    # terrain is whatever build_scene installed above). When set_frequency(f)
+    # is called we MUST recompute limits['gait_freq_hz'] AND
+    # limits['commanded_velocity_mps'] (= 2*L_proj*sin(A_yaw)*f) — else
+    # BL/cycle and velocity_quality would be computed at f=1.0 (5x off at 5 Hz).
+    # PASS = STABLE: no buckle, |net_yaw|<=15, roll<=5, root-z p2p bounded,
+    # non-trivial forward. 5 Hz on --flat is the hard stressor.
+    # ════════════════════════════════════════════════════════════════════
+    if args.battery:
+        import math as _math
+        with open(CFG_PATH, "r", encoding="utf-8") as _fh:
+            _cfgb = yaml.safe_load(_fh)
+        _A_yaw_b  = float(_cfgb.get("leg_wave", {}).get("amplitudes", [0.6])[0])
+        _L_proj_b = float(getattr(args, "leg_proj_length_m", 0.035))
+        freqs = [float(x) for x in str(args.battery_freqs).split(",") if x.strip()]
+        terr_tag = "flat" if args.flat else \
+            f"wl{args.terrain_wavelength:.0f}_a{args.terrain_amplitude*1000:.0f}"
+
+        def _flb(r, k, d=0.0):
+            try:
+                v = r.get(k, "")
+                return float(v) if v not in ("", None) else d
+            except (TypeError, ValueError):
+                return d
+
+        with open(args.battery, "r", newline="", encoding="utf-8") as _cf:
+            _all_rows = list(csv.DictReader(_cf))
+        _cand = [r for r in _all_rows
+                 if _flb(r, "cost", 1e12) < BUCKLED_COST * 0.99]
+        _cand.sort(key=lambda r: _flb(r, "cost", 1e12))
+        topN = _cand[:max(1, args.battery_top_n)]
+        spawn_off0 = list(getattr(build_scene, "_spawn_offsets",
+                                  [(0.0, 0.0, 0.0)]))[0]
+
+        print("\n" + "=" * 72, flush=True)
+        print(f"[battery] terrain={terr_tag}  freqs={freqs} Hz  "
+              f"top_n={len(topN)}  (one terrain per invocation)", flush=True)
+        print(f"[battery] commanded_velocity = 2*L_proj({_L_proj_b})*"
+              f"sin(A_yaw={_A_yaw_b:.3f})*f ;  PASS = no buckle, |net_yaw|<="
+              f"{float(limits.get('yaw_tol_deg',15.0)):.0f}, roll<="
+              f"{float(limits.get('max_roll_deg',5.0)):.0f}, z_p2p<="
+              f"{args.battery_z_bound_m*1000:.0f}mm, fwd>="
+              f"{args.battery_fwd_min_m*1000:.0f}mm", flush=True)
+        print("=" * 72, flush=True)
+
+        _GAIN_KEYS = ("body_kp", "body_kv", "hip_yaw_kp", "hip_yaw_kv",
+                      "hip_pitch_kp", "hip_pitch_kv", "tibia_kp", "tibia_kv",
+                      "tarsus_kp", "tarsus_kv", "pitch_kp", "pitch_kv",
+                      "head_yaw_gain")
+        bat_rows = []
+        for r in topN:
+            trial_id = int(_flb(r, "trial", -1))
+            params = {k: _flb(r, k) for k in _GAIN_KEYS
+                      if r.get(k, "") not in ("", None)}
+            apply_params(controller, params)
+            for fhz in freqs:
+                controller.set_frequency(fhz)
+                lim_f = dict(limits)
+                lim_f["gait_freq_hz"] = fhz
+                lim_f["commanded_velocity_mps"] = \
+                    2.0 * _L_proj_b * _math.sin(_A_yaw_b) * fhz
+                recorder.reset()
+                reset_robot_and_controller(robot, controller, sim,
+                                           spawn_offset_xyz=spawn_off0)
+                buckled_c, reason_c = run_trial(sim, robot, controller, recorder,
+                                                args.duration)
+                cost_c, parts_c = compute_cost(buckled_c, reason_c, recorder,
+                                               weights, lim_f, settle_s)
+                t_arr = np.asarray(recorder.times)
+                _m = t_arr >= settle_s
+                _cz = np.asarray(recorder.com_pos)
+                z_ptp = float(_cz[_m, 2].max() - _cz[_m, 2].min()) \
+                    if _cz.ndim == 2 and _m.sum() >= 2 else float("nan")
+                net_yaw = float(parts_c.get("net_yaw_deg", float("nan")))
+                roll    = float(parts_c.get("body_roll_rms_deg", float("nan")))
+                fwd     = float(parts_c.get("fwd_signed", float("nan")))
+                blc     = float(parts_c.get("BL_per_cycle", float("nan")))
+                buck    = bool(parts_c.get("buckled", buckled_c))
+                passed = (
+                    (not buck)
+                    and np.isfinite(net_yaw)
+                    and abs(net_yaw) <= float(limits.get("yaw_tol_deg", 15.0))
+                    and np.isfinite(roll)
+                    and roll <= float(limits.get("max_roll_deg", 5.0))
+                    and np.isfinite(z_ptp)
+                    and z_ptp <= float(args.battery_z_bound_m)
+                    and np.isfinite(fwd)
+                    and fwd >= float(args.battery_fwd_min_m))
+                bat_rows.append(dict(
+                    terrain=terr_tag, trial=trial_id, freq_hz=fhz,
+                    PASS=int(passed), buckled=int(buck),
+                    net_yaw_deg=net_yaw, body_roll_rms_deg=roll,
+                    root_z_ptp_m=z_ptp, fwd_signed_m=fwd, BL_per_cycle=blc,
+                    realized_body_yaw_rms_deg=float(
+                        parts_c.get("realized_body_yaw_rms_deg", float("nan"))),
+                    commanded_velocity_mps=lim_f["commanded_velocity_mps"],
+                    reason=reason_c if buck else ""))
+                print(f"  trial {trial_id:>3}  f={fhz:>3.0f}Hz  "
+                      f"{'PASS' if passed else 'FAIL'}  buck={int(buck)}  "
+                      f"net_yaw={net_yaw:+7.2f}  roll={roll:5.2f}  "
+                      f"z_p2p={z_ptp*1000:6.1f}mm  fwd={fwd:+.4f}m  "
+                      f"BL/cyc={blc:.4f}", flush=True)
+
+        _out_dir = os.path.dirname(os.path.abspath(args.battery))
+        out_csv  = os.path.join(_out_dir, f"battery_{terr_tag}.csv")
+        _dump_csv(out_csv, bat_rows)
+        _npass = sum(r["PASS"] for r in bat_rows)
+        print("-" * 72, flush=True)
+        print(f"[battery] {_npass}/{len(bat_rows)} cells PASS  ->  {out_csv}",
+              flush=True)
+        print(f"[bio] report -> battery {terr_tag} complete", flush=True)
+        sim_app.close()
+        return 0
 
     # ── Optuna study ──
     storage = f"sqlite:///{storage_path}"
@@ -1770,8 +2385,18 @@ def main():
         _hp_lo, _hp_hi = _rng("hip_pitch_kp", 1e-5, 0.5)
         _hpv_lo, _hpv_hi = _rng("hip_pitch_kv", 1e-8, 5e-2)
         params = dict(
-            body_kp      = trial.suggest_float("body_kp",      _b_lo,  _b_hi,  log=True),
-            body_kv      = trial.suggest_float("body_kv",      _bv_lo, _bv_hi, log=True),
+            # STAGE A RE-SCOPE v2 (2026-06-16, PI directive): the BODY WAVE is
+            # PINNED to the shipped YAML gains (configs/farms_controller.yaml:55-56)
+            # — body_kp/body_kv are REMOVED from the TPE search and injected as
+            # constants so EVERY trial runs a genuine body wave. (Prior Round 1
+            # collapsed 204/250 trials to body_kp≈1e-4 = wave effectively OFF; the
+            # "no-spin winners" then leaned on the head_yaw servo, not a real gait.)
+            # Keys are kept because apply_params indexes params["body_kp"] directly.
+            body_kp      = 0.14396435461660606,
+            body_kv      = 0.003710391030836182,
+            head_yaw_gain = 0.0,   # RE-SCOPE v2: heading servo OFF — pinned to 0
+                                   # (not searched) AND injected so every CSV row
+                                   # records head_yaw_gain=0 (⛳A per-trial audit).
             hip_yaw_kp   = trial.suggest_float("hip_yaw_kp",   _hy_lo, _hy_hi, log=True),
             hip_yaw_kv   = trial.suggest_float("hip_yaw_kv",   _hyv_lo, _hyv_hi, log=True),
             hip_pitch_kp = trial.suggest_float("hip_pitch_kp", _hp_lo, _hp_hi, log=True),
@@ -1791,6 +2416,8 @@ def main():
             _pv_lo, _pv_hi = _rng("pitch_kv", 1e-6, 5e-1)
             params["pitch_kp"] = trial.suggest_float("pitch_kp", _pk_lo, _pk_hi, log=True)
             params["pitch_kv"] = trial.suggest_float("pitch_kv", _pv_lo, _pv_hi, log=True)
+        if args.tune_head_yaw:
+            params["head_yaw_gain"] = trial.suggest_float("head_yaw_gain", 0.0, 3.0)
 
         # NOTE: body_amp / leg_amp_dof0 / leg_amp_dof1 / frequency
         # are intentionally NOT in the search space. They are gait-
@@ -1852,8 +2479,9 @@ def main():
                 wall = time.time() - t0
                 wls = (args.wavelengths_mm or "").split(",")
                 wl_failed = wls[s_idx] if s_idx < len(wls) else "?"
-                print(f"  [trial {trial.number:4d}] PRUNED on patch[{s_idx}] "
-                      f"λ={wl_failed.strip()}mm: {reason_s}  ({wall:.1f}s)",
+                print(f"  [trial {trial.number:4d}] PRUNED (buckle -> "
+                      f"INFEASIBLE) on patch[{s_idx}] "
+                      f"l={wl_failed.strip()}mm: {reason_s}  ({wall:.1f}s)",
                       flush=True)
                 row = {**params, "trial": trial.number, "wall_s": wall,
                        "pruned_at_patch": s_idx,
@@ -1864,13 +2492,68 @@ def main():
                 raise optuna.TrialPruned()
         wall = time.time() - t0
 
-        # ── Aggregate ──
-        cost = float(np.mean(per_spawn_costs))
+        # -- Aggregate - STAGE-A (2026-06-15) TWO-TERRAIN worst-case --------
+        # OLD: cost = mean over spawns (every patch averaged into one number,
+        #      and CoT-only feasibility). A gait that walked the easy patch
+        #      and stalled the hard one could still average to a low cost.
+        #
+        # NEW (auditor req #2): each tiled patch IS a distinct TERRAIN.
+        #   * FEASIBILITY is WORST-CASE: the trial is feasible ONLY if EVERY
+        #     patch is feasible (no buckle AND compute_cost's per-patch
+        #     n_violations == 0 - that single counter already bundles the
+        #     forward-floor / net-yaw / roll / straightness / velocity-
+        #     quality / clearance / force gates).
+        #   * The OBJECTIVE returned to Optuna is the TARGET patch's BARE
+        #     forward-dominant `_obj` (matched by nearest wavelength to
+        #     --stage-a-target-wavelength), NOT the mean. So TPE optimises
+        #     forward progress on the RL rough end (l=60 / S=0.267) while the
+        #     secondary terrain (l=18 / S=0.556) only has veto power.
+        #   * If INFEASIBLE, cost = target `_obj` + 100 * (sum of violation
+        #     magnitudes across ALL patches) so TPE still gets a gradient
+        #     back toward joint feasibility. Any buckle => infeasible.
         any_buckled = any(per_spawn_buckled)
+
+        # Identify the TARGET patch index by nearest wavelength. In tiled
+        # mode spawn i <-> terrain_patches[i] one-to-one; fall back to spawn 0
+        # when wavelengths are unavailable (legacy single-terrain runs).
+        target_wl = float(getattr(args, "stage_a_target_wavelength", 60.0))
+        if terrain_patches is not None and len(terrain_patches) > 0:
+            target_idx = int(np.argmin([abs(float(p["wavelength_mm"]) - target_wl)
+                                        for p in terrain_patches]))
+        else:
+            target_idx = 0
+        target_idx = min(target_idx, len(per_spawn_parts) - 1)
+
+        # Worst-case feasibility: a patch with no parts entry (i.e. it
+        # buckled before compute_cost produced metrics) is INFEASIBLE.
+        per_patch_feasible = [
+            (not per_spawn_buckled[i])
+            and int(per_spawn_parts[i].get("n_violations", 1)) == 0
+            for i in range(len(per_spawn_parts))
+        ]
+        feasible = all(per_patch_feasible) and not any_buckled
+
+        # Target objective = the target patch's BARE _obj (no penalty added).
+        # If the target buckled, compute_cost returned BUCKLED_COST as `cost`
+        # and no `obj`; fall back to that cost so the number stays large/bad.
+        target_obj = float(per_spawn_parts[target_idx].get(
+            "obj", per_spawn_costs[target_idx]))
+
+        # Cross-patch violation total (sum of per-patch violation magnitudes).
+        cross_violation_total = float(sum(
+            float(per_spawn_parts[i].get("violation_total", 0.0))
+            for i in range(len(per_spawn_parts))))
+
+        if feasible:
+            cost = target_obj
+        else:
+            cost = target_obj + 100.0 * cross_violation_total
 
         # Build a single "parts" record for CSV. Numeric parts: mean across
         # spawns. String/bool parts: take spawn 0 (and add per-spawn columns
-        # for full audit).
+        # for full audit). The Optuna-returned `cost` is OVERWRITTEN below to
+        # the two-terrain value (so the per-patch-mean `cost` from compute_cost
+        # is not what's logged as the trial cost).
         parts = {}
         for k, v in per_spawn_parts[0].items():
             try:
@@ -1878,35 +2561,60 @@ def main():
                 parts[k] = float(np.mean(vals))
             except (TypeError, ValueError, KeyError):
                 parts[k] = v
-        # Per-spawn cost & key metrics, suffixed _spawn{i}
+        # Per-patch (== per-terrain) metrics, suffixed _spawn{i}. Keep the
+        # feasibility-relevant channels per patch so GATE A can show
+        # per-terrain feasibility (fwd_signed, net_yaw, straightness, roll,
+        # buckled) plus the per-patch cost / objective / violations.
         for i, p in enumerate(per_spawn_parts):
             parts[f"cost_spawn_{i}"]            = per_spawn_costs[i]
+            parts[f"obj_spawn_{i}"]             = p.get("obj", per_spawn_costs[i])
+            parts[f"n_violations_spawn_{i}"]    = int(p.get("n_violations", 0))
+            parts[f"violation_total_spawn_{i}"] = float(p.get("violation_total", 0.0))
+            parts[f"constraint_violations_spawn_{i}"] = p.get("constraint_violations", "")
+            parts[f"feasible_spawn_{i}"]        = int(per_patch_feasible[i])
+            parts[f"fwd_signed_spawn_{i}"]      = p.get("fwd_signed", 0.0)
+            parts[f"net_yaw_deg_spawn_{i}"]     = p.get("net_yaw_deg", 0.0)
+            parts[f"straightness_spawn_{i}"]    = p.get("straightness", 0.0)
+            parts[f"body_roll_rms_deg_spawn_{i}"] = p.get("body_roll_rms_deg", 0.0)
             parts[f"speed_mps_spawn_{i}"]       = p.get("speed_mps", 0.0)
             parts[f"velocity_quality_spawn_{i}"]= p.get("velocity_quality", 0.0)
             parts[f"clearance_rms_m_spawn_{i}"] = p.get("clearance_rms_m", 0.0)
             parts[f"buckled_spawn_{i}"]         = int(per_spawn_buckled[i])
-        parts["cost_mean"]    = cost
+            if terrain_patches is not None and i < len(terrain_patches):
+                parts[f"wavelength_mm_spawn_{i}"] = float(terrain_patches[i]["wavelength_mm"])
+                parts[f"amplitude_m_spawn_{i}"]   = float(terrain_patches[i]["amplitude_m"])
+        # STAGE-A aggregation summary columns.
+        parts["target_idx"]            = target_idx
+        parts["target_wavelength_mm"]  = (
+            float(terrain_patches[target_idx]["wavelength_mm"])
+            if terrain_patches is not None and target_idx < len(terrain_patches)
+            else float("nan"))
+        parts["target_obj"]            = target_obj
+        parts["feasible"]              = int(feasible)
+        parts["cross_violation_total"] = cross_violation_total
+        parts["cost_mean"]    = float(np.mean(per_spawn_costs))   # legacy ref
         parts["cost_max"]     = float(np.max(per_spawn_costs))
         parts["cost_std"]     = float(np.std(per_spawn_costs))
         parts["n_spawns"]     = len(spawn_offsets)
         parts["n_buckled"]    = int(sum(per_spawn_buckled))
         parts["buckled"]      = any_buckled
+        parts["cost"]         = cost   # the two-terrain value returned to Optuna
 
         if any_buckled:
             print(f"  [trial {trial.number:4d}] BUCKLE in "
-                  f"{sum(per_spawn_buckled)}/{len(spawn_offsets)} spawns  "
-                  f"cost_mean={cost:.1f}  "
+                  f"{sum(per_spawn_buckled)}/{len(spawn_offsets)} patches  "
+                  f"cost={cost:.1f}  INFEASIBLE  "
                   f"costs={[f'{c:.2f}' for c in per_spawn_costs]}  "
                   f"({wall:.1f}s)", flush=True)
         else:
-            mean_speed = float(np.mean([p.get('speed_mps', 0.0)
-                                        for p in per_spawn_parts]))
-            mean_strt  = float(np.mean([p.get('straightness', 0.0)
-                                        for p in per_spawn_parts]))
-            print(f"  [trial {trial.number:4d}] cost={cost:7.3f}  "
-                  f"(spawns={[f'{c:.2f}' for c in per_spawn_costs]})  "
-                  f"speed={mean_speed*1000:5.1f}mm/s  "
-                  f"strt={mean_strt:.3f}  "
+            _verdict = "FEASIBLE" if feasible else "INFEASIBLE"
+            _fwd_list = [f"{float(p.get('fwd_signed', 0.0)):+.4f}"
+                         for p in per_spawn_parts]
+            print(f"  [trial {trial.number:4d}] cost={cost:8.3f}  {_verdict}  "
+                  f"target[{target_idx}] obj={target_obj:8.3f}  "
+                  f"feas={[int(f) for f in per_patch_feasible]}  "
+                  f"fwd={_fwd_list}  "
+                  f"x_viol={cross_violation_total:.3f}  "
                   f"({wall:.1f}s)", flush=True)
 
         row = {**params, **parts, "trial": trial.number, "wall_s": wall}
@@ -1968,6 +2676,7 @@ def main():
     # test_walk.py. Otherwise the GPU / Fabric / RTX context is locked
     # by this process and the subprocess will fail to initialise its
     # own renderer.
+    print("[bio] report -> sweep complete", flush=True)
     sim_app.close()
 
     # ── Render the winning trial via test_walk.py (subprocess) ──
@@ -2018,8 +2727,11 @@ def _patch_yaml(base_cfg, params):
     import copy
     cfg = copy.deepcopy(base_cfg)
     imp = cfg.setdefault("impedance", {})
-    imp["body_kp"] = float(params["body_kp"])
-    imp["body_kv"] = float(params["body_kv"])
+    # RE-SCOPE v2 (2026-06-16): body_kp/body_kv are PINNED (removed from the TPE
+    # search), so optuna's best.params no longer carries them — fall back to the
+    # YAML value (which IS the pinned constant) instead of KeyError-ing.
+    imp["body_kp"] = float(params.get("body_kp", imp.get("body_kp", 0.14396435461660606)))
+    imp["body_kv"] = float(params.get("body_kv", imp.get("body_kv", 0.003710391030836182)))
     if "pitch_kp" in params:
         imp["pitch_kp"] = float(params["pitch_kp"])
         imp["pitch_kv"] = float(params["pitch_kv"])

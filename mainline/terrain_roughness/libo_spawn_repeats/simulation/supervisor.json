@@ -1,0 +1,720 @@
+{
+  "complete": true,
+  "all_attempts_accounted_for": true,
+  "started_unix": 1790732616.1759746,
+  "elapsed_s": 2440.910020828247,
+  "finished": [
+    {
+      "job": "flat_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 19944,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "flat_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 26568,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 25876,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23612,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18880,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14720,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 5044,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9244,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18784,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18816,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 25836,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23384,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 4576,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        5,
+        6
+      ]
+    },
+    {
+      "job": "height_x0p75_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 7428,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s00_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11068,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s00_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 22476,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s01_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10252,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s01_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9832,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10236,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 15920,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s03_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11828,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s03_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 15100,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9244,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14224,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s03_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 3460,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s03_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11860,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 4052,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 25400,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s03_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23992,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s03_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 22600,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s02_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 24644,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s02_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 25744,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s03_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9952,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s03_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9920,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s04_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 12296,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s04_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 15220,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s05_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11668,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s05_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11200,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s04_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 24772,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s04_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9884,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s05_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6360,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s05_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 7580,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s04_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9796,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s04_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 22612,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s05_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8960,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        25
+      ],
+      "interrupted_peer_source_ids": [
+        26,
+        27
+      ]
+    },
+    {
+      "job": "height_x0p25_s05_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18820,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s04_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14516,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s04_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 22708,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s05_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23584,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s05_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 24648,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s06_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 2684,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s06_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6648,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s07_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 12688,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s07_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 23336,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s06_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 5056,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s06_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 2716,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s07_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 25148,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s07_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 16532,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s06_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10960,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s06_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14384,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s07_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 3868,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s07_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10172,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s06_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10608,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s06_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13388,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s07_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 21996,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s07_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13476,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s08_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6208,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s08_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8888,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s09_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8452,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s09_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18776,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s08_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 26228,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s08_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 3380,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s09_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13644,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p50_s09_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18292,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s08_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13716,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s08_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 5816,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s09_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 26356,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s09_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8836,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s08_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10924,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s08_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 26124,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s09_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 7664,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        45
+      ],
+      "interrupted_peer_source_ids": [
+        46,
+        47
+      ]
+    },
+    {
+      "job": "height_x1p00_s09_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 24228,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p75_s01_low",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        5,
+        6
+      ],
+      "pid": 5004,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x0p25_s05_low",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        26,
+        27
+      ],
+      "pid": 6208,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "height_x1p00_s09_low",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        46,
+        47
+      ],
+      "pid": 25928,
+      "exit": 0,
+      "status": "finished"
+    }
+  ],
+  "current": [],
+  "meaning": "Complete means all205 planned observations attempted and peers recovered; divergent/boundary trials remain failed."
+}

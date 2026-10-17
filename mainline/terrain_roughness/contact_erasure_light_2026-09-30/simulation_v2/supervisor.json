@@ -1,0 +1,1199 @@
+{
+  "complete": false,
+  "pid": 30428,
+  "batch": "peer_recovery2_0",
+  "started_unix": 1790781718.0449874,
+  "elapsed_s": 2351.845151424408,
+  "finished": [
+    {
+      "job": "endpoint_p0_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8348,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_low"
+    },
+    {
+      "job": "endpoint_p0_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6976,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p0_high"
+    },
+    {
+      "job": "endpoint_p1_low",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 19316,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_low"
+    },
+    {
+      "job": "endpoint_p1_high",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29584,
+      "exit": 0,
+      "status": "finished",
+      "reused": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\_archive\\contact_erasure_full_2026-09-30\\simulation\\runs\\v1\\endpoint_p1_high"
+    },
+    {
+      "job": "pilot_p050_bin010_w3",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 6560,
+      "exit": 1,
+      "status": "failed",
+      "reused": true,
+      "diagnostic_only": true,
+      "run_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\contact_erasure_light_2026-09-30\\simulation\\runs\\v1\\pilot_p050_bin010_w3"
+    },
+    {
+      "job": "bin010_p010_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 21708,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin020_p010_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 30084,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin050_p010_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29004,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin010_p020_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 10604,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin020_p020_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 12160,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin050_p020_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8484,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin010_p030_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 4116,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 17340,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p030_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29836,
+      "exit": 0,
+      "status": "finished"
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 18844,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13532,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 27780,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 9924,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29712,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 17468,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29916,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 16140,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11952,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p070_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 19348,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p070_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 11524,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p070_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 30260,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p080_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29512,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p080_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 22032,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p080_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 8460,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p090_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 29544,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p090_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 13200,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p090_b00",
+      "attempt": "v1",
+      "keep": null,
+      "pid": 14788,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        3,
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 22748,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 11648,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 22652,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "pid": 16608,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 27284,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin020_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 12240,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        1
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p050_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 10928,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin010_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 24056,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 21748,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p060_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 23628,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin010_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 23636,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        8
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30080,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        2
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p070_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 14208,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin010_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 30236,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        4
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 27320,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin050_p080_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 26820,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        9
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin010_p090_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 30136,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "job": "bin020_p090_b00",
+      "attempt": "peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 10604,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "job": "bin050_p090_b00",
+      "attempt": "peer2_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pid": 30228,
+      "exit": 1,
+      "status": "failed",
+      "offender_source_ids": [
+        7
+      ],
+      "interrupted_peer_source_ids": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ]
+    }
+  ],
+  "current": [
+    {
+      "job": "bin020_p030_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 2304,
+      "exit": null,
+      "status": "running"
+    },
+    {
+      "job": "bin010_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pid": 9232,
+      "exit": null,
+      "status": "running"
+    },
+    {
+      "job": "bin020_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "pid": 28056,
+      "exit": null,
+      "status": "running"
+    },
+    {
+      "job": "bin050_p040_b00",
+      "attempt": "peer1_from_peer1_from_v1",
+      "keep": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "pid": 25076,
+      "exit": null,
+      "status": "running"
+    }
+  ]
+}

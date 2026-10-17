@@ -1,0 +1,127 @@
+{
+  "schema": "nine_contact_loss_combined_layout_v1",
+  "created_utc": "2026-10-02T20:25:56.937553+00:00",
+  "source_results_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v03\\RESULTS.json",
+  "source_results_sha256": "d33f2a1baf333dd24205c02f83dfdebc35d2fb152f352eb373f6ee36cf481b34",
+  "prior_nine_report_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\REPORT.json",
+  "prior_nine_report_sha256": "0728b247e1a6225155727b8d4387042f0fe7ca3a86ca0004ec4342ae03fcb7b6",
+  "prior_checked_report_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\REPORT.json",
+  "prior_checked_report_sha256": "1ef6c2dc1edf59edfe6fb42b62c4015c9c2a9868c82c4461fe0819c3b401eb0c",
+  "plot_source_sha256": "eb70276e32c4a74b42ff84fd3dd02a77fb697840b3ff206604d641929dfc1bc9",
+  "layout": "Rows: 2/4/8 mm cutoff. Columns: A/B/C aggregation. Each cell: left loss–roughness, right displacement–loss.",
+  "definitions": {
+    "A": "Mean of valid 10 ms missing / expected-flat fractions",
+    "B": "Mean of six 1 s cycle pooled missing / expected-flat fractions",
+    "C": "Whole 0–6 s pooled missing / expected-flat fraction"
+  },
+  "window_s": [
+    0,
+    6
+  ],
+  "shared_retained_rough": 3413,
+  "flat_controls": 5,
+  "new_physics_steps": 0,
+  "cells": [
+    {
+      "cutoff_mm": 2.0,
+      "aggregation": "A",
+      "metric": "instantaneous",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 2.0,
+      "aggregation": "B",
+      "metric": "cycle",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 2.0,
+      "aggregation": "C",
+      "metric": "pooled",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 4.0,
+      "aggregation": "A",
+      "metric": "instantaneous",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 4.0,
+      "aggregation": "B",
+      "metric": "cycle",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 4.0,
+      "aggregation": "C",
+      "metric": "pooled",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 8.0,
+      "aggregation": "A",
+      "metric": "instantaneous",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 8.0,
+      "aggregation": "B",
+      "metric": "cycle",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    },
+    {
+      "cutoff_mm": 8.0,
+      "aggregation": "C",
+      "metric": "pooled",
+      "same_points_as_prior_nine": true,
+      "panel_count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\all_nine_contact_loss.png",
+      "sha256": "34b7d9ec95a0adfb4d8c00ad8fb79abf3b916cb681d6295ec26ae108fac6c448",
+      "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\contact_loss_overview_2026-10-02\\all_nine_contact_loss.png"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\all_nine_contact_loss.svg",
+      "sha256": "2857736178dfd5591e47b449fbe216fa827c3efadbc69ae1876f310ea0b92a38",
+      "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\contact_loss_overview_2026-10-02\\all_nine_contact_loss.svg"
+    }
+  ],
+  "checks": {
+    "same_data_and_selection": true,
+    "nine_combinations_18_panels": true,
+    "png_decodes": true
+  },
+  "manual_visual_review_complete": true,
+  "manual_review": {
+    "root": "Actually viewed generated PNG: complete 3x3 cutoff/aggregation cells, 18 panels, shared legend, readable headings/axes/footer, no clipping.",
+    "independent_reviewer": "/root/cutoff_inputs",
+    "independent_actual_review": "Actually viewed generated PNG and confirmed the layout and no clipping.",
+    "reviewed_png_sha256": "34b7d9ec95a0adfb4d8c00ad8fb79abf3b916cb681d6295ec26ae108fac6c448"
+  },
+  "documentation_updates": [
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\README.md",
+      "previous_sha256": "c5fe4e9006dc89e6e314d2303a76500b28fa05a8de7dca1fe3445a064de3a2e2",
+      "updated_sha256": "a828d715434c2c3f8e77c1692c9fb2aab4c3d97cbb7dd2ec66885574adb691f9",
+      "added_text": "<!-- combined-nine-overview -->\n## 九张合并总览\n\n行：2/4/8 mm截断；列：A/B/C。每格左侧loss–roughness、右侧前向位移–loss；与下面九张单图使用相同数据和保留试次。\n\n![九张合并总览](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.png)\n\n[可缩放SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.svg) · [原始PNG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.png)\n\n"
+    },
+    {
+      "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\README.md",
+      "previous_sha256": "26428c65960a65583b3acb254072c1a21aecc3f89e1dded41e22297241cd33cc",
+      "updated_sha256": "ddafdce47607f300ef409f025062dcb75492354b381332dc4ebed4160f3f9b9e",
+      "added_text": "<!-- combined-nine-overview -->\n## 九张合并总览\n\n行：2/4/8 mm截断；列：A/B/C。每格左侧loss–roughness、右侧前向位移–loss；与下面九张单图使用相同数据和保留试次。\n\n![九张合并总览](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.png)\n\n[可缩放SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.svg) · [原始PNG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/all_nine_contact_loss.png)\n\n"
+    }
+  ]
+}

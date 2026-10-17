@@ -1,0 +1,8 @@
+{
+  "status": "interrupted",
+  "observed_utc": "2026-09-29T21:17:43.517508+00:00",
+  "evidence": "All four recorded PIDs absent; exec session unavailable; last recorded simulation times 0.1-0.3 s, no completed trajectories.",
+  "cause": "Process lifetime ended across environment/session change; precise termination mechanism not established.",
+  "configuration_changed": false,
+  "next_attempt": "v2"
+}

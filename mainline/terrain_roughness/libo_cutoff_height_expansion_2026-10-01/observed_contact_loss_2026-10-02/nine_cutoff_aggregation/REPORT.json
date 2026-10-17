@@ -1,0 +1,473 @@
+{
+  "schema": "nine_cutoff_aggregation_contact_loss_v1",
+  "created_utc": "2026-10-02T20:11:13.368909+00:00",
+  "source_results_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v03\\RESULTS.json",
+  "source_results_sha256": "d33f2a1baf333dd24205c02f83dfdebc35d2fb152f352eb373f6ee36cf481b34",
+  "prior_checked_report_path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\REPORT.json",
+  "prior_checked_report_sha256": "1ef6c2dc1edf59edfe6fb42b62c4015c9c2a9868c82c4461fe0819c3b401eb0c",
+  "plot_source_sha256": "dc762bee9cc1760ad7ba9abfd325549066e9767f0dcbd6f1688ed25a281e26c7",
+  "primary_figure_count": 9,
+  "panels_per_figure": 2,
+  "primary_layout": "3 cutoffs x 3 aggregation choices; left loss vs roughness, right forward displacement vs loss",
+  "window_s": [
+    0,
+    6
+  ],
+  "retained_rough": 3413,
+  "flat_controls": 5,
+  "same_preserved_selection": true,
+  "new_physics_steps": 0,
+  "definitions": {
+    "A": "Mean of valid 10 ms missing / expected-flat fractions",
+    "B": "Mean of six 1 s cycle pooled missing / expected-flat fractions",
+    "C": "Whole 0–6 s pooled missing / expected-flat fraction"
+  },
+  "figures": [
+    {
+      "cutoff_mm": 2.0,
+      "metric": "instantaneous",
+      "aggregation": "A",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_A.png",
+          "sha256": "abf48b7c079b80fd3957039c26acda1772a66f61360e2db5be6a6d3c64634a0b",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_A.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_A.svg",
+          "sha256": "f4282563c9caa592f486be79178449b88ea201cb2a14cf679ba543c266717817",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_A.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 2.0,
+      "metric": "cycle",
+      "aggregation": "B",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_B.png",
+          "sha256": "db9dc9c8a57b25a942a884f36bfb6d1900e2eec7f226d682f073631be86d6be2",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_B.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_B.svg",
+          "sha256": "d80c9460d93b3b6658dd78f29365e19cc6a9b3fcc1e26833364ae95024fb1cf1",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_B.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 2.0,
+      "metric": "pooled",
+      "aggregation": "C",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_C.png",
+          "sha256": "cb26a2f826dcf005650367e07ae93cbe35b879fd619878132998461915b31531",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_C.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_2mm_aggregation_C.svg",
+          "sha256": "385d35e775ccf9f4d96ffe74b6c99188636276ba80d6d2b49f0712e7f1631229",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_2mm_aggregation_C.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 4.0,
+      "metric": "instantaneous",
+      "aggregation": "A",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_A.png",
+          "sha256": "38aa91fd144f9820867e0490cdab01a6efa14da35d2cee6fa996ba93ae1801e0",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_A.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_A.svg",
+          "sha256": "1b22dd3d860ee4ea593c803b68e8bdccd5c83f712d841b3e470404e058ab614a",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_A.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 4.0,
+      "metric": "cycle",
+      "aggregation": "B",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_B.png",
+          "sha256": "362a4cb42888af8d6b22b84ab0fe5703ef2b83681ec698f39d7c4ab13418ad51",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_B.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_B.svg",
+          "sha256": "e632f544d0a397fc54e645bb302893832663dfe1fcca1be067f63cf31c73307c",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_B.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 4.0,
+      "metric": "pooled",
+      "aggregation": "C",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_C.png",
+          "sha256": "63091f05c247a02a65a96054a8ba3adc77b2cb5c49125a33ee82e2fc2b5e8433",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_C.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_C.svg",
+          "sha256": "3456df9050504649cf329e2feab1b4ff08c91d99c2ce2f1d3825dc6e073463aa",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_4mm_aggregation_C.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 8.0,
+      "metric": "instantaneous",
+      "aggregation": "A",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_A.png",
+          "sha256": "018cff511202aeff164e234578805f864f5f8f01b499648e605d6a9a1c08523a",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_A.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_A.svg",
+          "sha256": "457366073ae523435c8c44eeb8e14d6e4a937f273fe3d3f207cb43aa2c6226a9",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_A.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 8.0,
+      "metric": "cycle",
+      "aggregation": "B",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_B.png",
+          "sha256": "251b7453082fb8f92bb80c08c5b78cf470554ba9eb386497be956e616c77ae00",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_B.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_B.svg",
+          "sha256": "42b10968bb9d63800606cdabc0c8fe68325ec5c7d6c060f546a7b399d11a8f79",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_B.svg"
+        }
+      ]
+    },
+    {
+      "cutoff_mm": 8.0,
+      "metric": "pooled",
+      "aggregation": "C",
+      "files": [
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_C.png",
+          "sha256": "ad658d11f525a517e2234cc225a39ff354da1285189708e8b754754c8fb49df8",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_C.png"
+        },
+        {
+          "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_8mm_aggregation_C.svg",
+          "sha256": "a6bd00ba828c229ebf50eb805b5a6d192d178ab0c69d46853eb330481bde2530",
+          "reviewed_origin_path": "C:\\Users\\wxy22\\.codex\\visualizations\\2026\\09\\28\\01a0e9b6-86f3-70e1-9d8b-220d682785d6\\nine_contact_loss_2026-10-02\\cutoff_8mm_aggregation_C.svg"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "all_nine_pairs_present": true,
+    "all_mean_plus_minus_SD_inside_axes": true,
+    "source_unchanged": true,
+    "all_pngs_decode": true
+  },
+  "manual_visual_review_complete": true,
+  "manual_review": {
+    "root_actual_images": [
+      {
+        "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_A.png",
+        "sha256": "38aa91fd144f9820867e0490cdab01a6efa14da35d2cee6fa996ba93ae1801e0",
+        "actually_viewed": true
+      },
+      {
+        "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_B.png",
+        "sha256": "362a4cb42888af8d6b22b84ab0fe5703ef2b83681ec698f39d7c4ab13418ad51",
+        "actually_viewed": true
+      },
+      {
+        "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation\\cutoff_4mm_aggregation_C.png",
+        "sha256": "63091f05c247a02a65a96054a8ba3adc77b2cb5c49125a33ee82e2fc2b5e8433",
+        "actually_viewed": true
+      }
+    ],
+    "additional_visual_and_numeric_audit": {
+      "schema": "nine_contact_loss_extra_visual_qa_v1",
+      "reviewed_utc": "2026-10-02T20:15:53.262868+00:00",
+      "manual_visual_review_complete": true,
+      "assigned_scope": "Six images: cutoff2mm and8mm × aggregationsA/B/C. Cutoff4mm is reviewed separately by parent.",
+      "new_report": {
+        "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/REPORT.json",
+        "sha256": "502e3237c9ef29174f1c2742f58ae01b3e4aa5553beaed0934dcc2bbd26e018a"
+      },
+      "prior_checked_report": {
+        "path": "X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/REPORT.json",
+        "sha256": "1ef6c2dc1edf59edfe6fb42b62c4015c9c2a9868c82c4461fe0819c3b401eb0c"
+      },
+      "source_results": {
+        "path": "X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/combined/v03/RESULTS.json",
+        "sha256": "d33f2a1baf333dd24205c02f83dfdebc35d2fb152f352eb373f6ee36cf481b34",
+        "matches_both_report_source_pins": true
+      },
+      "source_checks": {
+        "two_cutoffs_times45_groups": 90,
+        "each_cutoff_metric_combination_has45_groups": true,
+        "aggregation_mean_SD_checks": 270,
+        "all_A_B_C_means_and_sample_SDs_recomputed_from_exact_retained_RESULTS_cells_match_prior_report": true,
+        "forward_mean_SD_and_roughness_match": true,
+        "retained_selection_and_omission_unchanged": true,
+        "five_flat_reference_losses_all_zero": true,
+        "source_and_plot_files_not_modified_by_QA": true
+      },
+      "figures": [
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_2mm_aggregation_A.png",
+          "sha256": "abf48b7c079b80fd3957039c26acda1772a66f61360e2db5be6a6d3c64634a0b",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 2.0,
+          "aggregation": "A",
+          "metric": "instantaneous",
+          "metric_description": "Mean of valid 10 ms missing / expected-flat fractions",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        },
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_2mm_aggregation_B.png",
+          "sha256": "db9dc9c8a57b25a942a884f36bfb6d1900e2eec7f226d682f073631be86d6be2",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 2.0,
+          "aggregation": "B",
+          "metric": "cycle",
+          "metric_description": "Mean of six 1 s cycle pooled missing / expected-flat fractions",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        },
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_2mm_aggregation_C.png",
+          "sha256": "cb26a2f826dcf005650367e07ae93cbe35b879fd619878132998461915b31531",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 2.0,
+          "aggregation": "C",
+          "metric": "pooled",
+          "metric_description": "Whole 0–6 s pooled missing / expected-flat fraction",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        },
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_8mm_aggregation_A.png",
+          "sha256": "018cff511202aeff164e234578805f864f5f8f01b499648e605d6a9a1c08523a",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 8.0,
+          "aggregation": "A",
+          "metric": "instantaneous",
+          "metric_description": "Mean of valid 10 ms missing / expected-flat fractions",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        },
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_8mm_aggregation_B.png",
+          "sha256": "251b7453082fb8f92bb80c08c5b78cf470554ba9eb386497be956e616c77ae00",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 8.0,
+          "aggregation": "B",
+          "metric": "cycle",
+          "metric_description": "Mean of six 1 s cycle pooled missing / expected-flat fractions",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        },
+        {
+          "path": "C:/Users/wxy22/.codex/visualizations/2026/09/28/01a0e9b6-86f3-70e1-9d8b-220d682785d6/nine_contact_loss_2026-10-02/cutoff_8mm_aggregation_C.png",
+          "sha256": "ad658d11f525a517e2234cc225a39ff354da1285189708e8b754754c8fb49df8",
+          "dimensions_px": [
+            2346,
+            1054
+          ],
+          "cutoff_mm": 8.0,
+          "aggregation": "C",
+          "metric": "pooled",
+          "metric_description": "Whole 0–6 s pooled missing / expected-flat fraction",
+          "actually_viewed_with_view_image": true,
+          "manual_visual_review_complete": true,
+          "visual_findings": {
+            "correct_cutoff_and_aggregation_title": true,
+            "correct_metric_explanation": true,
+            "two_panel_layout": "Left: contact loss vs shared fixed-morphology roughness. Right: forward displacement vs same contact-loss aggregation.",
+            "five_curves": "Wave1.5 blue,2 orange,2.5 green,3 red,3.5 purple; same colors in both panels and all six figures.",
+            "uniform_circle_markers_and_connected_flat_points": true,
+            "flat_at_roughness0_loss0_on_left_and_loss0_with_per_wave_displacement_on_right": true,
+            "pale_STD_visible_with_y_SD_on_left_and_xy_SD_on_right": true,
+            "titles_legend_panel_titles_axes_labels_and_three_footnotes_not_clipped": true,
+            "plot_lines_points_and_error_bars_not_clipped": true,
+            "footnotes_visible": "0–6s identical retained trials; pale sample SD, one farthest-from-median omission; lines in increasing height; same-phase flat; failures not scored and fractions not calibrated erasure p."
+          },
+          "source_checks": {
+            "all45_rough_groups_mean_and_sample_SD_recomputed_from_exact_retained_source_cells": true,
+            "same_mean_SD_as_prior_checked_report_and_RESULTS_summaries": true,
+            "same_retained_spawns_and_one_point_omission": true,
+            "all_mean_plus_minus_SD_within_declared_axes": true
+          },
+          "display_note": "Original2346×1054 requested; tool displayed2048×920. Labels and three footer lines were readable.",
+          "deliverable": true,
+          "issues": []
+        }
+      ],
+      "all_six_deliverable": true,
+      "issues": [],
+      "limitations": [
+        "Complete-trial conditional means after the existing one-point omission; failures are preserved and not zeroed.",
+        "Sample SD is across shared spawn positions/headings on one terrain realization, not confidence intervals.",
+        "Each wave has one preserved flat control and no repeat-based flat SD.",
+        "A/B/C contact-pattern fractions are descriptive and not calibrated random-erasure probabilities."
+      ],
+      "new_physics_steps": 0,
+      "X_drive_writes": 0,
+      "extra_generated_figures": 0
+    }
+  },
+  "preserved_results_reports_status": {
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\FINAL_DELIVERY.json": "d0dcb2052f22da77739451cb097e2cc043abe5f81d49b7b2d29dd0a9ccd6da03",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\FINAL_REPORT.md": "107b0952ee94c7f9ecc6d7fff68adad3d06c12476e0894c642f046b34d2a3140",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\STATUS.json": "a8cc065f12a50b6d5df26305a887bcf4e7a1a77cea92bd1629b8288154fe6a0c",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\PROTOCOL.json": "08d060cf37cfb119963678f525186b13a4310b72323c13cc20bf30331187f51f",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\combined\\v03\\RESULTS.json": "d33f2a1baf333dd24205c02f83dfdebc35d2fb152f352eb373f6ee36cf481b34",
+    "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\REPORT.json": "1ef6c2dc1edf59edfe6fb42b62c4015c9c2a9868c82c4461fe0819c3b401eb0c"
+  },
+  "canonical_output_directory": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\nine_cutoff_aggregation",
+  "documentation_update": {
+    "path": "X:\\Projects\\Centipede_IsaacLab_RL\\mainline\\terrain_roughness\\libo_cutoff_height_expansion_2026-10-01\\observed_contact_loss_2026-10-02\\README.md",
+    "previous_sha256": "faba0afdde392a6a6eb06f0e78a3972941d1ca63d3e31a5f0cdba0c0d6937583",
+    "updated_sha256": "26428c65960a65583b3acb254072c1a21aecc3f89e1dded41e22297241cd33cc",
+    "added_text": "\n## 九张主图：三个截断 × 三种聚合\n\n每张左侧为loss–roughness、右侧为位移–loss。[九张图与定义](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/README.md)。\n\n| 最短波长截断 | A：逐10 ms比例平均 | B：逐1 s周期比例平均 | C：全0–6 s汇总比例 |\n|---|---|---|---|\n| 2 mm | [2 mm · A](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_A.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_A.svg) | [2 mm · B](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_B.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_B.svg) | [2 mm · C](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_C.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_2mm_aggregation_C.svg) |\n| 4 mm | [4 mm · A](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_A.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_A.svg) | [4 mm · B](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_B.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_B.svg) | [4 mm · C](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_C.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_4mm_aggregation_C.svg) |\n| 8 mm | [8 mm · A](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_A.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_A.svg) | [8 mm · B](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_B.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_B.svg) | [8 mm · C](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_C.png) · [SVG](X:/Projects/Centipede_IsaacLab_RL/mainline/terrain_roughness/libo_cutoff_height_expansion_2026-10-01/observed_contact_loss_2026-10-02/nine_cutoff_aggregation/cutoff_8mm_aggregation_C.svg) |\n\n"
+  }
+}
